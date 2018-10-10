@@ -34,6 +34,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('user.show', Auth::user()->name) }}">{{Auth::user()->name}}</a>
                             <a class="dropdown-item" href="/post/create">Create Post</a>
+                            <a class="dropdown-item" href="/settings">Settings</a>
                             <a class="dropdown-item" href="{{ route('favorite') }}">My Favorites</a>
                             <a class="dropdown-item" href="{{ route(
                                 'home') }}">Home</a>

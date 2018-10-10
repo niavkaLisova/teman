@@ -34,6 +34,7 @@ Vue.component('welcome-component', require('./components/welcome/WelcomeComponen
 Vue.component('pagination', require('laravel-vue-pagination'));
 Vue.component('comments-component', require('./components/comment/CommentsComponent.vue'));
 Vue.component('like-component', require('./components/like/LikeComponent.vue'));
+Vue.component('settings-component', require('./components/settings/SettingsComponent.vue'));
 
 const app = new Vue({
     el: '#app'

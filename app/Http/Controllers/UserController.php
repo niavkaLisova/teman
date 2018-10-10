@@ -13,6 +13,28 @@ class UserController extends Controller
         return view('user')->with('user', $user);
     }
 
+    public function settings()
+    {
+    	$user = User::find(Auth::id());
+
+    	return view('user.settings')->with('user', $user);
+    }
+
+    public function updateInfo(Request $request)
+    {
+       	$update = $request->get('update');
+       	$date = $update['bday'];
+    	$user = User::find($update['id']);
+    	$user->username = $update['username'];
+    	$user->gender = $update['gender'];
+    	$user->bday = $date;
+    	$user->country = $update['country'];
+    	$user->city = $update['city'];
+    	$user->save();
+
+    	return ['status'=> $date];
+    }
+
     public function follow(Request $request, User $user)
 	{
 	    if($request->user()->canFollow($user)) {

@@ -25697,6 +25697,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('welcome-component', __web
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('pagination', __webpack_require__(101));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('comments-component', __webpack_require__(102));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('like-component', __webpack_require__(121));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('settings-component', __webpack_require__(126));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app'
@@ -53470,6 +53471,586 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 125 */,
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(127)
+/* template */
+var __vue_template__ = __webpack_require__(128)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/settings/SettingsComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-79d9b899", Component.options)
+  } else {
+    hotAPI.reload("data-v-79d9b899", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {
+        user: {
+            required: true,
+            type: Object
+        }
+    },
+    data: function data() {
+        return {
+            itemActive: 1
+        };
+    },
+
+    methods: {
+        changeActive: function changeActive(item) {
+            this.itemActive = item;
+        }
+    },
+    components: { UserInfo: __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default.a }
+});
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-4" }, [
+      _c("ul", [
+        _c(
+          "li",
+          {
+            on: {
+              click: function($event) {
+                _vm.changeActive(1)
+              }
+            }
+          },
+          [_vm._v("User info")]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            on: {
+              click: function($event) {
+                _vm.changeActive(2)
+              }
+            }
+          },
+          [_vm._v("Chage Password")]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            on: {
+              click: function($event) {
+                _vm.changeActive(3)
+              }
+            }
+          },
+          [_vm._v("Change Email")]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            on: {
+              click: function($event) {
+                _vm.changeActive(4)
+              }
+            }
+          },
+          [_vm._v("Change Avatr")]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            on: {
+              click: function($event) {
+                _vm.changeActive(5)
+              }
+            }
+          },
+          [_vm._v("Dele6e Acount")]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-md-8" }, [
+      _c("h2", [_vm._v("Settings")]),
+      _vm._v(" "),
+      _vm.itemActive == 1
+        ? _c("div", [_c("UserInfo", { attrs: { user: _vm.user } })], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.itemActive == 2 ? _c("div", [_vm._v("Change Password")]) : _vm._e(),
+      _vm._v(" "),
+      _vm.itemActive == 3 ? _c("div", [_vm._v("Change Email")]) : _vm._e(),
+      _vm._v(" "),
+      _vm.itemActive == 4 ? _c("div", [_vm._v("Change Avatar")]) : _vm._e(),
+      _vm._v(" "),
+      _vm.itemActive == 5 ? _c("div", [_vm._v("Delete Acount")]) : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-79d9b899", module.exports)
+  }
+}
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(130)
+/* template */
+var __vue_template__ = __webpack_require__(131)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/settings/UserInfo.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-16740a6a", Component.options)
+  } else {
+    hotAPI.reload("data-v-16740a6a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 130 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {
+        user: {
+            required: true,
+            type: Object
+        }
+    },
+    methods: {
+        update: function update() {
+            var _this = this;
+
+            axios.post('/update/info', { "update": this.user }).then(function (response) {
+                _this.$awn.success('User Updated');
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "user_id" } }, [_vm._v("User ID")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.id,
+            expression: "user.id"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "user_id", readonly: "" },
+        domProps: { value: _vm.user.id },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "id", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.name,
+            expression: "user.name"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "name", readonly: "" },
+        domProps: { value: _vm.user.name },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "name", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "username" } }, [_vm._v("Username")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.username,
+            expression: "user.username"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "username", placeholder: "Username" },
+        domProps: { value: _vm.user.username },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "username", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { staticClass: "mr-sm-2", attrs: { for: "gender" } }, [
+        _vm._v("Gender")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.user.gender,
+              expression: "user.gender"
+            }
+          ],
+          staticClass: "custom-select mb-2 mr-sm-2 mb-sm-0",
+          attrs: { id: "gender" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.user,
+                "gender",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            }
+          }
+        },
+        [
+          _c("option", { attrs: { value: "none" } }, [
+            _vm._v("it doesn't matter")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "female" } }, [_vm._v("Female")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "male" } }, [_vm._v("Male")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "bday" } }, [_vm._v("Birthday")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.bday,
+            expression: "user.bday"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "date", id: "bday" },
+        domProps: { value: _vm.user.bday },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "bday", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "country" } }, [_vm._v("Country")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.country,
+            expression: "user.country"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "country", placeholder: "Country" },
+        domProps: { value: _vm.user.country },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "country", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "city" } }, [_vm._v("City")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.city,
+            expression: "user.city"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "city", placeholder: "City" },
+        domProps: { value: _vm.user.city },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "city", $event.target.value)
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary",
+        attrs: { type: "button" },
+        on: { click: _vm.update }
+      },
+      [_vm._v("Update")]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-16740a6a", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

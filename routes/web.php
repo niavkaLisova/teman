@@ -49,6 +49,10 @@ Route::get('/users/{user}/follow', 'UserController@follow')->name('user.follow')
 
 Route::get('/users/{user}/unfollow', 'UserController@unfollow')->name('user.unfollow');
 
+Route::get('/settings', 'UserController@settings')->middleware('auth')->name('user.settings');
+
+Route::post('/update/info', 'UserController@updateInfo');
+
 Route::get('/chat', 'ChatController@index')->name('chat');
 
 Route::get('/message', 'MessageController@index')->name('message');
