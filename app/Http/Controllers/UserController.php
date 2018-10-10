@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use App\User;
 
 class UserController extends Controller
@@ -33,6 +35,33 @@ class UserController extends Controller
     	$user->save();
 
     	return ['status'=> $date];
+    }
+
+    public function showChangePassword(Request $request)
+    {
+        $validator = $request->validate([
+	        'password' => 'required|string|min:6'
+	    ]);
+
+	    $user = User::find(Auth::id());
+	    $user->password = Hash::make($request->get('password'));
+	    $user->save();
+
+    	return ['status' => 'ok'];
+    }
+
+    public function showChangeEmail(Request $request)
+    {
+    	$validator = $request->validate([
+	        'email' => 'required|string|email|max:255|unique:users'
+	    ]);
+
+	    $user = User::find(Auth::id());
+	    $user->email = $request->get('email');
+	    $user->save();
+
+    	return ['status' => 'ok'];
+    	
     }
 
     public function follow(Request $request, User $user)

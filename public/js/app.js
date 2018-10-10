@@ -53528,6 +53528,10 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue__);
 //
 //
 //
@@ -53550,6 +53554,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 
 
@@ -53571,7 +53577,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.itemActive = item;
         }
     },
-    components: { UserInfo: __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default.a }
+    components: { UserInfo: __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default.a, ChangePassword: __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue___default.a, ChangeEmail: __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue___default.a }
 });
 
 /***/ }),
@@ -53654,9 +53660,13 @@ var render = function() {
         ? _c("div", [_c("UserInfo", { attrs: { user: _vm.user } })], 1)
         : _vm._e(),
       _vm._v(" "),
-      _vm.itemActive == 2 ? _c("div", [_vm._v("Change Password")]) : _vm._e(),
+      _vm.itemActive == 2
+        ? _c("div", [_c("ChangePassword", { attrs: { user: _vm.user } })], 1)
+        : _vm._e(),
       _vm._v(" "),
-      _vm.itemActive == 3 ? _c("div", [_vm._v("Change Email")]) : _vm._e(),
+      _vm.itemActive == 3
+        ? _c("div", [_c("ChangeEmail", { attrs: { user: _vm.user } })], 1)
+        : _vm._e(),
       _vm._v(" "),
       _vm.itemActive == 4 ? _c("div", [_vm._v("Change Avatar")]) : _vm._e(),
       _vm._v(" "),
@@ -54049,6 +54059,392 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-16740a6a", module.exports)
+  }
+}
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(133)
+/* template */
+var __vue_template__ = __webpack_require__(134)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/settings/ChangePassword.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-29511dfc", Component.options)
+  } else {
+    hotAPI.reload("data-v-29511dfc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 133 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['user'],
+    data: function data() {
+        return {
+            password: '',
+            visible: true
+        };
+    },
+
+    methods: {
+        changePassword: function changePassword() {
+            var _this = this;
+
+            axios.post('/changePassword', { password: this.password }).then(function (response) {
+                _this.$awn.success('Password Updated');
+                _this.password = '';
+            }).catch(function (err) {
+                _this.$awn.alert('Failed');
+                _this.password = '';
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.visible
+      ? _c("label", { attrs: { for: "passwordH" } }, [_vm._v("Password")])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.visible
+      ? _c("label", { attrs: { for: "password" } }, [_vm._v("Password")])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.visible
+      ? _c("div", { staticClass: "input-group mb-3" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "password",
+              placeholder: "Password",
+              "aria-label": "Pasword",
+              id: "passwordH",
+              "aria-describedby": "basic-addon1"
+            },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-group-append" }, [
+            _c(
+              "span",
+              {
+                staticClass: "input-group-text",
+                attrs: { id: "basic-addon1" },
+                on: {
+                  click: function($event) {
+                    _vm.visible = !_vm.visible
+                  }
+                }
+              },
+              [_c("i", { staticClass: "far fa-eye-slash" })]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.visible
+      ? _c("div", { staticClass: "input-group mb-3" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              placeholder: "Password",
+              "aria-label": "Pasword",
+              id: "password",
+              "aria-describedby": "basic-addon2"
+            },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-group-append" }, [
+            _c(
+              "span",
+              {
+                staticClass: "input-group-text",
+                attrs: { id: "basic-addon2" },
+                on: {
+                  click: function($event) {
+                    _vm.visible = !_vm.visible
+                  }
+                }
+              },
+              [_c("i", { staticClass: "far fa-eye" })]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary",
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            return _vm.changePassword($event)
+          }
+        }
+      },
+      [_vm._v("Change Password")]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-29511dfc", module.exports)
+  }
+}
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(136)
+/* template */
+var __vue_template__ = __webpack_require__(137)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/settings/ChangeEmail.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6dbc268b", Component.options)
+  } else {
+    hotAPI.reload("data-v-6dbc268b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 136 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['user'],
+    data: function data() {
+        return {
+            email: ''
+        };
+    },
+
+    methods: {
+        changeEmail: function changeEmail() {
+            var _this = this;
+
+            console.log('new email', this.email);
+            axios.post('/changeEmail', { email: this.email }).then(function (response) {
+                _this.$awn.success('Email Updated');
+            }).catch(function (err) {
+                _this.$awn.alert('Failed');
+                _this.email = _this.user.email;
+            });
+        }
+    },
+    mounted: function mounted() {
+        this.email = this.user.email;
+    }
+});
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.email,
+            expression: "email"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { id: "email", type: "email" },
+        domProps: { value: _vm.email },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.email = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary",
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            return _vm.changeEmail($event)
+          }
+        }
+      },
+      [_vm._v("Change Email")]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6dbc268b", module.exports)
   }
 }
 

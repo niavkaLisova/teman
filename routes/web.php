@@ -51,6 +51,10 @@ Route::get('/users/{user}/unfollow', 'UserController@unfollow')->name('user.unfo
 
 Route::get('/settings', 'UserController@settings')->middleware('auth')->name('user.settings');
 
+Route::post('/changePassword','UserController@showChangePassword');
+
+Route::post('/changeEmail','UserController@showChangeEmail');
+
 Route::post('/update/info', 'UserController@updateInfo');
 
 Route::get('/chat', 'ChatController@index')->name('chat');

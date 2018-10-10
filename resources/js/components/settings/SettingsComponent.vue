@@ -12,8 +12,8 @@
         <div class="col-md-8">
             <h2>Settings</h2>
             <div v-if="itemActive == 1"><UserInfo :user="user" /></div>
-            <div v-if="itemActive == 2">Change Password</div>
-            <div v-if="itemActive == 3">Change Email</div>
+            <div v-if="itemActive == 2"><ChangePassword :user="user" /></div>
+            <div v-if="itemActive == 3"><ChangeEmail :user="user" /></div>
             <div v-if="itemActive == 4">Change Avatar</div>
             <div v-if="itemActive == 5">Delete Acount</div>
         </div>
@@ -22,7 +22,9 @@
 
 <script>
     import UserInfo from './UserInfo.vue';
-
+    import ChangePassword from './ChangePassword.vue';
+    import ChangeEmail from './ChangeEmail.vue';
+ 
     export default {
         props: {
             user: {
@@ -40,6 +42,6 @@
                 this.itemActive = item;
             }
         },
-        components: {UserInfo}
+        components: {UserInfo, ChangePassword, ChangeEmail}
     }
 </script>
