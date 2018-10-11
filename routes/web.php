@@ -49,6 +49,14 @@ Route::get('/users/{user}/follow', 'UserController@follow')->name('user.follow')
 
 Route::get('/users/{user}/unfollow', 'UserController@unfollow')->name('user.unfollow');
 
+Route::post('/users/follow', 'UserController@followpost');
+
+Route::post('/users/unfollow', 'UserController@unfollowpost');
+
+Route::post('/user/image/store', 'UserController@imageStore');
+
+Route::post('/user/image/update', 'UserController@imageUpdate');
+
 Route::get('/settings', 'UserController@settings')->middleware('auth')->name('user.settings');
 
 Route::post('/changePassword','UserController@showChangePassword');

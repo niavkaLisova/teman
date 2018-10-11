@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\User;
+use App\Follower;
 
 class UserController extends Controller
 {
@@ -80,6 +81,28 @@ class UserController extends Controller
 	       return redirect()->back();
 	}
 
+	public function unfollowpost(Request $request)
+	{
+		$follow = Follower::where('user_id', AUth::id())
+			->where('follower_id', $request->get('user'))
+			->get();
+
+		if($follow);
+			$follow[0]->delete();
+
+		return ['status' => 'ok'];
+	}
+
+	public function followpost(Request $request)
+	{
+		$follow = Follower::create([
+			'user_id' => Auth::id(),
+			'follower_id' => $request->get('user')
+		]);
+
+		return $follow;
+	}
+
 	/**
 	 * Get all favorite posts by user
 	 *
@@ -91,4 +114,31 @@ class UserController extends Controller
 	    
 	    return view('user.my_favorites')->with('myFavorites', $myFavorites);
 	}
+
+	public function imageStore(Request $request)
+    {
+        $imageName = time().'.'.$request->image->getClientOriginalExtension();
+
+        $request->image->move(public_path('storage/user'), $imageName);
+
+        return response()->json(['success'=>'You have successfully upload image.', 'name' => $imageName]);
+    }
+
+    public function imageUpdate(Request $request)
+    {
+        $user = User::find($request->get('id'));
+        $image_path = 'no';
+
+        // check prev img
+        if(strlen($user->avatar) > 3 && $user->avatar != 'noimage.jpg') {
+            $image_path = public_path('storage/user') . '/' . $user->avatar; 
+            unlink($image_path);
+        }
+
+        $user->avatar = $request->get('image');
+
+        $user->save();
+
+        return ['status' => 'ok'];
+    }
 }
