@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Post;
 use App\Message;
+use App\Portfolio;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -33,6 +34,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function posts()
     {
        return $this->hasMany('App\Post');
+    }
+
+    public function portfolios()
+    {
+       return $this->hasMany(Portfolio::class);
     }
 
     public function getRouteKeyName()

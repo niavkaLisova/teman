@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "vue-awesome-notifications": "^2.2.9",
-    "vue-ckeditor": "^1.0.0"
+    "vue-ckeditor": "^1.0.0",
+    "vue-router": "^3.0.1"
   }
 }

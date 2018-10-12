@@ -39,7 +39,7 @@
                 });
             },
             deleteComment() {
-                console.log(this.comment.reply_id)
+                // console.log(this.comment.reply_id)
                 if(this.comment.reply_id != 0) {
                     this.$emit('delete-reply');
                 }

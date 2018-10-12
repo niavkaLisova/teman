@@ -10,4 +10,3 @@
 		<comments-component :user=0 :author="{{$post->user->id}}" :id="{{$post->id}}"></comments-component>
 	@endif
 @endsection
-

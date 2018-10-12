@@ -5,7 +5,9 @@
                 <div class="head">
                     <h6><a :href="`/users/${comment.user.name}`">{{comment.user.name}}</a> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="replyAnswer" v-if="user != 0"> | answer</span></h6>
                     <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
-                </div>
+
+                    <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
+                    </div>
                 <div class="content">{{body}}</div>
             </div>
         </div>
@@ -34,6 +36,10 @@
                 required: true,
                 type: Number,
             },
+            author: {
+                required: true,
+                type: Number
+            }
         },
         data() {
             return {
@@ -69,6 +75,14 @@
 
             replyAnswer() {
                 this.$emit('reply-answer', {"name": this.comment.user.name});
+            },
+
+            remove() {
+                this.deleteReply();
+                axios.post('/comment/delete', {'comment_id': this.comment.id})
+                    .then(function(response) {
+                        // console.log('deleted', response.data); 
+                    });
             }
         },
         mounted() {

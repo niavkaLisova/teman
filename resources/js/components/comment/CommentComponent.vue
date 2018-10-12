@@ -6,7 +6,7 @@
                     <h6><a :href="`/users/${comment.user.name}`">{{comment.user.name}}</a> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="answerShow" v-if="user != 0"> | answer</span></h6>
                     <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
 
-                    <button v-if="user == author && !editable" class="btn btn-danger">Delete</button>
+                    <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
                 </div>
                 <div class="content">{{body}}</div>
             </div>
@@ -34,7 +34,7 @@
             <button v-if="length > 0" class="btn btn-primary" @click="findLen">More</button>
             <button v-if="length <= 0 && comment.replies.length > 5" class="btn btn-primary" @click="length = comment.replies.length - 5">Less</button>
             <div v-for="reply in comment.replies.slice(length, comment.replies.length)" :key="reply.id" class="reply">
-                <ReplyComponent :comment="reply" :user="user" @reply-answer="replyAnswer" />
+                <ReplyComponent :comment="reply" :user="user" @reply-answer="replyAnswer" :author="author" />
             </div>
         </div>
     </div>
@@ -43,6 +43,7 @@
 <script>
     import EditComponent from './EditComponent.vue';
     import ReplyComponent from './ReplyComponent.vue';
+    import Event from '../../event.js';
     
     export default {
         props: {
@@ -123,6 +124,11 @@
             findLen() {
                 this.length = this.length - 5;
                 if(this.length < 0) this.length = 0;
+            },
+            remove() {
+                Event.$emit('delete-edit', {
+                    'id': this.comment.id
+                });
             }
         },
         mounted() {

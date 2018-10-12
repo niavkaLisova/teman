@@ -1,6 +1,8 @@
 import Vue from "vue"
 import VueAWN from "vue-awesome-notifications"
 require("vue-awesome-notifications/dist/styles/style.css")
+// import router from './router/router.js'
+// import App from './views/App.vue'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -40,7 +42,13 @@ Vue.component('info-component', require('./components/user/InfoComponent.vue'));
 Vue.component('main-info', require('./components/user/MainInfo.vue'));
 Vue.component('following-component', require('./components/user/FollowingComponent.vue'));
 Vue.component('follow-component', require('./components/user/FollowComponent.vue'));
+Vue.component('portfolio-form', require('./components/portfolio/PortfolioForm.vue'));
+Vue.component('portfolio-edit', require('./components/portfolio/PortfolioEdit.vue'));
+Vue.component('portfolio-index', require('./components/portfolio/PortfolioIndex'));
+Vue.component('portfolio-show', require('./components/portfolio/PortfolioShow'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    // components: { App },
+    // // router
 });

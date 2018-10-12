@@ -22,6 +22,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/vue-ckeditor2"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->

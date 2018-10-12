@@ -86,3 +86,20 @@ Route::post('/favorite/{post}', 'PostController@favoritePost');
 Route::post('/unfavorite/{post}', 'PostController@unFavoritePost');
 
 Route::get('/my_favorites', 'UserController@myFavorites')->middleware('auth')->name('favorite');
+
+Route::post('/portfolio/info', 'PortfolioController@indexInfo');
+
+Route::post('/portfolio/showInfo', 'PortfolioController@showInfo');
+Route::get('/portfolio/{id}/list', 'PortfolioController@show');
+
+Route::get('/portfolio/create', 'PortfolioController@create');
+
+Route::post('/portfolio/save', 'PortfolioController@store');
+
+Route::put('/portfolio/{id}/update', 'PortfolioController@update');
+
+Route::get('/portfolio/{id}/edit', 'PortfolioController@edit');
+
+Route::get('/portfolio/{user_id?}', 'PortfolioController@index');
+
+Route::delete('/portfolio/{id}', 'PortfolioController@destroy');
