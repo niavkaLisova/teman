@@ -12,6 +12,7 @@
         </div>
 
         <div v-if="year">{{year}}</div>
+        <p>{{ $t('message.hello', {name: 'visitor'}) }}</p>
     </div>
 </template>
 

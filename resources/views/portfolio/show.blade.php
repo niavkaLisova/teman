@@ -2,6 +2,10 @@
 
 @section('content')
 <div class="container">
-    <portfolio-show :id="{{$id}}"></portfolio-show>
+    @if(Auth::id())
+    	<portfolio-show :id="{{$id}}" :me="{{Auth::id()}}"></portfolio-show>
+    @else
+    	<portfolio-show :id="{{$id}}" :me=0></portfolio-show>
+    @endif
 </div>
 @endsection

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <edit-component :id="{{$post->id}}"></edit-component>
+    <edit-component :id="{{$post->id}}" :me="{{Auth::id()}}"></edit-component>
 
 </div>
 @endsection

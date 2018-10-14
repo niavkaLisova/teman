@@ -7,12 +7,14 @@
             <main-info :user="{{$user}}"></main-info>
             <following-component :following="{{$user->following}}"></following-component>
             <hr>
+            @if(Auth::id())
             <follow-component
                 :check="{{Auth::check()}}"
                 :auth="{{Auth::id()}}"
                 :user="{{$user}}"
                 :following="{{Auth::user()->following}}"
                 ></follow-component>
+            @endif
             <info-component :user="{{$user}}"></info-component>
         </div>
         <div class="col-md-8">

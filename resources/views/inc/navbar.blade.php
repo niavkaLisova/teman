@@ -15,6 +15,7 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <languages></languages>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

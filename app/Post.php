@@ -10,7 +10,7 @@ use App\Favorite;
 
 class Post extends Model
 {
-	protected $fillable = ['id', 'user_id', 'body', 'title', 'type', 'image'];
+	protected $fillable = ['id', 'user_id', 'body', 'title', 'type', 'image', 'portfolio_id'];
 
 	protected $appends = ['createdDate'];
 	

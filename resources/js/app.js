@@ -3,6 +3,9 @@ import VueAWN from "vue-awesome-notifications"
 require("vue-awesome-notifications/dist/styles/style.css")
 // import router from './router/router.js'
 // import App from './views/App.vue'
+import VueI18n from 'vue-i18n'
+import translate from './lang/translate.js'
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -14,6 +17,15 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 Vue.use(VueAWN);
+Vue.use(VueI18n);
+
+const lang = document.documentElement.lang.substr(0, 2); 
+
+// Create VueI18n instance with options
+const i18n = new VueI18n({
+  locale: lang, // set locale
+  messages: translate, // set locale messages
+})
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -22,6 +34,7 @@ Vue.use(VueAWN);
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('languages', require('./components/navbar/Languages.vue'));
 Vue.component('editor-component', require('./components/post/EditorComponent.vue'));
 Vue.component('form-component', require('./components/FormComponent.vue'));
 Vue.component('edit-component', require('./components/post/EditComponent.vue'));
@@ -49,6 +62,7 @@ Vue.component('portfolio-show', require('./components/portfolio/PortfolioShow'))
 
 const app = new Vue({
     el: '#app',
+    i18n
     // components: { App },
     // // router
 });

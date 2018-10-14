@@ -1,6 +1,11 @@
 <template>
     <div class="form-component">
-        <h2>New Portfolio</h2>
+        <div class="toolbar">
+            <h2>New Portfolio</h2>
+            <div>
+                <a href="/portfolio" class="btn btn-outline-info">Portfolio</a>
+            </div>
+        </div>
         <div class="row">
             <form class="col-md-8">
                 <div class="form-group">
@@ -53,6 +58,11 @@ export default {
 .form-component {
     textarea {
         resize: none;
+    }
+
+    .toolbar {
+        display: flex;
+        justify-content: space-between;
     }
 }
 </style>

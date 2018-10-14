@@ -20,6 +20,12 @@
             </div>
 
             <div class="form-group">
+                <select class="custom-select" v-model="portfolio">
+                  <option v-for="item in portfolioList" :value="item.id">{{item.title}}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <button class="btn btn-primary" @click.prevent="saveTweet">
                     Create
                 </button>
@@ -32,11 +38,14 @@ import Event from '../event.js';
 import VueCkeditor from 'vue-ckeditor2';
 
 export default {
+    props: ['me'],
     data() {
         return {
             title: '',
             postData: {},
             type: 'draft',
+            portfolio: '',
+            portfolioList: [],
             content: '',
             config: {
                 height: 300
@@ -45,13 +54,15 @@ export default {
     },
     methods: {
         saveTweet() {
-            axios.post('/post/save', {body: this.content, title: this.title, type: this.type}).then(res => {
+            axios.post('/post/save', {body: this.content, title: this.title, type: this.type, portfolio_id: this.portfolio}).then(res => {
+                console.log('res', res.data)
             }).catch(e => {
                 console.log(e);
             });
             this.content = '';
             this.title = '',
             this.type = 'draft';
+            this.portfolio = '';
 
             this.$awn.success("Post Created");
         },
@@ -61,6 +72,12 @@ export default {
         onFocus(editor) {
             // console.log(this.editor);
         }
+    },
+    mounted() {
+        axios.post('/portfolio/info', {'user_id': this.me})
+            .then(response => {
+                this.portfolioList = response.data;
+            });
     },
     components: { VueCkeditor }
 }

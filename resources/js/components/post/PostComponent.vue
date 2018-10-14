@@ -16,6 +16,7 @@
                                     @like="like"
                                     @dislike="dislike"
                                 ></like-component>
+                                <i class="far fa-heart" v-if="user == 0"></i>
                         </div>
                     </div> 
 

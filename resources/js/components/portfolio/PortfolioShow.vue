@@ -1,7 +1,17 @@
 <template>
     <div class="portfolio" v-if="portfolio">
-        <span class="title">{{portfolio.title}}</span> | <a :href="`/users/${portfolio.users.name}`">{{portfolio.users.name}}</a> | {{portfolio.posts.length}} work<span v-if="portfolio.posts.length > 1">s</span>
-        <div  class="describe" v-if="portfolio.describe">{{portfolio.describe}}</div>
+        <div class="box">
+            <div  class="describe" v-if="portfolio.describe">{{portfolio.describe}}</div>
+            <div>
+                <div class="title">{{portfolio.title}}</div> 
+                <div>
+                    <a :href="`/users/${portfolio.users.name}`">{{portfolio.users.name}}</a> | {{portfolio.posts.length}} work<span v-if="portfolio.posts.length > 1">s</span>
+                </div>
+                <a :href="`/portfolio/${portfolio.user_id}`" class="btn btn-outline-secondary"> Porfolio</a>
+                <a v-if="portfolio.users.id == me" href="/post/create" class="btn btn-outline-info">Create Post</a>
+
+            </div>
+        </div>
 
         <div v-for="work in portfolio.posts">
             <h4 class="title"><a :href="`/post/${work.id}`">{{work.title}}</a></h4>
@@ -13,7 +23,16 @@
 <script>
 
 export default {
-    props: ['id'],
+    props: {
+        id: {
+            required: true,
+            type: Number
+        },
+        me: {
+            required: false,
+            default: 0
+        }
+    },
     data() {
         return {
             portfolio: null
@@ -30,12 +49,15 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio {
+    .box {
+        display: flex;
+    }
     .title {
         font-weight: bold;
         font-size: 1.2em;
     }
     .describe {
-
+        flex: 2;
     }
 
     .cut {

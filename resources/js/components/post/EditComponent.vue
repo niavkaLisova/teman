@@ -21,6 +21,12 @@
                     </select>
                 </div>
 
+                <div class="form-group">
+                    <select class="custom-select" v-model="portfolio">
+                      <option v-for="item in portfolioList" :value="item.id">{{item.title}}</option>
+                    </select>
+                </div>
+
                 <div class="card">
                     <div class="card-header">Image Upload</div>
                     <div class="card-body">
@@ -59,7 +65,7 @@ import Event from '../../event.js';
 import VueCkeditor from 'vue-ckeditor2';
 
 export default {
-    props: ['id'],
+    props: ['id', 'me'],
     data() {
         return {
             title: '',
@@ -69,6 +75,8 @@ export default {
             name: '',
             image: '',
             success: '',
+            portfolio: 1,
+            portfolioList: [],
             config: {
                 height: 300
             }
@@ -80,11 +88,17 @@ export default {
             this.type = resp.data.type;
             this.content = resp.data.body;
             this.name = resp.data.image;
+            this.portfolio = resp.data.portfolio_id;
         }));
+
+        axios.post('/portfolio/info', {'user_id': this.me})
+            .then(response => {
+                this.portfolioList = response.data;
+            });
     },
     methods: {
         updatePost() {
-            axios.post('/post/update', {body: this.content, title: this.title, type: this.type, id: this.id}).then(res => {
+            axios.post('/post/update', {body: this.content, title: this.title, type: this.type, id: this.id, portfolio_id: this.portfolio}).then(res => {
                 this.$awn.success('Post Updated');
             }).catch(e => {
                 console.log(e);

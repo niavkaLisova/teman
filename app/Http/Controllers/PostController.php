@@ -41,10 +41,11 @@ class PostController extends Controller
             'body' => $request->get('body'),
             'title' => $request->get('title'),
             'type' => $request->get('type'),
+            'portfolio_id' => $request->get('portfolio_id'),
             'image' => 'noimage.jpg'
         ]);
 
-        return response()->json($post->with('user')->find($newPost->id));
+        return ['status' => 'ok'];
     }
 
     public function show(Post $post)
@@ -88,6 +89,7 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->body = $request->get('body');
         $post->type = $request->get('type');
+        $post->portfolio_id = $request->get('portfolio_id');
 
         $post->save();
 
