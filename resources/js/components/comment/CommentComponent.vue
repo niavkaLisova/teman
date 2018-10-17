@@ -2,10 +2,10 @@
     <div class="comments-app" v-if="body">
         <div v-if="state === 'default'">
             <div class="comment-box">
-                <img class="mr-3 img-avatar" :src="`/storage/user/${comment.user.avatar}`" />
+                <img v-if="comment.user" class="mr-3 img-avatar" :src="`/storage/user/${comment.user.avatar}`" />
                 <div class="comment">        
                     <div class="head">
-                        <h6><a :href="`/users/${comment.user.name}`">{{comment.user.name}}</a> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="answerShow" v-if="user != 0"> | answer</span></h6>
+                        <h6><span v-if="comment.user" v-html="comment.user.ProfileLink"></span><span v-if="!comment.user">user deleted</span> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="answerShow" v-if="user != 0"> | answer</span></h6>
                         <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
 
                         <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
@@ -111,7 +111,7 @@
             answerShow() {
                 this.show = !this.show;
                 this.newReply = '@' + this.comment.user.name + ', ';
-                this.$nextTick(() => {  
+                this.$nextTick(() => { 
                     let id = "#reply_" + this.comment.id;      
                     window.$(id).focus();     
                 });
@@ -141,7 +141,11 @@
         },
         computed: {
             editable() {
-                return this.user === this.comment.user.id;
+                if(this.comment.user) {
+                    return this.user === this.comment.user.id;
+                } else {
+                    return false;
+                }
             }
         },
         components: {EditComponent, ReplyComponent}

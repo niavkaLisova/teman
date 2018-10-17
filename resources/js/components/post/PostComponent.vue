@@ -9,7 +9,7 @@
                     <div class="col-md-10">
                         <div class="mt-3">
                             <h2 class="title">{{post.title}}</h2>
-                            <a :href="`/users/${post.user.name}`">{{post.user.name}}</a> | {{ post.createdDate }} | {{ post.view_count }} view | {{ favorite }}    <like-component
+                            <span v-html="post.user.ProfileLink"></span> | {{ post.createdDate }} | {{ post.view_count }} view | {{ favorite }}    <like-component
                                     :post="this.id"
                                     :favorited="favorited"
                                     v-if="user != 0"

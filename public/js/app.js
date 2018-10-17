@@ -50821,6 +50821,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -50998,11 +50999,16 @@ var render = function() {
               }
             }
           },
-          _vm._l(_vm.portfolioList, function(item) {
-            return _c("option", { domProps: { value: item.id } }, [
-              _vm._v(_vm._s(item.title))
-            ])
-          })
+          [
+            _c("option", { attrs: { value: "" } }),
+            _vm._v(" "),
+            _vm._l(_vm.portfolioList, function(item) {
+              return _c("option", { domProps: { value: item.id } }, [
+                _vm._v(_vm._s(item.title))
+              ])
+            })
+          ],
+          2
         )
       ]),
       _vm._v(" "),
@@ -51089,6 +51095,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_ckeditor2__ = __webpack_require__(8);
+//
 //
 //
 //
@@ -51381,11 +51388,16 @@ var render = function() {
                 }
               }
             },
-            _vm._l(_vm.portfolioList, function(item) {
-              return _c("option", { domProps: { value: item.id } }, [
-                _vm._v(_vm._s(item.title))
-              ])
-            })
+            [
+              _c("option", { attrs: { value: "" } }),
+              _vm._v(" "),
+              _vm._l(_vm.portfolioList, function(item) {
+                return _c("option", { domProps: { value: item.id } }, [
+                  _vm._v(_vm._s(item.title))
+                ])
+              })
+            ],
+            2
           )
         ]),
         _vm._v(" "),
@@ -51649,9 +51661,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
             _c("div", { staticClass: "mt-3" }, [
-              _c("a", { attrs: { href: "/users/" + post.user.name } }, [
-                _vm._v(_vm._s(post.user.name))
-              ]),
+              _c("span", {
+                domProps: { innerHTML: _vm._s(post.user.ProfileLink) }
+              }),
               _vm._v(" | " + _vm._s(post.createdDate) + " | "),
               _c("a", { attrs: { href: "/post/" + post.id } }, [
                 _vm._v(_vm._s(post.title))
@@ -52668,11 +52680,9 @@ var render = function() {
                       _vm._v(_vm._s(_vm.post.title))
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "a",
-                      { attrs: { href: "/users/" + _vm.post.user.name } },
-                      [_vm._v(_vm._s(_vm.post.user.name))]
-                    ),
+                    _c("span", {
+                      domProps: { innerHTML: _vm._s(_vm.post.user.ProfileLink) }
+                    }),
                     _vm._v(
                       " | " +
                         _vm._s(_vm.post.createdDate) +
@@ -52887,9 +52897,9 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "media-body" }, [
               _c("div", { staticClass: "mt-3" }, [
-                _c("a", { attrs: { href: "/users/" + post.user.name } }, [
-                  _vm._v(_vm._s(post.user.name))
-                ]),
+                _c("span", {
+                  domProps: { innerHTML: _vm._s(post.user.ProfileLink) }
+                }),
                 _vm._v(" | " + _vm._s(post.createdDate) + " | "),
                 _c("a", { attrs: { href: "/post/" + post.id } }, [
                   _vm._v(_vm._s(post.title))
@@ -54660,7 +54670,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     computed: {
         editable: function editable() {
-            return this.user === this.comment.user.id;
+            if (this.comment.user) {
+                return this.user === this.comment.user.id;
+            } else {
+                return false;
+            }
         }
     },
     components: { EditComponent: __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue___default.a, ReplyComponent: __WEBPACK_IMPORTED_MODULE_1__ReplyComponent_vue___default.a }
@@ -54918,7 +54932,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.comments-app[data-v-4d07198e] {\n  margin: 5px 0;\n}\n.comments-app textarea[data-v-4d07198e] {\n    resize: none;\n}\n.comments-app .head[data-v-4d07198e] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    border-bottom: 1px dashed lightgreen;\n    padding: 10px 20px 0px;\n    line-height: 1em;\n}\n.comments-app .content[data-v-4d07198e] {\n    padding: 10px 20px;\n}\n.comments-app .reply[data-v-4d07198e] {\n    margin-left: 40px;\n    border: 1px solid lightgrey;\n    border-radius: 5px;\n    background: white;\n}\n.comments-app .comment[data-v-4d07198e] {\n    border: 1px solid lightgrey;\n    border-radius: 5px;\n    background: white;\n}\n.comments-app .answer[data-v-4d07198e] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n", ""]);
+exports.push([module.i, "\n.comments-app[data-v-4d07198e] {\n  margin: 5px 0;\n}\n.comments-app textarea[data-v-4d07198e] {\n    resize: none;\n}\n.comments-app .head[data-v-4d07198e] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    border-bottom: 1px dashed lightgreen;\n    padding: 10px 20px 0px;\n    line-height: 1em;\n}\n.comments-app .content[data-v-4d07198e] {\n    padding: 10px 20px;\n}\n.comments-app .reply[data-v-4d07198e] {\n    margin-left: 40px;\n    border: 1px solid lightgrey;\n    border-radius: 5px;\n    background: white;\n}\n.comments-app .comment-box[data-v-4d07198e] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    border: 1px solid lightgrey;\n    border-radius: 5px;\n    background: white;\n}\n.comments-app .comment-box .img-avatar[data-v-4d07198e] {\n      width: 70px;\n      height: 70px;\n}\n.comments-app .answer[data-v-4d07198e] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n", ""]);
 
 // exports
 
@@ -54931,6 +54945,9 @@ exports.push([module.i, "\n.comments-app[data-v-4d07198e] {\n  margin: 5px 0;\n}
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__EditComponent_vue__);
+//
+//
+//
 //
 //
 //
@@ -55019,7 +55036,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     computed: {
         editable: function editable() {
-            return this.user === this.comment.user.id;
+            if (this.comment.user) {
+                return this.user === this.comment.user.id;
+            } else {
+                return false;
+            }
         }
     },
     components: { EditComponent: __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue___default.a }
@@ -55037,59 +55058,74 @@ var render = function() {
     ? _c("div", { staticClass: "comments-app" }, [
         _vm.state === "default"
           ? _c("div", [
-              _c("div", { staticClass: "comment" }, [
-                _c("div", { staticClass: "head" }, [
-                  _c("h6", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/users/" + _vm.comment.user.name } },
-                      [_vm._v(_vm._s(_vm.comment.user.name))]
-                    ),
-                    _vm._v(" | " + _vm._s(_vm.comment.createdDate) + " "),
-                    _vm.comment.edit
-                      ? _c("span", [_vm._v(" | edited")])
+              _c("div", { staticClass: "comment-box" }, [
+                _vm.comment.user
+                  ? _c("img", {
+                      staticClass: "mr-3 img-avatar",
+                      attrs: { src: "/storage/user/" + _vm.comment.user.avatar }
+                    })
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("div", { staticClass: "comment" }, [
+                  _c("div", { staticClass: "head" }, [
+                    _c("h6", [
+                      _vm.comment.user
+                        ? _c("span", {
+                            domProps: {
+                              innerHTML: _vm._s(_vm.comment.user.ProfileLink)
+                            }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      !_vm.comment.user
+                        ? _c("span", [_vm._v("user deleted")])
+                        : _vm._e(),
+                      _vm._v(" | " + _vm._s(_vm.comment.createdDate) + " "),
+                      _vm.comment.edit
+                        ? _c("span", [_vm._v(" | edited")])
+                        : _vm._e(),
+                      _vm.user != 0
+                        ? _c("span", { on: { click: _vm.replyAnswer } }, [
+                            _vm._v(" | answer")
+                          ])
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _vm.editable
+                      ? _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-secondary",
+                            on: {
+                              click: function($event) {
+                                _vm.state = "editing"
+                              }
+                            }
+                          },
+                          [_vm._v("Edit")]
+                        )
                       : _vm._e(),
-                    _vm.user != 0
-                      ? _c("span", { on: { click: _vm.replyAnswer } }, [
-                          _vm._v(" | answer")
-                        ])
+                    _vm._v(" "),
+                    _vm.user == _vm.author && !_vm.editable
+                      ? _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-danger",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.remove($event)
+                              }
+                            }
+                          },
+                          [_vm._v("Delete")]
+                        )
                       : _vm._e()
                   ]),
                   _vm._v(" "),
-                  _vm.editable
-                    ? _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-secondary",
-                          on: {
-                            click: function($event) {
-                              _vm.state = "editing"
-                            }
-                          }
-                        },
-                        [_vm._v("Edit")]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.user == _vm.author && !_vm.editable
-                    ? _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.remove($event)
-                            }
-                          }
-                        },
-                        [_vm._v("Delete")]
-                      )
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content" }, [
-                  _vm._v(_vm._s(_vm.body))
+                  _c("div", { staticClass: "content" }, [
+                    _vm._v(_vm._s(_vm.body))
+                  ])
                 ])
               ])
             ])
@@ -55137,19 +55173,26 @@ var render = function() {
         _vm.state === "default"
           ? _c("div", [
               _c("div", { staticClass: "comment-box" }, [
-                _c("img", {
-                  staticClass: "mr-3 img-avatar",
-                  attrs: { src: "/storage/user/" + _vm.comment.user.avatar }
-                }),
+                _vm.comment.user
+                  ? _c("img", {
+                      staticClass: "mr-3 img-avatar",
+                      attrs: { src: "/storage/user/" + _vm.comment.user.avatar }
+                    })
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("div", { staticClass: "comment" }, [
                   _c("div", { staticClass: "head" }, [
                     _c("h6", [
-                      _c(
-                        "a",
-                        { attrs: { href: "/users/" + _vm.comment.user.name } },
-                        [_vm._v(_vm._s(_vm.comment.user.name))]
-                      ),
+                      _vm.comment.user
+                        ? _c("span", {
+                            domProps: {
+                              innerHTML: _vm._s(_vm.comment.user.ProfileLink)
+                            }
+                          })
+                        : _vm._e(),
+                      !_vm.comment.user
+                        ? _c("span", [_vm._v("user deleted")])
+                        : _vm._e(),
                       _vm._v(" | " + _vm._s(_vm.comment.createdDate) + " "),
                       _vm.comment.edit
                         ? _c("span", [_vm._v(" | edited")])
@@ -56620,10 +56663,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['user']
+    props: ['user'],
+    methods: {
+        removeAllP: function removeAllP() {
+            var _this = this;
 
+            axios.delete('/delete/' + this.user.id + '/works').then(function (response) {
+                _this.$awn.success('OK');
+            }).catch(function (err) {
+                _this.$awn.alert('Failed');
+            });
+        },
+        removeAccount: function removeAccount() {
+            var _this2 = this;
+
+            axios.delete('/delete/' + this.user.id + '/user').then(function (response) {
+                _this2.$awn.success('OK');
+                window.location.replace("/login");
+            }).catch(function (err) {
+                _this2.$awn.alert('Failed');
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -56634,7 +56698,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("h2", [_vm._v("Delete " + _vm._s(_vm.user.id))])])
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-outline-danger",
+        on: { click: _vm.removeAccount }
+      },
+      [_vm._v("Delete Account")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      { staticClass: "btn btn-outline-danger", on: { click: _vm.removeAllP } },
+      [_vm._v("Delete All Portfolios and Posts")]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -56714,7 +56793,7 @@ var render = function() {
               }
             }
           },
-          [_vm._v("Dele6e Account")]
+          [_vm._v("Delete")]
         )
       ])
     ]),
@@ -57385,7 +57464,7 @@ var render = function() {
     { staticClass: "following" },
     _vm._l(_vm.following.splice(0, 3), function(user) {
       return _c("div", { staticClass: "followUser" }, [
-        _c("a", { attrs: { href: "/users/" + user.name } }, [
+        _c("a", { attrs: { href: "/users/" + user.id } }, [
           _c("span", [_vm._v(_vm._s(user.name))]),
           _vm._v(" "),
           _c("img", {

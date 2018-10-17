@@ -22,6 +22,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password', 'view_count', 'username', 'gender', 'bday', 'country', 'city'
     ];
 
+    protected $appends = ['ProfileLink'];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -43,12 +45,13 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function getRouteKeyName()
     {
-       return 'name';
+       return 'id';
     }
 
     public function getProfileLinkAttribute()
     {
-        return route('user.show', $this);
+
+        return "<a href='/users/{$this->id}'>{$this->name}</a>";
     }
 
     public function following()

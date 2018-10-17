@@ -13,7 +13,7 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show', 'postAll', 'postInfo']]);
-        $this->middleware(['verified'], ['except' => ['index', 'show', 'postAll', 'postInfo']]);
+        $this->middleware(['verified'], ['except' => ['index', 'show', 'postAll', 'postInfo', 'visit']]);
     }
 
 	public function index(Request $request, Post $post)

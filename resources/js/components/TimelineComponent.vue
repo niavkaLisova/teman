@@ -5,7 +5,7 @@
             <img class="mr-3" />
             <div class="media-body">
                 <div class="mt-3">
-                    <a :href="`/users/${post.user.name}`">{{post.user.name}}</a> | {{ post.createdDate }} | <a :href="`/post/${post.id}`">{{post.title}}</a>
+                    <span v-html="post.user.ProfileLink"></span> | {{ post.createdDate }} | <a :href="`/post/${post.id}`">{{post.title}}</a>
                 </div>
                 <hr />
                 <div class="cut" v-html="post.body"></div>

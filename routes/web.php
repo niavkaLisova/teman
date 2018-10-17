@@ -63,6 +63,10 @@ Route::post('/changePassword','UserController@showChangePassword');
 
 Route::post('/changeEmail','UserController@showChangeEmail');
 
+Route::delete('/delete/{id}/works','UserController@destroyWorks');
+
+Route::delete('/delete/{id}/user','UserController@destroy');
+
 Route::post('/update/info', 'UserController@updateInfo');
 
 Route::get('/chat', 'ChatController@index')->name('chat');

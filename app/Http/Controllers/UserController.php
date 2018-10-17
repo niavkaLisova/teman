@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Follower;
+use App\Portfolio;
+use App\Post;
+use App\Comment;
 
 class UserController extends Controller
 {
@@ -140,5 +144,56 @@ class UserController extends Controller
         $user->save();
 
         return ['status' => 'ok'];
+    }
+
+    public function destroyWorks($id)
+    {
+    	$posts = Post::where('user_id', $id)->get();
+    	$posts_id = [];
+
+    	for($i = 0; $i < count($posts); $i++)
+    	{
+    		array_push($posts_id, $posts[$i]->id);
+    		if(strlen($posts[$i]->image) > 3 && $posts[$i]->image != 'noimage.jpg') {
+	            $image_path = public_path('images') . '/' . $posts[$i]->image; 
+	            unlink($image_path);
+	        }
+    	}
+
+    	Post::where('user_id',  $id)->delete(); 
+    	Portfolio::where('user_id', $id)->delete();
+    	Comment::whereIn('post_id', $posts_id)->delete();
+
+    	return ['status' => 'ok'];
+    	
+    }
+
+    public function destroy($id)
+    {
+    	$posts = Post::where('user_id', $id)->get();
+    	$posts_id = [];
+
+    	for($i = 0; $i < count($posts); $i++)
+    	{
+    		array_push($posts_id, $posts[$i]->id);
+    		if(strlen($posts[$i]->image) > 3 && $posts[$i]->image != 'noimage.jpg') {
+	            $image_path = public_path('images') . '/' . $posts[$i]->image; 
+	            unlink($image_path);
+	        }
+    	}
+
+    	Post::where('user_id',  $id)->delete(); 
+    	Portfolio::where('user_id', $id)->delete();
+    	Comment::whereIn('post_id', $posts_id)->delete();
+
+    	$user = User::find($id);
+    	if(strlen($user->avatar) > 3 && $user->avatar != 'noimage.jpg') {
+            $image_path = public_path('storage/user') . '/' . $user->avatar; 
+            unlink($image_path);
+        }
+    	Auth::logout();
+    	$user->delete();
+
+    	return ['satus'=> $user->avatar];
     }
 }

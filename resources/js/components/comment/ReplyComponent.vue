@@ -1,14 +1,17 @@
 <template>
     <div class="comments-app" v-if="body && visible">
         <div v-if="state === 'default'">
-            <div class="comment">
-                <div class="head">
-                    <h6><a :href="`/users/${comment.user.name}`">{{comment.user.name}}</a> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="replyAnswer" v-if="user != 0"> | answer</span></h6>
-                    <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
+            <div class="comment-box">
+                <img v-if="comment.user" class="mr-3 img-avatar" :src="`/storage/user/${comment.user.avatar}`" />
+                <div class="comment">
+                    <div class="head">
+                        <h6><span v-if="comment.user" v-html="comment.user.ProfileLink"></span> <span v-if="!comment.user">user deleted</span> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="replyAnswer" v-if="user != 0"> | answer</span></h6>
+                        <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
 
-                    <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
-                    </div>
-                <div class="content">{{body}}</div>
+                        <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
+                        </div>
+                    <div class="content">{{body}}</div>
+                </div>
             </div>
         </div>
 
@@ -92,7 +95,11 @@
         },
         computed: {
             editable() {
-                return this.user === this.comment.user.id;
+                if(this.comment.user) {
+                    return this.user === this.comment.user.id;
+                } else {
+                    return false;
+                }
             }
         },
         components: {EditComponent}
@@ -121,10 +128,16 @@
         border-radius: 5px;
         background: white;
     }
-    .comment {
+    .comment-box {
+        display: flex;
         border: 1px solid lightgrey;
         border-radius: 5px;
         background: white;
+
+        .img-avatar {
+            width: 70px;
+            height: 70px;
+        }
     }
     .answer {
         display: flex;

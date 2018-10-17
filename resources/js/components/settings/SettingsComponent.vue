@@ -6,7 +6,7 @@
                 <li @click="changeActive(2)">Chage Password</li>
                 <li @click="changeActive(3)">Change Email</li>
                 <li @click="changeActive(4)">Change Avatar</li>
-                <li @click="changeActive(5)">Dele6e Account</li>
+                <li @click="changeActive(5)">Delete</li>
             </ul>
         </div>
         <div class="col-md-8">

@@ -1,7 +1,7 @@
 <template>
     <div class="following">
         <div v-for="user in following.splice(0, 3)" class="followUser">
-            <a :href="`/users/${user.name}`">
+            <a :href="`/users/${user.id}`">
                 <span>{{user.name}}</span>
                 <img class="mr-3 img-fluid" :src="`/storage/user/${user.avatar}`" />
             </a>

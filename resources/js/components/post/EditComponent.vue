@@ -23,6 +23,7 @@
 
                 <div class="form-group">
                     <select class="custom-select" v-model="portfolio">
+                      <option value=""></option>
                       <option v-for="item in portfolioList" :value="item.id">{{item.title}}</option>
                     </select>
                 </div>
