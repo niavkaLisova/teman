@@ -16,16 +16,16 @@ class PostController extends Controller
         $this->middleware(['verified'], ['except' => ['index', 'show', 'postAll', 'postInfo', 'visit']]);
     }
 
-	public function index(Request $request, Post $post)
+	public function index(Request $request, Post $post, $page)
     {
+        $perPage = 5;
         $posts = $post->whereIn('user_id', $request->user()->following()
             ->pluck('users.id')
             ->push($request->user()->id))
             ->where('type', 'public')
             ->with('user')
             ->orderBy('created_at', 'desc')
-            ->take($request->get('limit', 10))
-            ->get();
+            ->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json($posts);
     }
@@ -63,12 +63,13 @@ class PostController extends Controller
         return response()->json($post);
     }
 
-    public function postAll()
+    public function postAll($page = 1)
     {
+        $perPage = 5;
         $posts = Post::where('type', 'public')
             ->with('user')
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate($perPage, ['*'], 'page', $page);
 
         return response()->json($posts);
     }

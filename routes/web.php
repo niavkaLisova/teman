@@ -19,7 +19,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/{page}', 'PostController@index')->name('posts.index');
 
 Route::get('/post/create', 'PostController@create');
 
@@ -37,7 +37,7 @@ Route::post('/post/destroy', 'PostController@destroy');
 
 Route::post('/visit', 'PostController@visit');
 
-Route::get('/posts/all', 'PostController@postAll');
+Route::get('/posts/{page}/all', 'PostController@postAll');
 
 Route::post('/post/image/store', 'PostController@imageStore');
 
@@ -52,6 +52,15 @@ Route::get('/users/{user}/unfollow', 'UserController@unfollow')->name('user.unfo
 Route::post('/users/follow', 'UserController@followpost');
 
 Route::post('/users/unfollow', 'UserController@unfollowpost');
+
+
+Route::get('/following/{id}/list', 'UserController@followingList');
+
+Route::get('/follower/{id}/list', 'UserController@followerList');
+
+Route::get('/following/{user}/list/{page}', 'UserController@followingListPage');
+
+Route::get('/follower/{user}/list/{page}', 'UserController@followerListPage');
 
 Route::post('/user/image/store', 'UserController@imageStore');
 

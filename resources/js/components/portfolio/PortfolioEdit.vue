@@ -1,6 +1,11 @@
 <template>
     <div class="edit-container">
-        <h2>Edit Portfolio</h2>
+        <div class="toolbar">
+            <h2>Edit Portfolio</h2>
+            <div>
+                <a href="/portfolio" class="btn btn-outline-info">Portfolio</a>
+            </div>
+        </div>
         <div class="row">
             <form class="col-md-8">
                 <div class="form-group">
@@ -58,6 +63,11 @@ export default {
 .edit-container {
     textarea {
         resize: none;
+    }
+
+    .toolbar {
+        display: flex;
+        justify-content: space-between;
     }
 }
 </style>

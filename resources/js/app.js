@@ -54,6 +54,8 @@ Vue.component('upload', require('./components/settings/Upload.vue'));
 Vue.component('info-component', require('./components/user/InfoComponent.vue'));
 Vue.component('main-info', require('./components/user/MainInfo.vue'));
 Vue.component('following-component', require('./components/user/FollowingComponent.vue'));
+Vue.component('following-list', require('./components/user/FollowingList.vue'));
+Vue.component('follower-list', require('./components/user/FollowerList.vue'));
 Vue.component('follow-component', require('./components/user/FollowComponent.vue'));
 Vue.component('portfolio-form', require('./components/portfolio/PortfolioForm.vue'));
 Vue.component('portfolio-edit', require('./components/portfolio/PortfolioEdit.vue'));

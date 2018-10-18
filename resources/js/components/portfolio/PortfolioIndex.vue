@@ -6,7 +6,7 @@
                 <a href="/portfolio/create" class="btn btn-outline-info">Create Portfolio</a>
             </div>
         </div> 
-        <div class="red_bd" v-for="(portfolio, index) in portfolios" :key="portfolio.id">
+        <div v-for="(portfolio, index) in portfolios" :key="portfolio.id">
             <a :href="`/users/${portfolio.users.name}`">{{portfolio.users.name}}</a> | <a :href="`/portfolio/${portfolio.id}/list`">{{portfolio.title}}</a> | {{ portfolio.posts.length }} work<span v-if="portfolio.posts.length > 1">s</span>
             <div  v-if="portfolio.describe">{{portfolio.describe}}</div>
             <div class="input-group" v-if="me != 0 && me == user_id">
@@ -51,8 +51,6 @@ export default {
         display: flex;
         justify-content: space-between;
     }
-    .red_bd {
-        border: 20px solid red;
-    }
+
 }
 </style>

@@ -32,7 +32,7 @@ class UserController extends Controller
        	$update = $request->get('update');
        	$date = $update['bday'];
     	$user = User::find($update['id']);
-    	$user->username = $update['username'];
+    	$user->name = $update['name'];
     	$user->gender = $update['gender'];
     	$user->bday = $date;
     	$user->country = $update['country'];
@@ -107,6 +107,35 @@ class UserController extends Controller
 		return $follow;
 	}
 
+	public function followingList($id)
+	{
+		return view('user.following')->with('user_id', $id);
+	}
+
+	public function followerList($id)
+	{
+		return view('user.follower')->with('user_id', $id);
+	}
+
+	public function followingListPage($user, $page = 0)
+	{
+		$perPage = 10;
+   		$following = Follower::where('user_id',  $user)
+   			->with('user')
+   			->paginate($perPage, ['*'], 'page', $page);
+
+   		return response()->json($following);
+	}
+
+	public function followerListPage($user, $page = 0)
+	{
+		$perPage = 10;
+   		$following = Follower::where('follower_id',  $user)
+   			->with('follower')
+   			->paginate($perPage, ['*'], 'page', $page);
+
+   		return response()->json($following);
+	}
 	/**
 	 * Get all favorite posts by user
 	 *

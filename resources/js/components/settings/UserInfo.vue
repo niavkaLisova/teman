@@ -17,17 +17,7 @@
                 type="text"
                 id="name"
                 v-model="user.name"
-                readonly>
-        </div>
-
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input
-                class="form-control"
-                type="text"
-                id="username"
-                placeholder="Username"
-                v-model="user.username">
+                >
         </div>
 
         <div class="form-group">

@@ -11,23 +11,42 @@
                 <div class="cut" v-html="post.body"></div>
             </div>
         </div>
+        <infinite-loading @infinite="infiniteHandler">
+            <span slot="no-more">
+                There is no more:(
+            </span>
+        </infinite-loading>
     </div>
 </template>
 <script>
+import InfiniteLoading from 'vue-infinite-loading';
 import Event from '../event.js';
 
 export default {
     data() {
         return {
             posts: [],
-            post: {}
+            post: {},
+            current_page: 1
         }
     },
-    mounted() {
-        axios.get('/posts').then((resp => {
-            this.posts = resp.data;
-        }));
-    }
+    methods: {
+        infiniteHandler($state) {
+            axios.get('/posts/' + this.current_page + '/all')
+                .then(({ data }) => {
+                    if (data.data.length) {
+                        this.current_page = data.current_page + 1;
+                        this.posts = this.posts.concat(data.data);
+                        $state.loaded();
+                    } else {
+                        $state.complete();
+                    }
+                });
+        },
+    },
+    components: {
+        InfiniteLoading,
+    },
 }
 </script>
 

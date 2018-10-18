@@ -1,9 +1,12 @@
 <template>
     <div class="main">
-        <h2 v-if="user.username">{{user.username}} <span>(@{{user.name}})</span></h2>
-        <h2 v-if="!user.username">{{user.name}}</h2>
+        <h2>{{user.name}}</h2>
         <img class="mr-3 img-fluid" :src="`/storage/user/${user.avatar}`" />
-        <a :href="`/portfolio/${user.id}`" class="btn btn-outline-secondary">Portfolio</a>
+        <div class="input-group">
+            <a :href="`/portfolio/${user.id}`" class="btn btn-outline-secondary">Portfolio</a>
+            <a :href="`/following/${user.id}/list`" class="btn btn-outline-secondary">Following</a>
+            <a :href="`/follower/${user.id}/list`" class="btn btn-outline-secondary">Follower</a>
+        </div>
     </div>
 </template>
 

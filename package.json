@@ -23,6 +23,7 @@
     "vue-awesome-notifications": "^2.2.9",
     "vue-ckeditor": "^1.0.0",
     "vue-i18n": "^8.2.0",
+    "vue-infinite-loading": "^2.3.5",
     "vue-router": "^3.0.1"
   }
 }
