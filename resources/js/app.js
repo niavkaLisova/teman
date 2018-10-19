@@ -49,6 +49,7 @@ Vue.component('welcome-component', require('./components/welcome/WelcomeComponen
 Vue.component('pagination', require('laravel-vue-pagination'));
 Vue.component('comments-component', require('./components/comment/CommentsComponent.vue'));
 Vue.component('like-component', require('./components/like/LikeComponent.vue'));
+Vue.component('my-favorite', require('./components/like/MyFavorite.vue'));
 Vue.component('settings-component', require('./components/settings/SettingsComponent.vue'));
 Vue.component('upload', require('./components/settings/Upload.vue'));
 Vue.component('info-component', require('./components/user/InfoComponent.vue'));

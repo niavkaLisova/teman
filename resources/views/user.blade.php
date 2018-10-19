@@ -4,7 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <main-info :user="{{$user}}"></main-info>
+            @if(Auth::id())
+                <main-info :user="{{$user}}" me="{{Auth::id()}}"></main-info>
+            @else
+                <main-info :user="{{$user}}" me=0></main-info>
+            @endif
             <following-component :following="{{$user->following}}"></following-component>
             <hr>
             @if(Auth::id())

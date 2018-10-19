@@ -78,7 +78,11 @@ Route::delete('/delete/{id}/user','UserController@destroy');
 
 Route::post('/update/info', 'UserController@updateInfo');
 
-Route::get('/chat', 'ChatController@index')->name('chat');
+Route::get('/chat/{id?}', 'ChatController@index')->name('chat');
+
+Route::get('/my/chats', 'ChatController@chatList')->name('chat');
+
+Route::post('/find/companion/info', 'ChatController@companionInfo');
 
 Route::get('/message', 'MessageController@index')->name('message');
 

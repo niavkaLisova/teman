@@ -36,7 +36,6 @@
                             <a class="dropdown-item" href="{{ route('user.show', Auth::user()->id) }}">{{Auth::user()->name}}</a>
                             <a class="dropdown-item" href="/post/create">Create Post</a>
                             <a class="dropdown-item" href="/settings">Settings</a>
-                            <a class="dropdown-item" href="{{ route('favorite') }}">My Favorites</a>
                             <a class="dropdown-item" href="{{ route(
                                 'home') }}">Home</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
