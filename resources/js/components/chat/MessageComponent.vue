@@ -2,6 +2,8 @@
     <div class="message self">
         <strong class="user">{{ message.user.name }}</strong>
         <p class="body">{{ message.body }}</p>
+        <span>{{message.created_at | moment("from", "now", true)}}</span>
+        <!-- <span>{{message.created_at}}</span> -->
     </div>
 </template>
 

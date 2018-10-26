@@ -18,6 +18,7 @@ window.Vue = require('vue');
 
 Vue.use(VueAWN);
 Vue.use(VueI18n);
+Vue.use(require('vue-moment'));
 
 const lang = document.documentElement.lang.substr(0, 2); 
 

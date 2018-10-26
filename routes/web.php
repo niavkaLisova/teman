@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Events\MessagePushed;
 
 Route::get('/', function () {
     return view('welcome');
@@ -84,7 +85,7 @@ Route::get('/my/chats', 'ChatController@chatList')->name('chat');
 
 Route::post('/find/companion/info', 'ChatController@companionInfo');
 
-Route::get('/message', 'MessageController@index')->name('message');
+Route::get('/message/{chat_id}/{page}', 'MessageController@index')->name('message');
 
 Route::post('/message', 'MessageController@store')->name('message.store');
  
@@ -120,3 +121,10 @@ Route::get('/portfolio/{id}/edit', 'PortfolioController@edit');
 Route::get('/portfolio/{user_id?}', 'PortfolioController@index');
 
 Route::delete('/portfolio/{id}', 'PortfolioController@destroy');
+
+Broadcast::routes();
+
+Route::get('/event', function() {
+	event(new MessagePushed('porqui?'));
+	return 'event';
+});

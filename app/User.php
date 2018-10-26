@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Post;
 use App\Message;
 use App\Portfolio;
+use App\Chat;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -95,4 +96,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(Post::class, 'favorites', 'user_id', 'post_id')->withTimeStamps();
     }
 
+    public function chats()
+    {
+        return $this->belongsToMany(Chat::class);
+    }
 }

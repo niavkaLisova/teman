@@ -6,9 +6,9 @@
                 <div class="comment">        
                     <div class="head">
                         <h6><span v-if="comment.user" v-html="comment.user.ProfileLink"></span><span v-if="!comment.user">user deleted</span> | {{ comment.createdDate }} <span v-if='comment.edit'> | edited</span><span @click="answerShow" v-if="user != 0"> | answer</span></h6>
-                        <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary">Edit</button>
+                        <button v-if="editable" @click="state = 'editing'" class="btn btn-secondary hover">Edit</button>
 
-                        <button v-if="user == author && !editable" class="btn btn-danger" @click.prevent="remove">Delete</button>
+                        <button v-if="user == author && !editable" class="btn btn-danger hover_d" @click.prevent="remove">Delete</button>
                     </div>
                     <div class="content">{{body}}</div>
                 </div>
@@ -185,6 +185,14 @@
         border: 1px solid lightgrey;
         border-radius: 5px;
         background: white;
+
+        .hover, .hover_d {
+            opacity: 0;
+        }
+
+        &:hover .hover, &:hover .hover_d {
+            opacity: 1;
+        }
 
         .img-avatar {
             width: 70px;

@@ -1,35 +1,33 @@
 <template>
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">Chats</div>
-            <div class="card-body">
-                <chat-messages-component></chat-messages-component>
-                <chat-form-component></chat-form-component>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Chats</div>
+                <div class="card-body">
+                    <chat-messages-component :chat_id="chat_id" :me="me" @list-active="listActive"></chat-messages-component>
+                    <chat-form-component :me="me" :chat_id="chat_id"></chat-form-component>
+                </div>
             </div>
+        </div>
+        <div class="col-md-4">
+            <user-component :activeUsers="activeUsers" :chat_id="chat_id"></user-component>
         </div>
     </div>
 </template>
 
 <script>
-    import Event from '../../event.js';
-
     export default {
+        props: ['chat_id', 'me'],
         data() {
             return {
-                messages: []
+                activeUsers: []
             }
         },
-        mounted() {
-            axios.get('/message').then((response) => {
-                console.log(response.data);
-                this.messages = response.data;
-            });
-            Event.$on('added_message', (message) => {
-                this.messages.unshift(message);
-                if(message.selfMessage) {
-                    // this.$refs.message.scrollTop = 0;
-                }
-            });
+        methods: {
+            listActive(data) {
+                console.log('have new list', data)
+                this.activeUsers = data;
+            }
         }
     }
 </script>

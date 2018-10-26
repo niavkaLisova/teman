@@ -19,9 +19,10 @@
     import Event from '../../event.js';
 
     export default {
+        props: ['chat_id', 'me'],
         data() {
             return {
-                body: null
+                body: null,
             }
         },
         methods: {
@@ -35,25 +36,20 @@
                 if(!this.body || this.body.trim() === '') {
                     return
                 }
-                let messageObj = this.buildMessage();
-                Event.$emit('added_message', messageObj);
+                // let messageObj = this.buildMessage();
                 axios.post('/message', {
-	                body: this.body.trim()
-	            }).catch(() => {
-	                 console.log('failed');
-	            });
+	                body: this.body.trim(),
+                    chat_id: this.chat_id
+	            }).then(response => {
+                    let messages = response.data;
+                    messages.user = {name: this.me.name};
+	                // Event.$emit('added_message', messages);
+	            }).catch(err => {
+                    console.log('failed', err);
+                })
                 this.body = null;
             },
-            buildMessage() {
-                return {
-                    id: Date.now(),
-                    body: this.body,
-                    selfMessage: true,
-                    user: {
-                        name: Laravel.user.name
-                    }
-                }
-            }
+            
         }
     }
 </script>

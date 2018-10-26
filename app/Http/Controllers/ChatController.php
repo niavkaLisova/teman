@@ -22,9 +22,11 @@ class ChatController extends Controller
 
     public function chatList()
     {
-    	$id = Auth::id();
+    	// $id = Auth::id();
 
-    	$chats = Chat::whereRaw('JSON_CONTAINS(users->"$.list", \'[' . $id . ']\')')->get();
+    	// $chats = Chat::whereRaw('JSON_CONTAINS(users->"$.list", \'[' . $id . ']\')')->get();
+
+        $chats = Auth::user()->chats;
 
     	return $chats;
     }
