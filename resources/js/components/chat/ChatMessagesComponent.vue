@@ -78,7 +78,6 @@
             },
 
             listActive() {
-                console.log('method active');
                 this.$emit('list-active', this.activeUsers);
             }
         },

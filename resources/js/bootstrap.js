@@ -1,7 +1,10 @@
 
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
-
+window.emoji = require('emoji');
+window.wdt = require('wdt-emoji-bundle');
+console.log(window.wdt.defaults);
+window.wdt.defaults.emojiSheets.apple = '/images/vendor/wdt-emoji-bundle/sheets/sheet_apple_64_indexed_128.png';
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

@@ -5,6 +5,7 @@ require("vue-awesome-notifications/dist/styles/style.css")
 // import App from './views/App.vue'
 import VueI18n from 'vue-i18n'
 import translate from './lang/translate.js'
+import { filter } from 'vb-emoji'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -13,8 +14,9 @@ import translate from './lang/translate.js'
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
+
+Vue.use(filter)
 
 Vue.use(VueAWN);
 Vue.use(VueI18n);
@@ -63,6 +65,15 @@ Vue.component('portfolio-form', require('./components/portfolio/PortfolioForm.vu
 Vue.component('portfolio-edit', require('./components/portfolio/PortfolioEdit.vue'));
 Vue.component('portfolio-index', require('./components/portfolio/PortfolioIndex'));
 Vue.component('portfolio-show', require('./components/portfolio/PortfolioShow'));
+
+Vue.filter('currency', {
+  read: function (value) {
+    return 'READ ' + value;
+  },
+  write: function (value) {
+    return 'WRITE ' + value;
+  }
+})
 
 const app = new Vue({
     el: '#app',

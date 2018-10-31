@@ -8,6 +8,7 @@
             @keydown="typing"
             v-model="body">
         </textarea>
+        <picker set="twitter" @select="addEmoji" />
         <span class="notice">
             Hit Return to send a message
         </span>
@@ -15,14 +16,15 @@
 </template>
 
 <script>
-
+    import { Picker } from 'emoji-mart-vue'
     import Event from '../../event.js';
 
     export default {
         props: ['chat_id', 'me'],
         data() {
             return {
-                body: null,
+                body: '',
+                test: 'Some test'
             }
         },
         methods: {
@@ -47,9 +49,16 @@
 	            }).catch(err => {
                     console.log('failed', err);
                 })
-                this.body = null;
+                this.body = '';
             },
-            
+            addEmoji(e) {
+                console.log(e);
+                this.body += ':idx:' + e.id + ':';
+                document.getElementById("body").focus();
+            }
+        },
+        components: {
+            Picker
         }
     }
 </script>
