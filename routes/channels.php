@@ -17,6 +17,6 @@
 
 Broadcast::channel('room.{room_id}', function ($user, $room_id) {
     if($user->chats->contains($room_id)) {
-    	return $user->name;
+    	return $user->id;
     }
 });

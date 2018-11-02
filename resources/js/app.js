@@ -66,15 +66,6 @@ Vue.component('portfolio-edit', require('./components/portfolio/PortfolioEdit.vu
 Vue.component('portfolio-index', require('./components/portfolio/PortfolioIndex'));
 Vue.component('portfolio-show', require('./components/portfolio/PortfolioShow'));
 
-Vue.filter('currency', {
-  read: function (value) {
-    return 'READ ' + value;
-  },
-  write: function (value) {
-    return 'WRITE ' + value;
-  }
-})
-
 const app = new Vue({
     el: '#app',
     i18n

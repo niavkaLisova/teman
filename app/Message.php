@@ -7,7 +7,7 @@ use App\User;
 
 class Message extends Model
 {
-	protected $fillable = ['body', 'user_id', 'del'];
+	protected $fillable = ['body', 'user_id', 'del', 'read'];
     
     protected $appends = ['selfMessage'];
 

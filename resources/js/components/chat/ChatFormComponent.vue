@@ -6,7 +6,9 @@
             rows="5"
             class="form-input"
             @keydown="typing"
-            v-model="body">
+            @input="input"
+            v-model="dis"
+            debounce="500">
         </textarea>
         <picker set="twitter" @select="addEmoji" />
         <span class="notice">
@@ -20,28 +22,51 @@
     import Event from '../../event.js';
 
     export default {
-        props: ['chat_id', 'me'],
+        props: ['chat_id', 'me', 'activeUsers'],
         data() {
             return {
                 body: '',
-                test: 'Some test'
+                dis: ''
             }
         },
         methods: {
             typing(e) {
+                this.$emit('typing');
+
                 if(e.keyCode === 13 && !e.shiftKey) {
                     e.preventDefault();
                     this.sendMessage();
                 }        
             },
+            input(e) {
+                // console.log('input', e)
+                if(e.inputType == "insertText") {
+                    this.body += e.data;
+                }
+                if(e.inputType == "deleteContentBackward") {
+                    this.body = this.body.substr(0, this.body.length - 1)
+                }
+                // console.log('data', e.data, e.data == undefined)
+                if(e.data == undefined) {
+                    this.body = e.srcElement.value;
+                }
+
+            },
             sendMessage() {
+                console.log('send messages', this.body);
                 if(!this.body || this.body.trim() === '') {
                     return
                 }
+                let read = 0;
                 // let messageObj = this.buildMessage();
+                // if(this.activeUsers.length > 1) {
+                //     read = 1;
+                //     console.log('Your companion is online')
+                // }
                 axios.post('/message', {
 	                body: this.body.trim(),
-                    chat_id: this.chat_id
+                    chat_id: this.chat_id,
+                    read: read
 	            }).then(response => {
                     let messages = response.data;
                     messages.user = {name: this.me.name};
@@ -50,10 +75,12 @@
                     console.log('failed', err);
                 })
                 this.body = '';
+                this.dis = '';
             },
             addEmoji(e) {
-                console.log(e);
+                // console.log(e);
                 this.body += ':idx:' + e.id + ':';
+                this.dis += e.native;
                 document.getElementById("body").focus();
             }
         },

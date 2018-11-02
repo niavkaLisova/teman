@@ -7,11 +7,13 @@
         </infinite-loading>
         <div class="message-area" ref='messageDisplay' id="scroll">
             <message-component 
-                v-for="message in messages" 
-                :key="message.id" 
+                v-for="(message, index) in messages" 
+                :key="index" 
                 :message="message">
-            </message-component>      
+            </message-component>    
         </div>
+        <span v-if="isActive.length > 0">
+        <span v-for="active in isActive">{{active.name}} </span> is typing...</span>
         <hr>
     </div>
 </template>
@@ -27,7 +29,8 @@
                 messages: [],
                 activeUsers: [],
                 current_page: 0,
-                canLoad: false
+                canLoad: false,
+                isActive: [],
             }
         },
         computed: {
@@ -79,13 +82,32 @@
 
             listActive() {
                 this.$emit('list-active', this.activeUsers);
+            },
+
+            typing() {
+                this.channel
+                    .whisper('typing', {
+                        name: this.me.name,
+                        id: this.me.id
+                    });
             }
         },
         mounted() {
             this.infiniteHandler();
 
+            if(this.chat_id > 0){
+                axios.post('/read/message', {chat_id: this.chat_id})
+                    .then(response => {
+                        this.messages = response.data.data.reverse();;
+                    })
+            }
+
             Event.$on('added_message', (message) => {
                 this.messages.push(message);    
+            });
+
+            Event.$on('type_event', (message) => {
+                this.typing();
             });
 
             this.channel
@@ -102,6 +124,45 @@
                     let info = data.data;
                     info.user = data.user;
                     this.messages.push(info);
+                    axios.post('/read/message/one', {message_id: data.data.id})
+                        .then(response => {
+                            // console.log('response', response.data)
+                        });
+
+                    this.isActive = this.isActive.filter(user => {
+                        return user.id != data.user.id;
+                    })
+
+                    this.channel
+                        .whisper('read', {
+                            id: data.user.id
+                        });
+                })
+                .listenForWhisper('typing', e => {
+                    let find = this.isActive.find(user => {
+                        return user.id == e.id;
+                    });
+
+                    if(!find) {
+                        this.isActive.push(e);
+                    }
+                    
+                    if(this.typingTime) clearTimeout(this.typingTime);
+
+                    this.typingTime = setTimeout(() => {
+                        this.isActive = this.isActive.filter(user => {
+                            return user.id != e.id;
+                        })
+                    }, 2000)
+                })
+                .listenForWhisper('read', e => {
+                    let newM = this.messages.map(msg => {
+                        if(msg.user_id, e.id) {
+                            msg.read = 1;
+                            return msg;
+                        }
+                    })
+                    this.messages = newM;
                 });
         },
         created: function () {

@@ -83,11 +83,19 @@ Route::get('/chat/{id?}', 'ChatController@index')->name('chat');
 
 Route::get('/my/chats', 'ChatController@chatList')->name('chat');
 
+Route::post('/update/chat/title', 'ChatController@updateTitle')->name('chat');
+
+Route::post('/leave/chatroom', 'ChatController@leaveChat')->name('chat');
+
 Route::post('/find/companion/info', 'ChatController@companionInfo');
 
 Route::get('/message/{chat_id}/{page}', 'MessageController@index')->name('message');
 
 Route::post('/message', 'MessageController@store')->name('message.store');
+
+Route::post('/read/message', 'MessageController@read');
+
+Route::post('/read/message/one', 'MessageController@readOne');
  
 Route::get('/comments/{comment}/{page}', 'CommentController@index');
  

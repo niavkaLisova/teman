@@ -25,11 +25,25 @@ class MessageController extends Controller
 	    $message = Chat::find($request->chat_id)->messages()->create([
 	    		"body"=> $request->body,
 	    		"user_id" => $id,
+	    		"read" => $request->read,
 	    		"del" => '{"list": []}'
 	    	]);
 
 	    \App\Events\Message::dispatch($message, $request->chat_id, $request->user());
 
 	    return response()->json($message);
+	}
+
+	public function read(Request $request) {
+		$messages = Chat::find($request->chat_id)->messages()->where('user_id', '<>', Auth::id())->update(['read' => 1]);
+
+    	$newMessages = Chat::find($request->chat_id)->messages()->orderBy('created_at', 'desc')->with('user')->paginate(20, ['*'], 'page', 0);
+		return $newMessages;
+	}
+
+	public function readOne(Request $request) {
+		$message = Message::find($request->message_id)->update(['read' => 1]);
+
+		return $request->message_id;
 	}
 }

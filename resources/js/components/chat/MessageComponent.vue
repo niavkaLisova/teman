@@ -1,11 +1,10 @@
 <template>
-    <div class="message self">
+    <div :class="{unread: message.read == 0, message: true, self: true}" >
         <strong class="user">{{ message.user.name }}</strong>
-        <div class="body" v-html="message.body"></div>
-        <span>{{message.created_at | moment("from", "now", true)}}</span>
-        <hr>
-        <!-- <div v-html="text"></div> -->
         <div v-html="display"></div>
+        <!-- <span>{{message.created_at | moment("from", "now", true)}}</span> -->
+        <span>{{message.created_at }}</span>
+        <hr>     
     </div>
 </template>
 
@@ -32,11 +31,6 @@
             }
         },
         computed: {
-            text() {
-                // let outHtml = this.$options.filters.render(this.message.body);
-                let outHtml = 'zadowbalo'
-                return outHtml;
-            },
             display() {
                 let render = this.$options.filters.render(this.message.body);
                 return render;
@@ -64,5 +58,8 @@
     .emojione {
         width: 24px;
         height: 24px;
+    }
+    .unread {
+        background-color: pink;
     }
 </style>

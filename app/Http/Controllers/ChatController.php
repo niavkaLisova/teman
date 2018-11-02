@@ -26,9 +26,24 @@ class ChatController extends Controller
 
     	// $chats = Chat::whereRaw('JSON_CONTAINS(users->"$.list", \'[' . $id . ']\')')->get();
 
-        $chats = Auth::user()->chats;
+        $chats = Auth::user()->chats()->with('users')->get();
 
     	return $chats;
+    }
+
+    public function updateTitle(Request $request)
+    {
+        Chat::find($request->chat_id)->update(['title' => $request->title]);
+    }
+
+    public function leaveChat(Request $request)
+    {
+        Auth::user()->chats()->detach([$request->chat_id]);
+        $chat = Chat::find($request->chat_id);
+        if($chat->users()->count() == 0) {
+            $chat->messages()->delete();
+            $chat->delete();
+        }
     }
 
     public function chatMessages()

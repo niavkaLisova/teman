@@ -517,7 +517,7 @@ module.exports = g;
 
 
 var bind = __webpack_require__(24);
-var isBuffer = __webpack_require__(70);
+var isBuffer = __webpack_require__(66);
 
 /*global toString:true*/
 
@@ -821,6 +821,17 @@ module.exports = {
 
 /***/ }),
 /* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue___default.a());
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -829,7 +840,7 @@ module.exports = {
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(90);
+exports = module.exports = __webpack_require__(86);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -1022,17 +1033,6 @@ function localstorage() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue___default.a());
-
-/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1209,15 +1209,15 @@ Emitter.prototype.hasListeners = function(event){
  * Module dependencies.
  */
 
-var keys = __webpack_require__(97);
+var keys = __webpack_require__(93);
 var hasBinary = __webpack_require__(35);
-var sliceBuffer = __webpack_require__(103);
-var after = __webpack_require__(104);
-var utf8 = __webpack_require__(105);
+var sliceBuffer = __webpack_require__(99);
+var after = __webpack_require__(100);
+var utf8 = __webpack_require__(101);
 
 var base64encoder;
 if (global && global.ArrayBuffer) {
-  base64encoder = __webpack_require__(106);
+  base64encoder = __webpack_require__(102);
 }
 
 /**
@@ -1275,7 +1275,7 @@ var err = { type: 'error', data: 'parser error' };
  * Create a blob api even for blob builder when vendor prefixes exist
  */
 
-var Blob = __webpack_require__(107);
+var Blob = __webpack_require__(103);
 
 /**
  * Encodes a packet.
@@ -13044,7 +13044,7 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(4);
-var normalizeHeaderName = __webpack_require__(72);
+var normalizeHeaderName = __webpack_require__(68);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -13149,9 +13149,9 @@ module.exports = defaults;
  * Module dependencies.
  */
 
-var debug = __webpack_require__(5)('socket.io-parser');
+var debug = __webpack_require__(6)('socket.io-parser');
 var Emitter = __webpack_require__(7);
-var binary = __webpack_require__(92);
+var binary = __webpack_require__(88);
 var isArray = __webpack_require__(30);
 var isBuf = __webpack_require__(31);
 
@@ -13569,7 +13569,7 @@ function error(msg) {
 
 /* WEBPACK VAR INJECTION */(function(global) {// browser shim for xmlhttprequest module
 
-var hasCORS = __webpack_require__(95);
+var hasCORS = __webpack_require__(91);
 
 module.exports = function (opts) {
   var xdomain = opts.xdomain;
@@ -27597,12 +27597,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(4);
-var settle = __webpack_require__(73);
-var buildURL = __webpack_require__(75);
-var parseHeaders = __webpack_require__(76);
-var isURLSameOrigin = __webpack_require__(77);
+var settle = __webpack_require__(69);
+var buildURL = __webpack_require__(71);
+var parseHeaders = __webpack_require__(72);
+var isURLSameOrigin = __webpack_require__(73);
 var createError = __webpack_require__(26);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(78);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(74);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -27699,7 +27699,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(79);
+      var cookies = __webpack_require__(75);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -27783,7 +27783,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(74);
+var enhanceError = __webpack_require__(70);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -27935,15 +27935,15 @@ function isBuf(obj) {
  * Module dependencies.
  */
 
-var eio = __webpack_require__(93);
+var eio = __webpack_require__(89);
 var Socket = __webpack_require__(38);
 var Emitter = __webpack_require__(7);
 var parser = __webpack_require__(15);
 var on = __webpack_require__(39);
 var bind = __webpack_require__(40);
-var debug = __webpack_require__(5)('socket.io-client:manager');
+var debug = __webpack_require__(6)('socket.io-client:manager');
 var indexOf = __webpack_require__(37);
-var Backoff = __webpack_require__(112);
+var Backoff = __webpack_require__(108);
 
 /**
  * IE6+ hasOwnProperty
@@ -28514,9 +28514,9 @@ Manager.prototype.onreconnect = function () {
  */
 
 var XMLHttpRequest = __webpack_require__(16);
-var XHR = __webpack_require__(96);
-var JSONP = __webpack_require__(108);
-var websocket = __webpack_require__(109);
+var XHR = __webpack_require__(92);
+var JSONP = __webpack_require__(104);
+var websocket = __webpack_require__(105);
 
 /**
  * Export transports.
@@ -28578,7 +28578,7 @@ var parseqs = __webpack_require__(10);
 var parser = __webpack_require__(8);
 var inherit = __webpack_require__(11);
 var yeast = __webpack_require__(36);
-var debug = __webpack_require__(5)('engine.io-client:polling');
+var debug = __webpack_require__(6)('engine.io-client:polling');
 
 /**
  * Module exports.
@@ -28826,7 +28826,7 @@ Polling.prototype.uri = function () {
  * Module requirements.
  */
 
-var isArray = __webpack_require__(102);
+var isArray = __webpack_require__(98);
 
 var toString = Object.prototype.toString;
 var withNativeBlob = typeof Blob === 'function' ||
@@ -28885,7 +28885,7 @@ function hasBinary (obj) {
   return false;
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(98).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(94).Buffer))
 
 /***/ }),
 /* 36 */
@@ -28988,10 +28988,10 @@ module.exports = function(arr, obj){
 
 var parser = __webpack_require__(15);
 var Emitter = __webpack_require__(7);
-var toArray = __webpack_require__(111);
+var toArray = __webpack_require__(107);
 var on = __webpack_require__(39);
 var bind = __webpack_require__(40);
-var debug = __webpack_require__(5)('socket.io-client:socket');
+var debug = __webpack_require__(6)('socket.io-client:socket');
 var parseqs = __webpack_require__(10);
 var hasBin = __webpack_require__(35);
 
@@ -29487,13 +29487,13 @@ module.exports = function(obj, fn){
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(184)
+  __webpack_require__(180)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(186)
+var __vue_script__ = __webpack_require__(182)
 /* template */
-var __vue_template__ = __webpack_require__(187)
+var __vue_template__ = __webpack_require__(183)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -29536,7 +29536,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(43);
-module.exports = __webpack_require__(272);
+module.exports = __webpack_require__(268);
 
 
 /***/ }),
@@ -29574,7 +29574,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vb_e
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_awesome_notifications___default.a);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_i18n__["a" /* default */]);
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(113));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(109));
 
 var lang = document.documentElement.lang.substr(0, 2);
 
@@ -29590,44 +29590,35 @@ var i18n = new __WEBPACK_IMPORTED_MODULE_2_vue_i18n__["a" /* default */]({
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('example-component', __webpack_require__(114));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('languages', __webpack_require__(117));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('editor-component', __webpack_require__(122));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('form-component', __webpack_require__(125));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('edit-component', __webpack_require__(128));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('timeline-component', __webpack_require__(131));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-component', __webpack_require__(136));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('user-component', __webpack_require__(139));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-form-component', __webpack_require__(149));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('message-component', __webpack_require__(155));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-messages-component', __webpack_require__(160));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-component', __webpack_require__(165));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('welcome-component', __webpack_require__(170));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('pagination', __webpack_require__(175));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('comments-component', __webpack_require__(176));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('like-component', __webpack_require__(195));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('my-favorite', __webpack_require__(198));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('settings-component', __webpack_require__(203));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('upload', __webpack_require__(221));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('info-component', __webpack_require__(224));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('main-info', __webpack_require__(229));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('following-component', __webpack_require__(234));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('following-list', __webpack_require__(239));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('follower-list', __webpack_require__(244));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('follow-component', __webpack_require__(249));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-form', __webpack_require__(252));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-edit', __webpack_require__(257));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-index', __webpack_require__(262));
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-show', __webpack_require__(267));
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.filter('currency', {
-  read: function read(value) {
-    return 'READ ' + value;
-  },
-  write: function write(value) {
-    return 'WRITE ' + value;
-  }
-});
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('example-component', __webpack_require__(110));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('languages', __webpack_require__(113));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('editor-component', __webpack_require__(118));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('form-component', __webpack_require__(121));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('edit-component', __webpack_require__(124));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('timeline-component', __webpack_require__(127));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-component', __webpack_require__(132));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('user-component', __webpack_require__(135));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-form-component', __webpack_require__(145));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('message-component', __webpack_require__(151));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('chat-messages-component', __webpack_require__(156));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-component', __webpack_require__(161));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('welcome-component', __webpack_require__(166));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('pagination', __webpack_require__(171));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('comments-component', __webpack_require__(172));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('like-component', __webpack_require__(191));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('my-favorite', __webpack_require__(194));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('settings-component', __webpack_require__(199));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('upload', __webpack_require__(217));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('info-component', __webpack_require__(220));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('main-info', __webpack_require__(225));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('following-component', __webpack_require__(230));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('following-list', __webpack_require__(235));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('follower-list', __webpack_require__(240));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('follow-component', __webpack_require__(245));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-form', __webpack_require__(248));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-edit', __webpack_require__(253));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-index', __webpack_require__(258));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('portfolio-show', __webpack_require__(263));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app',
@@ -32345,15 +32336,12 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_laravel_echo__);
 
 window._ = __webpack_require__(62);
 window.Popper = __webpack_require__(22).default;
-window.emoji = __webpack_require__(63);
-window.wdt = __webpack_require__(65);
-console.log(window.wdt.defaults);
-window.wdt.defaults.emojiSheets.apple = '/images/vendor/wdt-emoji-bundle/sheets/sheet_apple_64_indexed_128.png';
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -32363,7 +32351,7 @@ window.wdt.defaults.emojiSheets.apple = '/images/vendor/wdt-emoji-bundle/sheets/
 try {
   window.$ = window.jQuery = __webpack_require__(23);
 
-  __webpack_require__(67);
+  __webpack_require__(63);
 } catch (e) {}
 
 /**
@@ -32372,7 +32360,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(68);
+window.axios = __webpack_require__(64);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -32397,7 +32385,7 @@ if (token) {
  */
 
 
-window.io = __webpack_require__(88);
+window.io = __webpack_require__(84);
 
 // Have this in case you stop running your laravel echo server
 // if (typeof io !== 'undefined') {
@@ -49535,4753 +49523,6 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(64);
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*global exports */
-/*!
- * emoji
- *
- * This file auto create by `bin/create_emoji_js.py`.
- * Emoji\'s table come from <a href="http://code.iamcal.com/php/emoji/">http://code.iamcal.com/php/emoji/</a>
- *
- * Copyright(c) 2012 - 2014 fengmk2 <fengmk2@gmail.com>
- * MIT Licensed
- */
-
-;(function (name, definition) {
-  // Come from eventproxy: https://github.com/JacksonTian/eventproxy/blob/master/lib/eventproxy.js#L7
-
-  // this is considered "safe":
-  var hasDefine = "function" === 'function';
-  var hasExports = typeof module !== 'undefined' && module.exports;
-
-  if (hasDefine) {
-    // AMD Module or CMD Module
-    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (definition),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (hasExports) {
-    // Node.js Module
-    module.exports = definition();
-  } else {
-    // Assign to common namespaces or simply the global object (window)
-    this[name] = definition();
-  }
-})('jEmoji', function () {
-
-var jEmoji = {
-  EMOJI_RE: function () {
-    return EMOJI_RE
-      || (EMOJI_RE = _createRegexp(EMOJI_MAP));
-  },
-  EMOJI_DOCOMO_RE: function () {
-    return EMOJI_DOCOMO_RE
-      || (EMOJI_DOCOMO_RE = _createRegexp(EMOJI_DOCOMO_MAP));
-  },
-  EMOJI_KDDI_RE: function () {
-    return EMOJI_KDDI_RE
-      || (EMOJI_KDDI_RE = _createRegexp(EMOJI_KDDI_MAP));
-  },
-  EMOJI_SOFTBANK_RE: function () {
-    return EMOJI_SOFTBANK_RE
-      || (EMOJI_SOFTBANK_RE = _createRegexp(EMOJI_SOFTBANK_MAP));
-  },
-  EMOJI_GOOGLE_RE: function () {
-    return EMOJI_GOOGLE_RE
-      || (EMOJI_GOOGLE_RE = _createRegexp(EMOJI_GOOGLE_MAP));
-  }
-};
-
-/**
- * Emoji code map.
- *
- * format:
- *   Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]'
- *
- * @type {Object}
- */
-var EMOJI_MAP = jEmoji.EMOJI_MAP = {
-  // missing
-  "👬": ["U+1F46C", "man and man holding hands", "1f46c", ["-", "-"], ["-", "-"], ["", "U+E428"], ["󾆠", "U+FE1A0"]],
-  "👭": ["U+1F46D", "woman and woman holding hands", "1f46d", ["-", "-"], ["-", "-"], ["", "U+E428"], ["󾆠", "U+FE1A0"]],
-  "🌲": ["U+1F332", "evergreen tree", "1f332", ["-", "-"], ["", "U+EB49"], ["", "U+E305"], ["󾁍", "U+FE04D"]],
-  "🌳": ["U+1F333", "deciduous tree", "1f333", ["-", "-"], ["", "U+EB49"], ["", "U+E305"], ["󾁍", "U+FE04D"]],
-  "🍋":  ["U+1F34B", "lemon", "1f34b", ["-", "-"], ["", "U+EABA"], ["", "U+E346"], ["󾁒", "U+FE052"]],
-  "😎": ["U+1F60E", "smiling face with sunglasses", "1f60e", ["", "U+E726"], ["", "U+E5C4"], ["", "U+E106"], ["󾌧", "U+FE327"]],
-  "😀":  ["U+1F600", "grinning face", "1f600", ["", "U+E753"], ["", "U+EB80"], ["", "U+E404"], ["󾌳", "U+FE333"]],
-  // table.html  "☀": ["U+2600", "black sun with rays", "2600", ["", "U+E63E"], ["", "U+E488"], ["", "U+E04A"], ["󾀀", "U+FE000"]],
-  "☁": ["U+2601", "cloud", "2601", ["", "U+E63F"], ["", "U+E48D"], ["", "U+E049"], ["󾀁", "U+FE001"]],
-  "☔": ["U+2614", "umbrella with rain drops", "2614", ["", "U+E640"], ["", "U+E48C"], ["", "U+E04B"], ["󾀂", "U+FE002"]],
-  "⛄": ["U+26C4", "snowman without snow", "26c4", ["", "U+E641"], ["", "U+E485"], ["", "U+E048"], ["󾀃", "U+FE003"]],
-  "⚡": ["U+26A1", "high voltage sign", "26a1", ["", "U+E642"], ["", "U+E487"], ["", "U+E13D"], ["󾀄", "U+FE004"]],
-  "🌀": ["U+1F300", "cyclone", "1f300", ["", "U+E643"], ["", "U+E469"], ["", "U+E443"], ["󾀅", "U+FE005"]],
-  "🌁": ["U+1F301", "foggy", "1f301", ["", "U+E644"], ["", "U+E598"], ["-", "-"], ["󾀆", "U+FE006"]],
-  "🌂": ["U+1F302", "closed umbrella", "1f302", ["", "U+E645"], ["", "U+EAE8"], ["", "U+E43C"], ["󾀇", "U+FE007"]],
-  "🌃": ["U+1F303", "night with stars", "1f303", ["", "U+E6B3"], ["", "U+EAF1"], ["", "U+E44B"], ["󾀈", "U+FE008"]],
-  "🌄": ["U+1F304", "sunrise over mountains", "1f304", ["", "U+E63E"], ["", "U+EAF4"], ["", "U+E04D"], ["󾀉", "U+FE009"]],
-  "🌅": ["U+1F305", "sunrise", "1f305", ["", "U+E63E"], ["", "U+EAF4"], ["", "U+E449"], ["󾀊", "U+FE00A"]],
-  "🌆": ["U+1F306", "cityscape at dusk", "1f306", ["-", "-"], ["", "U+E5DA"], ["", "U+E146"], ["󾀋", "U+FE00B"]],
-  "🌇": ["U+1F307", "sunset over buildings", "1f307", ["", "U+E63E"], ["", "U+E5DA"], ["", "U+E44A"], ["󾀌", "U+FE00C"]],
-  "🌈": ["U+1F308", "rainbow", "1f308", ["-", "-"], ["", "U+EAF2"], ["", "U+E44C"], ["󾀍", "U+FE00D"]],
-  "❄": ["U+2744", "snowflake", "2744", ["-", "-"], ["", "U+E48A"], ["-", "-"], ["󾀎", "U+FE00E"]],
-  "⛅": ["U+26C5", "sun behind cloud", "26c5", ["", "U+E63E U+E63F"], ["", "U+E48E"], ["", "U+E04A U+E049"], ["󾀏", "U+FE00F"]],
-  "🌉": ["U+1F309", "bridge at night", "1f309", ["", "U+E6B3"], ["", "U+E4BF"], ["", "U+E44B"], ["󾀐", "U+FE010"]],
-  "🌊": ["U+1F30A", "water wave", "1f30a", ["", "U+E73F"], ["", "U+EB7C"], ["", "U+E43E"], ["󾀸", "U+FE038"]],
-  "🌋": ["U+1F30B", "volcano", "1f30b", ["-", "-"], ["", "U+EB53"], ["-", "-"], ["󾀺", "U+FE03A"]],
-  "🌌": ["U+1F30C", "milky way", "1f30c", ["", "U+E6B3"], ["", "U+EB5F"], ["", "U+E44B"], ["󾀻", "U+FE03B"]],
-  "🌏": ["U+1F30F", "earth globe asia-australia", "1f30f", ["-", "-"], ["", "U+E5B3"], ["-", "-"], ["󾀹", "U+FE039"]],
-  "🌑": ["U+1F311", "new moon symbol", "1f311", ["", "U+E69C"], ["", "U+E5A8"], ["-", "-"], ["󾀑", "U+FE011"]],
-  "🌔": ["U+1F314", "waxing gibbous moon symbol", "1f314", ["", "U+E69D"], ["", "U+E5A9"], ["", "U+E04C"], ["󾀒", "U+FE012"]],
-  "🌓": ["U+1F313", "first quarter moon symbol", "1f313", ["", "U+E69E"], ["", "U+E5AA"], ["", "U+E04C"], ["󾀓", "U+FE013"]],
-  "🌙": ["U+1F319", "crescent moon", "1f319", ["", "U+E69F"], ["", "U+E486"], ["", "U+E04C"], ["󾀔", "U+FE014"]],
-  "🌕": ["U+1F315", "full moon symbol", "1f315", ["", "U+E6A0"], ["-", "-"], ["-", "-"], ["󾀕", "U+FE015"]],
-  "🌛": ["U+1F31B", "first quarter moon with face", "1f31b", ["", "U+E69E"], ["", "U+E489"], ["", "U+E04C"], ["󾀖", "U+FE016"]],
-  "🌟": ["U+1F31F", "glowing star", "1f31f", ["-", "-"], ["", "U+E48B"], ["", "U+E335"], ["󾭩", "U+FEB69"]],
-  "🌠": ["U+1F320", "shooting star", "1f320", ["-", "-"], ["", "U+E468"], ["-", "-"], ["󾭪", "U+FEB6A"]],
-  "🕐": ["U+1F550", "clock face one oclock", "1f550", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E024"], ["󾀞", "U+FE01E"]],
-  "🕑": ["U+1F551", "clock face two oclock", "1f551", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E025"], ["󾀟", "U+FE01F"]],
-  "🕒": ["U+1F552", "clock face three oclock", "1f552", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E026"], ["󾀠", "U+FE020"]],
-  "🕓": ["U+1F553", "clock face four oclock", "1f553", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E027"], ["󾀡", "U+FE021"]],
-  "🕔": ["U+1F554", "clock face five oclock", "1f554", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E028"], ["󾀢", "U+FE022"]],
-  "🕕": ["U+1F555", "clock face six oclock", "1f555", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E029"], ["󾀣", "U+FE023"]],
-  "🕖": ["U+1F556", "clock face seven oclock", "1f556", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02A"], ["󾀤", "U+FE024"]],
-  "🕗": ["U+1F557", "clock face eight oclock", "1f557", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02B"], ["󾀥", "U+FE025"]],
-  "🕘": ["U+1F558", "clock face nine oclock", "1f558", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02C"], ["󾀦", "U+FE026"]],
-  "🕙": ["U+1F559", "clock face ten oclock", "1f559", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02D"], ["󾀧", "U+FE027"]],
-  "🕚": ["U+1F55A", "clock face eleven oclock", "1f55a", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02E"], ["󾀨", "U+FE028"]],
-  "🕛": ["U+1F55B", "clock face twelve oclock", "1f55b", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02F"], ["󾀩", "U+FE029"]],
-  "⌚": ["U+231A", "watch", "231a", ["", "U+E71F"], ["", "U+E57A"], ["-", "-"], ["󾀝", "U+FE01D"]],
-  "⌛": ["U+231B", "hourglass", "231b", ["", "U+E71C"], ["", "U+E57B"], ["-", "-"], ["󾀜", "U+FE01C"]],
-  "⏰": ["U+23F0", "alarm clock", "23f0", ["", "U+E6BA"], ["", "U+E594"], ["", "U+E02D"], ["󾀪", "U+FE02A"]],
-  "⏳": ["U+23F3", "hourglass with flowing sand", "23f3", ["", "U+E71C"], ["", "U+E47C"], ["-", "-"], ["󾀛", "U+FE01B"]],
-  "♈": ["U+2648", "aries", "2648", ["", "U+E646"], ["", "U+E48F"], ["", "U+E23F"], ["󾀫", "U+FE02B"]],
-  "♉": ["U+2649", "taurus", "2649", ["", "U+E647"], ["", "U+E490"], ["", "U+E240"], ["󾀬", "U+FE02C"]],
-  "♊": ["U+264A", "gemini", "264a", ["", "U+E648"], ["", "U+E491"], ["", "U+E241"], ["󾀭", "U+FE02D"]],
-  "♋": ["U+264B", "cancer", "264b", ["", "U+E649"], ["", "U+E492"], ["", "U+E242"], ["󾀮", "U+FE02E"]],
-  "♌": ["U+264C", "leo", "264c", ["", "U+E64A"], ["", "U+E493"], ["", "U+E243"], ["󾀯", "U+FE02F"]],
-  "♍": ["U+264D", "virgo", "264d", ["", "U+E64B"], ["", "U+E494"], ["", "U+E244"], ["󾀰", "U+FE030"]],
-  "♎": ["U+264E", "libra", "264e", ["", "U+E64C"], ["", "U+E495"], ["", "U+E245"], ["󾀱", "U+FE031"]],
-  "♏": ["U+264F", "scorpius", "264f", ["", "U+E64D"], ["", "U+E496"], ["", "U+E246"], ["󾀲", "U+FE032"]],
-  "♐": ["U+2650", "sagittarius", "2650", ["", "U+E64E"], ["", "U+E497"], ["", "U+E247"], ["󾀳", "U+FE033"]],
-  "♑": ["U+2651", "capricorn", "2651", ["", "U+E64F"], ["", "U+E498"], ["", "U+E248"], ["󾀴", "U+FE034"]],
-  "♒": ["U+2652", "aquarius", "2652", ["", "U+E650"], ["", "U+E499"], ["", "U+E249"], ["󾀵", "U+FE035"]],
-  "♓": ["U+2653", "pisces", "2653", ["", "U+E651"], ["", "U+E49A"], ["", "U+E24A"], ["󾀶", "U+FE036"]],
-  "⛎": ["U+26CE", "ophiuchus", "26ce", ["-", "-"], ["", "U+E49B"], ["", "U+E24B"], ["󾀷", "U+FE037"]],
-  "🍀": ["U+1F340", "four leaf clover", "1f340", ["", "U+E741"], ["", "U+E513"], ["", "U+E110"], ["󾀼", "U+FE03C"]],
-  "🌷": ["U+1F337", "tulip", "1f337", ["", "U+E743"], ["", "U+E4E4"], ["", "U+E304"], ["󾀽", "U+FE03D"]],
-  "🌱": ["U+1F331", "seedling", "1f331", ["", "U+E746"], ["", "U+EB7D"], ["", "U+E110"], ["󾀾", "U+FE03E"]],
-  "🍁": ["U+1F341", "maple leaf", "1f341", ["", "U+E747"], ["", "U+E4CE"], ["", "U+E118"], ["󾀿", "U+FE03F"]],
-  "🌸": ["U+1F338", "cherry blossom", "1f338", ["", "U+E748"], ["", "U+E4CA"], ["", "U+E030"], ["󾁀", "U+FE040"]],
-  "🌹": ["U+1F339", "rose", "1f339", ["-", "-"], ["", "U+E5BA"], ["", "U+E032"], ["󾁁", "U+FE041"]],
-  "🍂": ["U+1F342", "fallen leaf", "1f342", ["", "U+E747"], ["", "U+E5CD"], ["", "U+E119"], ["󾁂", "U+FE042"]],
-  "🍃": ["U+1F343", "leaf fluttering in wind", "1f343", ["-", "-"], ["", "U+E5CD"], ["", "U+E447"], ["󾁃", "U+FE043"]],
-  "🌺": ["U+1F33A", "hibiscus", "1f33a", ["-", "-"], ["", "U+EA94"], ["", "U+E303"], ["󾁅", "U+FE045"]],
-  "🌻": ["U+1F33B", "sunflower", "1f33b", ["-", "-"], ["", "U+E4E3"], ["", "U+E305"], ["󾁆", "U+FE046"]],
-  "🌴": ["U+1F334", "palm tree", "1f334", ["-", "-"], ["", "U+E4E2"], ["", "U+E307"], ["󾁇", "U+FE047"]],
-  "🌵": ["U+1F335", "cactus", "1f335", ["-", "-"], ["", "U+EA96"], ["", "U+E308"], ["󾁈", "U+FE048"]],
-  "🌾": ["U+1F33E", "ear of rice", "1f33e", ["-", "-"], ["-", "-"], ["", "U+E444"], ["󾁉", "U+FE049"]],
-  "🌽": ["U+1F33D", "ear of maize", "1f33d", ["-", "-"], ["", "U+EB36"], ["-", "-"], ["󾁊", "U+FE04A"]],
-  "🍄": ["U+1F344", "mushroom", "1f344", ["-", "-"], ["", "U+EB37"], ["-", "-"], ["󾁋", "U+FE04B"]],
-  "🌰": ["U+1F330", "chestnut", "1f330", ["-", "-"], ["", "U+EB38"], ["-", "-"], ["󾁌", "U+FE04C"]],
-  "🌼": ["U+1F33C", "blossom", "1f33c", ["-", "-"], ["", "U+EB49"], ["", "U+E305"], ["󾁍", "U+FE04D"]],
-  "🌿": ["U+1F33F", "herb", "1f33f", ["", "U+E741"], ["", "U+EB82"], ["", "U+E110"], ["󾁎", "U+FE04E"]],
-  "🍒": ["U+1F352", "cherries", "1f352", ["", "U+E742"], ["", "U+E4D2"], ["-", "-"], ["󾁏", "U+FE04F"]],
-  "🍌": ["U+1F34C", "banana", "1f34c", ["", "U+E744"], ["", "U+EB35"], ["-", "-"], ["󾁐", "U+FE050"]],
-  "🍎": ["U+1F34E", "red apple", "1f34e", ["", "U+E745"], ["", "U+EAB9"], ["", "U+E345"], ["󾁑", "U+FE051"]],
-  "🍊": ["U+1F34A", "tangerine", "1f34a", ["-", "-"], ["", "U+EABA"], ["", "U+E346"], ["󾁒", "U+FE052"]],
-  "🍓": ["U+1F353", "strawberry", "1f353", ["-", "-"], ["", "U+E4D4"], ["", "U+E347"], ["󾁓", "U+FE053"]],
-  "🍉": ["U+1F349", "watermelon", "1f349", ["-", "-"], ["", "U+E4CD"], ["", "U+E348"], ["󾁔", "U+FE054"]],
-  "🍅": ["U+1F345", "tomato", "1f345", ["-", "-"], ["", "U+EABB"], ["", "U+E349"], ["󾁕", "U+FE055"]],
-  "🍆": ["U+1F346", "aubergine", "1f346", ["-", "-"], ["", "U+EABC"], ["", "U+E34A"], ["󾁖", "U+FE056"]],
-  "🍈": ["U+1F348", "melon", "1f348", ["-", "-"], ["", "U+EB32"], ["-", "-"], ["󾁗", "U+FE057"]],
-  "🍍": ["U+1F34D", "pineapple", "1f34d", ["-", "-"], ["", "U+EB33"], ["-", "-"], ["󾁘", "U+FE058"]],
-  "🍇": ["U+1F347", "grapes", "1f347", ["-", "-"], ["", "U+EB34"], ["-", "-"], ["󾁙", "U+FE059"]],
-  "🍑": ["U+1F351", "peach", "1f351", ["-", "-"], ["", "U+EB39"], ["-", "-"], ["󾁚", "U+FE05A"]],
-  "🍏": ["U+1F34F", "green apple", "1f34f", ["", "U+E745"], ["", "U+EB5A"], ["", "U+E345"], ["󾁛", "U+FE05B"]],
-  "👀": ["U+1F440", "eyes", "1f440", ["", "U+E691"], ["", "U+E5A4"], ["", "U+E419"], ["󾆐", "U+FE190"]],
-  "👂": ["U+1F442", "ear", "1f442", ["", "U+E692"], ["", "U+E5A5"], ["", "U+E41B"], ["󾆑", "U+FE191"]],
-  "👃": ["U+1F443", "nose", "1f443", ["-", "-"], ["", "U+EAD0"], ["", "U+E41A"], ["󾆒", "U+FE192"]],
-  "👄": ["U+1F444", "mouth", "1f444", ["", "U+E6F9"], ["", "U+EAD1"], ["", "U+E41C"], ["󾆓", "U+FE193"]],
-  "👅": ["U+1F445", "tongue", "1f445", ["", "U+E728"], ["", "U+EB47"], ["", "U+E409"], ["󾆔", "U+FE194"]],
-  "💄": ["U+1F484", "lipstick", "1f484", ["", "U+E710"], ["", "U+E509"], ["", "U+E31C"], ["󾆕", "U+FE195"]],
-  "💅": ["U+1F485", "nail polish", "1f485", ["-", "-"], ["", "U+EAA0"], ["", "U+E31D"], ["󾆖", "U+FE196"]],
-  "💆": ["U+1F486", "face massage", "1f486", ["-", "-"], ["", "U+E50B"], ["", "U+E31E"], ["󾆗", "U+FE197"]],
-  "💇": ["U+1F487", "haircut", "1f487", ["", "U+E675"], ["", "U+EAA1"], ["", "U+E31F"], ["󾆘", "U+FE198"]],
-  "💈": ["U+1F488", "barber pole", "1f488", ["-", "-"], ["", "U+EAA2"], ["", "U+E320"], ["󾆙", "U+FE199"]],
-  "👤": ["U+1F464", "bust in silhouette", "1f464", ["", "U+E6B1"], ["-", "-"], ["-", "-"], ["󾆚", "U+FE19A"]],
-  "👦": ["U+1F466", "boy", "1f466", ["", "U+E6F0"], ["", "U+E4FC"], ["", "U+E001"], ["󾆛", "U+FE19B"]],
-  "👧": ["U+1F467", "girl", "1f467", ["", "U+E6F0"], ["", "U+E4FA"], ["", "U+E002"], ["󾆜", "U+FE19C"]],
-  "👨": ["U+1F468", "man", "1f468", ["", "U+E6F0"], ["", "U+E4FC"], ["", "U+E004"], ["󾆝", "U+FE19D"]],
-  "👩": ["U+1F469", "woman", "1f469", ["", "U+E6F0"], ["", "U+E4FA"], ["", "U+E005"], ["󾆞", "U+FE19E"]],
-  "👪": ["U+1F46A", "family", "1f46a", ["-", "-"], ["", "U+E501"], ["-", "-"], ["󾆟", "U+FE19F"]],
-  "👫": ["U+1F46B", "man and woman holding hands", "1f46b", ["-", "-"], ["-", "-"], ["", "U+E428"], ["󾆠", "U+FE1A0"]],
-  "👮": ["U+1F46E", "police officer", "1f46e", ["-", "-"], ["", "U+E5DD"], ["", "U+E152"], ["󾆡", "U+FE1A1"]],
-  "👯": ["U+1F46F", "woman with bunny ears", "1f46f", ["-", "-"], ["", "U+EADB"], ["", "U+E429"], ["󾆢", "U+FE1A2"]],
-  "👰": ["U+1F470", "bride with veil", "1f470", ["-", "-"], ["", "U+EAE9"], ["-", "-"], ["󾆣", "U+FE1A3"]],
-  "👱": ["U+1F471", "person with blond hair", "1f471", ["-", "-"], ["", "U+EB13"], ["", "U+E515"], ["󾆤", "U+FE1A4"]],
-  "👲": ["U+1F472", "man with gua pi mao", "1f472", ["-", "-"], ["", "U+EB14"], ["", "U+E516"], ["󾆥", "U+FE1A5"]],
-  "👳": ["U+1F473", "man with turban", "1f473", ["-", "-"], ["", "U+EB15"], ["", "U+E517"], ["󾆦", "U+FE1A6"]],
-  "👴": ["U+1F474", "older man", "1f474", ["-", "-"], ["", "U+EB16"], ["", "U+E518"], ["󾆧", "U+FE1A7"]],
-  "👵": ["U+1F475", "older woman", "1f475", ["-", "-"], ["", "U+EB17"], ["", "U+E519"], ["󾆨", "U+FE1A8"]],
-  "👶": ["U+1F476", "baby", "1f476", ["-", "-"], ["", "U+EB18"], ["", "U+E51A"], ["󾆩", "U+FE1A9"]],
-  "👷": ["U+1F477", "construction worker", "1f477", ["-", "-"], ["", "U+EB19"], ["", "U+E51B"], ["󾆪", "U+FE1AA"]],
-  "👸": ["U+1F478", "princess", "1f478", ["-", "-"], ["", "U+EB1A"], ["", "U+E51C"], ["󾆫", "U+FE1AB"]],
-  "👹": ["U+1F479", "japanese ogre", "1f479", ["-", "-"], ["", "U+EB44"], ["-", "-"], ["󾆬", "U+FE1AC"]],
-  "👺": ["U+1F47A", "japanese goblin", "1f47a", ["-", "-"], ["", "U+EB45"], ["-", "-"], ["󾆭", "U+FE1AD"]],
-  "👻": ["U+1F47B", "ghost", "1f47b", ["-", "-"], ["", "U+E4CB"], ["", "U+E11B"], ["󾆮", "U+FE1AE"]],
-  "👼": ["U+1F47C", "baby angel", "1f47c", ["-", "-"], ["", "U+E5BF"], ["", "U+E04E"], ["󾆯", "U+FE1AF"]],
-  "👽": ["U+1F47D", "extraterrestrial alien", "1f47d", ["-", "-"], ["", "U+E50E"], ["", "U+E10C"], ["󾆰", "U+FE1B0"]],
-  "👾": ["U+1F47E", "alien monster", "1f47e", ["-", "-"], ["", "U+E4EC"], ["", "U+E12B"], ["󾆱", "U+FE1B1"]],
-  "👿": ["U+1F47F", "imp", "1f47f", ["-", "-"], ["", "U+E4EF"], ["", "U+E11A"], ["󾆲", "U+FE1B2"]],
-  "💀": ["U+1F480", "skull", "1f480", ["-", "-"], ["", "U+E4F8"], ["", "U+E11C"], ["󾆳", "U+FE1B3"]],
-  "💁": ["U+1F481", "information desk person", "1f481", ["-", "-"], ["-", "-"], ["", "U+E253"], ["󾆴", "U+FE1B4"]],
-  "💂": ["U+1F482", "guardsman", "1f482", ["-", "-"], ["-", "-"], ["", "U+E51E"], ["󾆵", "U+FE1B5"]],
-  "💃": ["U+1F483", "dancer", "1f483", ["-", "-"], ["", "U+EB1C"], ["", "U+E51F"], ["󾆶", "U+FE1B6"]],
-  "🐌": ["U+1F40C", "snail", "1f40c", ["", "U+E74E"], ["", "U+EB7E"], ["-", "-"], ["󾆹", "U+FE1B9"]],
-  "🐍": ["U+1F40D", "snake", "1f40d", ["-", "-"], ["", "U+EB22"], ["", "U+E52D"], ["󾇓", "U+FE1D3"]],
-  "🐎": ["U+1F40E", "horse", "1f40e", ["", "U+E754"], ["", "U+E4D8"], ["", "U+E134"], ["󾟜", "U+FE7DC"]],
-  "🐊": ["U+1F40A", "crocodile", "1f40a", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐋": ["U+1F40B", "whale", "1f40b", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐉": ["U+1F409", "dragon", "1f409", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐈": ["U+1F408", "cat", "1f408", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐇": ["U+1F407", "rabbit", "1f407", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐆": ["U+1F406", "leopard", "1f406", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐅": ["U+1F405", "tiger", "1f405", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐄": ["U+1F404", "cow", "1f404", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐃": ["U+1F403", "water buffalo", "1f403", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐂": ["U+1F402", "ox", "1f402", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐁": ["U+1F401", "mouse", "1f401", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐀": ["U+1F400", "rat", "1f400", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐔": ["U+1F414", "chicken", "1f414", ["-", "-"], ["", "U+EB23"], ["", "U+E52E"], ["󾇔", "U+FE1D4"]],
-  "🐗": ["U+1F417", "boar", "1f417", ["-", "-"], ["", "U+EB24"], ["", "U+E52F"], ["󾇕", "U+FE1D5"]],
-  "🐫": ["U+1F42B", "bactrian camel", "1f42b", ["-", "-"], ["", "U+EB25"], ["", "U+E530"], ["󾇖", "U+FE1D6"]],
-  "🐘": ["U+1F418", "elephant", "1f418", ["-", "-"], ["", "U+EB1F"], ["", "U+E526"], ["󾇌", "U+FE1CC"]],
-  "🐨": ["U+1F428", "koala", "1f428", ["-", "-"], ["", "U+EB20"], ["", "U+E527"], ["󾇍", "U+FE1CD"]],
-  "🐒": ["U+1F412", "monkey", "1f412", ["-", "-"], ["", "U+E4D9"], ["", "U+E528"], ["󾇎", "U+FE1CE"]],
-  "🐑": ["U+1F411", "sheep", "1f411", ["-", "-"], ["", "U+E48F"], ["", "U+E529"], ["󾇏", "U+FE1CF"]],
-  "🐙": ["U+1F419", "octopus", "1f419", ["-", "-"], ["", "U+E5C7"], ["", "U+E10A"], ["󾇅", "U+FE1C5"]],
-  "🐚": ["U+1F41A", "spiral shell", "1f41a", ["-", "-"], ["", "U+EAEC"], ["", "U+E441"], ["󾇆", "U+FE1C6"]],
-  "🐛": ["U+1F41B", "bug", "1f41b", ["-", "-"], ["", "U+EB1E"], ["", "U+E525"], ["󾇋", "U+FE1CB"]],
-  "🐜": ["U+1F41C", "ant", "1f41c", ["-", "-"], ["", "U+E4DD"], ["-", "-"], ["󾇚", "U+FE1DA"]],
-  "🐝": ["U+1F41D", "honeybee", "1f41d", ["-", "-"], ["", "U+EB57"], ["-", "-"], ["󾇡", "U+FE1E1"]],
-  "🐞": ["U+1F41E", "lady beetle", "1f41e", ["-", "-"], ["", "U+EB58"], ["-", "-"], ["󾇢", "U+FE1E2"]],
-  "🐠": ["U+1F420", "tropical fish", "1f420", ["", "U+E751"], ["", "U+EB1D"], ["", "U+E522"], ["󾇉", "U+FE1C9"]],
-  "🐡": ["U+1F421", "blowfish", "1f421", ["", "U+E751"], ["", "U+E4D3"], ["", "U+E019"], ["󾇙", "U+FE1D9"]],
-  "🐢": ["U+1F422", "turtle", "1f422", ["-", "-"], ["", "U+E5D4"], ["-", "-"], ["󾇜", "U+FE1DC"]],
-  "🐤": ["U+1F424", "baby chick", "1f424", ["", "U+E74F"], ["", "U+E4E0"], ["", "U+E523"], ["󾆺", "U+FE1BA"]],
-  "🐥": ["U+1F425", "front-facing baby chick", "1f425", ["", "U+E74F"], ["", "U+EB76"], ["", "U+E523"], ["󾆻", "U+FE1BB"]],
-  "🐦": ["U+1F426", "bird", "1f426", ["", "U+E74F"], ["", "U+E4E0"], ["", "U+E521"], ["󾇈", "U+FE1C8"]],
-  "🐣": ["U+1F423", "hatching chick", "1f423", ["", "U+E74F"], ["", "U+E5DB"], ["", "U+E523"], ["󾇝", "U+FE1DD"]],
-  "🐧": ["U+1F427", "penguin", "1f427", ["", "U+E750"], ["", "U+E4DC"], ["", "U+E055"], ["󾆼", "U+FE1BC"]],
-  "🐩": ["U+1F429", "poodle", "1f429", ["", "U+E6A1"], ["", "U+E4DF"], ["", "U+E052"], ["󾇘", "U+FE1D8"]],
-  "🐟": ["U+1F41F", "fish", "1f41f", ["", "U+E751"], ["", "U+E49A"], ["", "U+E019"], ["󾆽", "U+FE1BD"]],
-  "🐬": ["U+1F42C", "dolphin", "1f42c", ["-", "-"], ["", "U+EB1B"], ["", "U+E520"], ["󾇇", "U+FE1C7"]],
-  "🐭": ["U+1F42D", "mouse face", "1f42d", ["-", "-"], ["", "U+E5C2"], ["", "U+E053"], ["󾇂", "U+FE1C2"]],
-  "🐯": ["U+1F42F", "tiger face", "1f42f", ["-", "-"], ["", "U+E5C0"], ["", "U+E050"], ["󾇀", "U+FE1C0"]],
-  "🐱": ["U+1F431", "cat face", "1f431", ["", "U+E6A2"], ["", "U+E4DB"], ["", "U+E04F"], ["󾆸", "U+FE1B8"]],
-  "🐳": ["U+1F433", "spouting whale", "1f433", ["-", "-"], ["", "U+E470"], ["", "U+E054"], ["󾇃", "U+FE1C3"]],
-  "🐴": ["U+1F434", "horse face", "1f434", ["", "U+E754"], ["", "U+E4D8"], ["", "U+E01A"], ["󾆾", "U+FE1BE"]],
-  "🐵": ["U+1F435", "monkey face", "1f435", ["-", "-"], ["", "U+E4D9"], ["", "U+E109"], ["󾇄", "U+FE1C4"]],
-  "🐶": ["U+1F436", "dog face", "1f436", ["", "U+E6A1"], ["", "U+E4E1"], ["", "U+E052"], ["󾆷", "U+FE1B7"]],
-  "🐷": ["U+1F437", "pig face", "1f437", ["", "U+E755"], ["", "U+E4DE"], ["", "U+E10B"], ["󾆿", "U+FE1BF"]],
-  "🐻": ["U+1F43B", "bear face", "1f43b", ["-", "-"], ["", "U+E5C1"], ["", "U+E051"], ["󾇁", "U+FE1C1"]],
-  "🐹": ["U+1F439", "hamster face", "1f439", ["-", "-"], ["-", "-"], ["", "U+E524"], ["󾇊", "U+FE1CA"]],
-  "🐺": ["U+1F43A", "wolf face", "1f43a", ["", "U+E6A1"], ["", "U+E4E1"], ["", "U+E52A"], ["󾇐", "U+FE1D0"]],
-  "🐮": ["U+1F42E", "cow face", "1f42e", ["-", "-"], ["", "U+EB21"], ["", "U+E52B"], ["󾇑", "U+FE1D1"]],
-  "🐰": ["U+1F430", "rabbit face", "1f430", ["-", "-"], ["", "U+E4D7"], ["", "U+E52C"], ["󾇒", "U+FE1D2"]],
-  "🐸": ["U+1F438", "frog face", "1f438", ["-", "-"], ["", "U+E4DA"], ["", "U+E531"], ["󾇗", "U+FE1D7"]],
-  "🐾": ["U+1F43E", "paw prints", "1f43e", ["", "U+E698"], ["", "U+E4EE"], ["", "U+E536"], ["󾇛", "U+FE1DB"]],
-  "🐲": ["U+1F432", "dragon face", "1f432", ["-", "-"], ["", "U+EB3F"], ["-", "-"], ["󾇞", "U+FE1DE"]],
-  "🐼": ["U+1F43C", "panda face", "1f43c", ["-", "-"], ["", "U+EB46"], ["-", "-"], ["󾇟", "U+FE1DF"]],
-  "🐽": ["U+1F43D", "pig nose", "1f43d", ["", "U+E755"], ["", "U+EB48"], ["", "U+E10B"], ["󾇠", "U+FE1E0"]],
-  "😠": ["U+1F620", "angry face", "1f620", ["", "U+E6F1"], ["", "U+E472"], ["", "U+E059"], ["󾌠", "U+FE320"]],
-  "😩": ["U+1F629", "weary face", "1f629", ["", "U+E6F3"], ["", "U+EB67"], ["", "U+E403"], ["󾌡", "U+FE321"]],
-  "😲": ["U+1F632", "astonished face", "1f632", ["", "U+E6F4"], ["", "U+EACA"], ["", "U+E410"], ["󾌢", "U+FE322"]],
-  "😞": ["U+1F61E", "disappointed face", "1f61e", ["", "U+E6F2"], ["", "U+EAC0"], ["", "U+E058"], ["󾌣", "U+FE323"]],
-  "😵": ["U+1F635", "dizzy face", "1f635", ["", "U+E6F4"], ["", "U+E5AE"], ["", "U+E406"], ["󾌤", "U+FE324"]],
-  "😰": ["U+1F630", "face with open mouth and cold sweat", "1f630", ["", "U+E723"], ["", "U+EACB"], ["", "U+E40F"], ["󾌥", "U+FE325"]],
-  "😒": ["U+1F612", "unamused face", "1f612", ["", "U+E725"], ["", "U+EAC9"], ["", "U+E40E"], ["󾌦", "U+FE326"]],
-  "😍": ["U+1F60D", "smiling face with heart-shaped eyes", "1f60d", ["", "U+E726"], ["", "U+E5C4"], ["", "U+E106"], ["󾌧", "U+FE327"]],
-  "😤": ["U+1F624", "face with look of triumph", "1f624", ["", "U+E753"], ["", "U+EAC1"], ["", "U+E404"], ["󾌨", "U+FE328"]],
-  "😜": ["U+1F61C", "face with stuck-out tongue and winking eye", "1f61c", ["", "U+E728"], ["", "U+E4E7"], ["", "U+E105"], ["󾌩", "U+FE329"]],
-  "😝": ["U+1F61D", "face with stuck-out tongue and tightly-closed eyes", "1f61d", ["", "U+E728"], ["", "U+E4E7"], ["", "U+E409"], ["󾌪", "U+FE32A"]],
-  "😋": ["U+1F60B", "face savouring delicious food", "1f60b", ["", "U+E752"], ["", "U+EACD"], ["", "U+E056"], ["󾌫", "U+FE32B"]],
-  "😘": ["U+1F618", "face throwing a kiss", "1f618", ["", "U+E726"], ["", "U+EACF"], ["", "U+E418"], ["󾌬", "U+FE32C"]],
-  "😚": ["U+1F61A", "kissing face with closed eyes", "1f61a", ["", "U+E726"], ["", "U+EACE"], ["", "U+E417"], ["󾌭", "U+FE32D"]],
-  "😷": ["U+1F637", "face with medical mask", "1f637", ["-", "-"], ["", "U+EAC7"], ["", "U+E40C"], ["󾌮", "U+FE32E"]],
-  "😳": ["U+1F633", "flushed face", "1f633", ["", "U+E72A"], ["", "U+EAC8"], ["", "U+E40D"], ["󾌯", "U+FE32F"]],
-  "😃": ["U+1F603", "smiling face with open mouth", "1f603", ["", "U+E6F0"], ["", "U+E471"], ["", "U+E057"], ["󾌰", "U+FE330"]],
-  "😅": ["U+1F605", "smiling face with open mouth and cold sweat", "1f605", ["", "U+E722"], ["", "U+E471 U+E5B1"], ["", "U+E415 U+E331"], ["󾌱", "U+FE331"]],
-  "😆": ["U+1F606", "smiling face with open mouth and tightly-closed eyes", "1f606", ["", "U+E72A"], ["", "U+EAC5"], ["", "U+E40A"], ["󾌲", "U+FE332"]],
-  "😁": ["U+1F601", "grinning face with smiling eyes", "1f601", ["", "U+E753"], ["", "U+EB80"], ["", "U+E404"], ["󾌳", "U+FE333"]],
-  "😂": ["U+1F602", "face with tears of joy", "1f602", ["", "U+E72A"], ["", "U+EB64"], ["", "U+E412"], ["󾌴", "U+FE334"]],
-  "😊": ["U+1F60A", "smiling face with smiling eyes", "1f60a", ["", "U+E6F0"], ["", "U+EACD"], ["", "U+E056"], ["󾌵", "U+FE335"]],
-  "☺": ["U+263A", "white smiling face", "263a", ["", "U+E6F0"], ["", "U+E4FB"], ["", "U+E414"], ["󾌶", "U+FE336"]],
-  "😄": ["U+1F604", "smiling face with open mouth and smiling eyes", "1f604", ["", "U+E6F0"], ["", "U+E471"], ["", "U+E415"], ["󾌸", "U+FE338"]],
-  "😢": ["U+1F622", "crying face", "1f622", ["", "U+E72E"], ["", "U+EB69"], ["", "U+E413"], ["󾌹", "U+FE339"]],
-  "😭": ["U+1F62D", "loudly crying face", "1f62d", ["", "U+E72D"], ["", "U+E473"], ["", "U+E411"], ["󾌺", "U+FE33A"]],
-  "😨": ["U+1F628", "fearful face", "1f628", ["", "U+E757"], ["", "U+EAC6"], ["", "U+E40B"], ["󾌻", "U+FE33B"]],
-  "😣": ["U+1F623", "persevering face", "1f623", ["", "U+E72B"], ["", "U+EAC2"], ["", "U+E406"], ["󾌼", "U+FE33C"]],
-  "😡": ["U+1F621", "pouting face", "1f621", ["", "U+E724"], ["", "U+EB5D"], ["", "U+E416"], ["󾌽", "U+FE33D"]],
-  "😌": ["U+1F60C", "relieved face", "1f60c", ["", "U+E721"], ["", "U+EAC5"], ["", "U+E40A"], ["󾌾", "U+FE33E"]],
-  "😖": ["U+1F616", "confounded face", "1f616", ["", "U+E6F3"], ["", "U+EAC3"], ["", "U+E407"], ["󾌿", "U+FE33F"]],
-  "😔": ["U+1F614", "pensive face", "1f614", ["", "U+E720"], ["", "U+EAC0"], ["", "U+E403"], ["󾍀", "U+FE340"]],
-  "😱": ["U+1F631", "face screaming in fear", "1f631", ["", "U+E757"], ["", "U+E5C5"], ["", "U+E107"], ["󾍁", "U+FE341"]],
-  "😪": ["U+1F62A", "sleepy face", "1f62a", ["", "U+E701"], ["", "U+EAC4"], ["", "U+E408"], ["󾍂", "U+FE342"]],
-  "😏": ["U+1F60F", "smirking face", "1f60f", ["", "U+E72C"], ["", "U+EABF"], ["", "U+E402"], ["󾍃", "U+FE343"]],
-  "😓": ["U+1F613", "face with cold sweat", "1f613", ["", "U+E723"], ["", "U+E5C6"], ["", "U+E108"], ["󾍄", "U+FE344"]],
-  "😥": ["U+1F625", "disappointed but relieved face", "1f625", ["", "U+E723"], ["", "U+E5C6"], ["", "U+E401"], ["󾍅", "U+FE345"]],
-  "😫": ["U+1F62B", "tired face", "1f62b", ["", "U+E72B"], ["", "U+E474"], ["", "U+E406"], ["󾍆", "U+FE346"]],
-  "😉": ["U+1F609", "winking face", "1f609", ["", "U+E729"], ["", "U+E5C3"], ["", "U+E405"], ["󾍇", "U+FE347"]],
-  "😺": ["U+1F63A", "smiling cat face with open mouth", "1f63a", ["", "U+E6F0"], ["", "U+EB61"], ["", "U+E057"], ["󾍈", "U+FE348"]],
-  "😸": ["U+1F638", "grinning cat face with smiling eyes", "1f638", ["", "U+E753"], ["", "U+EB7F"], ["", "U+E404"], ["󾍉", "U+FE349"]],
-  "😹": ["U+1F639", "cat face with tears of joy", "1f639", ["", "U+E72A"], ["", "U+EB63"], ["", "U+E412"], ["󾍊", "U+FE34A"]],
-  "😽": ["U+1F63D", "kissing cat face with closed eyes", "1f63d", ["", "U+E726"], ["", "U+EB60"], ["", "U+E418"], ["󾍋", "U+FE34B"]],
-  "😻": ["U+1F63B", "smiling cat face with heart-shaped eyes", "1f63b", ["", "U+E726"], ["", "U+EB65"], ["", "U+E106"], ["󾍌", "U+FE34C"]],
-  "😿": ["U+1F63F", "crying cat face", "1f63f", ["", "U+E72E"], ["", "U+EB68"], ["", "U+E413"], ["󾍍", "U+FE34D"]],
-  "😾": ["U+1F63E", "pouting cat face", "1f63e", ["", "U+E724"], ["", "U+EB5E"], ["", "U+E416"], ["󾍎", "U+FE34E"]],
-  "😼": ["U+1F63C", "cat face with wry smile", "1f63c", ["", "U+E753"], ["", "U+EB6A"], ["", "U+E404"], ["󾍏", "U+FE34F"]],
-  "🙀": ["U+1F640", "weary cat face", "1f640", ["", "U+E6F3"], ["", "U+EB66"], ["", "U+E403"], ["󾍐", "U+FE350"]],
-  "🙅": ["U+1F645", "face with no good gesture", "1f645", ["", "U+E72F"], ["", "U+EAD7"], ["", "U+E423"], ["󾍑", "U+FE351"]],
-  "🙆": ["U+1F646", "face with ok gesture", "1f646", ["", "U+E70B"], ["", "U+EAD8"], ["", "U+E424"], ["󾍒", "U+FE352"]],
-  "🙇": ["U+1F647", "person bowing deeply", "1f647", ["-", "-"], ["", "U+EAD9"], ["", "U+E426"], ["󾍓", "U+FE353"]],
-  "🙈": ["U+1F648", "see-no-evil monkey", "1f648", ["-", "-"], ["", "U+EB50"], ["-", "-"], ["󾍔", "U+FE354"]],
-  "🙊": ["U+1F64A", "speak-no-evil monkey", "1f64a", ["-", "-"], ["", "U+EB51"], ["-", "-"], ["󾍕", "U+FE355"]],
-  "🙉": ["U+1F649", "hear-no-evil monkey", "1f649", ["-", "-"], ["", "U+EB52"], ["-", "-"], ["󾍖", "U+FE356"]],
-  "🙋": ["U+1F64B", "happy person raising one hand", "1f64b", ["-", "-"], ["", "U+EB85"], ["", "U+E012"], ["󾍗", "U+FE357"]],
-  "🙌": ["U+1F64C", "person raising both hands in celebration", "1f64c", ["-", "-"], ["", "U+EB86"], ["", "U+E427"], ["󾍘", "U+FE358"]],
-  "🙍": ["U+1F64D", "person frowning", "1f64d", ["", "U+E6F3"], ["", "U+EB87"], ["", "U+E403"], ["󾍙", "U+FE359"]],
-  "🙎": ["U+1F64E", "person with pouting face", "1f64e", ["", "U+E6F1"], ["", "U+EB88"], ["", "U+E416"], ["󾍚", "U+FE35A"]],
-  "🙏": ["U+1F64F", "person with folded hands", "1f64f", ["-", "-"], ["", "U+EAD2"], ["", "U+E41D"], ["󾍛", "U+FE35B"]],
-  "🏠": ["U+1F3E0", "house building", "1f3e0", ["", "U+E663"], ["", "U+E4AB"], ["", "U+E036"], ["󾒰", "U+FE4B0"]],
-  "🏡": ["U+1F3E1", "house with garden", "1f3e1", ["", "U+E663"], ["", "U+EB09"], ["", "U+E036"], ["󾒱", "U+FE4B1"]],
-  "🏢": ["U+1F3E2", "office building", "1f3e2", ["", "U+E664"], ["", "U+E4AD"], ["", "U+E038"], ["󾒲", "U+FE4B2"]],
-  "🏣": ["U+1F3E3", "japanese post office", "1f3e3", ["", "U+E665"], ["", "U+E5DE"], ["", "U+E153"], ["󾒳", "U+FE4B3"]],
-  "🏥": ["U+1F3E5", "hospital", "1f3e5", ["", "U+E666"], ["", "U+E5DF"], ["", "U+E155"], ["󾒴", "U+FE4B4"]],
-  "🏦": ["U+1F3E6", "bank", "1f3e6", ["", "U+E667"], ["", "U+E4AA"], ["", "U+E14D"], ["󾒵", "U+FE4B5"]],
-  "🏧": ["U+1F3E7", "automated teller machine", "1f3e7", ["", "U+E668"], ["", "U+E4A3"], ["", "U+E154"], ["󾒶", "U+FE4B6"]],
-  "🏨": ["U+1F3E8", "hotel", "1f3e8", ["", "U+E669"], ["", "U+EA81"], ["", "U+E158"], ["󾒷", "U+FE4B7"]],
-  "🏩": ["U+1F3E9", "love hotel", "1f3e9", ["", "U+E669 U+E6EF"], ["", "U+EAF3"], ["", "U+E501"], ["󾒸", "U+FE4B8"]],
-  "🏪": ["U+1F3EA", "convenience store", "1f3ea", ["", "U+E66A"], ["", "U+E4A4"], ["", "U+E156"], ["󾒹", "U+FE4B9"]],
-  "🏫": ["U+1F3EB", "school", "1f3eb", ["", "U+E73E"], ["", "U+EA80"], ["", "U+E157"], ["󾒺", "U+FE4BA"]],
-  "⛪": ["U+26EA", "church", "26ea", ["-", "-"], ["", "U+E5BB"], ["", "U+E037"], ["󾒻", "U+FE4BB"]],
-  "⛲": ["U+26F2", "fountain", "26f2", ["-", "-"], ["", "U+E5CF"], ["", "U+E121"], ["󾒼", "U+FE4BC"]],
-  "🏬": ["U+1F3EC", "department store", "1f3ec", ["-", "-"], ["", "U+EAF6"], ["", "U+E504"], ["󾒽", "U+FE4BD"]],
-  "🏯": ["U+1F3EF", "japanese castle", "1f3ef", ["-", "-"], ["", "U+EAF7"], ["", "U+E505"], ["󾒾", "U+FE4BE"]],
-  "🏰": ["U+1F3F0", "european castle", "1f3f0", ["-", "-"], ["", "U+EAF8"], ["", "U+E506"], ["󾒿", "U+FE4BF"]],
-  "🏭": ["U+1F3ED", "factory", "1f3ed", ["-", "-"], ["", "U+EAF9"], ["", "U+E508"], ["󾓀", "U+FE4C0"]],
-  "⚓": ["U+2693", "anchor", "2693", ["", "U+E661"], ["", "U+E4A9"], ["", "U+E202"], ["󾓁", "U+FE4C1"]],
-  "🏮": ["U+1F3EE", "izakaya lantern", "1f3ee", ["", "U+E74B"], ["", "U+E4BD"], ["", "U+E30B"], ["󾓂", "U+FE4C2"]],
-  "🗻": ["U+1F5FB", "mount fuji", "1f5fb", ["", "U+E740"], ["", "U+E5BD"], ["", "U+E03B"], ["󾓃", "U+FE4C3"]],
-  "🗼": ["U+1F5FC", "tokyo tower", "1f5fc", ["-", "-"], ["", "U+E4C0"], ["", "U+E509"], ["󾓄", "U+FE4C4"]],
-  "🗽": ["U+1F5FD", "statue of liberty", "1f5fd", ["-", "-"], ["-", "-"], ["", "U+E51D"], ["󾓆", "U+FE4C6"]],
-  "🗾": ["U+1F5FE", "silhouette of japan", "1f5fe", ["-", "-"], ["", "U+E572"], ["-", "-"], ["󾓇", "U+FE4C7"]],
-  "🗿": ["U+1F5FF", "moyai", "1f5ff", ["-", "-"], ["", "U+EB6C"], ["-", "-"], ["󾓈", "U+FE4C8"]],
-  "👞": ["U+1F45E", "mans shoe", "1f45e", ["", "U+E699"], ["", "U+E5B7"], ["", "U+E007"], ["󾓌", "U+FE4CC"]],
-  "👟": ["U+1F45F", "athletic shoe", "1f45f", ["", "U+E699"], ["", "U+EB2B"], ["", "U+E007"], ["󾓍", "U+FE4CD"]],
-  "👠": ["U+1F460", "high-heeled shoe", "1f460", ["", "U+E674"], ["", "U+E51A"], ["", "U+E13E"], ["󾓖", "U+FE4D6"]],
-  "👡": ["U+1F461", "womans sandal", "1f461", ["", "U+E674"], ["", "U+E51A"], ["", "U+E31A"], ["󾓗", "U+FE4D7"]],
-  "👢": ["U+1F462", "womans boots", "1f462", ["-", "-"], ["", "U+EA9F"], ["", "U+E31B"], ["󾓘", "U+FE4D8"]],
-  "👣": ["U+1F463", "footprints", "1f463", ["", "U+E698"], ["", "U+EB2A"], ["", "U+E536"], ["󾕓", "U+FE553"]],
-  "👓": ["U+1F453", "eyeglasses", "1f453", ["", "U+E69A"], ["", "U+E4FE"], ["-", "-"], ["󾓎", "U+FE4CE"]],
-  "👕": ["U+1F455", "t-shirt", "1f455", ["", "U+E70E"], ["", "U+E5B6"], ["", "U+E006"], ["󾓏", "U+FE4CF"]],
-  "👖": ["U+1F456", "jeans", "1f456", ["", "U+E711"], ["", "U+EB77"], ["-", "-"], ["󾓐", "U+FE4D0"]],
-  "👑": ["U+1F451", "crown", "1f451", ["", "U+E71A"], ["", "U+E5C9"], ["", "U+E10E"], ["󾓑", "U+FE4D1"]],
-  "👔": ["U+1F454", "necktie", "1f454", ["-", "-"], ["", "U+EA93"], ["", "U+E302"], ["󾓓", "U+FE4D3"]],
-  "👒": ["U+1F452", "womans hat", "1f452", ["-", "-"], ["", "U+EA9E"], ["", "U+E318"], ["󾓔", "U+FE4D4"]],
-  "👗": ["U+1F457", "dress", "1f457", ["-", "-"], ["", "U+EB6B"], ["", "U+E319"], ["󾓕", "U+FE4D5"]],
-  "👘": ["U+1F458", "kimono", "1f458", ["-", "-"], ["", "U+EAA3"], ["", "U+E321"], ["󾓙", "U+FE4D9"]],
-  "👙": ["U+1F459", "bikini", "1f459", ["-", "-"], ["", "U+EAA4"], ["", "U+E322"], ["󾓚", "U+FE4DA"]],
-  "👚": ["U+1F45A", "womans clothes", "1f45a", ["", "U+E70E"], ["", "U+E50D"], ["", "U+E006"], ["󾓛", "U+FE4DB"]],
-  "👛": ["U+1F45B", "purse", "1f45b", ["", "U+E70F"], ["", "U+E504"], ["-", "-"], ["󾓜", "U+FE4DC"]],
-  "👜": ["U+1F45C", "handbag", "1f45c", ["", "U+E682"], ["", "U+E49C"], ["", "U+E323"], ["󾓰", "U+FE4F0"]],
-  "👝": ["U+1F45D", "pouch", "1f45d", ["", "U+E6AD"], ["-", "-"], ["-", "-"], ["󾓱", "U+FE4F1"]],
-  "💰": ["U+1F4B0", "money bag", "1f4b0", ["", "U+E715"], ["", "U+E4C7"], ["", "U+E12F"], ["󾓝", "U+FE4DD"]],
-  "💱": ["U+1F4B1", "currency exchange", "1f4b1", ["-", "-"], ["-", "-"], ["", "U+E149"], ["󾓞", "U+FE4DE"]],
-  "💹": ["U+1F4B9", "chart with upwards trend and yen sign", "1f4b9", ["-", "-"], ["", "U+E5DC"], ["", "U+E14A"], ["󾓟", "U+FE4DF"]],
-  "💲": ["U+1F4B2", "heavy dollar sign", "1f4b2", ["", "U+E715"], ["", "U+E579"], ["", "U+E12F"], ["󾓠", "U+FE4E0"]],
-  "💳": ["U+1F4B3", "credit card", "1f4b3", ["-", "-"], ["", "U+E57C"], ["-", "-"], ["󾓡", "U+FE4E1"]],
-  "💴": ["U+1F4B4", "banknote with yen sign", "1f4b4", ["", "U+E6D6"], ["", "U+E57D"], ["-", "-"], ["󾓢", "U+FE4E2"]],
-  "💵": ["U+1F4B5", "banknote with dollar sign", "1f4b5", ["", "U+E715"], ["", "U+E585"], ["", "U+E12F"], ["󾓣", "U+FE4E3"]],
-  "💸": ["U+1F4B8", "money with wings", "1f4b8", ["-", "-"], ["", "U+EB5B"], ["-", "-"], ["󾓤", "U+FE4E4"]],
-  "🇨🇳": ["U+1F1E8 U+1F1F3", "regional indicator symbol letters cn", "1f1e81f1f3", ["-", "-"], ["", "U+EB11"], ["", "U+E513"], ["󾓭", "U+FE4ED"]],
-  "🇩🇪": ["U+1F1E9 U+1F1EA", "regional indicator symbol letters de", "1f1e91f1ea", ["-", "-"], ["", "U+EB0E"], ["", "U+E50E"], ["󾓨", "U+FE4E8"]],
-  "🇪🇸": ["U+1F1EA U+1F1F8", "regional indicator symbol letters es", "1f1ea1f1f8", ["-", "-"], ["", "U+E5D5"], ["", "U+E511"], ["󾓫", "U+FE4EB"]],
-  "🇫🇷": ["U+1F1EB U+1F1F7", "regional indicator symbol letters fr", "1f1eb1f1f7", ["-", "-"], ["", "U+EAFA"], ["", "U+E50D"], ["󾓧", "U+FE4E7"]],
-  "🇬🇧": ["U+1F1EC U+1F1E7", "regional indicator symbol letters gb", "1f1ec1f1e7", ["-", "-"], ["", "U+EB10"], ["", "U+E510"], ["󾓪", "U+FE4EA"]],
-  "🇮🇹": ["U+1F1EE U+1F1F9", "regional indicator symbol letters it", "1f1ee1f1f9", ["-", "-"], ["", "U+EB0F"], ["", "U+E50F"], ["󾓩", "U+FE4E9"]],
-  "🇯🇵": ["U+1F1EF U+1F1F5", "regional indicator symbol letters jp", "1f1ef1f1f5", ["-", "-"], ["", "U+E4CC"], ["", "U+E50B"], ["󾓥", "U+FE4E5"]],
-  "🇰🇷": ["U+1F1F0 U+1F1F7", "regional indicator symbol letters kr", "1f1f01f1f7", ["-", "-"], ["", "U+EB12"], ["", "U+E514"], ["󾓮", "U+FE4EE"]],
-  "🇷🇺": ["U+1F1F7 U+1F1FA", "regional indicator symbol letters ru", "1f1f71f1fa", ["-", "-"], ["", "U+E5D6"], ["", "U+E512"], ["󾓬", "U+FE4EC"]],
-  "🇺🇸": ["U+1F1FA U+1F1F8", "regional indicator symbol letters us", "1f1fa1f1f8", ["-", "-"], ["", "U+E573"], ["", "U+E50C"], ["󾓦", "U+FE4E6"]],
-  "🔥": ["U+1F525", "fire", "1f525", ["-", "-"], ["", "U+E47B"], ["", "U+E11D"], ["󾓶", "U+FE4F6"]],
-  "🔦": ["U+1F526", "electric torch", "1f526", ["", "U+E6FB"], ["", "U+E583"], ["-", "-"], ["󾓻", "U+FE4FB"]],
-  "🔧": ["U+1F527", "wrench", "1f527", ["", "U+E718"], ["", "U+E587"], ["-", "-"], ["󾓉", "U+FE4C9"]],
-  "🔨": ["U+1F528", "hammer", "1f528", ["-", "-"], ["", "U+E5CB"], ["", "U+E116"], ["󾓊", "U+FE4CA"]],
-  "🔩": ["U+1F529", "nut and bolt", "1f529", ["-", "-"], ["", "U+E581"], ["-", "-"], ["󾓋", "U+FE4CB"]],
-  "🔪": ["U+1F52A", "hocho", "1f52a", ["-", "-"], ["", "U+E57F"], ["-", "-"], ["󾓺", "U+FE4FA"]],
-  "🔫": ["U+1F52B", "pistol", "1f52b", ["-", "-"], ["", "U+E50A"], ["", "U+E113"], ["󾓵", "U+FE4F5"]],
-  "🔮": ["U+1F52E", "crystal ball", "1f52e", ["-", "-"], ["", "U+EA8F"], ["", "U+E23E"], ["󾓷", "U+FE4F7"]],
-  "🔯": ["U+1F52F", "six pointed star with middle dot", "1f52f", ["-", "-"], ["", "U+EA8F"], ["", "U+E23E"], ["󾓸", "U+FE4F8"]],
-  "🔰": ["U+1F530", "japanese symbol for beginner", "1f530", ["-", "-"], ["", "U+E480"], ["", "U+E209"], ["󾁄", "U+FE044"]],
-  "🔱": ["U+1F531", "trident emblem", "1f531", ["", "U+E71A"], ["", "U+E5C9"], ["", "U+E031"], ["󾓒", "U+FE4D2"]],
-  "💉": ["U+1F489", "syringe", "1f489", ["-", "-"], ["", "U+E510"], ["", "U+E13B"], ["󾔉", "U+FE509"]],
-  "💊": ["U+1F48A", "pill", "1f48a", ["-", "-"], ["", "U+EA9A"], ["", "U+E30F"], ["󾔊", "U+FE50A"]],
-  "🅰": ["U+1F170", "negative squared latin capital letter a", "1f170", ["-", "-"], ["", "U+EB26"], ["", "U+E532"], ["󾔋", "U+FE50B"]],
-  "🅱": ["U+1F171", "negative squared latin capital letter b", "1f171", ["-", "-"], ["", "U+EB27"], ["", "U+E533"], ["󾔌", "U+FE50C"]],
-  "🆎": ["U+1F18E", "negative squared ab", "1f18e", ["-", "-"], ["", "U+EB29"], ["", "U+E534"], ["󾔍", "U+FE50D"]],
-  "🅾": ["U+1F17E", "negative squared latin capital letter o", "1f17e", ["-", "-"], ["", "U+EB28"], ["", "U+E535"], ["󾔎", "U+FE50E"]],
-  "🎀": ["U+1F380", "ribbon", "1f380", ["", "U+E684"], ["", "U+E59F"], ["", "U+E314"], ["󾔏", "U+FE50F"]],
-  "🎁": ["U+1F381", "wrapped present", "1f381", ["", "U+E685"], ["", "U+E4CF"], ["", "U+E112"], ["󾔐", "U+FE510"]],
-  "🎂": ["U+1F382", "birthday cake", "1f382", ["", "U+E686"], ["", "U+E5A0"], ["", "U+E34B"], ["󾔑", "U+FE511"]],
-  "🎄": ["U+1F384", "christmas tree", "1f384", ["", "U+E6A4"], ["", "U+E4C9"], ["", "U+E033"], ["󾔒", "U+FE512"]],
-  "🎅": ["U+1F385", "father christmas", "1f385", ["-", "-"], ["", "U+EAF0"], ["", "U+E448"], ["󾔓", "U+FE513"]],
-  "🎌": ["U+1F38C", "crossed flags", "1f38c", ["-", "-"], ["", "U+E5D9"], ["", "U+E143"], ["󾔔", "U+FE514"]],
-  "🎆": ["U+1F386", "fireworks", "1f386", ["-", "-"], ["", "U+E5CC"], ["", "U+E117"], ["󾔕", "U+FE515"]],
-  "🎈": ["U+1F388", "balloon", "1f388", ["-", "-"], ["", "U+EA9B"], ["", "U+E310"], ["󾔖", "U+FE516"]],
-  "🎉": ["U+1F389", "party popper", "1f389", ["-", "-"], ["", "U+EA9C"], ["", "U+E312"], ["󾔗", "U+FE517"]],
-  "🎍": ["U+1F38D", "pine decoration", "1f38d", ["-", "-"], ["", "U+EAE3"], ["", "U+E436"], ["󾔘", "U+FE518"]],
-  "🎎": ["U+1F38E", "japanese dolls", "1f38e", ["-", "-"], ["", "U+EAE4"], ["", "U+E438"], ["󾔙", "U+FE519"]],
-  "🎓": ["U+1F393", "graduation cap", "1f393", ["-", "-"], ["", "U+EAE5"], ["", "U+E439"], ["󾔚", "U+FE51A"]],
-  "🎒": ["U+1F392", "school satchel", "1f392", ["-", "-"], ["", "U+EAE6"], ["", "U+E43A"], ["󾔛", "U+FE51B"]],
-  "🎏": ["U+1F38F", "carp streamer", "1f38f", ["-", "-"], ["", "U+EAE7"], ["", "U+E43B"], ["󾔜", "U+FE51C"]],
-  "🎇": ["U+1F387", "firework sparkler", "1f387", ["-", "-"], ["", "U+EAEB"], ["", "U+E440"], ["󾔝", "U+FE51D"]],
-  "🎐": ["U+1F390", "wind chime", "1f390", ["-", "-"], ["", "U+EAED"], ["", "U+E442"], ["󾔞", "U+FE51E"]],
-  "🎃": ["U+1F383", "jack-o-lantern", "1f383", ["-", "-"], ["", "U+EAEE"], ["", "U+E445"], ["󾔟", "U+FE51F"]],
-  "🎊": ["U+1F38A", "confetti ball", "1f38a", ["-", "-"], ["", "U+E46F"], ["-", "-"], ["󾔠", "U+FE520"]],
-  "🎋": ["U+1F38B", "tanabata tree", "1f38b", ["-", "-"], ["", "U+EB3D"], ["-", "-"], ["󾔡", "U+FE521"]],
-  "🎑": ["U+1F391", "moon viewing ceremony", "1f391", ["-", "-"], ["", "U+EAEF"], ["", "U+E446"], ["󾀗", "U+FE017"]],
-  "📟": ["U+1F4DF", "pager", "1f4df", ["", "U+E65A"], ["", "U+E59B"], ["-", "-"], ["󾔢", "U+FE522"]],
-  "☎": ["U+260E", "black telephone", "260e", ["", "U+E687"], ["", "U+E596"], ["", "U+E009"], ["󾔣", "U+FE523"]],
-  "📞": ["U+1F4DE", "telephone receiver", "1f4de", ["", "U+E687"], ["", "U+E51E"], ["", "U+E009"], ["󾔤", "U+FE524"]],
-  "📱": ["U+1F4F1", "mobile phone", "1f4f1", ["", "U+E688"], ["", "U+E588"], ["", "U+E00A"], ["󾔥", "U+FE525"]],
-  "📲": ["U+1F4F2", "mobile phone with rightwards arrow at left", "1f4f2", ["", "U+E6CE"], ["", "U+EB08"], ["", "U+E104"], ["󾔦", "U+FE526"]],
-  "📝": ["U+1F4DD", "memo", "1f4dd", ["", "U+E689"], ["", "U+EA92"], ["", "U+E301"], ["󾔧", "U+FE527"]],
-  "📠": ["U+1F4E0", "fax machine", "1f4e0", ["", "U+E6D0"], ["", "U+E520"], ["", "U+E00B"], ["󾔨", "U+FE528"]],
-  "✉": ["U+2709", "envelope", "2709", ["", "U+E6D3"], ["", "U+E521"], ["", "U+E103"], ["󾔩", "U+FE529"]],
-  "📨": ["U+1F4E8", "incoming envelope", "1f4e8", ["", "U+E6CF"], ["", "U+E591"], ["", "U+E103"], ["󾔪", "U+FE52A"]],
-  "📩": ["U+1F4E9", "envelope with downwards arrow above", "1f4e9", ["", "U+E6CF"], ["", "U+EB62"], ["", "U+E103"], ["󾔫", "U+FE52B"]],
-  "📪": ["U+1F4EA", "closed mailbox with lowered flag", "1f4ea", ["", "U+E665"], ["", "U+E51B"], ["", "U+E101"], ["󾔬", "U+FE52C"]],
-  "📫": ["U+1F4EB", "closed mailbox with raised flag", "1f4eb", ["", "U+E665"], ["", "U+EB0A"], ["", "U+E101"], ["󾔭", "U+FE52D"]],
-  "📮": ["U+1F4EE", "postbox", "1f4ee", ["", "U+E665"], ["", "U+E51B"], ["", "U+E102"], ["󾔮", "U+FE52E"]],
-  "📰": ["U+1F4F0", "newspaper", "1f4f0", ["-", "-"], ["", "U+E58B"], ["-", "-"], ["󾠢", "U+FE822"]],
-  "📢": ["U+1F4E2", "public address loudspeaker", "1f4e2", ["-", "-"], ["", "U+E511"], ["", "U+E142"], ["󾔯", "U+FE52F"]],
-  "📣": ["U+1F4E3", "cheering megaphone", "1f4e3", ["-", "-"], ["", "U+E511"], ["", "U+E317"], ["󾔰", "U+FE530"]],
-  "📡": ["U+1F4E1", "satellite antenna", "1f4e1", ["-", "-"], ["", "U+E4A8"], ["", "U+E14B"], ["󾔱", "U+FE531"]],
-  "📤": ["U+1F4E4", "outbox tray", "1f4e4", ["-", "-"], ["", "U+E592"], ["-", "-"], ["󾔳", "U+FE533"]],
-  "📥": ["U+1F4E5", "inbox tray", "1f4e5", ["-", "-"], ["", "U+E593"], ["-", "-"], ["󾔴", "U+FE534"]],
-  "📦": ["U+1F4E6", "package", "1f4e6", ["", "U+E685"], ["", "U+E51F"], ["", "U+E112"], ["󾔵", "U+FE535"]],
-  "📧": ["U+1F4E7", "e-mail symbol", "1f4e7", ["", "U+E6D3"], ["", "U+EB71"], ["", "U+E103"], ["󾮒", "U+FEB92"]],
-  "🔠": ["U+1F520", "input symbol for latin capital letters", "1f520", ["-", "-"], ["", "U+EAFD"], ["-", "-"], ["󾭼", "U+FEB7C"]],
-  "🔡": ["U+1F521", "input symbol for latin small letters", "1f521", ["-", "-"], ["", "U+EAFE"], ["-", "-"], ["󾭽", "U+FEB7D"]],
-  "🔢": ["U+1F522", "input symbol for numbers", "1f522", ["-", "-"], ["", "U+EAFF"], ["-", "-"], ["󾭾", "U+FEB7E"]],
-  "🔣": ["U+1F523", "input symbol for symbols", "1f523", ["-", "-"], ["", "U+EB00"], ["-", "-"], ["󾭿", "U+FEB7F"]],
-  "🔤": ["U+1F524", "input symbol for latin letters", "1f524", ["-", "-"], ["", "U+EB55"], ["-", "-"], ["󾮀", "U+FEB80"]],
-  "✒": ["U+2712", "black nib", "2712", ["", "U+E6AE"], ["", "U+EB03"], ["-", "-"], ["󾔶", "U+FE536"]],
-  "💺": ["U+1F4BA", "seat", "1f4ba", ["", "U+E6B2"], ["-", "-"], ["", "U+E11F"], ["󾔷", "U+FE537"]],
-  "💻": ["U+1F4BB", "personal computer", "1f4bb", ["", "U+E716"], ["", "U+E5B8"], ["", "U+E00C"], ["󾔸", "U+FE538"]],
-  "✏": ["U+270F", "pencil", "270f", ["", "U+E719"], ["", "U+E4A1"], ["", "U+E301"], ["󾔹", "U+FE539"]],
-  "📎": ["U+1F4CE", "paperclip", "1f4ce", ["", "U+E730"], ["", "U+E4A0"], ["-", "-"], ["󾔺", "U+FE53A"]],
-  "💼": ["U+1F4BC", "briefcase", "1f4bc", ["", "U+E682"], ["", "U+E5CE"], ["", "U+E11E"], ["󾔻", "U+FE53B"]],
-  "💽": ["U+1F4BD", "minidisc", "1f4bd", ["-", "-"], ["", "U+E582"], ["", "U+E316"], ["󾔼", "U+FE53C"]],
-  "💾": ["U+1F4BE", "floppy disk", "1f4be", ["-", "-"], ["", "U+E562"], ["", "U+E316"], ["󾔽", "U+FE53D"]],
-  "💿": ["U+1F4BF", "optical disc", "1f4bf", ["", "U+E68C"], ["", "U+E50C"], ["", "U+E126"], ["󾠝", "U+FE81D"]],
-  "📀": ["U+1F4C0", "dvd", "1f4c0", ["", "U+E68C"], ["", "U+E50C"], ["", "U+E127"], ["󾠞", "U+FE81E"]],
-  "✂": ["U+2702", "black scissors", "2702", ["", "U+E675"], ["", "U+E516"], ["", "U+E313"], ["󾔾", "U+FE53E"]],
-  "📍": ["U+1F4CD", "round pushpin", "1f4cd", ["-", "-"], ["", "U+E560"], ["-", "-"], ["󾔿", "U+FE53F"]],
-  "📃": ["U+1F4C3", "page with curl", "1f4c3", ["", "U+E689"], ["", "U+E561"], ["", "U+E301"], ["󾕀", "U+FE540"]],
-  "📄": ["U+1F4C4", "page facing up", "1f4c4", ["", "U+E689"], ["", "U+E569"], ["", "U+E301"], ["󾕁", "U+FE541"]],
-  "📅": ["U+1F4C5", "calendar", "1f4c5", ["-", "-"], ["", "U+E563"], ["-", "-"], ["󾕂", "U+FE542"]],
-  "📁": ["U+1F4C1", "file folder", "1f4c1", ["-", "-"], ["", "U+E58F"], ["-", "-"], ["󾕃", "U+FE543"]],
-  "📂": ["U+1F4C2", "open file folder", "1f4c2", ["-", "-"], ["", "U+E590"], ["-", "-"], ["󾕄", "U+FE544"]],
-  "📓": ["U+1F4D3", "notebook", "1f4d3", ["", "U+E683"], ["", "U+E56B"], ["", "U+E148"], ["󾕅", "U+FE545"]],
-  "📖": ["U+1F4D6", "open book", "1f4d6", ["", "U+E683"], ["", "U+E49F"], ["", "U+E148"], ["󾕆", "U+FE546"]],
-  "📔": ["U+1F4D4", "notebook with decorative cover", "1f4d4", ["", "U+E683"], ["", "U+E49D"], ["", "U+E148"], ["󾕇", "U+FE547"]],
-  "📕": ["U+1F4D5", "closed book", "1f4d5", ["", "U+E683"], ["", "U+E568"], ["", "U+E148"], ["󾔂", "U+FE502"]],
-  "📗": ["U+1F4D7", "green book", "1f4d7", ["", "U+E683"], ["", "U+E565"], ["", "U+E148"], ["󾓿", "U+FE4FF"]],
-  "📘": ["U+1F4D8", "blue book", "1f4d8", ["", "U+E683"], ["", "U+E566"], ["", "U+E148"], ["󾔀", "U+FE500"]],
-  "📙": ["U+1F4D9", "orange book", "1f4d9", ["", "U+E683"], ["", "U+E567"], ["", "U+E148"], ["󾔁", "U+FE501"]],
-  "📚": ["U+1F4DA", "books", "1f4da", ["", "U+E683"], ["", "U+E56F"], ["", "U+E148"], ["󾔃", "U+FE503"]],
-  "📛": ["U+1F4DB", "name badge", "1f4db", ["-", "-"], ["", "U+E51D"], ["-", "-"], ["󾔄", "U+FE504"]],
-  "📜": ["U+1F4DC", "scroll", "1f4dc", ["", "U+E70A"], ["", "U+E55F"], ["-", "-"], ["󾓽", "U+FE4FD"]],
-  "📋": ["U+1F4CB", "clipboard", "1f4cb", ["", "U+E689"], ["", "U+E564"], ["", "U+E301"], ["󾕈", "U+FE548"]],
-  "📆": ["U+1F4C6", "tear-off calendar", "1f4c6", ["-", "-"], ["", "U+E56A"], ["-", "-"], ["󾕉", "U+FE549"]],
-  "📊": ["U+1F4CA", "bar chart", "1f4ca", ["-", "-"], ["", "U+E574"], ["", "U+E14A"], ["󾕊", "U+FE54A"]],
-  "📈": ["U+1F4C8", "chart with upwards trend", "1f4c8", ["-", "-"], ["", "U+E575"], ["", "U+E14A"], ["󾕋", "U+FE54B"]],
-  "📉": ["U+1F4C9", "chart with downwards trend", "1f4c9", ["-", "-"], ["", "U+E576"], ["-", "-"], ["󾕌", "U+FE54C"]],
-  "📇": ["U+1F4C7", "card index", "1f4c7", ["", "U+E683"], ["", "U+E56C"], ["", "U+E148"], ["󾕍", "U+FE54D"]],
-  "📌": ["U+1F4CC", "pushpin", "1f4cc", ["-", "-"], ["", "U+E56D"], ["-", "-"], ["󾕎", "U+FE54E"]],
-  "📒": ["U+1F4D2", "ledger", "1f4d2", ["", "U+E683"], ["", "U+E56E"], ["", "U+E148"], ["󾕏", "U+FE54F"]],
-  "📏": ["U+1F4CF", "straight ruler", "1f4cf", ["-", "-"], ["", "U+E570"], ["-", "-"], ["󾕐", "U+FE550"]],
-  "📐": ["U+1F4D0", "triangular ruler", "1f4d0", ["-", "-"], ["", "U+E4A2"], ["-", "-"], ["󾕑", "U+FE551"]],
-  "📑": ["U+1F4D1", "bookmark tabs", "1f4d1", ["", "U+E689"], ["", "U+EB0B"], ["", "U+E301"], ["󾕒", "U+FE552"]],
-  "🎽": ["U+1F3BD", "running shirt with sash", "1f3bd", ["", "U+E652"], ["-", "-"], ["-", "-"], ["󾟐", "U+FE7D0"]],
-  "⚾": ["U+26BE", "baseball", "26be", ["", "U+E653"], ["", "U+E4BA"], ["", "U+E016"], ["󾟑", "U+FE7D1"]],
-  "⛳": ["U+26F3", "flag in hole", "26f3", ["", "U+E654"], ["", "U+E599"], ["", "U+E014"], ["󾟒", "U+FE7D2"]],
-  "🎾": ["U+1F3BE", "tennis racquet and ball", "1f3be", ["", "U+E655"], ["", "U+E4B7"], ["", "U+E015"], ["󾟓", "U+FE7D3"]],
-  "⚽": ["U+26BD", "soccer ball", "26bd", ["", "U+E656"], ["", "U+E4B6"], ["", "U+E018"], ["󾟔", "U+FE7D4"]],
-  "🎿": ["U+1F3BF", "ski and ski boot", "1f3bf", ["", "U+E657"], ["", "U+EAAC"], ["", "U+E013"], ["󾟕", "U+FE7D5"]],
-  "🏀": ["U+1F3C0", "basketball and hoop", "1f3c0", ["", "U+E658"], ["", "U+E59A"], ["", "U+E42A"], ["󾟖", "U+FE7D6"]],
-  "🏁": ["U+1F3C1", "chequered flag", "1f3c1", ["", "U+E659"], ["", "U+E4B9"], ["", "U+E132"], ["󾟗", "U+FE7D7"]],
-  "🏂": ["U+1F3C2", "snowboarder", "1f3c2", ["", "U+E712"], ["", "U+E4B8"], ["-", "-"], ["󾟘", "U+FE7D8"]],
-  "🏃": ["U+1F3C3", "runner", "1f3c3", ["", "U+E733"], ["", "U+E46B"], ["", "U+E115"], ["󾟙", "U+FE7D9"]],
-  "🏄": ["U+1F3C4", "surfer", "1f3c4", ["", "U+E712"], ["", "U+EB41"], ["", "U+E017"], ["󾟚", "U+FE7DA"]],
-  "🏆": ["U+1F3C6", "trophy", "1f3c6", ["-", "-"], ["", "U+E5D3"], ["", "U+E131"], ["󾟛", "U+FE7DB"]],
-  "🏈": ["U+1F3C8", "american football", "1f3c8", ["-", "-"], ["", "U+E4BB"], ["", "U+E42B"], ["󾟝", "U+FE7DD"]],
-  "🏊": ["U+1F3CA", "swimmer", "1f3ca", ["-", "-"], ["", "U+EADE"], ["", "U+E42D"], ["󾟞", "U+FE7DE"]],
-  "🚃": ["U+1F683", "railway car", "1f683", ["", "U+E65B"], ["", "U+E4B5"], ["", "U+E01E"], ["󾟟", "U+FE7DF"]],
-  "🚇": ["U+1F687", "metro", "1f687", ["", "U+E65C"], ["", "U+E5BC"], ["", "U+E434"], ["󾟠", "U+FE7E0"]],
-  "Ⓜ": ["U+24C2", "circled latin capital letter m", "24c2", ["", "U+E65C"], ["", "U+E5BC"], ["", "U+E434"], ["󾟡", "U+FE7E1"]],
-  "🚄": ["U+1F684", "high-speed train", "1f684", ["", "U+E65D"], ["", "U+E4B0"], ["", "U+E435"], ["󾟢", "U+FE7E2"]],
-  "🚅": ["U+1F685", "high-speed train with bullet nose", "1f685", ["", "U+E65D"], ["", "U+E4B0"], ["", "U+E01F"], ["󾟣", "U+FE7E3"]],
-  "🚗": ["U+1F697", "automobile", "1f697", ["", "U+E65E"], ["", "U+E4B1"], ["", "U+E01B"], ["󾟤", "U+FE7E4"]],
-  "🚙": ["U+1F699", "recreational vehicle", "1f699", ["", "U+E65F"], ["", "U+E4B1"], ["", "U+E42E"], ["󾟥", "U+FE7E5"]],
-  "🚌": ["U+1F68C", "bus", "1f68c", ["", "U+E660"], ["", "U+E4AF"], ["", "U+E159"], ["󾟦", "U+FE7E6"]],
-  "🚏": ["U+1F68F", "bus stop", "1f68f", ["-", "-"], ["", "U+E4A7"], ["", "U+E150"], ["󾟧", "U+FE7E7"]],
-  "🚢": ["U+1F6A2", "ship", "1f6a2", ["", "U+E661"], ["", "U+EA82"], ["", "U+E202"], ["󾟨", "U+FE7E8"]],
-  "✈": ["U+2708", "airplane", "2708", ["", "U+E662"], ["", "U+E4B3"], ["", "U+E01D"], ["󾟩", "U+FE7E9"]],
-  "⛵": ["U+26F5", "sailboat", "26f5", ["", "U+E6A3"], ["", "U+E4B4"], ["", "U+E01C"], ["󾟪", "U+FE7EA"]],
-  "🚉": ["U+1F689", "station", "1f689", ["-", "-"], ["", "U+EB6D"], ["", "U+E039"], ["󾟬", "U+FE7EC"]],
-  "🚀": ["U+1F680", "rocket", "1f680", ["-", "-"], ["", "U+E5C8"], ["", "U+E10D"], ["󾟭", "U+FE7ED"]],
-  "🚤": ["U+1F6A4", "speedboat", "1f6a4", ["", "U+E6A3"], ["", "U+E4B4"], ["", "U+E135"], ["󾟮", "U+FE7EE"]],
-  "🚕": ["U+1F695", "taxi", "1f695", ["", "U+E65E"], ["", "U+E4B1"], ["", "U+E15A"], ["󾟯", "U+FE7EF"]],
-  "🚚": ["U+1F69A", "delivery truck", "1f69a", ["-", "-"], ["", "U+E4B2"], ["", "U+E42F"], ["󾟱", "U+FE7F1"]],
-  "🚒": ["U+1F692", "fire engine", "1f692", ["-", "-"], ["", "U+EADF"], ["", "U+E430"], ["󾟲", "U+FE7F2"]],
-  "🚑": ["U+1F691", "ambulance", "1f691", ["-", "-"], ["", "U+EAE0"], ["", "U+E431"], ["󾟳", "U+FE7F3"]],
-  "🚓": ["U+1F693", "police car", "1f693", ["-", "-"], ["", "U+EAE1"], ["", "U+E432"], ["󾟴", "U+FE7F4"]],
-  "⛽": ["U+26FD", "fuel pump", "26fd", ["", "U+E66B"], ["", "U+E571"], ["", "U+E03A"], ["󾟵", "U+FE7F5"]],
-  "🅿": ["U+1F17F", "negative squared latin capital letter p", "1f17f", ["", "U+E66C"], ["", "U+E4A6"], ["", "U+E14F"], ["󾟶", "U+FE7F6"]],
-  "🚥": ["U+1F6A5", "horizontal traffic light", "1f6a5", ["", "U+E66D"], ["", "U+E46A"], ["", "U+E14E"], ["󾟷", "U+FE7F7"]],
-  "🚧": ["U+1F6A7", "construction sign", "1f6a7", ["-", "-"], ["", "U+E5D7"], ["", "U+E137"], ["󾟸", "U+FE7F8"]],
-  "🚨": ["U+1F6A8", "police cars revolving light", "1f6a8", ["-", "-"], ["", "U+EB73"], ["", "U+E432"], ["󾟹", "U+FE7F9"]],
-  "♨": ["U+2668", "hot springs", "2668", ["", "U+E6F7"], ["", "U+E4BC"], ["", "U+E123"], ["󾟺", "U+FE7FA"]],
-  "⛺": ["U+26FA", "tent", "26fa", ["-", "-"], ["", "U+E5D0"], ["", "U+E122"], ["󾟻", "U+FE7FB"]],
-  "🎠": ["U+1F3A0", "carousel horse", "1f3a0", ["", "U+E679"], ["-", "-"], ["-", "-"], ["󾟼", "U+FE7FC"]],
-  "🎡": ["U+1F3A1", "ferris wheel", "1f3a1", ["-", "-"], ["", "U+E46D"], ["", "U+E124"], ["󾟽", "U+FE7FD"]],
-  "🎢": ["U+1F3A2", "roller coaster", "1f3a2", ["-", "-"], ["", "U+EAE2"], ["", "U+E433"], ["󾟾", "U+FE7FE"]],
-  "🎣": ["U+1F3A3", "fishing pole and fish", "1f3a3", ["", "U+E751"], ["", "U+EB42"], ["", "U+E019"], ["󾟿", "U+FE7FF"]],
-  "🎤": ["U+1F3A4", "microphone", "1f3a4", ["", "U+E676"], ["", "U+E503"], ["", "U+E03C"], ["󾠀", "U+FE800"]],
-  "🎥": ["U+1F3A5", "movie camera", "1f3a5", ["", "U+E677"], ["", "U+E517"], ["", "U+E03D"], ["󾠁", "U+FE801"]],
-  "🎦": ["U+1F3A6", "cinema", "1f3a6", ["", "U+E677"], ["", "U+E517"], ["", "U+E507"], ["󾠂", "U+FE802"]],
-  "🎧": ["U+1F3A7", "headphone", "1f3a7", ["", "U+E67A"], ["", "U+E508"], ["", "U+E30A"], ["󾠃", "U+FE803"]],
-  "🎨": ["U+1F3A8", "artist palette", "1f3a8", ["", "U+E67B"], ["", "U+E59C"], ["", "U+E502"], ["󾠄", "U+FE804"]],
-  "🎩": ["U+1F3A9", "top hat", "1f3a9", ["", "U+E67C"], ["", "U+EAF5"], ["", "U+E503"], ["󾠅", "U+FE805"]],
-  "🎪": ["U+1F3AA", "circus tent", "1f3aa", ["", "U+E67D"], ["", "U+E59E"], ["-", "-"], ["󾠆", "U+FE806"]],
-  "🎫": ["U+1F3AB", "ticket", "1f3ab", ["", "U+E67E"], ["", "U+E49E"], ["", "U+E125"], ["󾠇", "U+FE807"]],
-  "🎬": ["U+1F3AC", "clapper board", "1f3ac", ["", "U+E6AC"], ["", "U+E4BE"], ["", "U+E324"], ["󾠈", "U+FE808"]],
-  "🎭": ["U+1F3AD", "performing arts", "1f3ad", ["-", "-"], ["", "U+E59D"], ["", "U+E503"], ["󾠉", "U+FE809"]],
-  "🎮": ["U+1F3AE", "video game", "1f3ae", ["", "U+E68B"], ["", "U+E4C6"], ["-", "-"], ["󾠊", "U+FE80A"]],
-  "🀄": ["U+1F004", "mahjong tile red dragon", "1f004", ["-", "-"], ["", "U+E5D1"], ["", "U+E12D"], ["󾠋", "U+FE80B"]],
-  "🎯": ["U+1F3AF", "direct hit", "1f3af", ["-", "-"], ["", "U+E4C5"], ["", "U+E130"], ["󾠌", "U+FE80C"]],
-  "🎰": ["U+1F3B0", "slot machine", "1f3b0", ["-", "-"], ["", "U+E46E"], ["", "U+E133"], ["󾠍", "U+FE80D"]],
-  "🎱": ["U+1F3B1", "billiards", "1f3b1", ["-", "-"], ["", "U+EADD"], ["", "U+E42C"], ["󾠎", "U+FE80E"]],
-  "🎲": ["U+1F3B2", "game die", "1f3b2", ["-", "-"], ["", "U+E4C8"], ["-", "-"], ["󾠏", "U+FE80F"]],
-  "🎳": ["U+1F3B3", "bowling", "1f3b3", ["-", "-"], ["", "U+EB43"], ["-", "-"], ["󾠐", "U+FE810"]],
-  "🎴": ["U+1F3B4", "flower playing cards", "1f3b4", ["-", "-"], ["", "U+EB6E"], ["-", "-"], ["󾠑", "U+FE811"]],
-  "🃏": ["U+1F0CF", "playing card black joker", "1f0cf", ["-", "-"], ["", "U+EB6F"], ["-", "-"], ["󾠒", "U+FE812"]],
-  "🎵": ["U+1F3B5", "musical note", "1f3b5", ["", "U+E6F6"], ["", "U+E5BE"], ["", "U+E03E"], ["󾠓", "U+FE813"]],
-  "🎶": ["U+1F3B6", "multiple musical notes", "1f3b6", ["", "U+E6FF"], ["", "U+E505"], ["", "U+E326"], ["󾠔", "U+FE814"]],
-  "🎷": ["U+1F3B7", "saxophone", "1f3b7", ["-", "-"], ["-", "-"], ["", "U+E040"], ["󾠕", "U+FE815"]],
-  "🎸": ["U+1F3B8", "guitar", "1f3b8", ["-", "-"], ["", "U+E506"], ["", "U+E041"], ["󾠖", "U+FE816"]],
-  "🎹": ["U+1F3B9", "musical keyboard", "1f3b9", ["-", "-"], ["", "U+EB40"], ["-", "-"], ["󾠗", "U+FE817"]],
-  "🎺": ["U+1F3BA", "trumpet", "1f3ba", ["-", "-"], ["", "U+EADC"], ["", "U+E042"], ["󾠘", "U+FE818"]],
-  "🎻": ["U+1F3BB", "violin", "1f3bb", ["-", "-"], ["", "U+E507"], ["-", "-"], ["󾠙", "U+FE819"]],
-  "🎼": ["U+1F3BC", "musical score", "1f3bc", ["", "U+E6FF"], ["", "U+EACC"], ["", "U+E326"], ["󾠚", "U+FE81A"]],
-  "〽": ["U+303D", "part alternation mark", "303d", ["-", "-"], ["-", "-"], ["", "U+E12C"], ["󾠛", "U+FE81B"]],
-  "📷": ["U+1F4F7", "camera", "1f4f7", ["", "U+E681"], ["", "U+E515"], ["", "U+E008"], ["󾓯", "U+FE4EF"]],
-  "📹": ["U+1F4F9", "video camera", "1f4f9", ["", "U+E677"], ["", "U+E57E"], ["", "U+E03D"], ["󾓹", "U+FE4F9"]],
-  "📺": ["U+1F4FA", "television", "1f4fa", ["", "U+E68A"], ["", "U+E502"], ["", "U+E12A"], ["󾠜", "U+FE81C"]],
-  "📻": ["U+1F4FB", "radio", "1f4fb", ["-", "-"], ["", "U+E5B9"], ["", "U+E128"], ["󾠟", "U+FE81F"]],
-  "📼": ["U+1F4FC", "videocassette", "1f4fc", ["-", "-"], ["", "U+E580"], ["", "U+E129"], ["󾠠", "U+FE820"]],
-  "💋": ["U+1F48B", "kiss mark", "1f48b", ["", "U+E6F9"], ["", "U+E4EB"], ["", "U+E003"], ["󾠣", "U+FE823"]],
-  "💌": ["U+1F48C", "love letter", "1f48c", ["", "U+E717"], ["", "U+EB78"], ["", "U+E103 U+E328"], ["󾠤", "U+FE824"]],
-  "💍": ["U+1F48D", "ring", "1f48d", ["", "U+E71B"], ["", "U+E514"], ["", "U+E034"], ["󾠥", "U+FE825"]],
-  "💎": ["U+1F48E", "gem stone", "1f48e", ["", "U+E71B"], ["", "U+E514"], ["", "U+E035"], ["󾠦", "U+FE826"]],
-  "💏": ["U+1F48F", "kiss", "1f48f", ["", "U+E6F9"], ["", "U+E5CA"], ["", "U+E111"], ["󾠧", "U+FE827"]],
-  "💐": ["U+1F490", "bouquet", "1f490", ["-", "-"], ["", "U+EA95"], ["", "U+E306"], ["󾠨", "U+FE828"]],
-  "💑": ["U+1F491", "couple with heart", "1f491", ["", "U+E6ED"], ["", "U+EADA"], ["", "U+E425"], ["󾠩", "U+FE829"]],
-  "💒": ["U+1F492", "wedding", "1f492", ["-", "-"], ["", "U+E5BB"], ["", "U+E43D"], ["󾠪", "U+FE82A"]],
-  "🔞": ["U+1F51E", "no one under eighteen symbol", "1f51e", ["-", "-"], ["", "U+EA83"], ["", "U+E207"], ["󾬥", "U+FEB25"]],
-  "©": ["U+00A9", "copyright sign", "a9", ["", "U+E731"], ["", "U+E558"], ["", "U+E24E"], ["󾬩", "U+FEB29"]],
-  "®": ["U+00AE", "registered sign", "ae", ["", "U+E736"], ["", "U+E559"], ["", "U+E24F"], ["󾬭", "U+FEB2D"]],
-  "™": ["U+2122", "trade mark sign", "2122", ["", "U+E732"], ["", "U+E54E"], ["", "U+E537"], ["󾬪", "U+FEB2A"]],
-  "ℹ": ["U+2139", "information source", "2139", ["-", "-"], ["", "U+E533"], ["-", "-"], ["󾭇", "U+FEB47"]],
-  "#⃣": ["U+0023 U+20E3", "hash key", "2320e3", ["", "U+E6E0"], ["", "U+EB84"], ["", "U+E210"], ["󾠬", "U+FE82C"]],
-  "1⃣": ["U+0031 U+20E3", "keycap 1", "3120e3", ["", "U+E6E2"], ["", "U+E522"], ["", "U+E21C"], ["󾠮", "U+FE82E"]],
-  "2⃣": ["U+0032 U+20E3", "keycap 2", "3220e3", ["", "U+E6E3"], ["", "U+E523"], ["", "U+E21D"], ["󾠯", "U+FE82F"]],
-  "3⃣": ["U+0033 U+20E3", "keycap 3", "3320e3", ["", "U+E6E4"], ["", "U+E524"], ["", "U+E21E"], ["󾠰", "U+FE830"]],
-  "4⃣": ["U+0034 U+20E3", "keycap 4", "3420e3", ["", "U+E6E5"], ["", "U+E525"], ["", "U+E21F"], ["󾠱", "U+FE831"]],
-  "5⃣": ["U+0035 U+20E3", "keycap 5", "3520e3", ["", "U+E6E6"], ["", "U+E526"], ["", "U+E220"], ["󾠲", "U+FE832"]],
-  "6⃣": ["U+0036 U+20E3", "keycap 6", "3620e3", ["", "U+E6E7"], ["", "U+E527"], ["", "U+E221"], ["󾠳", "U+FE833"]],
-  "7⃣": ["U+0037 U+20E3", "keycap 7", "3720e3", ["", "U+E6E8"], ["", "U+E528"], ["", "U+E222"], ["󾠴", "U+FE834"]],
-  "8⃣": ["U+0038 U+20E3", "keycap 8", "3820e3", ["", "U+E6E9"], ["", "U+E529"], ["", "U+E223"], ["󾠵", "U+FE835"]],
-  "9⃣": ["U+0039 U+20E3", "keycap 9", "3920e3", ["", "U+E6EA"], ["", "U+E52A"], ["", "U+E224"], ["󾠶", "U+FE836"]],
-  "0⃣": ["U+0030 U+20E3", "keycap 0", "3020e3", ["", "U+E6EB"], ["", "U+E5AC"], ["", "U+E225"], ["󾠷", "U+FE837"]],
-  "🔟": ["U+1F51F", "keycap ten", "1f51f", ["-", "-"], ["", "U+E52B"], ["-", "-"], ["󾠻", "U+FE83B"]],
-  "📶": ["U+1F4F6", "antenna with bars", "1f4f6", ["-", "-"], ["", "U+EA84"], ["", "U+E20B"], ["󾠸", "U+FE838"]],
-  "📳": ["U+1F4F3", "vibration mode", "1f4f3", ["-", "-"], ["", "U+EA90"], ["", "U+E250"], ["󾠹", "U+FE839"]],
-  "📴": ["U+1F4F4", "mobile phone off", "1f4f4", ["-", "-"], ["", "U+EA91"], ["", "U+E251"], ["󾠺", "U+FE83A"]],
-  "🍔": ["U+1F354", "hamburger", "1f354", ["", "U+E673"], ["", "U+E4D6"], ["", "U+E120"], ["󾥠", "U+FE960"]],
-  "🍙": ["U+1F359", "rice ball", "1f359", ["", "U+E749"], ["", "U+E4D5"], ["", "U+E342"], ["󾥡", "U+FE961"]],
-  "🍰": ["U+1F370", "shortcake", "1f370", ["", "U+E74A"], ["", "U+E4D0"], ["", "U+E046"], ["󾥢", "U+FE962"]],
-  "🍜": ["U+1F35C", "steaming bowl", "1f35c", ["", "U+E74C"], ["", "U+E5B4"], ["", "U+E340"], ["󾥣", "U+FE963"]],
-  "🍞": ["U+1F35E", "bread", "1f35e", ["", "U+E74D"], ["", "U+EAAF"], ["", "U+E339"], ["󾥤", "U+FE964"]],
-  "🍳": ["U+1F373", "cooking", "1f373", ["-", "-"], ["", "U+E4D1"], ["", "U+E147"], ["󾥥", "U+FE965"]],
-  "🍦": ["U+1F366", "soft ice cream", "1f366", ["-", "-"], ["", "U+EAB0"], ["", "U+E33A"], ["󾥦", "U+FE966"]],
-  "🍟": ["U+1F35F", "french fries", "1f35f", ["-", "-"], ["", "U+EAB1"], ["", "U+E33B"], ["󾥧", "U+FE967"]],
-  "🍡": ["U+1F361", "dango", "1f361", ["-", "-"], ["", "U+EAB2"], ["", "U+E33C"], ["󾥨", "U+FE968"]],
-  "🍘": ["U+1F358", "rice cracker", "1f358", ["-", "-"], ["", "U+EAB3"], ["", "U+E33D"], ["󾥩", "U+FE969"]],
-  "🍚": ["U+1F35A", "cooked rice", "1f35a", ["", "U+E74C"], ["", "U+EAB4"], ["", "U+E33E"], ["󾥪", "U+FE96A"]],
-  "🍝": ["U+1F35D", "spaghetti", "1f35d", ["-", "-"], ["", "U+EAB5"], ["", "U+E33F"], ["󾥫", "U+FE96B"]],
-  "🍛": ["U+1F35B", "curry and rice", "1f35b", ["-", "-"], ["", "U+EAB6"], ["", "U+E341"], ["󾥬", "U+FE96C"]],
-  "🍢": ["U+1F362", "oden", "1f362", ["-", "-"], ["", "U+EAB7"], ["", "U+E343"], ["󾥭", "U+FE96D"]],
-  "🍣": ["U+1F363", "sushi", "1f363", ["-", "-"], ["", "U+EAB8"], ["", "U+E344"], ["󾥮", "U+FE96E"]],
-  "🍱": ["U+1F371", "bento box", "1f371", ["-", "-"], ["", "U+EABD"], ["", "U+E34C"], ["󾥯", "U+FE96F"]],
-  "🍲": ["U+1F372", "pot of food", "1f372", ["-", "-"], ["", "U+EABE"], ["", "U+E34D"], ["󾥰", "U+FE970"]],
-  "🍧": ["U+1F367", "shaved ice", "1f367", ["-", "-"], ["", "U+EAEA"], ["", "U+E43F"], ["󾥱", "U+FE971"]],
-  "🍖": ["U+1F356", "meat on bone", "1f356", ["-", "-"], ["", "U+E4C4"], ["-", "-"], ["󾥲", "U+FE972"]],
-  "🍥": ["U+1F365", "fish cake with swirl design", "1f365", ["", "U+E643"], ["", "U+E4ED"], ["-", "-"], ["󾥳", "U+FE973"]],
-  "🍠": ["U+1F360", "roasted sweet potato", "1f360", ["-", "-"], ["", "U+EB3A"], ["-", "-"], ["󾥴", "U+FE974"]],
-  "🍕": ["U+1F355", "slice of pizza", "1f355", ["-", "-"], ["", "U+EB3B"], ["-", "-"], ["󾥵", "U+FE975"]],
-  "🍗": ["U+1F357", "poultry leg", "1f357", ["-", "-"], ["", "U+EB3C"], ["-", "-"], ["󾥶", "U+FE976"]],
-  "🍨": ["U+1F368", "ice cream", "1f368", ["-", "-"], ["", "U+EB4A"], ["-", "-"], ["󾥷", "U+FE977"]],
-  "🍩": ["U+1F369", "doughnut", "1f369", ["-", "-"], ["", "U+EB4B"], ["-", "-"], ["󾥸", "U+FE978"]],
-  "🍪": ["U+1F36A", "cookie", "1f36a", ["-", "-"], ["", "U+EB4C"], ["-", "-"], ["󾥹", "U+FE979"]],
-  "🍫": ["U+1F36B", "chocolate bar", "1f36b", ["-", "-"], ["", "U+EB4D"], ["-", "-"], ["󾥺", "U+FE97A"]],
-  "🍬": ["U+1F36C", "candy", "1f36c", ["-", "-"], ["", "U+EB4E"], ["-", "-"], ["󾥻", "U+FE97B"]],
-  "🍭": ["U+1F36D", "lollipop", "1f36d", ["-", "-"], ["", "U+EB4F"], ["-", "-"], ["󾥼", "U+FE97C"]],
-  "🍮": ["U+1F36E", "custard", "1f36e", ["-", "-"], ["", "U+EB56"], ["-", "-"], ["󾥽", "U+FE97D"]],
-  "🍯": ["U+1F36F", "honey pot", "1f36f", ["-", "-"], ["", "U+EB59"], ["-", "-"], ["󾥾", "U+FE97E"]],
-  "🍤": ["U+1F364", "fried shrimp", "1f364", ["-", "-"], ["", "U+EB70"], ["-", "-"], ["󾥿", "U+FE97F"]],
-  "🍴": ["U+1F374", "fork and knife", "1f374", ["", "U+E66F"], ["", "U+E4AC"], ["", "U+E043"], ["󾦀", "U+FE980"]],
-  "☕": ["U+2615", "hot beverage", "2615", ["", "U+E670"], ["", "U+E597"], ["", "U+E045"], ["󾦁", "U+FE981"]],
-  "🍸": ["U+1F378", "cocktail glass", "1f378", ["", "U+E671"], ["", "U+E4C2"], ["", "U+E044"], ["󾦂", "U+FE982"]],
-  "🍺": ["U+1F37A", "beer mug", "1f37a", ["", "U+E672"], ["", "U+E4C3"], ["", "U+E047"], ["󾦃", "U+FE983"]],
-  "🍵": ["U+1F375", "teacup without handle", "1f375", ["", "U+E71E"], ["", "U+EAAE"], ["", "U+E338"], ["󾦄", "U+FE984"]],
-  "🍶": ["U+1F376", "sake bottle and cup", "1f376", ["", "U+E74B"], ["", "U+EA97"], ["", "U+E30B"], ["󾦅", "U+FE985"]],
-  "🍷": ["U+1F377", "wine glass", "1f377", ["", "U+E756"], ["", "U+E4C1"], ["", "U+E044"], ["󾦆", "U+FE986"]],
-  "🍻": ["U+1F37B", "clinking beer mugs", "1f37b", ["", "U+E672"], ["", "U+EA98"], ["", "U+E30C"], ["󾦇", "U+FE987"]],
-  "🍹": ["U+1F379", "tropical drink", "1f379", ["", "U+E671"], ["", "U+EB3E"], ["", "U+E044"], ["󾦈", "U+FE988"]],
-  "↗": ["U+2197", "north east arrow", "2197", ["", "U+E678"], ["", "U+E555"], ["", "U+E236"], ["󾫰", "U+FEAF0"]],
-  "↘": ["U+2198", "south east arrow", "2198", ["", "U+E696"], ["", "U+E54D"], ["", "U+E238"], ["󾫱", "U+FEAF1"]],
-  "↖": ["U+2196", "north west arrow", "2196", ["", "U+E697"], ["", "U+E54C"], ["", "U+E237"], ["󾫲", "U+FEAF2"]],
-  "↙": ["U+2199", "south west arrow", "2199", ["", "U+E6A5"], ["", "U+E556"], ["", "U+E239"], ["󾫳", "U+FEAF3"]],
-  "⤴": ["U+2934", "arrow pointing rightwards then curving upwards", "2934", ["", "U+E6F5"], ["", "U+EB2D"], ["", "U+E236"], ["󾫴", "U+FEAF4"]],
-  "⤵": ["U+2935", "arrow pointing rightwards then curving downwards", "2935", ["", "U+E700"], ["", "U+EB2E"], ["", "U+E238"], ["󾫵", "U+FEAF5"]],
-  "↔": ["U+2194", "left right arrow", "2194", ["", "U+E73C"], ["", "U+EB7A"], ["-", "-"], ["󾫶", "U+FEAF6"]],
-  "↕": ["U+2195", "up down arrow", "2195", ["", "U+E73D"], ["", "U+EB7B"], ["-", "-"], ["󾫷", "U+FEAF7"]],
-  "⬆": ["U+2B06", "upwards black arrow", "2b06", ["-", "-"], ["", "U+E53F"], ["", "U+E232"], ["󾫸", "U+FEAF8"]],
-  "⬇": ["U+2B07", "downwards black arrow", "2b07", ["-", "-"], ["", "U+E540"], ["", "U+E233"], ["󾫹", "U+FEAF9"]],
-  "➡": ["U+27A1", "black rightwards arrow", "27a1", ["-", "-"], ["", "U+E552"], ["", "U+E234"], ["󾫺", "U+FEAFA"]],
-  "⬅": ["U+2B05", "leftwards black arrow", "2b05", ["-", "-"], ["", "U+E553"], ["", "U+E235"], ["󾫻", "U+FEAFB"]],
-  "▶": ["U+25B6", "black right-pointing triangle", "25b6", ["-", "-"], ["", "U+E52E"], ["", "U+E23A"], ["󾫼", "U+FEAFC"]],
-  "◀": ["U+25C0", "black left-pointing triangle", "25c0", ["-", "-"], ["", "U+E52D"], ["", "U+E23B"], ["󾫽", "U+FEAFD"]],
-  "⏩": ["U+23E9", "black right-pointing double triangle", "23e9", ["-", "-"], ["", "U+E530"], ["", "U+E23C"], ["󾫾", "U+FEAFE"]],
-  "⏪": ["U+23EA", "black left-pointing double triangle", "23ea", ["-", "-"], ["", "U+E52F"], ["", "U+E23D"], ["󾫿", "U+FEAFF"]],
-  "⏫": ["U+23EB", "black up-pointing double triangle", "23eb", ["-", "-"], ["", "U+E545"], ["-", "-"], ["󾬃", "U+FEB03"]],
-  "⏬": ["U+23EC", "black down-pointing double triangle", "23ec", ["-", "-"], ["", "U+E544"], ["-", "-"], ["󾬂", "U+FEB02"]],
-  "🔺": ["U+1F53A", "up-pointing red triangle", "1f53a", ["-", "-"], ["", "U+E55A"], ["-", "-"], ["󾭸", "U+FEB78"]],
-  "🔻": ["U+1F53B", "down-pointing red triangle", "1f53b", ["-", "-"], ["", "U+E55B"], ["-", "-"], ["󾭹", "U+FEB79"]],
-  "🔼": ["U+1F53C", "up-pointing small red triangle", "1f53c", ["-", "-"], ["", "U+E543"], ["-", "-"], ["󾬁", "U+FEB01"]],
-  "🔽": ["U+1F53D", "down-pointing small red triangle", "1f53d", ["-", "-"], ["", "U+E542"], ["-", "-"], ["󾬀", "U+FEB00"]],
-  "⭕": ["U+2B55", "heavy large circle", "2b55", ["", "U+E6A0"], ["", "U+EAAD"], ["", "U+E332"], ["󾭄", "U+FEB44"]],
-  "❌": ["U+274C", "cross mark", "274c", ["-", "-"], ["", "U+E550"], ["", "U+E333"], ["󾭅", "U+FEB45"]],
-  "❎": ["U+274E", "negative squared cross mark", "274e", ["-", "-"], ["", "U+E551"], ["", "U+E333"], ["󾭆", "U+FEB46"]],
-  "❗": ["U+2757", "heavy exclamation mark symbol", "2757", ["", "U+E702"], ["", "U+E482"], ["", "U+E021"], ["󾬄", "U+FEB04"]],
-  "⁉": ["U+2049", "exclamation question mark", "2049", ["", "U+E703"], ["", "U+EB2F"], ["-", "-"], ["󾬅", "U+FEB05"]],
-  "‼": ["U+203C", "double exclamation mark", "203c", ["", "U+E704"], ["", "U+EB30"], ["-", "-"], ["󾬆", "U+FEB06"]],
-  "❓": ["U+2753", "black question mark ornament", "2753", ["-", "-"], ["", "U+E483"], ["", "U+E020"], ["󾬉", "U+FEB09"]],
-  "❔": ["U+2754", "white question mark ornament", "2754", ["-", "-"], ["", "U+E483"], ["", "U+E336"], ["󾬊", "U+FEB0A"]],
-  "❕": ["U+2755", "white exclamation mark ornament", "2755", ["", "U+E702"], ["", "U+E482"], ["", "U+E337"], ["󾬋", "U+FEB0B"]],
-  "〰": ["U+3030", "wavy dash", "3030", ["", "U+E709"], ["-", "-"], ["-", "-"], ["󾬇", "U+FEB07"]],
-  "➰": ["U+27B0", "curly loop", "27b0", ["", "U+E70A"], ["", "U+EB31"], ["-", "-"], ["󾬈", "U+FEB08"]],
-  "➿": ["U+27BF", "double curly loop", "27bf", ["", "U+E6DF"], ["-", "-"], ["", "U+E211"], ["󾠫", "U+FE82B"]],
-  "❤": ["U+2764", "heavy black heart", "2764", ["", "U+E6EC"], ["", "U+E595"], ["", "U+E022"], ["󾬌", "U+FEB0C"]],
-  "💓": ["U+1F493", "beating heart", "1f493", ["", "U+E6ED"], ["", "U+EB75"], ["", "U+E327"], ["󾬍", "U+FEB0D"]],
-  "💔": ["U+1F494", "broken heart", "1f494", ["", "U+E6EE"], ["", "U+E477"], ["", "U+E023"], ["󾬎", "U+FEB0E"]],
-  "💕": ["U+1F495", "two hearts", "1f495", ["", "U+E6EF"], ["", "U+E478"], ["", "U+E327"], ["󾬏", "U+FEB0F"]],
-  "💖": ["U+1F496", "sparkling heart", "1f496", ["", "U+E6EC"], ["", "U+EAA6"], ["", "U+E327"], ["󾬐", "U+FEB10"]],
-  "💗": ["U+1F497", "growing heart", "1f497", ["", "U+E6ED"], ["", "U+EB75"], ["", "U+E328"], ["󾬑", "U+FEB11"]],
-  "💘": ["U+1F498", "heart with arrow", "1f498", ["", "U+E6EC"], ["", "U+E4EA"], ["", "U+E329"], ["󾬒", "U+FEB12"]],
-  "💙": ["U+1F499", "blue heart", "1f499", ["", "U+E6EC"], ["", "U+EAA7"], ["", "U+E32A"], ["󾬓", "U+FEB13"]],
-  "💚": ["U+1F49A", "green heart", "1f49a", ["", "U+E6EC"], ["", "U+EAA8"], ["", "U+E32B"], ["󾬔", "U+FEB14"]],
-  "💛": ["U+1F49B", "yellow heart", "1f49b", ["", "U+E6EC"], ["", "U+EAA9"], ["", "U+E32C"], ["󾬕", "U+FEB15"]],
-  "💜": ["U+1F49C", "purple heart", "1f49c", ["", "U+E6EC"], ["", "U+EAAA"], ["", "U+E32D"], ["󾬖", "U+FEB16"]],
-  "💝": ["U+1F49D", "heart with ribbon", "1f49d", ["", "U+E6EC"], ["", "U+EB54"], ["", "U+E437"], ["󾬗", "U+FEB17"]],
-  "💞": ["U+1F49E", "revolving hearts", "1f49e", ["", "U+E6ED"], ["", "U+E5AF"], ["", "U+E327"], ["󾬘", "U+FEB18"]],
-  "💟": ["U+1F49F", "heart decoration", "1f49f", ["", "U+E6F8"], ["", "U+E595"], ["", "U+E204"], ["󾬙", "U+FEB19"]],
-  "♥": ["U+2665", "black heart suit", "2665", ["", "U+E68D"], ["", "U+EAA5"], ["", "U+E20C"], ["󾬚", "U+FEB1A"]],
-  "♠": ["U+2660", "black spade suit", "2660", ["", "U+E68E"], ["", "U+E5A1"], ["", "U+E20E"], ["󾬛", "U+FEB1B"]],
-  "♦": ["U+2666", "black diamond suit", "2666", ["", "U+E68F"], ["", "U+E5A2"], ["", "U+E20D"], ["󾬜", "U+FEB1C"]],
-  "♣": ["U+2663", "black club suit", "2663", ["", "U+E690"], ["", "U+E5A3"], ["", "U+E20F"], ["󾬝", "U+FEB1D"]],
-  "🚬": ["U+1F6AC", "smoking symbol", "1f6ac", ["", "U+E67F"], ["", "U+E47D"], ["", "U+E30E"], ["󾬞", "U+FEB1E"]],
-  "🚭": ["U+1F6AD", "no smoking symbol", "1f6ad", ["", "U+E680"], ["", "U+E47E"], ["", "U+E208"], ["󾬟", "U+FEB1F"]],
-  "♿": ["U+267F", "wheelchair symbol", "267f", ["", "U+E69B"], ["", "U+E47F"], ["", "U+E20A"], ["󾬠", "U+FEB20"]],
-  "🚩": ["U+1F6A9", "triangular flag on post", "1f6a9", ["", "U+E6DE"], ["", "U+EB2C"], ["-", "-"], ["󾬢", "U+FEB22"]],
-  "⚠": ["U+26A0", "warning sign", "26a0", ["", "U+E737"], ["", "U+E481"], ["", "U+E252"], ["󾬣", "U+FEB23"]],
-  "⛔": ["U+26D4", "no entry", "26d4", ["", "U+E72F"], ["", "U+E484"], ["", "U+E137"], ["󾬦", "U+FEB26"]],
-  "♻": ["U+267B", "black universal recycling symbol", "267b", ["", "U+E735"], ["", "U+EB79"], ["-", "-"], ["󾬬", "U+FEB2C"]],
-  "🚲": ["U+1F6B2", "bicycle", "1f6b2", ["", "U+E71D"], ["", "U+E4AE"], ["", "U+E136"], ["󾟫", "U+FE7EB"]],
-  "🚶": ["U+1F6B6", "pedestrian", "1f6b6", ["", "U+E733"], ["", "U+EB72"], ["", "U+E201"], ["󾟰", "U+FE7F0"]],
-  "🚹": ["U+1F6B9", "mens symbol", "1f6b9", ["-", "-"], ["-", "-"], ["", "U+E138"], ["󾬳", "U+FEB33"]],
-  "🚺": ["U+1F6BA", "womens symbol", "1f6ba", ["-", "-"], ["-", "-"], ["", "U+E139"], ["󾬴", "U+FEB34"]],
-  "🛀": ["U+1F6C0", "bath", "1f6c0", ["", "U+E6F7"], ["", "U+E5D8"], ["", "U+E13F"], ["󾔅", "U+FE505"]],
-  "🚻": ["U+1F6BB", "restroom", "1f6bb", ["", "U+E66E"], ["", "U+E4A5"], ["", "U+E151"], ["󾔆", "U+FE506"]],
-  "🚽": ["U+1F6BD", "toilet", "1f6bd", ["", "U+E66E"], ["", "U+E4A5"], ["", "U+E140"], ["󾔇", "U+FE507"]],
-  "🚾": ["U+1F6BE", "water closet", "1f6be", ["", "U+E66E"], ["", "U+E4A5"], ["", "U+E309"], ["󾔈", "U+FE508"]],
-  "🚼": ["U+1F6BC", "baby symbol", "1f6bc", ["-", "-"], ["", "U+EB18"], ["", "U+E13A"], ["󾬵", "U+FEB35"]],
-  "🚪": ["U+1F6AA", "door", "1f6aa", ["", "U+E714"], ["-", "-"], ["-", "-"], ["󾓳", "U+FE4F3"]],
-  "🚫": ["U+1F6AB", "no entry sign", "1f6ab", ["", "U+E738"], ["", "U+E541"], ["-", "-"], ["󾭈", "U+FEB48"]],
-  "✔": ["U+2714", "heavy check mark", "2714", ["-", "-"], ["", "U+E557"], ["-", "-"], ["󾭉", "U+FEB49"]],
-  "🆑": ["U+1F191", "squared cl", "1f191", ["", "U+E6DB"], ["", "U+E5AB"], ["-", "-"], ["󾮄", "U+FEB84"]],
-  "🆒": ["U+1F192", "squared cool", "1f192", ["-", "-"], ["", "U+EA85"], ["", "U+E214"], ["󾬸", "U+FEB38"]],
-  "🆓": ["U+1F193", "squared free", "1f193", ["", "U+E6D7"], ["", "U+E578"], ["-", "-"], ["󾬡", "U+FEB21"]],
-  "🆔": ["U+1F194", "squared id", "1f194", ["", "U+E6D8"], ["", "U+EA88"], ["", "U+E229"], ["󾮁", "U+FEB81"]],
-  "🆕": ["U+1F195", "squared new", "1f195", ["", "U+E6DD"], ["", "U+E5B5"], ["", "U+E212"], ["󾬶", "U+FEB36"]],
-  "🆖": ["U+1F196", "squared ng", "1f196", ["", "U+E72F"], ["-", "-"], ["-", "-"], ["󾬨", "U+FEB28"]],
-  "🆗": ["U+1F197", "squared ok", "1f197", ["", "U+E70B"], ["", "U+E5AD"], ["", "U+E24D"], ["󾬧", "U+FEB27"]],
-  "🆘": ["U+1F198", "squared sos", "1f198", ["-", "-"], ["", "U+E4E8"], ["-", "-"], ["󾭏", "U+FEB4F"]],
-  "🆙": ["U+1F199", "squared up with exclamation mark", "1f199", ["-", "-"], ["", "U+E50F"], ["", "U+E213"], ["󾬷", "U+FEB37"]],
-  "🆚": ["U+1F19A", "squared vs", "1f19a", ["-", "-"], ["", "U+E5D2"], ["", "U+E12E"], ["󾬲", "U+FEB32"]],
-  "🈁": ["U+1F201", "squared katakana koko", "1f201", ["-", "-"], ["-", "-"], ["", "U+E203"], ["󾬤", "U+FEB24"]],
-  "🈂": ["U+1F202", "squared katakana sa", "1f202", ["-", "-"], ["", "U+EA87"], ["", "U+E228"], ["󾬿", "U+FEB3F"]],
-  "🈲": ["U+1F232", "squared cjk unified ideograph-7981", "1f232", ["", "U+E738"], ["-", "-"], ["-", "-"], ["󾬮", "U+FEB2E"]],
-  "🈳": ["U+1F233", "squared cjk unified ideograph-7a7a", "1f233", ["", "U+E739"], ["", "U+EA8A"], ["", "U+E22B"], ["󾬯", "U+FEB2F"]],
-  "🈴": ["U+1F234", "squared cjk unified ideograph-5408", "1f234", ["", "U+E73A"], ["-", "-"], ["-", "-"], ["󾬰", "U+FEB30"]],
-  "🈵": ["U+1F235", "squared cjk unified ideograph-6e80", "1f235", ["", "U+E73B"], ["", "U+EA89"], ["", "U+E22A"], ["󾬱", "U+FEB31"]],
-  "🈶": ["U+1F236", "squared cjk unified ideograph-6709", "1f236", ["-", "-"], ["-", "-"], ["", "U+E215"], ["󾬹", "U+FEB39"]],
-  "🈚": ["U+1F21A", "squared cjk unified ideograph-7121", "1f21a", ["-", "-"], ["-", "-"], ["", "U+E216"], ["󾬺", "U+FEB3A"]],
-  "🈷": ["U+1F237", "squared cjk unified ideograph-6708", "1f237", ["-", "-"], ["-", "-"], ["", "U+E217"], ["󾬻", "U+FEB3B"]],
-  "🈸": ["U+1F238", "squared cjk unified ideograph-7533", "1f238", ["-", "-"], ["-", "-"], ["", "U+E218"], ["󾬼", "U+FEB3C"]],
-  "🈹": ["U+1F239", "squared cjk unified ideograph-5272", "1f239", ["-", "-"], ["", "U+EA86"], ["", "U+E227"], ["󾬾", "U+FEB3E"]],
-  "🈯": ["U+1F22F", "squared cjk unified ideograph-6307", "1f22f", ["-", "-"], ["", "U+EA8B"], ["", "U+E22C"], ["󾭀", "U+FEB40"]],
-  "🈺": ["U+1F23A", "squared cjk unified ideograph-55b6", "1f23a", ["-", "-"], ["", "U+EA8C"], ["", "U+E22D"], ["󾭁", "U+FEB41"]],
-  "㊙": ["U+3299", "circled ideograph secret", "3299", ["", "U+E734"], ["", "U+E4F1"], ["", "U+E315"], ["󾬫", "U+FEB2B"]],
-  "㊗": ["U+3297", "circled ideograph congratulation", "3297", ["-", "-"], ["", "U+EA99"], ["", "U+E30D"], ["󾭃", "U+FEB43"]],
-  "🉐": ["U+1F250", "circled ideograph advantage", "1f250", ["-", "-"], ["", "U+E4F7"], ["", "U+E226"], ["󾬽", "U+FEB3D"]],
-  "🉑": ["U+1F251", "circled ideograph accept", "1f251", ["-", "-"], ["", "U+EB01"], ["-", "-"], ["󾭐", "U+FEB50"]],
-  "➕": ["U+2795", "heavy plus sign", "2795", ["-", "-"], ["", "U+E53C"], ["-", "-"], ["󾭑", "U+FEB51"]],
-  "➖": ["U+2796", "heavy minus sign", "2796", ["-", "-"], ["", "U+E53D"], ["-", "-"], ["󾭒", "U+FEB52"]],
-  "✖": ["U+2716", "heavy multiplication x", "2716", ["-", "-"], ["", "U+E54F"], ["", "U+E333"], ["󾭓", "U+FEB53"]],
-  "➗": ["U+2797", "heavy division sign", "2797", ["-", "-"], ["", "U+E554"], ["-", "-"], ["󾭔", "U+FEB54"]],
-  "💠": ["U+1F4A0", "diamond shape with a dot inside", "1f4a0", ["", "U+E6F8"], ["-", "-"], ["-", "-"], ["󾭕", "U+FEB55"]],
-  "💡": ["U+1F4A1", "electric light bulb", "1f4a1", ["", "U+E6FB"], ["", "U+E476"], ["", "U+E10F"], ["󾭖", "U+FEB56"]],
-  "💢": ["U+1F4A2", "anger symbol", "1f4a2", ["", "U+E6FC"], ["", "U+E4E5"], ["", "U+E334"], ["󾭗", "U+FEB57"]],
-  "💣": ["U+1F4A3", "bomb", "1f4a3", ["", "U+E6FE"], ["", "U+E47A"], ["", "U+E311"], ["󾭘", "U+FEB58"]],
-  "💤": ["U+1F4A4", "sleeping symbol", "1f4a4", ["", "U+E701"], ["", "U+E475"], ["", "U+E13C"], ["󾭙", "U+FEB59"]],
-  "💥": ["U+1F4A5", "collision symbol", "1f4a5", ["", "U+E705"], ["", "U+E5B0"], ["-", "-"], ["󾭚", "U+FEB5A"]],
-  "💦": ["U+1F4A6", "splashing sweat symbol", "1f4a6", ["", "U+E706"], ["", "U+E5B1"], ["", "U+E331"], ["󾭛", "U+FEB5B"]],
-  "💧": ["U+1F4A7", "droplet", "1f4a7", ["", "U+E707"], ["", "U+E4E6"], ["", "U+E331"], ["󾭜", "U+FEB5C"]],
-  "💨": ["U+1F4A8", "dash symbol", "1f4a8", ["", "U+E708"], ["", "U+E4F4"], ["", "U+E330"], ["󾭝", "U+FEB5D"]],
-  "💩": ["U+1F4A9", "pile of poo", "1f4a9", ["-", "-"], ["", "U+E4F5"], ["", "U+E05A"], ["󾓴", "U+FE4F4"]],
-  "💪": ["U+1F4AA", "flexed biceps", "1f4aa", ["-", "-"], ["", "U+E4E9"], ["", "U+E14C"], ["󾭞", "U+FEB5E"]],
-  "💫": ["U+1F4AB", "dizzy symbol", "1f4ab", ["-", "-"], ["", "U+EB5C"], ["", "U+E407"], ["󾭟", "U+FEB5F"]],
-  "💬": ["U+1F4AC", "speech balloon", "1f4ac", ["-", "-"], ["", "U+E4FD"], ["-", "-"], ["󾔲", "U+FE532"]],
-  "✨": ["U+2728", "sparkles", "2728", ["", "U+E6FA"], ["", "U+EAAB"], ["", "U+E32E"], ["󾭠", "U+FEB60"]],
-  "✴": ["U+2734", "eight pointed black star", "2734", ["", "U+E6F8"], ["", "U+E479"], ["", "U+E205"], ["󾭡", "U+FEB61"]],
-  "✳": ["U+2733", "eight spoked asterisk", "2733", ["", "U+E6F8"], ["", "U+E53E"], ["", "U+E206"], ["󾭢", "U+FEB62"]],
-  "⚪": ["U+26AA", "medium white circle", "26aa", ["", "U+E69C"], ["", "U+E53A"], ["", "U+E219"], ["󾭥", "U+FEB65"]],
-  "⚫": ["U+26AB", "medium black circle", "26ab", ["", "U+E69C"], ["", "U+E53B"], ["", "U+E219"], ["󾭦", "U+FEB66"]],
-  "🔴": ["U+1F534", "large red circle", "1f534", ["", "U+E69C"], ["", "U+E54A"], ["", "U+E219"], ["󾭣", "U+FEB63"]],
-  "🔵": ["U+1F535", "large blue circle", "1f535", ["", "U+E69C"], ["", "U+E54B"], ["", "U+E21A"], ["󾭤", "U+FEB64"]],
-  "🔲": ["U+1F532", "black square button", "1f532", ["", "U+E69C"], ["", "U+E54B"], ["", "U+E21A"], ["󾭤", "U+FEB64"]],
-  "🔳": ["U+1F533", "white square button", "1f533", ["", "U+E69C"], ["", "U+E54B"], ["", "U+E21B"], ["󾭧", "U+FEB67"]],
-  "⭐": ["U+2B50", "white medium star", "2b50", ["-", "-"], ["", "U+E48B"], ["", "U+E32F"], ["󾭨", "U+FEB68"]],
-  "⬜": ["U+2B1C", "white large square", "2b1c", ["-", "-"], ["", "U+E548"], ["", "U+E21B"], ["󾭫", "U+FEB6B"]],
-  "⬛": ["U+2B1B", "black large square", "2b1b", ["-", "-"], ["", "U+E549"], ["", "U+E21A"], ["󾭬", "U+FEB6C"]],
-  "▫": ["U+25AB", "white small square", "25ab", ["-", "-"], ["", "U+E531"], ["", "U+E21B"], ["󾭭", "U+FEB6D"]],
-  "▪": ["U+25AA", "black small square", "25aa", ["-", "-"], ["", "U+E532"], ["", "U+E21A"], ["󾭮", "U+FEB6E"]],
-  "◽": ["U+25FD", "white medium small square", "25fd", ["-", "-"], ["", "U+E534"], ["", "U+E21B"], ["󾭯", "U+FEB6F"]],
-  "◾": ["U+25FE", "black medium small square", "25fe", ["-", "-"], ["", "U+E535"], ["", "U+E21A"], ["󾭰", "U+FEB70"]],
-  "◻": ["U+25FB", "white medium square", "25fb", ["-", "-"], ["", "U+E538"], ["", "U+E21B"], ["󾭱", "U+FEB71"]],
-  "◼": ["U+25FC", "black medium square", "25fc", ["-", "-"], ["", "U+E539"], ["", "U+E21A"], ["󾭲", "U+FEB72"]],
-  "🔶": ["U+1F536", "large orange diamond", "1f536", ["-", "-"], ["", "U+E546"], ["", "U+E21B"], ["󾭳", "U+FEB73"]],
-  "🔷": ["U+1F537", "large blue diamond", "1f537", ["-", "-"], ["", "U+E547"], ["", "U+E21B"], ["󾭴", "U+FEB74"]],
-  "🔸": ["U+1F538", "small orange diamond", "1f538", ["-", "-"], ["", "U+E536"], ["", "U+E21B"], ["󾭵", "U+FEB75"]],
-  "🔹": ["U+1F539", "small blue diamond", "1f539", ["-", "-"], ["", "U+E537"], ["", "U+E21B"], ["󾭶", "U+FEB76"]],
-  "❇": ["U+2747", "sparkle", "2747", ["", "U+E6FA"], ["", "U+E46C"], ["", "U+E32E"], ["󾭷", "U+FEB77"]],
-  "💮": ["U+1F4AE", "white flower", "1f4ae", ["-", "-"], ["", "U+E4F0"], ["-", "-"], ["󾭺", "U+FEB7A"]],
-  "💯": ["U+1F4AF", "hundred points symbol", "1f4af", ["-", "-"], ["", "U+E4F2"], ["-", "-"], ["󾭻", "U+FEB7B"]],
-  "↩": ["U+21A9", "leftwards arrow with hook", "21a9", ["", "U+E6DA"], ["", "U+E55D"], ["-", "-"], ["󾮃", "U+FEB83"]],
-  "↪": ["U+21AA", "rightwards arrow with hook", "21aa", ["-", "-"], ["", "U+E55C"], ["-", "-"], ["󾮈", "U+FEB88"]],
-  "🔃": ["U+1F503", "clockwise downwards and upwards open circle arrows", "1f503", ["", "U+E735"], ["", "U+EB0D"], ["-", "-"], ["󾮑", "U+FEB91"]],
-  "🔊": ["U+1F50A", "speaker with three sound waves", "1f50a", ["-", "-"], ["", "U+E511"], ["", "U+E141"], ["󾠡", "U+FE821"]],
-  "🔋": ["U+1F50B", "battery", "1f50b", ["-", "-"], ["", "U+E584"], ["-", "-"], ["󾓼", "U+FE4FC"]],
-  "🔌": ["U+1F50C", "electric plug", "1f50c", ["-", "-"], ["", "U+E589"], ["-", "-"], ["󾓾", "U+FE4FE"]],
-  "🔍": ["U+1F50D", "left-pointing magnifying glass", "1f50d", ["", "U+E6DC"], ["", "U+E518"], ["", "U+E114"], ["󾮅", "U+FEB85"]],
-  "🔎": ["U+1F50E", "right-pointing magnifying glass", "1f50e", ["", "U+E6DC"], ["", "U+EB05"], ["", "U+E114"], ["󾮍", "U+FEB8D"]],
-  "🔒": ["U+1F512", "lock", "1f512", ["", "U+E6D9"], ["", "U+E51C"], ["", "U+E144"], ["󾮆", "U+FEB86"]],
-  "🔓": ["U+1F513", "open lock", "1f513", ["", "U+E6D9"], ["", "U+E51C"], ["", "U+E145"], ["󾮇", "U+FEB87"]],
-  "🔏": ["U+1F50F", "lock with ink pen", "1f50f", ["", "U+E6D9"], ["", "U+EB0C"], ["", "U+E144"], ["󾮐", "U+FEB90"]],
-  "🔐": ["U+1F510", "closed lock with key", "1f510", ["", "U+E6D9"], ["", "U+EAFC"], ["", "U+E144"], ["󾮊", "U+FEB8A"]],
-  "🔑": ["U+1F511", "key", "1f511", ["", "U+E6D9"], ["", "U+E519"], ["", "U+E03F"], ["󾮂", "U+FEB82"]],
-  "🔔": ["U+1F514", "bell", "1f514", ["", "U+E713"], ["", "U+E512"], ["", "U+E325"], ["󾓲", "U+FE4F2"]],
-  "☑": ["U+2611", "ballot box with check", "2611", ["-", "-"], ["", "U+EB02"], ["-", "-"], ["󾮋", "U+FEB8B"]],
-  "🔘": ["U+1F518", "radio button", "1f518", ["-", "-"], ["", "U+EB04"], ["-", "-"], ["󾮌", "U+FEB8C"]],
-  "🔖": ["U+1F516", "bookmark", "1f516", ["-", "-"], ["", "U+EB07"], ["-", "-"], ["󾮏", "U+FEB8F"]],
-  "🔗": ["U+1F517", "link symbol", "1f517", ["-", "-"], ["", "U+E58A"], ["-", "-"], ["󾭋", "U+FEB4B"]],
-  "🔙": ["U+1F519", "back with leftwards arrow above", "1f519", ["-", "-"], ["", "U+EB06"], ["", "U+E235"], ["󾮎", "U+FEB8E"]],
-  "🔚": ["U+1F51A", "end with leftwards arrow above", "1f51a", ["", "U+E6B9"], ["-", "-"], ["-", "-"], ["󾀚", "U+FE01A"]],
-  "🔛": ["U+1F51B", "on with exclamation mark with left right arrow above", "1f51b", ["", "U+E6B8"], ["-", "-"], ["-", "-"], ["󾀙", "U+FE019"]],
-  "🔜": ["U+1F51C", "soon with rightwards arrow above", "1f51c", ["", "U+E6B7"], ["-", "-"], ["-", "-"], ["󾀘", "U+FE018"]],
-  "🔝": ["U+1F51D", "top with upwards arrow above", "1f51d", ["-", "-"], ["-", "-"], ["", "U+E24C"], ["󾭂", "U+FEB42"]],
-  "✅": ["U+2705", "white heavy check mark", "2705", ["-", "-"], ["", "U+E55E"], ["-", "-"], ["󾭊", "U+FEB4A"]],
-  "✊": ["U+270A", "raised fist", "270a", ["", "U+E693"], ["", "U+EB83"], ["", "U+E010"], ["󾮓", "U+FEB93"]],
-  "✋": ["U+270B", "raised hand", "270b", ["", "U+E695"], ["", "U+E5A7"], ["", "U+E012"], ["󾮕", "U+FEB95"]],
-  "✌": ["U+270C", "victory hand", "270c", ["", "U+E694"], ["", "U+E5A6"], ["", "U+E011"], ["󾮔", "U+FEB94"]],
-  "👊": ["U+1F44A", "fisted hand sign", "1f44a", ["", "U+E6FD"], ["", "U+E4F3"], ["", "U+E00D"], ["󾮖", "U+FEB96"]],
-  "👍": ["U+1F44D", "thumbs up sign", "1f44d", ["", "U+E727"], ["", "U+E4F9"], ["", "U+E00E"], ["󾮗", "U+FEB97"]],
-  "☝": ["U+261D", "white up pointing index", "261d", ["-", "-"], ["", "U+E4F6"], ["", "U+E00F"], ["󾮘", "U+FEB98"]],
-  "👆": ["U+1F446", "white up pointing backhand index", "1f446", ["-", "-"], ["", "U+EA8D"], ["", "U+E22E"], ["󾮙", "U+FEB99"]],
-  "👇": ["U+1F447", "white down pointing backhand index", "1f447", ["-", "-"], ["", "U+EA8E"], ["", "U+E22F"], ["󾮚", "U+FEB9A"]],
-  "👈": ["U+1F448", "white left pointing backhand index", "1f448", ["-", "-"], ["", "U+E4FF"], ["", "U+E230"], ["󾮛", "U+FEB9B"]],
-  "👉": ["U+1F449", "white right pointing backhand index", "1f449", ["-", "-"], ["", "U+E500"], ["", "U+E231"], ["󾮜", "U+FEB9C"]],
-  "👋": ["U+1F44B", "waving hand sign", "1f44b", ["", "U+E695"], ["", "U+EAD6"], ["", "U+E41E"], ["󾮝", "U+FEB9D"]],
-  "👏": ["U+1F44F", "clapping hands sign", "1f44f", ["-", "-"], ["", "U+EAD3"], ["", "U+E41F"], ["󾮞", "U+FEB9E"]],
-  "👌": ["U+1F44C", "ok hand sign", "1f44c", ["", "U+E70B"], ["", "U+EAD4"], ["", "U+E420"], ["󾮟", "U+FEB9F"]],
-  "👎": ["U+1F44E", "thumbs down sign", "1f44e", ["", "U+E700"], ["", "U+EAD5"], ["", "U+E421"], ["󾮠", "U+FEBA0"]],
-  "👐": ["U+1F450", "open hands sign", "1f450", ["", "U+E695"], ["", "U+EAD6"], ["", "U+E422"], ["󾮡", "U+FEBA1"]],
-  "🏇": ["U+1F3C7", "horse racer", "1f3c7", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🏉": ["U+1F3C9", "rugby football", "1f3c9", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🍼": ["U+1F37C", "babby bottle", "1f37c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🍐": ["U+1F350", "pear", "1f350", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌞": ["U+1F31e", "sun with face", "1f31e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌝": ["U+1F31D", "full moon with face", "1f31d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌜": ["U+1F31C", "last quarter moon with face", "1f31c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌚": ["U+1F31A", "new moon with face", "1f31a", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌘": ["U+1F318", "waning crescent moon symbol", "1f318", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌗": ["U+1F317", "last quarter moon symbol", "1f317", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌖": ["U+1F316", "waning gibbous moon symbol", "1f316", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌒": ["U+1F312", "waxing crescent moon symbol", "1f312", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌐": ["U+1F310", "globe with meridians", "1f310", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌎": ["U+1F30E", "earth globe americas", "1f30e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🌍": ["U+1F30D", "earth globe europe-africa", "1f30d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🏤": ["U+1F3E4", "european post office", "1f3e4", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐏": ["U+1F40F", "ram", "1f40f", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐐": ["U+1F410", "goat", "1f410", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐓": ["U+1F413", "rooster", "1f413", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐕": ["U+1F415", "dog", "1f415", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐖": ["U+1F416", "pig", "1f416", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🐪": ["U+1F42A", "dromedary camel", "1f42a", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "👥": ["U+1F465", "busts in silhouette", "1f465", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "💭": ["U+1F4AD", "thought balloon", "1f4ad", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "💶": ["U+1F4B6", "banknote with euro sign", "1f4b6", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "💷": ["U+1F4B7", "banknote with pound sign", "1f4b7", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "📬": ["U+1F4EC", "open mailbox with raised flag", "1f4ec", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "📭": ["U+1F4ED", "open mailbox with lowered flag", "1f4ed", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "📯": ["U+1F4EF", "postal horn", "1f4ef", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "📵": ["U+1F4F5", "no mobile phones", "1f4f5", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔀": ["U+1F500", "twisted rightwards arrows", "1f500", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔁": ["U+1F501", "clockwise rightwards and leftwards open circle arrows", "1f501", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔂": ["U+1F502", "clockwise rightwards and leftwards open circle arrows with circled one overlay", "1f502", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔃": ["U+1F503", "clockwise downwards and upwards open circle arrows", "1f503", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔄": ["U+1F504", "anticlockwise downwards and upwards open circle arrows", "1f504", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔅": ["U+1F505", "low brightness symbol", "1f505", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔆": ["U+1F506", "high brightness symbol", "1f506", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔇": ["U+1F507", "speaker with cancellation stroke", "1f507", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔉": ["U+1F509", "speaker with one sound wave", "1f509", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔕": ["U+1F515", "bell with cancellation stroke", "1f515", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔬": ["U+1F52C", "microscope", "1f52c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🔭": ["U+1F52D", "telescope", "1f52d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕜": ["U+1F55C", "clock face one-thirty", "1f55c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕝": ["U+1F55D", "clock face two-thirty", "1f55d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕞": ["U+1F55E", "clock face three-thirty", "1f55e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕟": ["U+1F55F", "clock face four-thirty", "1f55f", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕠": ["U+1F560", "clock face five-thirty", "1f560", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕡": ["U+1F561", "clock face six-thirty", "1f561", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕢": ["U+1F562", "clock face seven-thirty", "1f562", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕣": ["U+1F563", "clock face eight-thirty", "1f563", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕤": ["U+1F564", "clock face nine-thirty", "1f564", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕥": ["U+1F565", "clock face ten-thirty", "1f565", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕦": ["U+1F566", "clock face eleven-thirty", "1f566", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕧": ["U+1F567", "clock face twelve-thirty", "1f567", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🕧": ["U+1F567", "grinning face", "1f600", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😇": ["U+1F607", "smiling face with halo", "1f607", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😈": ["U+1F608", "smiling face with horns", "1f608", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😐": ["U+1F610", "neutral face", "1f610", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😑": ["U+1F611", "expressionless face", "1f611", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😕": ["U+1F615", "confused face", "1f615", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😗": ["U+1F617", "kissing face", "1f617", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😗": ["U+1F617", "kissing face", "1f617", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😛": ["U+1F61B", "face with stuck-out tongue", "1f61b", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😟": ["U+1F61F", "worried face", "1f61f", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😥": ["U+1F625", "disappointed but relieved face", "1f625", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😦": ["U+1F626", "frowning face with open mouth", "1f626", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😧": ["U+1F627", "anguished face", "1f627", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😬": ["U+1F62C", "grimacing face", "1f62c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😬": ["U+1F62C", "grimacing face", "1f62c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😮": ["U+1F62E", "face with open mouth", "1f62e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😯": ["U+1F62F", "hushed face", "1f62f", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😴": ["U+1F634", "sleeping face", "1f634", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😶": ["U+1F636", "face without mouth", "1f636", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚁": ["U+1F681", "helicopter", "1f681", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚂": ["U+1F682", "steam locomotive", "1f682", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚆": ["U+1F686", "train", "1f686", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚈": ["U+1F688", "light rail", "1f688", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚎": ["U+1F68E", "trolleybus", "1f68e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚍": ["U+1F68D", "oncoming bus", "1f68d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚐": ["U+1F690", "minibus", "1f690", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚔": ["U+1F694", "oncoming police car", "1f694", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚖": ["U+1F696", "oncoming taxi", "1f696", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚘": ["U+1F698", "oncoming automobile", "1f698", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚛": ["U+1F69B", "articulated lorry", "1f69b", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚜": ["U+1F69C", "tractor", "1f69c", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚝": ["U+1F69D", "monorail", "1f69d", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚞": ["U+1F69E", "mountain railway", "1f69e", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚟": ["U+1F69F", "suspension railway", "1f69f", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚠": ["U+1F6A0", "mountain cableway", "1f6a0", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚡": ["U+1F6A1", "aerial tramway", "1f6a1", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚣": ["U+1F6A3", "rowboat", "1f6a3", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚦": ["U+1F6A6", "vertical traffic light", "1f6a6", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚮": ["U+1F6AE", "put litter in its place symbol", "1f6ae", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚯": ["U+1F6AF", "do not litter symbol", "1f6af", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚰": ["U+1F6B0", "potable water symbol", "1f6b0", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚱": ["U+1F6B1", "non-potable water symbol", "1f6b1", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚳": ["U+1F6B3", "no bicycles", "1f6b3", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚴": ["U+1F6B4", "bicyclist", "1f6b4", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚵": ["U+1F6B5", "mountain bicyclist", "1f6b5", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚷": ["U+1F6B7", "no pedestrians", "1f6b7", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚸": ["U+1F6B8", "children crossing", "1f6b8", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚿": ["U+1F6BF", "shower", "1f6bf", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🛁": ["U+1F6C1", "bathtub", "1f6c1", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🛂": ["U+1F6C2", "passport control", "1f6c2", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🛃": ["U+1F6C3", "customs", "1f6c3", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🛄": ["U+1F6C4", "baggage claim", "1f6c4", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🛅": ["U+1F6C5", "left luggage", "1f6c5", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "😙": ["U+1F619", "kissing face with smiling eyes", "1f619", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]],
-  "🚊": ["U+1F68A", "tram", "1f68a", ["-", "-"], ["-", "-"], ["-", "-"], ["-", "-"]]
-};
-
-
-/**
- * Create map keys rexgep, keys sort by key's length desc.
- *
- * @param {Object} map
- * @return {RegExp}
- */
-function _createRegexp(map) {
-  var keys = Object.keys(map);
-  keys.sort(function (a, b) {
-    return b.length - a.length;
-  });
-  return new RegExp('(' + keys.join('|') + ')', 'g');
-}
-
-var EMOJI_RE = null;
-/**
- * Convert unified code to HTML.
- *
- * @param {String} text
- * @return {String} html with emoji classname.
- */
-function unifiedToHTML(text) {
-  return text.replace(jEmoji.EMOJI_RE(), function (_, m) {
-    var em = EMOJI_MAP[m];
-    return '<span class="emoji emoji' + em[2] + '" title="' + em[1] + '"></span>';
-  });
-}
-jEmoji.unifiedToHTML = unifiedToHTML;
-
-var EMOJI_DOCOMO_MAP = {};
-var EMOJI_KDDI_MAP = {};
-var EMOJI_SOFTBANK_MAP = {};
-var EMOJI_GOOGLE_MAP = {};
-var _maps = [EMOJI_DOCOMO_MAP, EMOJI_KDDI_MAP, EMOJI_SOFTBANK_MAP, EMOJI_GOOGLE_MAP];
-for (var k in EMOJI_MAP) {
-  var em = EMOJI_MAP[k];
-  for (var i = 0; i < _maps.length; i++) {
-    var index = i + 3;
-    var code = em[index][0];
-    var map = _maps[i];
-    if (code === '-' || map[code]) { // use first code
-      continue;
-    }
-    map[code] = k;
-  }
-}
-
-var EMOJI_DOCOMO_RE = null;
-/**
- * Convert DoCoMo code to Unified code.
- *
- * @param {String} text
- * @return {String}
- */
-function docomoToUnified(text) {
-  return text.replace(jEmoji.EMOJI_DOCOMO_RE(), function (_, m) {
-    return EMOJI_DOCOMO_MAP[m];
-  });
-}
-jEmoji.docomoToUnified = docomoToUnified;
-
-var EMOJI_KDDI_RE = null;
-/**
- * Convert KDDI code to Unified code.
- *
- * @param {String} text
- * @return {String}
- */
-function kddiToUnified(text) {
-  return text.replace(jEmoji.EMOJI_KDDI_RE(), function (_, m) {
-    return EMOJI_KDDI_MAP[m];
-  });
-}
-jEmoji.kddiToUnified = kddiToUnified;
-
-var EMOJI_SOFTBANK_RE = null;
-/**
- * Convert SoftBank code to Unified code.
- *
- * @param {String} text
- * @return {String}
- */
-function softbankToUnified(text) {
-  return text.replace(jEmoji.EMOJI_SOFTBANK_RE(), function (_, m) {
-    return EMOJI_SOFTBANK_MAP[m];
-  });
-}
-jEmoji.softbankToUnified = softbankToUnified;
-
-var EMOJI_GOOGLE_RE = null;
-/**
- * Convert Google code to Unified code.
- *
- * @param {String} text
- * @return {String}
- */
-function googleToUnified(text) {
-  return text.replace(jEmoji.EMOJI_GOOGLE_RE(), function (_, m) {
-    return EMOJI_GOOGLE_MAP[m];
-  });
-}
-jEmoji.googleToUnified = googleToUnified;
-
-return jEmoji;
-
-});
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- @package wdt-emoji-bundle - Slack like emoji selector with apple, twitter, google, emojione and custom emoji support.
- @version version: 0.2.1
- @contributors https://github.com/needim/wdt-emoji-bundle/graphs/contributors
- @documentation Examples and Documentation - http://ned.im/wdt-emoji-bundle/
- @license Licensed under the MIT licenses: http://www.opensource.org/licenses/mit-license.php
- */
-
-;
-(function (root, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(66)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports === 'object') {
-    module.exports = factory(require('emoji-js'));
-  } else {
-    root.wdtEmojiBundle = factory(root.EmojiConvertor);
-  }
-})(this, function (EmojiConvertor) {
-  var wdtEmojiBundle = {};
-
-  wdtEmojiBundle.defaults = {
-    pickerColors : ['green', 'pink', 'yellow', 'blue', 'gray'],
-    textMode     : true,
-    disabledCategories: ['Skin Tones'],
-    sectionOrders: {
-      'Recent'  : 10,
-      'Custom'  : 9,
-      'People'  : 8,
-      'Nature'  : 7,
-      'Foods'   : 6,
-      'Activity': 5,
-      'Places'  : 4,
-      'Objects' : 3,
-      'Symbols' : 2,
-      'Flags'   : 1
-    },
-    skinColor    : 'skin-1',
-    allowNative  : false,
-    emojiType    : 'apple',
-    emojiSheets: {
-      'apple'    : '/sheets/sheet_apple_64_indexed_128.png',
-      'google'   : '/sheets/sheet_google_64_indexed_128.png',
-      'twitter'  : '/sheets/sheet_twitter_64_indexed_128.png',
-      'emojione' : '/sheets/sheet_emojione_64_indexed_128.png',
-      'facebook' : '/sheets/sheet_facebook_64_indexed_128.png',
-      'messenger': '/sheets/sheet_messenger_64_indexed_128.png'
-    },
-		emojiData: {"Symbols":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY BLACK HEART","short_name":"heart","short_names":["heart"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"YELLOW HEART","short_name":"yellow_heart","short_names":["yellow_heart"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GREEN HEART","short_name":"green_heart","short_names":["green_heart"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLUE HEART","short_name":"blue_heart","short_names":["blue_heart"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PURPLE HEART","short_name":"purple_heart","short_names":["purple_heart"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BROKEN HEART","short_name":"broken_heart","short_names":["broken_heart"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HEAVY HEART EXCLAMATION MARK ORNAMENT","short_name":"heavy_heart_exclamation_mark_ornament","short_names":["heavy_heart_exclamation_mark_ornament"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TWO HEARTS","short_name":"two_hearts","short_names":["two_hearts"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REVOLVING HEARTS","short_name":"revolving_hearts","short_names":["revolving_hearts"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BEATING HEART","short_name":"heartbeat","short_names":["heartbeat"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GROWING HEART","short_name":"heartpulse","short_names":["heartpulse"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPARKLING HEART","short_name":"sparkling_heart","short_names":["sparkling_heart"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEART WITH ARROW","short_name":"cupid","short_names":["cupid"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEART WITH RIBBON","short_name":"gift_heart","short_names":["gift_heart"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEART DECORATION","short_name":"heart_decoration","short_names":["heart_decoration"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PEACE SYMBOL","short_name":"peace_symbol","short_names":["peace_symbol"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LATIN CROSS","short_name":"latin_cross","short_names":["latin_cross"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"STAR AND CRESCENT","short_name":"star_and_crescent","short_names":["star_and_crescent"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"OM SYMBOL","short_name":"om_symbol","short_names":["om_symbol"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WHEEL OF DHARMA","short_name":"wheel_of_dharma","short_names":["wheel_of_dharma"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"STAR OF DAVID","short_name":"star_of_david","short_names":["star_of_david"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SIX POINTED STAR WITH MIDDLE DOT","short_name":"six_pointed_star","short_names":["six_pointed_star"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MENORAH WITH NINE BRANCHES","short_name":"menorah_with_nine_branches","short_names":["menorah_with_nine_branches"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"YIN YANG","short_name":"yin_yang","short_names":["yin_yang"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ORTHODOX CROSS","short_name":"orthodox_cross","short_names":["orthodox_cross"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PLACE OF WORSHIP","short_name":"place_of_worship","short_names":["place_of_worship"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPHIUCHUS","short_name":"ophiuchus","short_names":["ophiuchus"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ARIES","short_name":"aries","short_names":["aries"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TAURUS","short_name":"taurus","short_names":["taurus"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GEMINI","short_name":"gemini","short_names":["gemini"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CANCER","short_name":"cancer","short_names":["cancer"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEO","short_name":"leo","short_names":["leo"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIRGO","short_name":"virgo","short_names":["virgo"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LIBRA","short_name":"libra","short_names":["libra"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SCORPIUS","short_name":"scorpius","short_names":["scorpius"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SAGITTARIUS","short_name":"sagittarius","short_names":["sagittarius"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAPRICORN","short_name":"capricorn","short_names":["capricorn"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AQUARIUS","short_name":"aquarius","short_names":["aquarius"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PISCES","short_name":"pisces","short_names":["pisces"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED ID","short_name":"id","short_names":["id"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ATOM SYMBOL","short_name":"atom_symbol","short_names":["atom_symbol"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-7A7A","short_name":"u7a7a","short_names":["u7a7a"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-5272","short_name":"u5272","short_names":["u5272"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RADIOACTIVE SIGN","short_name":"radioactive_sign","short_names":["radioactive_sign"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BIOHAZARD SIGN","short_name":"biohazard_sign","short_names":["biohazard_sign"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOBILE PHONE OFF","short_name":"mobile_phone_off","short_names":["mobile_phone_off"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIBRATION MODE","short_name":"vibration_mode","short_names":["vibration_mode"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-6709","short_name":"u6709","short_names":["u6709"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-7121","short_name":"u7121","short_names":["u7121"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-7533","short_name":"u7533","short_names":["u7533"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-55B6","short_name":"u55b6","short_names":["u55b6"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-6708","short_name":"u6708","short_names":["u6708"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EIGHT POINTED BLACK STAR","short_name":"eight_pointed_black_star","short_names":["eight_pointed_black_star"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED VS","short_name":"vs","short_names":["vs"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCLED IDEOGRAPH ACCEPT","short_name":"accept","short_names":["accept"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE FLOWER","short_name":"white_flower","short_names":["white_flower"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCLED IDEOGRAPH ADVANTAGE","short_name":"ideograph_advantage","short_names":["ideograph_advantage"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCLED IDEOGRAPH SECRET","short_name":"secret","short_names":["secret"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCLED IDEOGRAPH CONGRATULATION","short_name":"congratulations","short_names":["congratulations"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-5408","short_name":"u5408","short_names":["u5408"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-6E80","short_name":"u6e80","short_names":["u6e80"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-7981","short_name":"u7981","short_names":["u7981"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED LATIN CAPITAL LETTER A","short_name":"a","short_names":["a"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED LATIN CAPITAL LETTER B","short_name":"b","short_names":["b"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED AB","short_name":"ab","short_names":["ab"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CL","short_name":"cl","short_names":["cl"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED LATIN CAPITAL LETTER O","short_name":"o2","short_names":["o2"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED SOS","short_name":"sos","short_names":["sos"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO ENTRY","short_name":"no_entry","short_names":["no_entry"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NAME BADGE","short_name":"name_badge","short_names":["name_badge"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO ENTRY SIGN","short_name":"no_entry_sign","short_names":["no_entry_sign"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CROSS MARK","short_name":"x","short_names":["x"],"sort_order":72},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY LARGE CIRCLE","short_name":"o","short_names":["o"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANGER SYMBOL","short_name":"anger","short_names":["anger"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOT SPRINGS","short_name":"hotsprings","short_names":["hotsprings"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO PEDESTRIANS","short_name":"no_pedestrians","short_names":["no_pedestrians"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DO NOT LITTER SYMBOL","short_name":"do_not_litter","short_names":["do_not_litter"],"sort_order":77},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO BICYCLES","short_name":"no_bicycles","short_names":["no_bicycles"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NON-POTABLE WATER SYMBOL","short_name":"non-potable_water","short_names":["non-potable_water"],"sort_order":79},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO ONE UNDER EIGHTEEN SYMBOL","short_name":"underage","short_names":["underage"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO MOBILE PHONES","short_name":"no_mobile_phones","short_names":["no_mobile_phones"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY EXCLAMATION MARK SYMBOL","short_name":"exclamation","short_names":["exclamation","heavy_exclamation_mark"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE EXCLAMATION MARK ORNAMENT","short_name":"grey_exclamation","short_names":["grey_exclamation"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK QUESTION MARK ORNAMENT","short_name":"question","short_names":["question"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE QUESTION MARK ORNAMENT","short_name":"grey_question","short_names":["grey_question"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOUBLE EXCLAMATION MARK","short_name":"bangbang","short_names":["bangbang"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EXCLAMATION QUESTION MARK","short_name":"interrobang","short_names":["interrobang"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HUNDRED POINTS SYMBOL","short_name":"100","short_names":["100"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOW BRIGHTNESS SYMBOL","short_name":"low_brightness","short_names":["low_brightness"],"sort_order":89},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIGH BRIGHTNESS SYMBOL","short_name":"high_brightness","short_names":["high_brightness"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRIDENT EMBLEM","short_name":"trident","short_names":["trident"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FLEUR-DE-LIS","short_name":"fleur_de_lis","short_names":["fleur_de_lis"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PART ALTERNATION MARK","short_name":"part_alternation_mark","short_names":["part_alternation_mark"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WARNING SIGN","short_name":"warning","short_names":["warning"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHILDREN CROSSING","short_name":"children_crossing","short_names":["children_crossing"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE SYMBOL FOR BEGINNER","short_name":"beginner","short_names":["beginner"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK UNIVERSAL RECYCLING SYMBOL","short_name":"recycle","short_names":["recycle"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED CJK UNIFIED IDEOGRAPH-6307","short_name":"u6307","short_names":["u6307"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHART WITH UPWARDS TREND AND YEN SIGN","short_name":"chart","short_names":["chart"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPARKLE","short_name":"sparkle","short_names":["sparkle"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EIGHT SPOKED ASTERISK","short_name":"eight_spoked_asterisk","short_names":["eight_spoked_asterisk"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED CROSS MARK","short_name":"negative_squared_cross_mark","short_names":["negative_squared_cross_mark"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE HEAVY CHECK MARK","short_name":"white_check_mark","short_names":["white_check_mark"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DIAMOND SHAPE WITH A DOT INSIDE","short_name":"diamond_shape_with_a_dot_inside","short_names":["diamond_shape_with_a_dot_inside"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CYCLONE","short_name":"cyclone","short_names":["cyclone"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOUBLE CURLY LOOP","short_name":"loop","short_names":["loop"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GLOBE WITH MERIDIANS","short_name":"globe_with_meridians","short_names":["globe_with_meridians"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCLED LATIN CAPITAL LETTER M","short_name":"m","short_names":["m"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AUTOMATED TELLER MACHINE","short_name":"atm","short_names":["atm"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED KATAKANA SA","short_name":"sa","short_names":["sa"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PASSPORT CONTROL","short_name":"passport_control","short_names":["passport_control"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CUSTOMS","short_name":"customs","short_names":["customs"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BAGGAGE CLAIM","short_name":"baggage_claim","short_names":["baggage_claim"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEFT LUGGAGE","short_name":"left_luggage","short_names":["left_luggage"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHEELCHAIR SYMBOL","short_name":"wheelchair","short_names":["wheelchair"],"sort_order":115},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NO SMOKING SYMBOL","short_name":"no_smoking","short_names":["no_smoking"],"sort_order":116},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WATER CLOSET","short_name":"wc","short_names":["wc"],"sort_order":117},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEGATIVE SQUARED LATIN CAPITAL LETTER P","short_name":"parking","short_names":["parking"],"sort_order":118},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POTABLE WATER SYMBOL","short_name":"potable_water","short_names":["potable_water"],"sort_order":119},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MENS SYMBOL","short_name":"mens","short_names":["mens"],"sort_order":120},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMENS SYMBOL","short_name":"womens","short_names":["womens"],"sort_order":121},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BABY SYMBOL","short_name":"baby_symbol","short_names":["baby_symbol"],"sort_order":122},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RESTROOM","short_name":"restroom","short_names":["restroom"],"sort_order":123},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PUT LITTER IN ITS PLACE SYMBOL","short_name":"put_litter_in_its_place","short_names":["put_litter_in_its_place"],"sort_order":124},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CINEMA","short_name":"cinema","short_names":["cinema"],"sort_order":125},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANTENNA WITH BARS","short_name":"signal_strength","short_names":["signal_strength"],"sort_order":126},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED KATAKANA KOKO","short_name":"koko","short_names":["koko"],"sort_order":127},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED NG","short_name":"ng","short_names":["ng"],"sort_order":128},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED OK","short_name":"ok","short_names":["ok"],"sort_order":129},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED UP WITH EXCLAMATION MARK","short_name":"up","short_names":["up"],"sort_order":130},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED COOL","short_name":"cool","short_names":["cool"],"sort_order":131},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED NEW","short_name":"new","short_names":["new"],"sort_order":132},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SQUARED FREE","short_name":"free","short_names":["free"],"sort_order":133},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 0","short_name":"zero","short_names":["zero"],"sort_order":134},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 1","short_name":"one","short_names":["one"],"sort_order":135},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 2","short_name":"two","short_names":["two"],"sort_order":136},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 3","short_name":"three","short_names":["three"],"sort_order":137},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 4","short_name":"four","short_names":["four"],"sort_order":138},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 5","short_name":"five","short_names":["five"],"sort_order":139},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 6","short_name":"six","short_names":["six"],"sort_order":140},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 7","short_name":"seven","short_names":["seven"],"sort_order":141},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 8","short_name":"eight","short_names":["eight"],"sort_order":142},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"KEYCAP 9","short_name":"nine","short_names":["nine"],"sort_order":143},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KEYCAP TEN","short_name":"keycap_ten","short_names":["keycap_ten"],"sort_order":144},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":null,"short_name":"keycap_star","short_names":["keycap_star"],"sort_order":145},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INPUT SYMBOL FOR NUMBERS","short_name":"1234","short_names":["1234"],"sort_order":146},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK RIGHT-POINTING TRIANGLE","short_name":"arrow_forward","short_names":["arrow_forward"],"sort_order":147},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DOUBLE VERTICAL BAR","short_name":"double_vertical_bar","short_names":["double_vertical_bar"],"sort_order":148},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR","short_name":"black_right_pointing_triangle_with_double_vertical_bar","short_names":["black_right_pointing_triangle_with_double_vertical_bar"],"sort_order":149},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BLACK SQUARE FOR STOP","short_name":"black_square_for_stop","short_names":["black_square_for_stop"],"sort_order":150},{"has_img_apple":false,"has_img_google":true,"has_img_twitter":false,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":false,"name":"EJECT SYMBOL","short_name":"eject","short_names":["eject"],"sort_order":151},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BLACK CIRCLE FOR RECORD","short_name":"black_circle_for_record","short_names":["black_circle_for_record"],"sort_order":152},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR","short_name":"black_right_pointing_double_triangle_with_vertical_bar","short_names":["black_right_pointing_double_triangle_with_vertical_bar"],"sort_order":153},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR","short_name":"black_left_pointing_double_triangle_with_vertical_bar","short_names":["black_left_pointing_double_triangle_with_vertical_bar"],"sort_order":154},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK RIGHT-POINTING DOUBLE TRIANGLE","short_name":"fast_forward","short_names":["fast_forward"],"sort_order":155},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK LEFT-POINTING DOUBLE TRIANGLE","short_name":"rewind","short_names":["rewind"],"sort_order":156},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TWISTED RIGHTWARDS ARROWS","short_name":"twisted_rightwards_arrows","short_names":["twisted_rightwards_arrows"],"sort_order":157},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCKWISE RIGHTWARDS AND LEFTWARDS OPEN CIRCLE ARROWS","short_name":"repeat","short_names":["repeat"],"sort_order":158},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCKWISE RIGHTWARDS AND LEFTWARDS OPEN CIRCLE ARROWS WITH CIRCLED ONE OVERLAY","short_name":"repeat_one","short_names":["repeat_one"],"sort_order":159},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK LEFT-POINTING TRIANGLE","short_name":"arrow_backward","short_names":["arrow_backward"],"sort_order":160},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UP-POINTING SMALL RED TRIANGLE","short_name":"arrow_up_small","short_names":["arrow_up_small"],"sort_order":161},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOWN-POINTING SMALL RED TRIANGLE","short_name":"arrow_down_small","short_names":["arrow_down_small"],"sort_order":162},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK UP-POINTING DOUBLE TRIANGLE","short_name":"arrow_double_up","short_names":["arrow_double_up"],"sort_order":163},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK DOWN-POINTING DOUBLE TRIANGLE","short_name":"arrow_double_down","short_names":["arrow_double_down"],"sort_order":164},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK RIGHTWARDS ARROW","short_name":"arrow_right","short_names":["arrow_right"],"sort_order":165},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEFTWARDS BLACK ARROW","short_name":"arrow_left","short_names":["arrow_left"],"sort_order":166},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UPWARDS BLACK ARROW","short_name":"arrow_up","short_names":["arrow_up"],"sort_order":167},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOWNWARDS BLACK ARROW","short_name":"arrow_down","short_names":["arrow_down"],"sort_order":168},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NORTH EAST ARROW","short_name":"arrow_upper_right","short_names":["arrow_upper_right"],"sort_order":169},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SOUTH EAST ARROW","short_name":"arrow_lower_right","short_names":["arrow_lower_right"],"sort_order":170},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SOUTH WEST ARROW","short_name":"arrow_lower_left","short_names":["arrow_lower_left"],"sort_order":171},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NORTH WEST ARROW","short_name":"arrow_upper_left","short_names":["arrow_upper_left"],"sort_order":172},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UP DOWN ARROW","short_name":"arrow_up_down","short_names":["arrow_up_down"],"sort_order":173},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEFT RIGHT ARROW","short_name":"left_right_arrow","short_names":["left_right_arrow"],"sort_order":174},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANTICLOCKWISE DOWNWARDS AND UPWARDS OPEN CIRCLE ARROWS","short_name":"arrows_counterclockwise","short_names":["arrows_counterclockwise"],"sort_order":175},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RIGHTWARDS ARROW WITH HOOK","short_name":"arrow_right_hook","short_names":["arrow_right_hook"],"sort_order":176},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEFTWARDS ARROW WITH HOOK","short_name":"leftwards_arrow_with_hook","short_names":["leftwards_arrow_with_hook"],"sort_order":177},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS","short_name":"arrow_heading_up","short_names":["arrow_heading_up"],"sort_order":178},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS","short_name":"arrow_heading_down","short_names":["arrow_heading_down"],"sort_order":179},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"HASH KEY","short_name":"hash","short_names":["hash"],"sort_order":180},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INFORMATION SOURCE","short_name":"information_source","short_names":["information_source"],"sort_order":181},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INPUT SYMBOL FOR LATIN LETTERS","short_name":"abc","short_names":["abc"],"sort_order":182},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INPUT SYMBOL FOR LATIN SMALL LETTERS","short_name":"abcd","short_names":["abcd"],"sort_order":183},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INPUT SYMBOL FOR LATIN CAPITAL LETTERS","short_name":"capital_abcd","short_names":["capital_abcd"],"sort_order":184},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INPUT SYMBOL FOR SYMBOLS","short_name":"symbols","short_names":["symbols"],"sort_order":185},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MUSICAL NOTE","short_name":"musical_note","short_names":["musical_note"],"sort_order":186},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MULTIPLE MUSICAL NOTES","short_name":"notes","short_names":["notes"],"sort_order":187},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WAVY DASH","short_name":"wavy_dash","short_names":["wavy_dash"],"sort_order":188},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CURLY LOOP","short_name":"curly_loop","short_names":["curly_loop"],"sort_order":189},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY CHECK MARK","short_name":"heavy_check_mark","short_names":["heavy_check_mark"],"sort_order":190},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCKWISE DOWNWARDS AND UPWARDS OPEN CIRCLE ARROWS","short_name":"arrows_clockwise","short_names":["arrows_clockwise"],"sort_order":191},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY PLUS SIGN","short_name":"heavy_plus_sign","short_names":["heavy_plus_sign"],"sort_order":192},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY MINUS SIGN","short_name":"heavy_minus_sign","short_names":["heavy_minus_sign"],"sort_order":193},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY DIVISION SIGN","short_name":"heavy_division_sign","short_names":["heavy_division_sign"],"sort_order":194},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY MULTIPLICATION X","short_name":"heavy_multiplication_x","short_names":["heavy_multiplication_x"],"sort_order":195},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAVY DOLLAR SIGN","short_name":"heavy_dollar_sign","short_names":["heavy_dollar_sign"],"sort_order":196},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CURRENCY EXCHANGE","short_name":"currency_exchange","short_names":["currency_exchange"],"sort_order":197},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":false,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"COPYRIGHT SIGN","short_name":"copyright","short_names":["copyright"],"sort_order":198},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":false,"has_img_emojione":true,"has_img_facebook":false,"has_img_messenger":false,"name":"REGISTERED SIGN","short_name":"registered","short_names":["registered"],"sort_order":199},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":false,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRADE MARK SIGN","short_name":"tm","short_names":["tm"],"sort_order":200},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"END WITH LEFTWARDS ARROW ABOVE","short_name":"end","short_names":["end"],"sort_order":201},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BACK WITH LEFTWARDS ARROW ABOVE","short_name":"back","short_names":["back"],"sort_order":202},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ON WITH EXCLAMATION MARK WITH LEFT RIGHT ARROW ABOVE","short_name":"on","short_names":["on"],"sort_order":203},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TOP WITH UPWARDS ARROW ABOVE","short_name":"top","short_names":["top"],"sort_order":204},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SOON WITH RIGHTWARDS ARROW ABOVE","short_name":"soon","short_names":["soon"],"sort_order":205},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BALLOT BOX WITH CHECK","short_name":"ballot_box_with_check","short_names":["ballot_box_with_check"],"sort_order":206},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RADIO BUTTON","short_name":"radio_button","short_names":["radio_button"],"sort_order":207},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MEDIUM WHITE CIRCLE","short_name":"white_circle","short_names":["white_circle"],"sort_order":208},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MEDIUM BLACK CIRCLE","short_name":"black_circle","short_names":["black_circle"],"sort_order":209},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LARGE RED CIRCLE","short_name":"red_circle","short_names":["red_circle"],"sort_order":210},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LARGE BLUE CIRCLE","short_name":"large_blue_circle","short_names":["large_blue_circle"],"sort_order":211},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMALL ORANGE DIAMOND","short_name":"small_orange_diamond","short_names":["small_orange_diamond"],"sort_order":212},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMALL BLUE DIAMOND","short_name":"small_blue_diamond","short_names":["small_blue_diamond"],"sort_order":213},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LARGE ORANGE DIAMOND","short_name":"large_orange_diamond","short_names":["large_orange_diamond"],"sort_order":214},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LARGE BLUE DIAMOND","short_name":"large_blue_diamond","short_names":["large_blue_diamond"],"sort_order":215},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UP-POINTING RED TRIANGLE","short_name":"small_red_triangle","short_names":["small_red_triangle"],"sort_order":216},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK SMALL SQUARE","short_name":"black_small_square","short_names":["black_small_square"],"sort_order":217},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE SMALL SQUARE","short_name":"white_small_square","short_names":["white_small_square"],"sort_order":218},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK LARGE SQUARE","short_name":"black_large_square","short_names":["black_large_square"],"sort_order":219},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE LARGE SQUARE","short_name":"white_large_square","short_names":["white_large_square"],"sort_order":220},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOWN-POINTING RED TRIANGLE","short_name":"small_red_triangle_down","short_names":["small_red_triangle_down"],"sort_order":221},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK MEDIUM SQUARE","short_name":"black_medium_square","short_names":["black_medium_square"],"sort_order":222},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE MEDIUM SQUARE","short_name":"white_medium_square","short_names":["white_medium_square"],"sort_order":223},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK MEDIUM SMALL SQUARE","short_name":"black_medium_small_square","short_names":["black_medium_small_square"],"sort_order":224},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE MEDIUM SMALL SQUARE","short_name":"white_medium_small_square","short_names":["white_medium_small_square"],"sort_order":225},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK SQUARE BUTTON","short_name":"black_square_button","short_names":["black_square_button"],"sort_order":226},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE SQUARE BUTTON","short_name":"white_square_button","short_names":["white_square_button"],"sort_order":227},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEAKER","short_name":"speaker","short_names":["speaker"],"sort_order":228},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEAKER WITH ONE SOUND WAVE","short_name":"sound","short_names":["sound"],"sort_order":229},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEAKER WITH THREE SOUND WAVES","short_name":"loud_sound","short_names":["loud_sound"],"sort_order":230},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEAKER WITH CANCELLATION STROKE","short_name":"mute","short_names":["mute"],"sort_order":231},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHEERING MEGAPHONE","short_name":"mega","short_names":["mega"],"sort_order":232},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PUBLIC ADDRESS LOUDSPEAKER","short_name":"loudspeaker","short_names":["loudspeaker"],"sort_order":233},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BELL","short_name":"bell","short_names":["bell"],"sort_order":234},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BELL WITH CANCELLATION STROKE","short_name":"no_bell","short_names":["no_bell"],"sort_order":235},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PLAYING CARD BLACK JOKER","short_name":"black_joker","short_names":["black_joker"],"sort_order":236},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAHJONG TILE RED DRAGON","short_name":"mahjong","short_names":["mahjong"],"sort_order":237},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK SPADE SUIT","short_name":"spades","short_names":["spades"],"sort_order":238},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK CLUB SUIT","short_name":"clubs","short_names":["clubs"],"sort_order":239},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK HEART SUIT","short_name":"hearts","short_names":["hearts"],"sort_order":240},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK DIAMOND SUIT","short_name":"diamonds","short_names":["diamonds"],"sort_order":241},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FLOWER PLAYING CARDS","short_name":"flower_playing_cards","short_names":["flower_playing_cards"],"sort_order":242},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"THOUGHT BALLOON","short_name":"thought_balloon","short_names":["thought_balloon"],"sort_order":243},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RIGHT ANGER BUBBLE","short_name":"right_anger_bubble","short_names":["right_anger_bubble"],"sort_order":244},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEECH BALLOON","short_name":"speech_balloon","short_names":["speech_balloon"],"sort_order":245},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":false,"name":"LEFT SPEECH BUBBLE","short_name":"left_speech_bubble","short_names":["left_speech_bubble"],"sort_order":246},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE ONE OCLOCK","short_name":"clock1","short_names":["clock1"],"sort_order":247},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TWO OCLOCK","short_name":"clock2","short_names":["clock2"],"sort_order":248},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE THREE OCLOCK","short_name":"clock3","short_names":["clock3"],"sort_order":249},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE FOUR OCLOCK","short_name":"clock4","short_names":["clock4"],"sort_order":250},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE FIVE OCLOCK","short_name":"clock5","short_names":["clock5"],"sort_order":251},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE SIX OCLOCK","short_name":"clock6","short_names":["clock6"],"sort_order":252},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE SEVEN OCLOCK","short_name":"clock7","short_names":["clock7"],"sort_order":253},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE EIGHT OCLOCK","short_name":"clock8","short_names":["clock8"],"sort_order":254},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE NINE OCLOCK","short_name":"clock9","short_names":["clock9"],"sort_order":255},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TEN OCLOCK","short_name":"clock10","short_names":["clock10"],"sort_order":256},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE ELEVEN OCLOCK","short_name":"clock11","short_names":["clock11"],"sort_order":257},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TWELVE OCLOCK","short_name":"clock12","short_names":["clock12"],"sort_order":258},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE ONE-THIRTY","short_name":"clock130","short_names":["clock130"],"sort_order":259},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TWO-THIRTY","short_name":"clock230","short_names":["clock230"],"sort_order":260},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE THREE-THIRTY","short_name":"clock330","short_names":["clock330"],"sort_order":261},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE FOUR-THIRTY","short_name":"clock430","short_names":["clock430"],"sort_order":262},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE FIVE-THIRTY","short_name":"clock530","short_names":["clock530"],"sort_order":263},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE SIX-THIRTY","short_name":"clock630","short_names":["clock630"],"sort_order":264},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE SEVEN-THIRTY","short_name":"clock730","short_names":["clock730"],"sort_order":265},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE EIGHT-THIRTY","short_name":"clock830","short_names":["clock830"],"sort_order":266},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE NINE-THIRTY","short_name":"clock930","short_names":["clock930"],"sort_order":267},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TEN-THIRTY","short_name":"clock1030","short_names":["clock1030"],"sort_order":268},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE ELEVEN-THIRTY","short_name":"clock1130","short_names":["clock1130"],"sort_order":269},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOCK FACE TWELVE-THIRTY","short_name":"clock1230","short_names":["clock1230"],"sort_order":270}],"Objects":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WATCH","short_name":"watch","short_names":["watch"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOBILE PHONE","short_name":"iphone","short_names":["iphone"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOBILE PHONE WITH RIGHTWARDS ARROW AT LEFT","short_name":"calling","short_names":["calling"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSONAL COMPUTER","short_name":"computer","short_names":["computer"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"KEYBOARD","short_name":"keyboard","short_names":["keyboard"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DESKTOP COMPUTER","short_name":"desktop_computer","short_names":["desktop_computer"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PRINTER","short_name":"printer","short_names":["printer"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"THREE BUTTON MOUSE","short_name":"three_button_mouse","short_names":["three_button_mouse"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"TRACKBALL","short_name":"trackball","short_names":["trackball"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"JOYSTICK","short_name":"joystick","short_names":["joystick"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"COMPRESSION","short_name":"compression","short_names":["compression"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MINIDISC","short_name":"minidisc","short_names":["minidisc"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FLOPPY DISK","short_name":"floppy_disk","short_names":["floppy_disk"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPTICAL DISC","short_name":"cd","short_names":["cd"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DVD","short_name":"dvd","short_names":["dvd"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIDEOCASSETTE","short_name":"vhs","short_names":["vhs"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAMERA","short_name":"camera","short_names":["camera"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CAMERA WITH FLASH","short_name":"camera_with_flash","short_names":["camera_with_flash"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIDEO CAMERA","short_name":"video_camera","short_names":["video_camera"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOVIE CAMERA","short_name":"movie_camera","short_names":["movie_camera"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FILM PROJECTOR","short_name":"film_projector","short_names":["film_projector"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FILM FRAMES","short_name":"film_frames","short_names":["film_frames"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TELEPHONE RECEIVER","short_name":"telephone_receiver","short_names":["telephone_receiver"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK TELEPHONE","short_name":"phone","short_names":["phone","telephone"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PAGER","short_name":"pager","short_names":["pager"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FAX MACHINE","short_name":"fax","short_names":["fax"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TELEVISION","short_name":"tv","short_names":["tv"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RADIO","short_name":"radio","short_names":["radio"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"STUDIO MICROPHONE","short_name":"studio_microphone","short_names":["studio_microphone"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LEVEL SLIDER","short_name":"level_slider","short_names":["level_slider"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CONTROL KNOBS","short_name":"control_knobs","short_names":["control_knobs"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"STOPWATCH","short_name":"stopwatch","short_names":["stopwatch"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"TIMER CLOCK","short_name":"timer_clock","short_names":["timer_clock"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ALARM CLOCK","short_name":"alarm_clock","short_names":["alarm_clock"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MANTELPIECE CLOCK","short_name":"mantelpiece_clock","short_names":["mantelpiece_clock"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOURGLASS WITH FLOWING SAND","short_name":"hourglass_flowing_sand","short_names":["hourglass_flowing_sand"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOURGLASS","short_name":"hourglass","short_names":["hourglass"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SATELLITE ANTENNA","short_name":"satellite_antenna","short_names":["satellite_antenna"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BATTERY","short_name":"battery","short_names":["battery"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ELECTRIC PLUG","short_name":"electric_plug","short_names":["electric_plug"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ELECTRIC LIGHT BULB","short_name":"bulb","short_names":["bulb"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ELECTRIC TORCH","short_name":"flashlight","short_names":["flashlight"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CANDLE","short_name":"candle","short_names":["candle"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WASTEBASKET","short_name":"wastebasket","short_names":["wastebasket"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"OIL DRUM","short_name":"oil_drum","short_names":["oil_drum"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MONEY WITH WINGS","short_name":"money_with_wings","short_names":["money_with_wings"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANKNOTE WITH DOLLAR SIGN","short_name":"dollar","short_names":["dollar"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANKNOTE WITH YEN SIGN","short_name":"yen","short_names":["yen"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANKNOTE WITH EURO SIGN","short_name":"euro","short_names":["euro"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANKNOTE WITH POUND SIGN","short_name":"pound","short_names":["pound"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MONEY BAG","short_name":"moneybag","short_names":["moneybag"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CREDIT CARD","short_name":"credit_card","short_names":["credit_card"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GEM STONE","short_name":"gem","short_names":["gem"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SCALES","short_name":"scales","short_names":["scales"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WRENCH","short_name":"wrench","short_names":["wrench"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HAMMER","short_name":"hammer","short_names":["hammer"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HAMMER AND PICK","short_name":"hammer_and_pick","short_names":["hammer_and_pick"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HAMMER AND WRENCH","short_name":"hammer_and_wrench","short_names":["hammer_and_wrench"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PICK","short_name":"pick","short_names":["pick"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NUT AND BOLT","short_name":"nut_and_bolt","short_names":["nut_and_bolt"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"GEAR","short_name":"gear","short_names":["gear"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CHAINS","short_name":"chains","short_names":["chains"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PISTOL","short_name":"gun","short_names":["gun"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOMB","short_name":"bomb","short_names":["bomb"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOCHO","short_name":"hocho","short_names":["hocho","knife"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DAGGER KNIFE","short_name":"dagger_knife","short_names":["dagger_knife"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CROSSED SWORDS","short_name":"crossed_swords","short_names":["crossed_swords"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SHIELD","short_name":"shield","short_names":["shield"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMOKING SYMBOL","short_name":"smoking","short_names":["smoking"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SKULL AND CROSSBONES","short_name":"skull_and_crossbones","short_names":["skull_and_crossbones"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"COFFIN","short_name":"coffin","short_names":["coffin"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FUNERAL URN","short_name":"funeral_urn","short_names":["funeral_urn"],"sort_order":72},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"AMPHORA","short_name":"amphora","short_names":["amphora"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CRYSTAL BALL","short_name":"crystal_ball","short_names":["crystal_ball"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PRAYER BEADS","short_name":"prayer_beads","short_names":["prayer_beads"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BARBER POLE","short_name":"barber","short_names":["barber"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ALEMBIC","short_name":"alembic","short_names":["alembic"],"sort_order":77},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TELESCOPE","short_name":"telescope","short_names":["telescope"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MICROSCOPE","short_name":"microscope","short_names":["microscope"],"sort_order":79},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HOLE","short_name":"hole","short_names":["hole"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PILL","short_name":"pill","short_names":["pill"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SYRINGE","short_name":"syringe","short_names":["syringe"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"THERMOMETER","short_name":"thermometer","short_names":["thermometer"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LABEL","short_name":"label","short_names":["label"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOOKMARK","short_name":"bookmark","short_names":["bookmark"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TOILET","short_name":"toilet","short_names":["toilet"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHOWER","short_name":"shower","short_names":["shower"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BATHTUB","short_name":"bathtub","short_names":["bathtub"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KEY","short_name":"key","short_names":["key"],"sort_order":89},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"OLD KEY","short_name":"old_key","short_names":["old_key"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"COUCH AND LAMP","short_name":"couch_and_lamp","short_names":["couch_and_lamp"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SLEEPING ACCOMMODATION","short_name":"sleeping_accommodation","short_names":["sleeping_accommodation"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BED","short_name":"bed","short_names":["bed"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOOR","short_name":"door","short_names":["door"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BELLHOP BELL","short_name":"bellhop_bell","short_names":["bellhop_bell"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FRAME WITH PICTURE","short_name":"frame_with_picture","short_names":["frame_with_picture"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WORLD MAP","short_name":"world_map","short_names":["world_map"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"UMBRELLA ON GROUND","short_name":"umbrella_on_ground","short_names":["umbrella_on_ground"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOYAI","short_name":"moyai","short_names":["moyai"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SHOPPING BAGS","short_name":"shopping_bags","short_names":["shopping_bags"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BALLOON","short_name":"balloon","short_names":["balloon"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CARP STREAMER","short_name":"flags","short_names":["flags"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RIBBON","short_name":"ribbon","short_names":["ribbon"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WRAPPED PRESENT","short_name":"gift","short_names":["gift"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONFETTI BALL","short_name":"confetti_ball","short_names":["confetti_ball"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PARTY POPPER","short_name":"tada","short_names":["tada"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE DOLLS","short_name":"dolls","short_names":["dolls"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WIND CHIME","short_name":"wind_chime","short_names":["wind_chime"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CROSSED FLAGS","short_name":"crossed_flags","short_names":["crossed_flags"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"IZAKAYA LANTERN","short_name":"izakaya_lantern","short_names":["izakaya_lantern","lantern"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ENVELOPE","short_name":"email","short_names":["email","envelope"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ENVELOPE WITH DOWNWARDS ARROW ABOVE","short_name":"envelope_with_arrow","short_names":["envelope_with_arrow"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INCOMING ENVELOPE","short_name":"incoming_envelope","short_names":["incoming_envelope"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"E-MAIL SYMBOL","short_name":"e-mail","short_names":["e-mail"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOVE LETTER","short_name":"love_letter","short_names":["love_letter"],"sort_order":115},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POSTBOX","short_name":"postbox","short_names":["postbox"],"sort_order":116},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOSED MAILBOX WITH LOWERED FLAG","short_name":"mailbox_closed","short_names":["mailbox_closed"],"sort_order":117},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOSED MAILBOX WITH RAISED FLAG","short_name":"mailbox","short_names":["mailbox"],"sort_order":118},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN MAILBOX WITH RAISED FLAG","short_name":"mailbox_with_mail","short_names":["mailbox_with_mail"],"sort_order":119},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN MAILBOX WITH LOWERED FLAG","short_name":"mailbox_with_no_mail","short_names":["mailbox_with_no_mail"],"sort_order":120},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PACKAGE","short_name":"package","short_names":["package"],"sort_order":121},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POSTAL HORN","short_name":"postal_horn","short_names":["postal_horn"],"sort_order":122},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INBOX TRAY","short_name":"inbox_tray","short_names":["inbox_tray"],"sort_order":123},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OUTBOX TRAY","short_name":"outbox_tray","short_names":["outbox_tray"],"sort_order":124},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SCROLL","short_name":"scroll","short_names":["scroll"],"sort_order":125},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PAGE WITH CURL","short_name":"page_with_curl","short_names":["page_with_curl"],"sort_order":126},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOOKMARK TABS","short_name":"bookmark_tabs","short_names":["bookmark_tabs"],"sort_order":127},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BAR CHART","short_name":"bar_chart","short_names":["bar_chart"],"sort_order":128},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHART WITH UPWARDS TREND","short_name":"chart_with_upwards_trend","short_names":["chart_with_upwards_trend"],"sort_order":129},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHART WITH DOWNWARDS TREND","short_name":"chart_with_downwards_trend","short_names":["chart_with_downwards_trend"],"sort_order":130},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PAGE FACING UP","short_name":"page_facing_up","short_names":["page_facing_up"],"sort_order":131},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CALENDAR","short_name":"date","short_names":["date"],"sort_order":132},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TEAR-OFF CALENDAR","short_name":"calendar","short_names":["calendar"],"sort_order":133},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPIRAL CALENDAR PAD","short_name":"spiral_calendar_pad","short_names":["spiral_calendar_pad"],"sort_order":134},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CARD INDEX","short_name":"card_index","short_names":["card_index"],"sort_order":135},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CARD FILE BOX","short_name":"card_file_box","short_names":["card_file_box"],"sort_order":136},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BALLOT BOX WITH BALLOT","short_name":"ballot_box_with_ballot","short_names":["ballot_box_with_ballot"],"sort_order":137},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FILE CABINET","short_name":"file_cabinet","short_names":["file_cabinet"],"sort_order":138},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLIPBOARD","short_name":"clipboard","short_names":["clipboard"],"sort_order":139},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPIRAL NOTE PAD","short_name":"spiral_note_pad","short_names":["spiral_note_pad"],"sort_order":140},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FILE FOLDER","short_name":"file_folder","short_names":["file_folder"],"sort_order":141},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN FILE FOLDER","short_name":"open_file_folder","short_names":["open_file_folder"],"sort_order":142},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CARD INDEX DIVIDERS","short_name":"card_index_dividers","short_names":["card_index_dividers"],"sort_order":143},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ROLLED-UP NEWSPAPER","short_name":"rolled_up_newspaper","short_names":["rolled_up_newspaper"],"sort_order":144},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEWSPAPER","short_name":"newspaper","short_names":["newspaper"],"sort_order":145},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NOTEBOOK","short_name":"notebook","short_names":["notebook"],"sort_order":146},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOSED BOOK","short_name":"closed_book","short_names":["closed_book"],"sort_order":147},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GREEN BOOK","short_name":"green_book","short_names":["green_book"],"sort_order":148},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLUE BOOK","short_name":"blue_book","short_names":["blue_book"],"sort_order":149},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ORANGE BOOK","short_name":"orange_book","short_names":["orange_book"],"sort_order":150},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NOTEBOOK WITH DECORATIVE COVER","short_name":"notebook_with_decorative_cover","short_names":["notebook_with_decorative_cover"],"sort_order":151},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEDGER","short_name":"ledger","short_names":["ledger"],"sort_order":152},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOOKS","short_name":"books","short_names":["books"],"sort_order":153},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN BOOK","short_name":"book","short_names":["book","open_book"],"sort_order":154},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LINK SYMBOL","short_name":"link","short_names":["link"],"sort_order":155},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PAPERCLIP","short_name":"paperclip","short_names":["paperclip"],"sort_order":156},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LINKED PAPERCLIPS","short_name":"linked_paperclips","short_names":["linked_paperclips"],"sort_order":157},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK SCISSORS","short_name":"scissors","short_names":["scissors"],"sort_order":158},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRIANGULAR RULER","short_name":"triangular_ruler","short_names":["triangular_ruler"],"sort_order":159},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STRAIGHT RULER","short_name":"straight_ruler","short_names":["straight_ruler"],"sort_order":160},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PUSHPIN","short_name":"pushpin","short_names":["pushpin"],"sort_order":161},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROUND PUSHPIN","short_name":"round_pushpin","short_names":["round_pushpin"],"sort_order":162},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRIANGULAR FLAG ON POST","short_name":"triangular_flag_on_post","short_names":["triangular_flag_on_post"],"sort_order":163},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WAVING WHITE FLAG","short_name":"waving_white_flag","short_names":["waving_white_flag"],"sort_order":164},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WAVING BLACK FLAG","short_name":"waving_black_flag","short_names":["waving_black_flag"],"sort_order":165},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOSED LOCK WITH KEY","short_name":"closed_lock_with_key","short_names":["closed_lock_with_key"],"sort_order":166},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOCK","short_name":"lock","short_names":["lock"],"sort_order":167},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN LOCK","short_name":"unlock","short_names":["unlock"],"sort_order":168},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOCK WITH INK PEN","short_name":"lock_with_ink_pen","short_names":["lock_with_ink_pen"],"sort_order":169},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LOWER LEFT BALLPOINT PEN","short_name":"lower_left_ballpoint_pen","short_names":["lower_left_ballpoint_pen"],"sort_order":170},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LOWER LEFT FOUNTAIN PEN","short_name":"lower_left_fountain_pen","short_names":["lower_left_fountain_pen"],"sort_order":171},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK NIB","short_name":"black_nib","short_names":["black_nib"],"sort_order":172},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MEMO","short_name":"memo","short_names":["memo","pencil"],"sort_order":173},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PENCIL","short_name":"pencil2","short_names":["pencil2"],"sort_order":174},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LOWER LEFT CRAYON","short_name":"lower_left_crayon","short_names":["lower_left_crayon"],"sort_order":175},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LOWER LEFT PAINTBRUSH","short_name":"lower_left_paintbrush","short_names":["lower_left_paintbrush"],"sort_order":176},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEFT-POINTING MAGNIFYING GLASS","short_name":"mag","short_names":["mag"],"sort_order":177},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RIGHT-POINTING MAGNIFYING GLASS","short_name":"mag_right","short_names":["mag_right"],"sort_order":178}],"Nature":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOG FACE","short_name":"dog","short_names":["dog"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAT FACE","short_name":"cat","short_names":["cat"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUSE FACE","short_name":"mouse","short_names":["mouse"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HAMSTER FACE","short_name":"hamster","short_names":["hamster"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RABBIT FACE","short_name":"rabbit","short_names":["rabbit"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BEAR FACE","short_name":"bear","short_names":["bear"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PANDA FACE","short_name":"panda_face","short_names":["panda_face"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KOALA","short_name":"koala","short_names":["koala"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TIGER FACE","short_name":"tiger","short_names":["tiger"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"LION FACE","short_name":"lion_face","short_names":["lion_face"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COW FACE","short_name":"cow","short_names":["cow"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PIG FACE","short_name":"pig","short_names":["pig"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PIG NOSE","short_name":"pig_nose","short_names":["pig_nose"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FROG FACE","short_name":"frog","short_names":["frog"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OCTOPUS","short_name":"octopus","short_names":["octopus"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MONKEY FACE","short_name":"monkey_face","short_names":["monkey_face"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SEE-NO-EVIL MONKEY","short_name":"see_no_evil","short_names":["see_no_evil"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEAR-NO-EVIL MONKEY","short_name":"hear_no_evil","short_names":["hear_no_evil"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEAK-NO-EVIL MONKEY","short_name":"speak_no_evil","short_names":["speak_no_evil"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MONKEY","short_name":"monkey","short_names":["monkey"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHICKEN","short_name":"chicken","short_names":["chicken"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PENGUIN","short_name":"penguin","short_names":["penguin"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BIRD","short_name":"bird","short_names":["bird"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BABY CHICK","short_name":"baby_chick","short_names":["baby_chick"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HATCHING CHICK","short_name":"hatching_chick","short_names":["hatching_chick"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FRONT-FACING BABY CHICK","short_name":"hatched_chick","short_names":["hatched_chick"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOLF FACE","short_name":"wolf","short_names":["wolf"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOAR","short_name":"boar","short_names":["boar"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HORSE FACE","short_name":"horse","short_names":["horse"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"UNICORN FACE","short_name":"unicorn_face","short_names":["unicorn_face"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HONEYBEE","short_name":"bee","short_names":["bee","honeybee"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BUG","short_name":"bug","short_names":["bug"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SNAIL","short_name":"snail","short_names":["snail"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LADY BEETLE","short_name":"beetle","short_names":["beetle"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANT","short_name":"ant","short_names":["ant"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPIDER","short_name":"spider","short_names":["spider"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SCORPION","short_name":"scorpion","short_names":["scorpion"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CRAB","short_name":"crab","short_names":["crab"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SNAKE","short_name":"snake","short_names":["snake"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TURTLE","short_name":"turtle","short_names":["turtle"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TROPICAL FISH","short_name":"tropical_fish","short_names":["tropical_fish"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FISH","short_name":"fish","short_names":["fish"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLOWFISH","short_name":"blowfish","short_names":["blowfish"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOLPHIN","short_name":"dolphin","short_names":["dolphin","flipper"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPOUTING WHALE","short_name":"whale","short_names":["whale"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHALE","short_name":"whale2","short_names":["whale2"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CROCODILE","short_name":"crocodile","short_names":["crocodile"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEOPARD","short_name":"leopard","short_names":["leopard"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TIGER","short_name":"tiger2","short_names":["tiger2"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WATER BUFFALO","short_name":"water_buffalo","short_names":["water_buffalo"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OX","short_name":"ox","short_names":["ox"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COW","short_name":"cow2","short_names":["cow2"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DROMEDARY CAMEL","short_name":"dromedary_camel","short_names":["dromedary_camel"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BACTRIAN CAMEL","short_name":"camel","short_names":["camel"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ELEPHANT","short_name":"elephant","short_names":["elephant"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GOAT","short_name":"goat","short_names":["goat"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAM","short_name":"ram","short_names":["ram"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHEEP","short_name":"sheep","short_names":["sheep"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HORSE","short_name":"racehorse","short_names":["racehorse"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PIG","short_name":"pig2","short_names":["pig2"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAT","short_name":"rat","short_names":["rat"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUSE","short_name":"mouse2","short_names":["mouse2"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROOSTER","short_name":"rooster","short_names":["rooster"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"TURKEY","short_name":"turkey","short_names":["turkey"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DOVE OF PEACE","short_name":"dove_of_peace","short_names":["dove_of_peace"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOG","short_name":"dog2","short_names":["dog2"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POODLE","short_name":"poodle","short_names":["poodle"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAT","short_name":"cat2","short_names":["cat2"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RABBIT","short_name":"rabbit2","short_names":["rabbit2"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CHIPMUNK","short_name":"chipmunk","short_names":["chipmunk"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PAW PRINTS","short_name":"feet","short_names":["feet","paw_prints"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DRAGON","short_name":"dragon","short_names":["dragon"],"sort_order":72},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DRAGON FACE","short_name":"dragon_face","short_names":["dragon_face"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CACTUS","short_name":"cactus","short_names":["cactus"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHRISTMAS TREE","short_name":"christmas_tree","short_names":["christmas_tree"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EVERGREEN TREE","short_name":"evergreen_tree","short_names":["evergreen_tree"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DECIDUOUS TREE","short_name":"deciduous_tree","short_names":["deciduous_tree"],"sort_order":77},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PALM TREE","short_name":"palm_tree","short_names":["palm_tree"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SEEDLING","short_name":"seedling","short_names":["seedling"],"sort_order":79},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HERB","short_name":"herb","short_names":["herb"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SHAMROCK","short_name":"shamrock","short_names":["shamrock"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FOUR LEAF CLOVER","short_name":"four_leaf_clover","short_names":["four_leaf_clover"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PINE DECORATION","short_name":"bamboo","short_names":["bamboo"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TANABATA TREE","short_name":"tanabata_tree","short_names":["tanabata_tree"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEAF FLUTTERING IN WIND","short_name":"leaves","short_names":["leaves"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FALLEN LEAF","short_name":"fallen_leaf","short_names":["fallen_leaf"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAPLE LEAF","short_name":"maple_leaf","short_names":["maple_leaf"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EAR OF RICE","short_name":"ear_of_rice","short_names":["ear_of_rice"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIBISCUS","short_name":"hibiscus","short_names":["hibiscus"],"sort_order":89},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUNFLOWER","short_name":"sunflower","short_names":["sunflower"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROSE","short_name":"rose","short_names":["rose"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TULIP","short_name":"tulip","short_names":["tulip"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLOSSOM","short_name":"blossom","short_names":["blossom"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHERRY BLOSSOM","short_name":"cherry_blossom","short_names":["cherry_blossom"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOUQUET","short_name":"bouquet","short_names":["bouquet"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MUSHROOM","short_name":"mushroom","short_names":["mushroom"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHESTNUT","short_name":"chestnut","short_names":["chestnut"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JACK-O-LANTERN","short_name":"jack_o_lantern","short_names":["jack_o_lantern"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPIRAL SHELL","short_name":"shell","short_names":["shell"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPIDER WEB","short_name":"spider_web","short_names":["spider_web"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EARTH GLOBE AMERICAS","short_name":"earth_americas","short_names":["earth_americas"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EARTH GLOBE EUROPE-AFRICA","short_name":"earth_africa","short_names":["earth_africa"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EARTH GLOBE ASIA-AUSTRALIA","short_name":"earth_asia","short_names":["earth_asia"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FULL MOON SYMBOL","short_name":"full_moon","short_names":["full_moon"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WANING GIBBOUS MOON SYMBOL","short_name":"waning_gibbous_moon","short_names":["waning_gibbous_moon"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LAST QUARTER MOON SYMBOL","short_name":"last_quarter_moon","short_names":["last_quarter_moon"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WANING CRESCENT MOON SYMBOL","short_name":"waning_crescent_moon","short_names":["waning_crescent_moon"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEW MOON SYMBOL","short_name":"new_moon","short_names":["new_moon"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WAXING CRESCENT MOON SYMBOL","short_name":"waxing_crescent_moon","short_names":["waxing_crescent_moon"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIRST QUARTER MOON SYMBOL","short_name":"first_quarter_moon","short_names":["first_quarter_moon"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WAXING GIBBOUS MOON SYMBOL","short_name":"moon","short_names":["moon","waxing_gibbous_moon"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEW MOON WITH FACE","short_name":"new_moon_with_face","short_names":["new_moon_with_face"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FULL MOON WITH FACE","short_name":"full_moon_with_face","short_names":["full_moon_with_face"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIRST QUARTER MOON WITH FACE","short_name":"first_quarter_moon_with_face","short_names":["first_quarter_moon_with_face"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LAST QUARTER MOON WITH FACE","short_name":"last_quarter_moon_with_face","short_names":["last_quarter_moon_with_face"],"sort_order":115},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUN WITH FACE","short_name":"sun_with_face","short_names":["sun_with_face"],"sort_order":116},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CRESCENT MOON","short_name":"crescent_moon","short_names":["crescent_moon"],"sort_order":117},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE MEDIUM STAR","short_name":"star","short_names":["star"],"sort_order":118},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GLOWING STAR","short_name":"star2","short_names":["star2"],"sort_order":119},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DIZZY SYMBOL","short_name":"dizzy","short_names":["dizzy"],"sort_order":120},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPARKLES","short_name":"sparkles","short_names":["sparkles"],"sort_order":121},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"COMET","short_name":"comet","short_names":["comet"],"sort_order":122},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BLACK SUN WITH RAYS","short_name":"sunny","short_names":["sunny"],"sort_order":123},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WHITE SUN WITH SMALL CLOUD","short_name":"mostly_sunny","short_names":["mostly_sunny","sun_small_cloud"],"sort_order":124},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUN BEHIND CLOUD","short_name":"partly_sunny","short_names":["partly_sunny"],"sort_order":125},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WHITE SUN BEHIND CLOUD","short_name":"barely_sunny","short_names":["barely_sunny","sun_behind_cloud"],"sort_order":126},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WHITE SUN BEHIND CLOUD WITH RAIN","short_name":"partly_sunny_rain","short_names":["partly_sunny_rain","sun_behind_rain_cloud"],"sort_order":127},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOUD","short_name":"cloud","short_names":["cloud"],"sort_order":128},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CLOUD WITH RAIN","short_name":"rain_cloud","short_names":["rain_cloud"],"sort_order":129},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"THUNDER CLOUD AND RAIN","short_name":"thunder_cloud_and_rain","short_names":["thunder_cloud_and_rain"],"sort_order":130},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CLOUD WITH LIGHTNING","short_name":"lightning","short_names":["lightning","lightning_cloud"],"sort_order":131},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIGH VOLTAGE SIGN","short_name":"zap","short_names":["zap"],"sort_order":132},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIRE","short_name":"fire","short_names":["fire"],"sort_order":133},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COLLISION SYMBOL","short_name":"boom","short_names":["boom","collision"],"sort_order":134},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SNOWFLAKE","short_name":"snowflake","short_names":["snowflake"],"sort_order":135},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CLOUD WITH SNOW","short_name":"snow_cloud","short_names":["snow_cloud"],"sort_order":136},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SNOWMAN","short_name":"snowman","short_names":["snowman"],"sort_order":137},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SNOWMAN WITHOUT SNOW","short_name":"snowman_without_snow","short_names":["snowman_without_snow"],"sort_order":138},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WIND BLOWING FACE","short_name":"wind_blowing_face","short_names":["wind_blowing_face"],"sort_order":139},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DASH SYMBOL","short_name":"dash","short_names":["dash"],"sort_order":140},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CLOUD WITH TORNADO","short_name":"tornado","short_names":["tornado","tornado_cloud"],"sort_order":141},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FOG","short_name":"fog","short_names":["fog"],"sort_order":142},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"UMBRELLA","short_name":"umbrella","short_names":["umbrella"],"sort_order":143},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UMBRELLA WITH RAIN DROPS","short_name":"umbrella_with_rain_drops","short_names":["umbrella_with_rain_drops"],"sort_order":144},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DROPLET","short_name":"droplet","short_names":["droplet"],"sort_order":145},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPLASHING SWEAT SYMBOL","short_name":"sweat_drops","short_names":["sweat_drops"],"sort_order":146},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WATER WAVE","short_name":"ocean","short_names":["ocean"],"sort_order":147}],"Foods":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GREEN APPLE","short_name":"green_apple","short_names":["green_apple"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RED APPLE","short_name":"apple","short_names":["apple"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PEAR","short_name":"pear","short_names":["pear"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TANGERINE","short_name":"tangerine","short_names":["tangerine"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LEMON","short_name":"lemon","short_names":["lemon"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANANA","short_name":"banana","short_names":["banana"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WATERMELON","short_name":"watermelon","short_names":["watermelon"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRAPES","short_name":"grapes","short_names":["grapes"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STRAWBERRY","short_name":"strawberry","short_names":["strawberry"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MELON","short_name":"melon","short_names":["melon"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHERRIES","short_name":"cherries","short_names":["cherries"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PEACH","short_name":"peach","short_names":["peach"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PINEAPPLE","short_name":"pineapple","short_names":["pineapple"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TOMATO","short_name":"tomato","short_names":["tomato"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AUBERGINE","short_name":"eggplant","short_names":["eggplant"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HOT PEPPER","short_name":"hot_pepper","short_names":["hot_pepper"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EAR OF MAIZE","short_name":"corn","short_names":["corn"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROASTED SWEET POTATO","short_name":"sweet_potato","short_names":["sweet_potato"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HONEY POT","short_name":"honey_pot","short_names":["honey_pot"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BREAD","short_name":"bread","short_names":["bread"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CHEESE WEDGE","short_name":"cheese_wedge","short_names":["cheese_wedge"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POULTRY LEG","short_name":"poultry_leg","short_names":["poultry_leg"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MEAT ON BONE","short_name":"meat_on_bone","short_names":["meat_on_bone"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FRIED SHRIMP","short_name":"fried_shrimp","short_names":["fried_shrimp"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COOKING","short_name":"egg","short_names":["egg"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HAMBURGER","short_name":"hamburger","short_names":["hamburger"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FRENCH FRIES","short_name":"fries","short_names":["fries"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HOT DOG","short_name":"hotdog","short_names":["hotdog"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLICE OF PIZZA","short_name":"pizza","short_names":["pizza"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPAGHETTI","short_name":"spaghetti","short_names":["spaghetti"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"TACO","short_name":"taco","short_names":["taco"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BURRITO","short_name":"burrito","short_names":["burrito"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STEAMING BOWL","short_name":"ramen","short_names":["ramen"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POT OF FOOD","short_name":"stew","short_names":["stew"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FISH CAKE WITH SWIRL DESIGN","short_name":"fish_cake","short_names":["fish_cake"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUSHI","short_name":"sushi","short_names":["sushi"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BENTO BOX","short_name":"bento","short_names":["bento"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CURRY AND RICE","short_name":"curry","short_names":["curry"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RICE BALL","short_name":"rice_ball","short_names":["rice_ball"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COOKED RICE","short_name":"rice","short_names":["rice"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RICE CRACKER","short_name":"rice_cracker","short_names":["rice_cracker"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ODEN","short_name":"oden","short_names":["oden"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DANGO","short_name":"dango","short_names":["dango"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHAVED ICE","short_name":"shaved_ice","short_names":["shaved_ice"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ICE CREAM","short_name":"ice_cream","short_names":["ice_cream"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SOFT ICE CREAM","short_name":"icecream","short_names":["icecream"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHORTCAKE","short_name":"cake","short_names":["cake"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BIRTHDAY CAKE","short_name":"birthday","short_names":["birthday"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CUSTARD","short_name":"custard","short_names":["custard"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CANDY","short_name":"candy","short_names":["candy"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOLLIPOP","short_name":"lollipop","short_names":["lollipop"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHOCOLATE BAR","short_name":"chocolate_bar","short_names":["chocolate_bar"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"POPCORN","short_name":"popcorn","short_names":["popcorn"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DOUGHNUT","short_name":"doughnut","short_names":["doughnut"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COOKIE","short_name":"cookie","short_names":["cookie"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BEER MUG","short_name":"beer","short_names":["beer"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLINKING BEER MUGS","short_name":"beers","short_names":["beers"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WINE GLASS","short_name":"wine_glass","short_names":["wine_glass"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COCKTAIL GLASS","short_name":"cocktail","short_names":["cocktail"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TROPICAL DRINK","short_name":"tropical_drink","short_names":["tropical_drink"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BOTTLE WITH POPPING CORK","short_name":"champagne","short_names":["champagne"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SAKE BOTTLE AND CUP","short_name":"sake","short_names":["sake"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TEACUP WITHOUT HANDLE","short_name":"tea","short_names":["tea"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOT BEVERAGE","short_name":"coffee","short_names":["coffee"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BABY BOTTLE","short_name":"baby_bottle","short_names":["baby_bottle"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FORK AND KNIFE","short_name":"fork_and_knife","short_names":["fork_and_knife"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FORK AND KNIFE WITH PLATE","short_name":"knife_fork_plate","short_names":["knife_fork_plate"],"sort_order":67}],"People":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRINNING FACE","short_name":"grinning","short_names":["grinning"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRIMACING FACE","short_name":"grimacing","short_names":["grimacing"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRINNING FACE WITH SMILING EYES","short_name":"grin","short_names":["grin"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH TEARS OF JOY","short_name":"joy","short_names":["joy"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH OPEN MOUTH","short_name":"smiley","short_names":["smiley"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH OPEN MOUTH AND SMILING EYES","short_name":"smile","short_names":["smile"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH OPEN MOUTH AND COLD SWEAT","short_name":"sweat_smile","short_names":["sweat_smile"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES","short_name":"laughing","short_names":["laughing","satisfied"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH HALO","short_name":"innocent","short_names":["innocent"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WINKING FACE","short_name":"wink","short_names":["wink"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH SMILING EYES","short_name":"blush","short_names":["blush"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLIGHTLY SMILING FACE","short_name":"slightly_smiling_face","short_names":["slightly_smiling_face"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"UPSIDE-DOWN FACE","short_name":"upside_down_face","short_names":["upside_down_face"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE SMILING FACE","short_name":"relaxed","short_names":["relaxed"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE SAVOURING DELICIOUS FOOD","short_name":"yum","short_names":["yum"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RELIEVED FACE","short_name":"relieved","short_names":["relieved"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH HEART-SHAPED EYES","short_name":"heart_eyes","short_names":["heart_eyes"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE THROWING A KISS","short_name":"kissing_heart","short_names":["kissing_heart"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISSING FACE","short_name":"kissing","short_names":["kissing"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISSING FACE WITH SMILING EYES","short_name":"kissing_smiling_eyes","short_names":["kissing_smiling_eyes"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISSING FACE WITH CLOSED EYES","short_name":"kissing_closed_eyes","short_names":["kissing_closed_eyes"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH STUCK-OUT TONGUE AND WINKING EYE","short_name":"stuck_out_tongue_winking_eye","short_names":["stuck_out_tongue_winking_eye"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH STUCK-OUT TONGUE AND TIGHTLY-CLOSED EYES","short_name":"stuck_out_tongue_closed_eyes","short_names":["stuck_out_tongue_closed_eyes"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH STUCK-OUT TONGUE","short_name":"stuck_out_tongue","short_names":["stuck_out_tongue"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MONEY-MOUTH FACE","short_name":"money_mouth_face","short_names":["money_mouth_face"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"NERD FACE","short_name":"nerd_face","short_names":["nerd_face"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH SUNGLASSES","short_name":"sunglasses","short_names":["sunglasses"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HUGGING FACE","short_name":"hugging_face","short_names":["hugging_face"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMIRKING FACE","short_name":"smirk","short_names":["smirk"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITHOUT MOUTH","short_name":"no_mouth","short_names":["no_mouth"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NEUTRAL FACE","short_name":"neutral_face","short_names":["neutral_face"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EXPRESSIONLESS FACE","short_name":"expressionless","short_names":["expressionless"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"UNAMUSED FACE","short_name":"unamused","short_names":["unamused"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FACE WITH ROLLING EYES","short_name":"face_with_rolling_eyes","short_names":["face_with_rolling_eyes"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"THINKING FACE","short_name":"thinking_face","short_names":["thinking_face"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FLUSHED FACE","short_name":"flushed","short_names":["flushed"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DISAPPOINTED FACE","short_name":"disappointed","short_names":["disappointed"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WORRIED FACE","short_name":"worried","short_names":["worried"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANGRY FACE","short_name":"angry","short_names":["angry"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POUTING FACE","short_name":"rage","short_names":["rage"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PENSIVE FACE","short_name":"pensive","short_names":["pensive"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONFUSED FACE","short_name":"confused","short_names":["confused"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SLIGHTLY FROWNING FACE","short_name":"slightly_frowning_face","short_names":["slightly_frowning_face"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WHITE FROWNING FACE","short_name":"white_frowning_face","short_names":["white_frowning_face"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSEVERING FACE","short_name":"persevere","short_names":["persevere"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONFOUNDED FACE","short_name":"confounded","short_names":["confounded"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TIRED FACE","short_name":"tired_face","short_names":["tired_face"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WEARY FACE","short_name":"weary","short_names":["weary"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH LOOK OF TRIUMPH","short_name":"triumph","short_names":["triumph"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH OPEN MOUTH","short_name":"open_mouth","short_names":["open_mouth"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE SCREAMING IN FEAR","short_name":"scream","short_names":["scream"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FEARFUL FACE","short_name":"fearful","short_names":["fearful"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH OPEN MOUTH AND COLD SWEAT","short_name":"cold_sweat","short_names":["cold_sweat"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HUSHED FACE","short_name":"hushed","short_names":["hushed"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FROWNING FACE WITH OPEN MOUTH","short_name":"frowning","short_names":["frowning"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANGUISHED FACE","short_name":"anguished","short_names":["anguished"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CRYING FACE","short_name":"cry","short_names":["cry"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DISAPPOINTED BUT RELIEVED FACE","short_name":"disappointed_relieved","short_names":["disappointed_relieved"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLEEPY FACE","short_name":"sleepy","short_names":["sleepy"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH COLD SWEAT","short_name":"sweat","short_names":["sweat"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOUDLY CRYING FACE","short_name":"sob","short_names":["sob"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DIZZY FACE","short_name":"dizzy_face","short_names":["dizzy_face"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ASTONISHED FACE","short_name":"astonished","short_names":["astonished"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ZIPPER-MOUTH FACE","short_name":"zipper_mouth_face","short_names":["zipper_mouth_face"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH MEDICAL MASK","short_name":"mask","short_names":["mask"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FACE WITH THERMOMETER","short_name":"face_with_thermometer","short_names":["face_with_thermometer"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FACE WITH HEAD-BANDAGE","short_name":"face_with_head_bandage","short_names":["face_with_head_bandage"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLEEPING FACE","short_name":"sleeping","short_names":["sleeping"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLEEPING SYMBOL","short_name":"zzz","short_names":["zzz"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PILE OF POO","short_name":"hankey","short_names":["hankey","poop","shit"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING FACE WITH HORNS","short_name":"smiling_imp","short_names":["smiling_imp"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"IMP","short_name":"imp","short_names":["imp"],"sort_order":72},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE OGRE","short_name":"japanese_ogre","short_names":["japanese_ogre"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE GOBLIN","short_name":"japanese_goblin","short_names":["japanese_goblin"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SKULL","short_name":"skull","short_names":["skull"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GHOST","short_name":"ghost","short_names":["ghost"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EXTRATERRESTRIAL ALIEN","short_name":"alien","short_names":["alien"],"sort_order":77},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ROBOT FACE","short_name":"robot_face","short_names":["robot_face"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING CAT FACE WITH OPEN MOUTH","short_name":"smiley_cat","short_names":["smiley_cat"],"sort_order":79},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRINNING CAT FACE WITH SMILING EYES","short_name":"smile_cat","short_names":["smile_cat"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAT FACE WITH TEARS OF JOY","short_name":"joy_cat","short_names":["joy_cat"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SMILING CAT FACE WITH HEART-SHAPED EYES","short_name":"heart_eyes_cat","short_names":["heart_eyes_cat"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAT FACE WITH WRY SMILE","short_name":"smirk_cat","short_names":["smirk_cat"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISSING CAT FACE WITH CLOSED EYES","short_name":"kissing_cat","short_names":["kissing_cat"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WEARY CAT FACE","short_name":"scream_cat","short_names":["scream_cat"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CRYING CAT FACE","short_name":"crying_cat_face","short_names":["crying_cat_face"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POUTING CAT FACE","short_name":"pouting_cat","short_names":["pouting_cat"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON RAISING BOTH HANDS IN CELEBRATION","short_name":"raised_hands","short_names":["raised_hands"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLAPPING HANDS SIGN","short_name":"clap","short_names":["clap"],"sort_order":89},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WAVING HAND SIGN","short_name":"wave","short_names":["wave"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"THUMBS UP SIGN","short_name":"+1","short_names":["+1","thumbsup"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"THUMBS DOWN SIGN","short_name":"-1","short_names":["-1","thumbsdown"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FISTED HAND SIGN","short_name":"facepunch","short_names":["facepunch","punch"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAISED FIST","short_name":"fist","short_names":["fist"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VICTORY HAND","short_name":"v","short_names":["v"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OK HAND SIGN","short_name":"ok_hand","short_names":["ok_hand"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAISED HAND","short_name":"hand","short_names":["hand","raised_hand"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OPEN HANDS SIGN","short_name":"open_hands","short_names":["open_hands"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FLEXED BICEPS","short_name":"muscle","short_names":["muscle"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON WITH FOLDED HANDS","short_name":"pray","short_names":["pray"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE UP POINTING INDEX","short_name":"point_up","short_names":["point_up"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE UP POINTING BACKHAND INDEX","short_name":"point_up_2","short_names":["point_up_2"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE DOWN POINTING BACKHAND INDEX","short_name":"point_down","short_names":["point_down"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE LEFT POINTING BACKHAND INDEX","short_name":"point_left","short_names":["point_left"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WHITE RIGHT POINTING BACKHAND INDEX","short_name":"point_right","short_names":["point_right"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"REVERSED HAND WITH MIDDLE FINGER EXTENDED","short_name":"middle_finger","short_names":["middle_finger","reversed_hand_with_middle_finger_extended"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RAISED HAND WITH FINGERS SPLAYED","short_name":"raised_hand_with_fingers_splayed","short_names":["raised_hand_with_fingers_splayed"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SIGN OF THE HORNS","short_name":"the_horns","short_names":["the_horns","sign_of_the_horns"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS","short_name":"spock-hand","short_names":["spock-hand"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WRITING HAND","short_name":"writing_hand","short_names":["writing_hand"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NAIL POLISH","short_name":"nail_care","short_names":["nail_care"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUTH","short_name":"lips","short_names":["lips"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TONGUE","short_name":"tongue","short_names":["tongue"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EAR","short_name":"ear","short_names":["ear"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NOSE","short_name":"nose","short_names":["nose"],"sort_order":115},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EYE","short_name":"eye","short_names":["eye"],"sort_order":116},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EYES","short_name":"eyes","short_names":["eyes"],"sort_order":117},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BUST IN SILHOUETTE","short_name":"bust_in_silhouette","short_names":["bust_in_silhouette"],"sort_order":118},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BUSTS IN SILHOUETTE","short_name":"busts_in_silhouette","short_names":["busts_in_silhouette"],"sort_order":119},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPEAKING HEAD IN SILHOUETTE","short_name":"speaking_head_in_silhouette","short_names":["speaking_head_in_silhouette"],"sort_order":120},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BABY","short_name":"baby","short_names":["baby"],"sort_order":121},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOY","short_name":"boy","short_names":["boy"],"sort_order":122},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GIRL","short_name":"girl","short_names":["girl"],"sort_order":123},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAN","short_name":"man","short_names":["man"],"sort_order":124},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMAN","short_name":"woman","short_names":["woman"],"sort_order":125},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON WITH BLOND HAIR","short_name":"person_with_blond_hair","short_names":["person_with_blond_hair"],"sort_order":126},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OLDER MAN","short_name":"older_man","short_names":["older_man"],"sort_order":127},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OLDER WOMAN","short_name":"older_woman","short_names":["older_woman"],"sort_order":128},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAN WITH GUA PI MAO","short_name":"man_with_gua_pi_mao","short_names":["man_with_gua_pi_mao"],"sort_order":129},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAN WITH TURBAN","short_name":"man_with_turban","short_names":["man_with_turban"],"sort_order":130},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POLICE OFFICER","short_name":"cop","short_names":["cop"],"sort_order":131},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONSTRUCTION WORKER","short_name":"construction_worker","short_names":["construction_worker"],"sort_order":132},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GUARDSMAN","short_name":"guardsman","short_names":["guardsman"],"sort_order":133},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SLEUTH OR SPY","short_name":"sleuth_or_spy","short_names":["sleuth_or_spy"],"sort_order":134},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FATHER CHRISTMAS","short_name":"santa","short_names":["santa"],"sort_order":135},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BABY ANGEL","short_name":"angel","short_names":["angel"],"sort_order":136},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PRINCESS","short_name":"princess","short_names":["princess"],"sort_order":137},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BRIDE WITH VEIL","short_name":"bride_with_veil","short_names":["bride_with_veil"],"sort_order":138},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PEDESTRIAN","short_name":"walking","short_names":["walking"],"sort_order":139},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RUNNER","short_name":"runner","short_names":["runner","running"],"sort_order":140},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DANCER","short_name":"dancer","short_names":["dancer"],"sort_order":141},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMAN WITH BUNNY EARS","short_name":"dancers","short_names":["dancers"],"sort_order":142},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MAN AND WOMAN HOLDING HANDS","short_name":"couple","short_names":["couple","man_and_woman_holding_hands"],"sort_order":143},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TWO MEN HOLDING HANDS","short_name":"two_men_holding_hands","short_names":["two_men_holding_hands"],"sort_order":144},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TWO WOMEN HOLDING HANDS","short_name":"two_women_holding_hands","short_names":["two_women_holding_hands"],"sort_order":145},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON BOWING DEEPLY","short_name":"bow","short_names":["bow"],"sort_order":146},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"INFORMATION DESK PERSON","short_name":"information_desk_person","short_names":["information_desk_person"],"sort_order":147},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH NO GOOD GESTURE","short_name":"no_good","short_names":["no_good"],"sort_order":148},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE WITH OK GESTURE","short_name":"ok_woman","short_names":["ok_woman"],"sort_order":149},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HAPPY PERSON RAISING ONE HAND","short_name":"raising_hand","short_names":["raising_hand"],"sort_order":150},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON WITH POUTING FACE","short_name":"person_with_pouting_face","short_names":["person_with_pouting_face"],"sort_order":151},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERSON FROWNING","short_name":"person_frowning","short_names":["person_frowning"],"sort_order":152},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HAIRCUT","short_name":"haircut","short_names":["haircut"],"sort_order":153},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACE MASSAGE","short_name":"massage","short_names":["massage"],"sort_order":154},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"COUPLE WITH HEART","short_name":"couple_with_heart","short_names":["couple_with_heart"],"sort_order":155},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-heart-woman","short_names":["woman-heart-woman"],"sort_order":156},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-heart-man","short_names":["man-heart-man"],"sort_order":157},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISS","short_name":"couplekiss","short_names":["couplekiss"],"sort_order":158},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-kiss-woman","short_names":["woman-kiss-woman"],"sort_order":159},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":false,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-kiss-man","short_names":["man-kiss-man"],"sort_order":160},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FAMILY","short_name":"family","short_names":["family","man-woman-boy"],"sort_order":161},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-woman-girl","short_names":["man-woman-girl"],"sort_order":162},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-woman-girl-boy","short_names":["man-woman-girl-boy"],"sort_order":163},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-woman-boy-boy","short_names":["man-woman-boy-boy"],"sort_order":164},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-woman-girl-girl","short_names":["man-woman-girl-girl"],"sort_order":165},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-woman-boy","short_names":["woman-woman-boy"],"sort_order":166},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-woman-girl","short_names":["woman-woman-girl"],"sort_order":167},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-woman-girl-boy","short_names":["woman-woman-girl-boy"],"sort_order":168},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-woman-boy-boy","short_names":["woman-woman-boy-boy"],"sort_order":169},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"woman-woman-girl-girl","short_names":["woman-woman-girl-girl"],"sort_order":170},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-man-boy","short_names":["man-man-boy"],"sort_order":171},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-man-girl","short_names":["man-man-girl"],"sort_order":172},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-man-girl-boy","short_names":["man-man-girl-boy"],"sort_order":173},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-man-boy-boy","short_names":["man-man-boy-boy"],"sort_order":174},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":null,"short_name":"man-man-girl-girl","short_names":["man-man-girl-girl"],"sort_order":175},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMANS CLOTHES","short_name":"womans_clothes","short_names":["womans_clothes"],"sort_order":176},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"T-SHIRT","short_name":"shirt","short_names":["shirt","tshirt"],"sort_order":177},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JEANS","short_name":"jeans","short_names":["jeans"],"sort_order":178},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NECKTIE","short_name":"necktie","short_names":["necktie"],"sort_order":179},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DRESS","short_name":"dress","short_names":["dress"],"sort_order":180},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BIKINI","short_name":"bikini","short_names":["bikini"],"sort_order":181},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KIMONO","short_name":"kimono","short_names":["kimono"],"sort_order":182},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LIPSTICK","short_name":"lipstick","short_names":["lipstick"],"sort_order":183},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"KISS MARK","short_name":"kiss","short_names":["kiss"],"sort_order":184},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FOOTPRINTS","short_name":"footprints","short_names":["footprints"],"sort_order":185},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIGH-HEELED SHOE","short_name":"high_heel","short_names":["high_heel"],"sort_order":186},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMANS SANDAL","short_name":"sandal","short_names":["sandal"],"sort_order":187},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMANS BOOTS","short_name":"boot","short_names":["boot"],"sort_order":188},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MANS SHOE","short_name":"mans_shoe","short_names":["mans_shoe","shoe"],"sort_order":189},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ATHLETIC SHOE","short_name":"athletic_shoe","short_names":["athletic_shoe"],"sort_order":190},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WOMANS HAT","short_name":"womans_hat","short_names":["womans_hat"],"sort_order":191},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TOP HAT","short_name":"tophat","short_names":["tophat"],"sort_order":192},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HELMET WITH WHITE CROSS","short_name":"helmet_with_white_cross","short_names":["helmet_with_white_cross"],"sort_order":193},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GRADUATION CAP","short_name":"mortar_board","short_names":["mortar_board"],"sort_order":194},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CROWN","short_name":"crown","short_names":["crown"],"sort_order":195},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SCHOOL SATCHEL","short_name":"school_satchel","short_names":["school_satchel"],"sort_order":196},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POUCH","short_name":"pouch","short_names":["pouch"],"sort_order":197},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PURSE","short_name":"purse","short_names":["purse"],"sort_order":198},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HANDBAG","short_name":"handbag","short_names":["handbag"],"sort_order":199},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BRIEFCASE","short_name":"briefcase","short_names":["briefcase"],"sort_order":200},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EYEGLASSES","short_name":"eyeglasses","short_names":["eyeglasses"],"sort_order":201},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DARK SUNGLASSES","short_name":"dark_sunglasses","short_names":["dark_sunglasses"],"sort_order":202},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RING","short_name":"ring","short_names":["ring"],"sort_order":203},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLOSED UMBRELLA","short_name":"closed_umbrella","short_names":["closed_umbrella"],"sort_order":204}],"Places":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AUTOMOBILE","short_name":"car","short_names":["car","red_car"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TAXI","short_name":"taxi","short_names":["taxi"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RECREATIONAL VEHICLE","short_name":"blue_car","short_names":["blue_car"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BUS","short_name":"bus","short_names":["bus"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TROLLEYBUS","short_name":"trolleybus","short_names":["trolleybus"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RACING CAR","short_name":"racing_car","short_names":["racing_car"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POLICE CAR","short_name":"police_car","short_names":["police_car"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AMBULANCE","short_name":"ambulance","short_names":["ambulance"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIRE ENGINE","short_name":"fire_engine","short_names":["fire_engine"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MINIBUS","short_name":"minibus","short_names":["minibus"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DELIVERY TRUCK","short_name":"truck","short_names":["truck"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ARTICULATED LORRY","short_name":"articulated_lorry","short_names":["articulated_lorry"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRACTOR","short_name":"tractor","short_names":["tractor"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RACING MOTORCYCLE","short_name":"racing_motorcycle","short_names":["racing_motorcycle"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BICYCLE","short_name":"bike","short_names":["bike"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"POLICE CARS REVOLVING LIGHT","short_name":"rotating_light","short_names":["rotating_light"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ONCOMING POLICE CAR","short_name":"oncoming_police_car","short_names":["oncoming_police_car"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ONCOMING BUS","short_name":"oncoming_bus","short_names":["oncoming_bus"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ONCOMING AUTOMOBILE","short_name":"oncoming_automobile","short_names":["oncoming_automobile"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ONCOMING TAXI","short_name":"oncoming_taxi","short_names":["oncoming_taxi"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AERIAL TRAMWAY","short_name":"aerial_tramway","short_names":["aerial_tramway"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUNTAIN CABLEWAY","short_name":"mountain_cableway","short_names":["mountain_cableway"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUSPENSION RAILWAY","short_name":"suspension_railway","short_names":["suspension_railway"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAILWAY CAR","short_name":"railway_car","short_names":["railway_car"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRAM CAR","short_name":"train","short_names":["train"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MONORAIL","short_name":"monorail","short_names":["monorail"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIGH-SPEED TRAIN","short_name":"bullettrain_side","short_names":["bullettrain_side"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HIGH-SPEED TRAIN WITH BULLET NOSE","short_name":"bullettrain_front","short_names":["bullettrain_front"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LIGHT RAIL","short_name":"light_rail","short_names":["light_rail"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUNTAIN RAILWAY","short_name":"mountain_railway","short_names":["mountain_railway"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STEAM LOCOMOTIVE","short_name":"steam_locomotive","short_names":["steam_locomotive"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRAIN","short_name":"train2","short_names":["train2"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"METRO","short_name":"metro","short_names":["metro"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRAM","short_name":"tram","short_names":["tram"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STATION","short_name":"station","short_names":["station"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HELICOPTER","short_name":"helicopter","short_names":["helicopter"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SMALL AIRPLANE","short_name":"small_airplane","short_names":["small_airplane"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AIRPLANE","short_name":"airplane","short_names":["airplane"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"AIRPLANE DEPARTURE","short_name":"airplane_departure","short_names":["airplane_departure"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"AIRPLANE ARRIVING","short_name":"airplane_arriving","short_names":["airplane_arriving"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SAILBOAT","short_name":"boat","short_names":["boat","sailboat"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MOTOR BOAT","short_name":"motor_boat","short_names":["motor_boat"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SPEEDBOAT","short_name":"speedboat","short_names":["speedboat"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FERRY","short_name":"ferry","short_names":["ferry"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PASSENGER SHIP","short_name":"passenger_ship","short_names":["passenger_ship"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROCKET","short_name":"rocket","short_names":["rocket"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SATELLITE","short_name":"satellite","short_names":["satellite"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SEAT","short_name":"seat","short_names":["seat"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ANCHOR","short_name":"anchor","short_names":["anchor"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONSTRUCTION SIGN","short_name":"construction","short_names":["construction"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FUEL PUMP","short_name":"fuelpump","short_names":["fuelpump"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BUS STOP","short_name":"busstop","short_names":["busstop"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VERTICAL TRAFFIC LIGHT","short_name":"vertical_traffic_light","short_names":["vertical_traffic_light"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HORIZONTAL TRAFFIC LIGHT","short_name":"traffic_light","short_names":["traffic_light"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHEQUERED FLAG","short_name":"checkered_flag","short_names":["checkered_flag"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHIP","short_name":"ship","short_names":["ship"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FERRIS WHEEL","short_name":"ferris_wheel","short_names":["ferris_wheel"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROLLER COASTER","short_name":"roller_coaster","short_names":["roller_coaster"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CAROUSEL HORSE","short_name":"carousel_horse","short_names":["carousel_horse"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BUILDING CONSTRUCTION","short_name":"building_construction","short_names":["building_construction"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FOGGY","short_name":"foggy","short_names":["foggy"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TOKYO TOWER","short_name":"tokyo_tower","short_names":["tokyo_tower"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FACTORY","short_name":"factory","short_names":["factory"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FOUNTAIN","short_name":"fountain","short_names":["fountain"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOON VIEWING CEREMONY","short_name":"rice_scene","short_names":["rice_scene"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MOUNTAIN","short_name":"mountain","short_names":["mountain"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SNOW CAPPED MOUNTAIN","short_name":"snow_capped_mountain","short_names":["snow_capped_mountain"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUNT FUJI","short_name":"mount_fuji","short_names":["mount_fuji"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VOLCANO","short_name":"volcano","short_names":["volcano"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SILHOUETTE OF JAPAN","short_name":"japan","short_names":["japan"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CAMPING","short_name":"camping","short_names":["camping"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TENT","short_name":"tent","short_names":["tent"],"sort_order":72},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"NATIONAL PARK","short_name":"national_park","short_names":["national_park"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MOTORWAY","short_name":"motorway","short_names":["motorway"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"RAILWAY TRACK","short_name":"railway_track","short_names":["railway_track"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUNRISE","short_name":"sunrise","short_names":["sunrise"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUNRISE OVER MOUNTAINS","short_name":"sunrise_over_mountains","short_names":["sunrise_over_mountains"],"sort_order":77},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DESERT","short_name":"desert","short_names":["desert"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BEACH WITH UMBRELLA","short_name":"beach_with_umbrella","short_names":["beach_with_umbrella"],"sort_order":79},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DESERT ISLAND","short_name":"desert_island","short_names":["desert_island"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SUNSET OVER BUILDINGS","short_name":"city_sunrise","short_names":["city_sunrise"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CITYSCAPE AT DUSK","short_name":"city_sunset","short_names":["city_sunset"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CITYSCAPE","short_name":"cityscape","short_names":["cityscape"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"NIGHT WITH STARS","short_name":"night_with_stars","short_names":["night_with_stars"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BRIDGE AT NIGHT","short_name":"bridge_at_night","short_names":["bridge_at_night"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MILKY WAY","short_name":"milky_way","short_names":["milky_way"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SHOOTING STAR","short_name":"stars","short_names":["stars"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIREWORK SPARKLER","short_name":"sparkler","short_names":["sparkler"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FIREWORKS","short_name":"fireworks","short_names":["fireworks"],"sort_order":89},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RAINBOW","short_name":"rainbow","short_names":["rainbow"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"HOUSE BUILDINGS","short_name":"house_buildings","short_names":["house_buildings"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EUROPEAN CASTLE","short_name":"european_castle","short_names":["european_castle"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE CASTLE","short_name":"japanese_castle","short_names":["japanese_castle"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"STADIUM","short_name":"stadium","short_names":["stadium"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"STATUE OF LIBERTY","short_name":"statue_of_liberty","short_names":["statue_of_liberty"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOUSE BUILDING","short_name":"house","short_names":["house"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOUSE WITH GARDEN","short_name":"house_with_garden","short_names":["house_with_garden"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"DERELICT HOUSE BUILDING","short_name":"derelict_house_building","short_names":["derelict_house_building"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"OFFICE BUILDING","short_name":"office","short_names":["office"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DEPARTMENT STORE","short_name":"department_store","short_names":["department_store"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"JAPANESE POST OFFICE","short_name":"post_office","short_names":["post_office"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"EUROPEAN POST OFFICE","short_name":"european_post_office","short_names":["european_post_office"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOSPITAL","short_name":"hospital","short_names":["hospital"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BANK","short_name":"bank","short_names":["bank"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HOTEL","short_name":"hotel","short_names":["hotel"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CONVENIENCE STORE","short_name":"convenience_store","short_names":["convenience_store"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SCHOOL","short_name":"school","short_names":["school"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"LOVE HOTEL","short_name":"love_hotel","short_names":["love_hotel"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"WEDDING","short_name":"wedding","short_names":["wedding"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CLASSICAL BUILDING","short_name":"classical_building","short_names":["classical_building"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CHURCH","short_name":"church","short_names":["church"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MOSQUE","short_name":"mosque","short_names":["mosque"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SYNAGOGUE","short_name":"synagogue","short_names":["synagogue"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"KAABA","short_name":"kaaba","short_names":["kaaba"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SHINTO SHRINE","short_name":"shinto_shrine","short_names":["shinto_shrine"],"sort_order":115}],"Activity":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SOCCER BALL","short_name":"soccer","short_names":["soccer"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BASKETBALL AND HOOP","short_name":"basketball","short_names":["basketball"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"AMERICAN FOOTBALL","short_name":"football","short_names":["football"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BASEBALL","short_name":"baseball","short_names":["baseball"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TENNIS RACQUET AND BALL","short_name":"tennis","short_names":["tennis"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"VOLLEYBALL","short_name":"volleyball","short_names":["volleyball"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RUGBY FOOTBALL","short_name":"rugby_football","short_names":["rugby_football"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BILLIARDS","short_name":"8ball","short_names":["8ball"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FLAG IN HOLE","short_name":"golf","short_names":["golf"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"GOLFER","short_name":"golfer","short_names":["golfer"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"TABLE TENNIS PADDLE AND BALL","short_name":"table_tennis_paddle_and_ball","short_names":["table_tennis_paddle_and_ball"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BADMINTON RACQUET AND SHUTTLECOCK","short_name":"badminton_racquet_and_shuttlecock","short_names":["badminton_racquet_and_shuttlecock"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ICE HOCKEY STICK AND PUCK","short_name":"ice_hockey_stick_and_puck","short_names":["ice_hockey_stick_and_puck"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"FIELD HOCKEY STICK AND BALL","short_name":"field_hockey_stick_and_ball","short_names":["field_hockey_stick_and_ball"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"CRICKET BAT AND BALL","short_name":"cricket_bat_and_ball","short_names":["cricket_bat_and_ball"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SKI AND SKI BOOT","short_name":"ski","short_names":["ski"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SKIER","short_name":"skier","short_names":["skier"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SNOWBOARDER","short_name":"snowboarder","short_names":["snowboarder"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ICE SKATE","short_name":"ice_skate","short_names":["ice_skate"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"BOW AND ARROW","short_name":"bow_and_arrow","short_names":["bow_and_arrow"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"FISHING POLE AND FISH","short_name":"fishing_pole_and_fish","short_names":["fishing_pole_and_fish"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ROWBOAT","short_name":"rowboat","short_names":["rowboat"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SWIMMER","short_name":"swimmer","short_names":["swimmer"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SURFER","short_name":"surfer","short_names":["surfer"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BATH","short_name":"bath","short_names":["bath"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"PERSON WITH BALL","short_name":"person_with_ball","short_names":["person_with_ball"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"WEIGHT LIFTER","short_name":"weight_lifter","short_names":["weight_lifter"],"sort_order":27},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BICYCLIST","short_name":"bicyclist","short_names":["bicyclist"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MOUNTAIN BICYCLIST","short_name":"mountain_bicyclist","short_names":["mountain_bicyclist"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HORSE RACING","short_name":"horse_racing","short_names":["horse_racing"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MAN IN BUSINESS SUIT LEVITATING","short_name":"man_in_business_suit_levitating","short_names":["man_in_business_suit_levitating"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TROPHY","short_name":"trophy","short_names":["trophy"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"RUNNING SHIRT WITH SASH","short_name":"running_shirt_with_sash","short_names":["running_shirt_with_sash"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"SPORTS MEDAL","short_name":"sports_medal","short_names":["sports_medal"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"MILITARY MEDAL","short_name":"medal","short_names":["medal"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"REMINDER RIBBON","short_name":"reminder_ribbon","short_names":["reminder_ribbon"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ROSETTE","short_name":"rosette","short_names":["rosette"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TICKET","short_name":"ticket","short_names":["ticket"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"ADMISSION TICKETS","short_name":"admission_tickets","short_names":["admission_tickets"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"PERFORMING ARTS","short_name":"performing_arts","short_names":["performing_arts"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ARTIST PALETTE","short_name":"art","short_names":["art"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CIRCUS TENT","short_name":"circus_tent","short_names":["circus_tent"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MICROPHONE","short_name":"microphone","short_names":["microphone"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"HEADPHONE","short_name":"headphones","short_names":["headphones"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MUSICAL SCORE","short_name":"musical_score","short_names":["musical_score"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"MUSICAL KEYBOARD","short_name":"musical_keyboard","short_names":["musical_keyboard"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SAXOPHONE","short_name":"saxophone","short_names":["saxophone"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"TRUMPET","short_name":"trumpet","short_names":["trumpet"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GUITAR","short_name":"guitar","short_names":["guitar"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIOLIN","short_name":"violin","short_names":["violin"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"CLAPPER BOARD","short_name":"clapper","short_names":["clapper"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"VIDEO GAME","short_name":"video_game","short_names":["video_game"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"ALIEN MONSTER","short_name":"space_invader","short_names":["space_invader"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"DIRECT HIT","short_name":"dart","short_names":["dart"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"GAME DIE","short_name":"game_die","short_names":["game_die"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"SLOT MACHINE","short_name":"slot_machine","short_names":["slot_machine"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"BOWLING","short_name":"bowling","short_names":["bowling"],"sort_order":57}],"Skin Tones":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EMOJI MODIFIER FITZPATRICK TYPE-1-2","short_name":"skin-tone-2","short_names":["skin-tone-2"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EMOJI MODIFIER FITZPATRICK TYPE-3","short_name":"skin-tone-3","short_names":["skin-tone-3"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EMOJI MODIFIER FITZPATRICK TYPE-4","short_name":"skin-tone-4","short_names":["skin-tone-4"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EMOJI MODIFIER FITZPATRICK TYPE-5","short_name":"skin-tone-5","short_names":["skin-tone-5"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"EMOJI MODIFIER FITZPATRICK TYPE-6","short_name":"skin-tone-6","short_names":["skin-tone-6"],"sort_order":5}],"Flags":[{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AF","short_name":"flag-af","short_names":["flag-af"],"sort_order":1},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AX","short_name":"flag-ax","short_names":["flag-ax"],"sort_order":2},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AL","short_name":"flag-al","short_names":["flag-al"],"sort_order":3},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DZ","short_name":"flag-dz","short_names":["flag-dz"],"sort_order":4},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AS","short_name":"flag-as","short_names":["flag-as"],"sort_order":5},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AD","short_name":"flag-ad","short_names":["flag-ad"],"sort_order":6},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AO","short_name":"flag-ao","short_names":["flag-ao"],"sort_order":7},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AI","short_name":"flag-ai","short_names":["flag-ai"],"sort_order":8},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AQ","short_name":"flag-aq","short_names":["flag-aq"],"sort_order":9},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AG","short_name":"flag-ag","short_names":["flag-ag"],"sort_order":10},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AR","short_name":"flag-ar","short_names":["flag-ar"],"sort_order":11},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AM","short_name":"flag-am","short_names":["flag-am"],"sort_order":12},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AW","short_name":"flag-aw","short_names":["flag-aw"],"sort_order":13},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AU","short_name":"flag-au","short_names":["flag-au"],"sort_order":14},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AT","short_name":"flag-at","short_names":["flag-at"],"sort_order":15},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AZ","short_name":"flag-az","short_names":["flag-az"],"sort_order":16},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BS","short_name":"flag-bs","short_names":["flag-bs"],"sort_order":17},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BH","short_name":"flag-bh","short_names":["flag-bh"],"sort_order":18},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BD","short_name":"flag-bd","short_names":["flag-bd"],"sort_order":19},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BB","short_name":"flag-bb","short_names":["flag-bb"],"sort_order":20},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BY","short_name":"flag-by","short_names":["flag-by"],"sort_order":21},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BE","short_name":"flag-be","short_names":["flag-be"],"sort_order":22},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BZ","short_name":"flag-bz","short_names":["flag-bz"],"sort_order":23},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BJ","short_name":"flag-bj","short_names":["flag-bj"],"sort_order":24},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BM","short_name":"flag-bm","short_names":["flag-bm"],"sort_order":25},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BT","short_name":"flag-bt","short_names":["flag-bt"],"sort_order":26},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BO","short_name":"flag-bo","short_names":["flag-bo"],"sort_order":27},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BQ","short_name":"flag-bq","short_names":["flag-bq"],"sort_order":28},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"REGIONAL INDICATOR SYMBOL LETTERS BA","short_name":"flag-ba","short_names":["flag-ba"],"sort_order":29},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BW","short_name":"flag-bw","short_names":["flag-bw"],"sort_order":30},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BR","short_name":"flag-br","short_names":["flag-br"],"sort_order":31},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IO","short_name":"flag-io","short_names":["flag-io"],"sort_order":32},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VG","short_name":"flag-vg","short_names":["flag-vg"],"sort_order":33},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"REGIONAL INDICATOR SYMBOL LETTERS BN","short_name":"flag-bn","short_names":["flag-bn"],"sort_order":34},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BG","short_name":"flag-bg","short_names":["flag-bg"],"sort_order":35},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BF","short_name":"flag-bf","short_names":["flag-bf"],"sort_order":36},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BI","short_name":"flag-bi","short_names":["flag-bi"],"sort_order":37},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CV","short_name":"flag-cv","short_names":["flag-cv"],"sort_order":38},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KH","short_name":"flag-kh","short_names":["flag-kh"],"sort_order":39},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CM","short_name":"flag-cm","short_names":["flag-cm"],"sort_order":40},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CA","short_name":"flag-ca","short_names":["flag-ca"],"sort_order":41},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IC","short_name":"flag-ic","short_names":["flag-ic"],"sort_order":42},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KY","short_name":"flag-ky","short_names":["flag-ky"],"sort_order":43},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CF","short_name":"flag-cf","short_names":["flag-cf"],"sort_order":44},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TD","short_name":"flag-td","short_names":["flag-td"],"sort_order":45},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CL","short_name":"flag-cl","short_names":["flag-cl"],"sort_order":46},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CN","short_name":"flag-cn","short_names":["flag-cn","cn"],"sort_order":47},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CX","short_name":"flag-cx","short_names":["flag-cx"],"sort_order":48},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CC","short_name":"flag-cc","short_names":["flag-cc"],"sort_order":49},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CO","short_name":"flag-co","short_names":["flag-co"],"sort_order":50},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KM","short_name":"flag-km","short_names":["flag-km"],"sort_order":51},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CG","short_name":"flag-cg","short_names":["flag-cg"],"sort_order":52},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CD","short_name":"flag-cd","short_names":["flag-cd"],"sort_order":53},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CK","short_name":"flag-ck","short_names":["flag-ck"],"sort_order":54},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CR","short_name":"flag-cr","short_names":["flag-cr"],"sort_order":55},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HR","short_name":"flag-hr","short_names":["flag-hr"],"sort_order":56},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CU","short_name":"flag-cu","short_names":["flag-cu"],"sort_order":57},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CW","short_name":"flag-cw","short_names":["flag-cw"],"sort_order":58},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CY","short_name":"flag-cy","short_names":["flag-cy"],"sort_order":59},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CZ","short_name":"flag-cz","short_names":["flag-cz"],"sort_order":60},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DK","short_name":"flag-dk","short_names":["flag-dk"],"sort_order":61},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DJ","short_name":"flag-dj","short_names":["flag-dj"],"sort_order":62},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DM","short_name":"flag-dm","short_names":["flag-dm"],"sort_order":63},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DO","short_name":"flag-do","short_names":["flag-do"],"sort_order":64},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EC","short_name":"flag-ec","short_names":["flag-ec"],"sort_order":65},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EG","short_name":"flag-eg","short_names":["flag-eg"],"sort_order":66},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SV","short_name":"flag-sv","short_names":["flag-sv"],"sort_order":67},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GQ","short_name":"flag-gq","short_names":["flag-gq"],"sort_order":68},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ER","short_name":"flag-er","short_names":["flag-er"],"sort_order":69},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EE","short_name":"flag-ee","short_names":["flag-ee"],"sort_order":70},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ET","short_name":"flag-et","short_names":["flag-et"],"sort_order":71},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EU","short_name":"flag-eu","short_names":["flag-eu"],"sort_order":72},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FK","short_name":"flag-fk","short_names":["flag-fk"],"sort_order":73},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FO","short_name":"flag-fo","short_names":["flag-fo"],"sort_order":74},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FJ","short_name":"flag-fj","short_names":["flag-fj"],"sort_order":75},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FI","short_name":"flag-fi","short_names":["flag-fi"],"sort_order":76},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FR","short_name":"flag-fr","short_names":["flag-fr","fr"],"sort_order":77},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GF","short_name":"flag-gf","short_names":["flag-gf"],"sort_order":78},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PF","short_name":"flag-pf","short_names":["flag-pf"],"sort_order":79},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TF","short_name":"flag-tf","short_names":["flag-tf"],"sort_order":80},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GA","short_name":"flag-ga","short_names":["flag-ga"],"sort_order":81},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GM","short_name":"flag-gm","short_names":["flag-gm"],"sort_order":82},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GE","short_name":"flag-ge","short_names":["flag-ge"],"sort_order":83},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DE","short_name":"flag-de","short_names":["flag-de","de"],"sort_order":84},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GH","short_name":"flag-gh","short_names":["flag-gh"],"sort_order":85},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GI","short_name":"flag-gi","short_names":["flag-gi"],"sort_order":86},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GR","short_name":"flag-gr","short_names":["flag-gr"],"sort_order":87},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GL","short_name":"flag-gl","short_names":["flag-gl"],"sort_order":88},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GD","short_name":"flag-gd","short_names":["flag-gd"],"sort_order":89},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GP","short_name":"flag-gp","short_names":["flag-gp"],"sort_order":90},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GU","short_name":"flag-gu","short_names":["flag-gu"],"sort_order":91},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GT","short_name":"flag-gt","short_names":["flag-gt"],"sort_order":92},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GG","short_name":"flag-gg","short_names":["flag-gg"],"sort_order":93},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GN","short_name":"flag-gn","short_names":["flag-gn"],"sort_order":94},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GW","short_name":"flag-gw","short_names":["flag-gw"],"sort_order":95},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GY","short_name":"flag-gy","short_names":["flag-gy"],"sort_order":96},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HT","short_name":"flag-ht","short_names":["flag-ht"],"sort_order":97},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HN","short_name":"flag-hn","short_names":["flag-hn"],"sort_order":98},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HK","short_name":"flag-hk","short_names":["flag-hk"],"sort_order":99},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HU","short_name":"flag-hu","short_names":["flag-hu"],"sort_order":100},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IS","short_name":"flag-is","short_names":["flag-is"],"sort_order":101},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IN","short_name":"flag-in","short_names":["flag-in"],"sort_order":102},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ID","short_name":"flag-id","short_names":["flag-id"],"sort_order":103},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IR","short_name":"flag-ir","short_names":["flag-ir"],"sort_order":104},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IQ","short_name":"flag-iq","short_names":["flag-iq"],"sort_order":105},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IE","short_name":"flag-ie","short_names":["flag-ie"],"sort_order":106},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IM","short_name":"flag-im","short_names":["flag-im"],"sort_order":107},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IL","short_name":"flag-il","short_names":["flag-il"],"sort_order":108},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS IT","short_name":"flag-it","short_names":["flag-it","it"],"sort_order":109},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CI","short_name":"flag-ci","short_names":["flag-ci"],"sort_order":110},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS JM","short_name":"flag-jm","short_names":["flag-jm"],"sort_order":111},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS JP","short_name":"flag-jp","short_names":["flag-jp","jp"],"sort_order":112},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS JE","short_name":"flag-je","short_names":["flag-je"],"sort_order":113},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS JO","short_name":"flag-jo","short_names":["flag-jo"],"sort_order":114},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KZ","short_name":"flag-kz","short_names":["flag-kz"],"sort_order":115},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KE","short_name":"flag-ke","short_names":["flag-ke"],"sort_order":116},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KI","short_name":"flag-ki","short_names":["flag-ki"],"sort_order":117},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS XK","short_name":"flag-xk","short_names":["flag-xk"],"sort_order":118},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KW","short_name":"flag-kw","short_names":["flag-kw"],"sort_order":119},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KG","short_name":"flag-kg","short_names":["flag-kg"],"sort_order":120},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LA","short_name":"flag-la","short_names":["flag-la"],"sort_order":121},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LV","short_name":"flag-lv","short_names":["flag-lv"],"sort_order":122},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LB","short_name":"flag-lb","short_names":["flag-lb"],"sort_order":123},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LS","short_name":"flag-ls","short_names":["flag-ls"],"sort_order":124},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LR","short_name":"flag-lr","short_names":["flag-lr"],"sort_order":125},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LY","short_name":"flag-ly","short_names":["flag-ly"],"sort_order":126},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LI","short_name":"flag-li","short_names":["flag-li"],"sort_order":127},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LT","short_name":"flag-lt","short_names":["flag-lt"],"sort_order":128},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LU","short_name":"flag-lu","short_names":["flag-lu"],"sort_order":129},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MO","short_name":"flag-mo","short_names":["flag-mo"],"sort_order":130},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MK","short_name":"flag-mk","short_names":["flag-mk"],"sort_order":131},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MG","short_name":"flag-mg","short_names":["flag-mg"],"sort_order":132},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MW","short_name":"flag-mw","short_names":["flag-mw"],"sort_order":133},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MY","short_name":"flag-my","short_names":["flag-my"],"sort_order":134},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MV","short_name":"flag-mv","short_names":["flag-mv"],"sort_order":135},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ML","short_name":"flag-ml","short_names":["flag-ml"],"sort_order":136},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MT","short_name":"flag-mt","short_names":["flag-mt"],"sort_order":137},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MH","short_name":"flag-mh","short_names":["flag-mh"],"sort_order":138},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MQ","short_name":"flag-mq","short_names":["flag-mq"],"sort_order":139},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MR","short_name":"flag-mr","short_names":["flag-mr"],"sort_order":140},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MU","short_name":"flag-mu","short_names":["flag-mu"],"sort_order":141},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS YT","short_name":"flag-yt","short_names":["flag-yt"],"sort_order":142},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MX","short_name":"flag-mx","short_names":["flag-mx"],"sort_order":143},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS FM","short_name":"flag-fm","short_names":["flag-fm"],"sort_order":144},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MD","short_name":"flag-md","short_names":["flag-md"],"sort_order":145},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MC","short_name":"flag-mc","short_names":["flag-mc"],"sort_order":146},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MN","short_name":"flag-mn","short_names":["flag-mn"],"sort_order":147},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ME","short_name":"flag-me","short_names":["flag-me"],"sort_order":148},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MS","short_name":"flag-ms","short_names":["flag-ms"],"sort_order":149},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MA","short_name":"flag-ma","short_names":["flag-ma"],"sort_order":150},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MZ","short_name":"flag-mz","short_names":["flag-mz"],"sort_order":151},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MM","short_name":"flag-mm","short_names":["flag-mm"],"sort_order":152},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NA","short_name":"flag-na","short_names":["flag-na"],"sort_order":153},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NR","short_name":"flag-nr","short_names":["flag-nr"],"sort_order":154},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NP","short_name":"flag-np","short_names":["flag-np"],"sort_order":155},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NL","short_name":"flag-nl","short_names":["flag-nl"],"sort_order":156},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NC","short_name":"flag-nc","short_names":["flag-nc"],"sort_order":157},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NZ","short_name":"flag-nz","short_names":["flag-nz"],"sort_order":158},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NI","short_name":"flag-ni","short_names":["flag-ni"],"sort_order":159},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NE","short_name":"flag-ne","short_names":["flag-ne"],"sort_order":160},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NG","short_name":"flag-ng","short_names":["flag-ng"],"sort_order":161},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NU","short_name":"flag-nu","short_names":["flag-nu"],"sort_order":162},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NF","short_name":"flag-nf","short_names":["flag-nf"],"sort_order":163},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MP","short_name":"flag-mp","short_names":["flag-mp"],"sort_order":164},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KP","short_name":"flag-kp","short_names":["flag-kp"],"sort_order":165},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS NO","short_name":"flag-no","short_names":["flag-no"],"sort_order":166},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS OM","short_name":"flag-om","short_names":["flag-om"],"sort_order":167},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PK","short_name":"flag-pk","short_names":["flag-pk"],"sort_order":168},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PW","short_name":"flag-pw","short_names":["flag-pw"],"sort_order":169},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PS","short_name":"flag-ps","short_names":["flag-ps"],"sort_order":170},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PA","short_name":"flag-pa","short_names":["flag-pa"],"sort_order":171},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PG","short_name":"flag-pg","short_names":["flag-pg"],"sort_order":172},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PY","short_name":"flag-py","short_names":["flag-py"],"sort_order":173},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PE","short_name":"flag-pe","short_names":["flag-pe"],"sort_order":174},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PH","short_name":"flag-ph","short_names":["flag-ph"],"sort_order":175},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PN","short_name":"flag-pn","short_names":["flag-pn"],"sort_order":176},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PL","short_name":"flag-pl","short_names":["flag-pl"],"sort_order":177},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PT","short_name":"flag-pt","short_names":["flag-pt"],"sort_order":178},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PR","short_name":"flag-pr","short_names":["flag-pr"],"sort_order":179},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS QA","short_name":"flag-qa","short_names":["flag-qa"],"sort_order":180},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS RE","short_name":"flag-re","short_names":["flag-re"],"sort_order":181},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS RO","short_name":"flag-ro","short_names":["flag-ro"],"sort_order":182},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS RU","short_name":"flag-ru","short_names":["flag-ru","ru"],"sort_order":183},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS RW","short_name":"flag-rw","short_names":["flag-rw"],"sort_order":184},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BL","short_name":"flag-bl","short_names":["flag-bl"],"sort_order":185},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SH","short_name":"flag-sh","short_names":["flag-sh"],"sort_order":186},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KN","short_name":"flag-kn","short_names":["flag-kn"],"sort_order":187},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LC","short_name":"flag-lc","short_names":["flag-lc"],"sort_order":188},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS PM","short_name":"flag-pm","short_names":["flag-pm"],"sort_order":189},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VC","short_name":"flag-vc","short_names":["flag-vc"],"sort_order":190},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS WS","short_name":"flag-ws","short_names":["flag-ws"],"sort_order":191},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SM","short_name":"flag-sm","short_names":["flag-sm"],"sort_order":192},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ST","short_name":"flag-st","short_names":["flag-st"],"sort_order":193},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SA","short_name":"flag-sa","short_names":["flag-sa"],"sort_order":194},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SN","short_name":"flag-sn","short_names":["flag-sn"],"sort_order":195},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS RS","short_name":"flag-rs","short_names":["flag-rs"],"sort_order":196},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SC","short_name":"flag-sc","short_names":["flag-sc"],"sort_order":197},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SL","short_name":"flag-sl","short_names":["flag-sl"],"sort_order":198},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SG","short_name":"flag-sg","short_names":["flag-sg"],"sort_order":199},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SX","short_name":"flag-sx","short_names":["flag-sx"],"sort_order":200},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SK","short_name":"flag-sk","short_names":["flag-sk"],"sort_order":201},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SI","short_name":"flag-si","short_names":["flag-si"],"sort_order":202},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SB","short_name":"flag-sb","short_names":["flag-sb"],"sort_order":203},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SO","short_name":"flag-so","short_names":["flag-so"],"sort_order":204},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ZA","short_name":"flag-za","short_names":["flag-za"],"sort_order":205},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GS","short_name":"flag-gs","short_names":["flag-gs"],"sort_order":206},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS KR","short_name":"flag-kr","short_names":["flag-kr","kr"],"sort_order":207},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SS","short_name":"flag-ss","short_names":["flag-ss"],"sort_order":208},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ES","short_name":"flag-es","short_names":["flag-es","es"],"sort_order":209},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS LK","short_name":"flag-lk","short_names":["flag-lk"],"sort_order":210},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SD","short_name":"flag-sd","short_names":["flag-sd"],"sort_order":211},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SR","short_name":"flag-sr","short_names":["flag-sr"],"sort_order":212},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SZ","short_name":"flag-sz","short_names":["flag-sz"],"sort_order":213},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SE","short_name":"flag-se","short_names":["flag-se"],"sort_order":214},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS CH","short_name":"flag-ch","short_names":["flag-ch"],"sort_order":215},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SY","short_name":"flag-sy","short_names":["flag-sy"],"sort_order":216},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TW","short_name":"flag-tw","short_names":["flag-tw"],"sort_order":217},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TJ","short_name":"flag-tj","short_names":["flag-tj"],"sort_order":218},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TZ","short_name":"flag-tz","short_names":["flag-tz"],"sort_order":219},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TH","short_name":"flag-th","short_names":["flag-th"],"sort_order":220},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TL","short_name":"flag-tl","short_names":["flag-tl"],"sort_order":221},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TG","short_name":"flag-tg","short_names":["flag-tg"],"sort_order":222},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TK","short_name":"flag-tk","short_names":["flag-tk"],"sort_order":223},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TO","short_name":"flag-to","short_names":["flag-to"],"sort_order":224},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TT","short_name":"flag-tt","short_names":["flag-tt"],"sort_order":225},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TN","short_name":"flag-tn","short_names":["flag-tn"],"sort_order":226},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TR","short_name":"flag-tr","short_names":["flag-tr"],"sort_order":227},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TM","short_name":"flag-tm","short_names":["flag-tm"],"sort_order":228},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TC","short_name":"flag-tc","short_names":["flag-tc"],"sort_order":229},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TV","short_name":"flag-tv","short_names":["flag-tv"],"sort_order":230},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS UG","short_name":"flag-ug","short_names":["flag-ug"],"sort_order":231},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS UA","short_name":"flag-ua","short_names":["flag-ua"],"sort_order":232},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AE","short_name":"flag-ae","short_names":["flag-ae"],"sort_order":233},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS GB","short_name":"flag-gb","short_names":["flag-gb","gb","uk"],"sort_order":234},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS US","short_name":"flag-us","short_names":["flag-us","us"],"sort_order":235},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VI","short_name":"flag-vi","short_names":["flag-vi"],"sort_order":236},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS UY","short_name":"flag-uy","short_names":["flag-uy"],"sort_order":237},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS UZ","short_name":"flag-uz","short_names":["flag-uz"],"sort_order":238},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VU","short_name":"flag-vu","short_names":["flag-vu"],"sort_order":239},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VA","short_name":"flag-va","short_names":["flag-va"],"sort_order":240},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VE","short_name":"flag-ve","short_names":["flag-ve"],"sort_order":241},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS VN","short_name":"flag-vn","short_names":["flag-vn"],"sort_order":242},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS WF","short_name":"flag-wf","short_names":["flag-wf"],"sort_order":243},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EH","short_name":"flag-eh","short_names":["flag-eh"],"sort_order":244},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS YE","short_name":"flag-ye","short_names":["flag-ye"],"sort_order":245},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ZM","short_name":"flag-zm","short_names":["flag-zm"],"sort_order":246},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS ZW","short_name":"flag-zw","short_names":["flag-zw"],"sort_order":247},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS AC","short_name":"flag-ac","short_names":["flag-ac"],"sort_order":248},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS BV","short_name":"flag-bv","short_names":["flag-bv"],"sort_order":249},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":false,"name":"REGIONAL INDICATOR SYMBOL LETTERS CP","short_name":"flag-cp","short_names":["flag-cp"],"sort_order":250},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS DG","short_name":"flag-dg","short_names":["flag-dg"],"sort_order":251},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS EA","short_name":"flag-ea","short_names":["flag-ea"],"sort_order":252},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS HM","short_name":"flag-hm","short_names":["flag-hm"],"sort_order":253},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS MF","short_name":"flag-mf","short_names":["flag-mf"],"sort_order":254},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS SJ","short_name":"flag-sj","short_names":["flag-sj"],"sort_order":255},{"has_img_apple":true,"has_img_google":true,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS TA","short_name":"flag-ta","short_names":["flag-ta"],"sort_order":256},{"has_img_apple":true,"has_img_google":false,"has_img_twitter":true,"has_img_emojione":true,"has_img_facebook":true,"has_img_messenger":true,"name":"REGIONAL INDICATOR SYMBOL LETTERS UM","short_name":"flag-um","short_names":["flag-um"],"sort_order":257}]}
-	};
-
-  /**
-   * Init the bundle with selector, YAY!
-   */
-  wdtEmojiBundle.init = function (selector) {
-
-    var self = this;
-
-    // emoji.js overrides
-
-    self.emoji = new EmojiConvertor();
-
-    self.emoji.allow_native = this.defaults.allowNative;
-    self.emoji.img_set = this.defaults.emojiType;
-    self.emoji.use_sheet = true;
-    self.emoji.supports_css = true;
-    self.emoji.img_sets['apple']['sheet'] = this.defaults.emojiSheets.apple;
-    self.emoji.img_sets['google']['sheet'] = this.defaults.emojiSheets.google;
-    self.emoji.img_sets['twitter']['sheet'] = this.defaults.emojiSheets.twitter;
-    self.emoji.img_sets['emojione']['sheet'] = this.defaults.emojiSheets.emojione;
-    self.emoji.img_sets['facebook']['sheet'] = this.defaults.emojiSheets.facebook;
-    self.emoji.img_sets['messenger']['sheet'] = this.defaults.emojiSheets.messenger;
-
-    self.selector = selector;
-    self.elements = document.querySelectorAll(selector);
-
-    self.popup = document.querySelector('.wdt-emoji-popup');
-    self.scroller = self.popup.querySelector('.wdt-emoji-scroll-wrapper');
-    self.searchInput = self.popup.querySelector('#wdt-emoji-search');
-    self.previewImg = self.popup.querySelector('#wdt-emoji-preview-img');
-    self.previewName = self.popup.querySelector('#wdt-emoji-preview-name');
-    self.previewAliases = self.popup.querySelector('#wdt-emoji-preview-aliases');
-
-    document.querySelector('body').dataset.wdtEmojiBundle = wdtEmojiBundle.defaults.emojiType;
-
-    var recent = self.popup.querySelector('[data-group-name="Recent"]');
-    if (recent)
-        recent.innerHTML = self.emoji.replace_colons(':clock3:');
-
-    var people = self.popup.querySelector('[data-group-name="People"]');
-    if (people)
-        people.innerHTML = self.emoji.replace_colons(':sunglasses:');
-
-    var nature = self.popup.querySelector('[data-group-name="Nature"]');
-    if (nature)
-      nature.innerHTML = self.emoji.replace_colons(':shamrock:');
-
-    var foods = self.popup.querySelector('[data-group-name="Foods"]');
-    if (foods)
-        foods.innerHTML = self.emoji.replace_colons(':pizza:');
-
-    var activity = self.popup.querySelector('[data-group-name="Activity"]');
-    if (activity)
-        activity.innerHTML = self.emoji.replace_colons(':football:');
-
-    var places = self.popup.querySelector('[data-group-name="Places"]');
-    if (places)
-        places.innerHTML = self.emoji.replace_colons(':airplane:');
-
-    var objects = self.popup.querySelector('[data-group-name="Objects"]');
-    if (objects)
-        objects.innerHTML = self.emoji.replace_colons(':bulb:');
-
-    var symbols = self.popup.querySelector('[data-group-name="Symbols"]');
-    if (symbols)
-        symbols.innerHTML = self.emoji.replace_colons(':heart:');
-
-    var flags = self.popup.querySelector('[data-group-name="Flags"]');
-    if (flags)
-        flags.innerHTML = self.emoji.replace_colons(':waving_white_flag:');
-
-    var custom = self.popup.querySelector('[data-group-name="Custom"]');
-    if (custom)
-        custom.innerHTML = self.emoji.replace_colons(':dark_sunglasses:');
-
-    // a trick for contenteditable blur range clear
-    self.ranges = {};
-
-    if (this.elements.length) {
-      for (var i = 0; i < self.elements.length; i++) {
-
-        var el = self.elements[i];
-
-        if (el.getAttribute('contenteditable')) {
-          el.dataset.rangeIndex = i;
-          wdtEmojiBundle.addRangeStore(el);
-        }
-
-        self.addPicker(self.elements[i]);
-      }
-    }
-
-    return self;
-  };
-
-  /**
-   *
-   * @param element
-   */
-  wdtEmojiBundle.addPicker = function (element) {
-    var self = this;
-    if (!hasClass(element, 'wdt-emoji-picker-ready')) {
-      var p = document.createElement('div');
-      addClass(p, 'wdt-emoji-picker');
-
-      p.innerHTML = self.emoji.replace_colons(':smile:');
-
-      p.addEventListener('click', wdtEmojiBundle.openPicker);
-
-      var parent = element.parentNode;
-      addClass(parent, 'wdt-emoji-picker-parent');
-      parent.appendChild(p);
-      if (hasClass(element, 'wdt-emoji-open-on-colon')) {
-        parent.addEventListener('keyup', wdtEmojiBundle.onKeyup)
-      }
-      addClass(element, 'wdt-emoji-picker-ready');
-    }
-  };
-
-  /**
-    *
-    * @param ev
-    * @returns {void}
-  */
-
-  wdtEmojiBundle.onKeyup = function (ev) {
-    var element = ev.target,
-        parent = findParent(element, 'wdt-emoji-picker-parent'),
-        emojiPicker = findChild(parent, 'wdt-emoji-picker'),
-        val = element.value,
-        selection = getSelection(element),
-        textBeforeCursor = val.substring(0, selection.start),
-        // `<space>:` OR `^:` followed by text
-        // text is captured
-        matches = textBeforeCursor.match(/(\s|^):(\S*)$/),
-        text = matches && matches[2];
-
-    wdtEmojiBundle.searchAfterColon(text, emojiPicker);
-  };
-
-  /**
-   *
-   * @param text
-   * @param emojiPicker
-   * @returns {void}
-   */
-  wdtEmojiBundle.searchAfterColon = function (text, emojiPicker) {
-    // no text  or not enough text after colon
-    if (!text || text.length < 2) {
-      wdtEmojiBundle.close();
-      return;
-    }
-    // is closed
-    if (!hasClass(emojiPicker, 'wdt-emoji-picker-open')) {
-      wdtEmojiBundle.openPicker.call(emojiPicker, {target: emojiPicker});
-    }
-    // execute the search
-    wdtEmojiBundle.fillSearch(text);
-  };
-
-  /**
-   *
-   * @param ev
-   * @returns {boolean}
-   */
-  wdtEmojiBundle.openPicker = function (ev) {
-    var self = this;
-    var parent = findParent(ev.target, 'wdt-emoji-picker-parent');
-
-    wdtEmojiBundle.input = parent.querySelector(wdtEmojiBundle.selector);
-
-    // @todo - [needim] - popup must be visible in viewport calculate carefully
-    function findBestAvailablePosition(el) {
-
-      var bodyRect = document.body.getBoundingClientRect();
-      var elRect = el.getBoundingClientRect();
-      var popupRect = wdtEmojiBundle.popup.getBoundingClientRect();
-
-      var pos = {
-        left: (elRect.left - popupRect.width) + elRect.width,
-        top : elRect.top + Math.abs(bodyRect.top) + elRect.height
-      };
-
-      pos.left = pos.left < 0 ? 0 : pos.left;
-
-      pos.left += 'px';
-      pos.top += 'px';
-
-      if (bodyRect.width < 415) { // mobile specific @todo - [needim] - better mobile detection needed
-        addClass(wdtEmojiBundle.popup, 'wdt-emoji-mobile');
-
-        return {
-          left    : '0px',
-          bottom  : '0px',
-          top     : 'auto',
-          width   : '100%',
-          position: 'fixed'
-        }
-      }
-
-      return pos;
-    }
-
-    css(wdtEmojiBundle.popup, findBestAvailablePosition(ev.target));
-
-    // On window resized
-    window.addEventListener('resize', function(new_event){
-      css(wdtEmojiBundle.popup, findBestAvailablePosition(ev.target));
-    });
-
-    addClass(wdtEmojiBundle.popup, 'open');
-
-    // fill with emoji
-    wdtEmojiBundle.fillPickerPopup();
-
-    if (hasClass(this, 'wdt-emoji-picker-open')) {
-      wdtEmojiBundle.closePicker(this);
-      removeClass(wdtEmojiBundle.popup, 'open');
-      return false;
-    }
-
-    wdtEmojiBundle.closePickers();
-
-    addClass(this, 'wdt-emoji-picker-open');
-    this.innerHTML = wdtEmojiBundle.emoji.replace_colons(':sunglasses:');
-  };
-
-  /**
-   *
-   * Main function to fill picker popup with emoji
-   *
-   * @returns void | boolean | mixed
-   */
-  wdtEmojiBundle.fillPickerPopup = function () {
-
-    var self = this;
-
-    if (hasClass(this.popup, 'ready'))
-      return false;
-
-    // @todo - [needim] - Support for recent and custom emoji list
-    var sectionsContainer = this.popup.querySelector('.wdt-emoji-sections'),
-      sections = {'Recent': [], 'Custom': []},
-      sortedSections = [];
-
-    for (var category in wdtEmojiBundle.defaults.emojiData) {
-      if (wdtEmojiBundle.defaults.emojiData.hasOwnProperty(category)) {
-
-        if (inArray(category, wdtEmojiBundle.defaults.disabledCategories))
-          continue;
-
-        emojiList = wdtEmojiBundle.defaults.emojiData[category];
-        sections[category] = emojiList;
-      }
-    }
-
-    var sortedSectionsArray = Object.keys(sections).sort(function (a, b) {
-      return wdtEmojiBundle.defaults.sectionOrders[a] < wdtEmojiBundle.defaults.sectionOrders[b] ? 1 : -1;
-    });
-
-    for (var i = 0; i < sortedSectionsArray.length; i++) {
-      sortedSections[sortedSectionsArray[i]] = sections[sortedSectionsArray[i]];
-    }
-
-    for (var title in sortedSections) {
-      if (sortedSections.hasOwnProperty(title)) {
-        var emojiList = sortedSections[title];
-
-        if (emojiList.length) {
-          var emojiSection = document.createElement('div'),
-            emojiTitle = document.createElement('h3'),
-            emojiListDiv = document.createElement('div');
-
-          emojiTitle.innerHTML = title;
-          emojiTitle.dataset.emojiGroup = title;
-          emojiListDiv.dataset.emojiGroup = title;
-
-          addClass(emojiListDiv, 'wdt-emoji-list');
-          addClass(emojiSection, 'wdt-emoji-section');
-
-          for (i = 0; i < emojiList.length; i++) {
-            var em = emojiList[i];
-
-            if (em.has_img_apple || em.has_img_emojione || em.has_img_google || em.has_img_twitter || em.has_img_facebook || em.has_img_messenger) {
-              var emojiLink = document.createElement('a');
-
-              addClass(emojiLink, 'wdt-emoji');
-              addClass(emojiLink, wdtEmojiBundle.getRandomPickerColor());
-
-              emojiLink.dataset.hasImgApple = em.has_img_apple;
-              emojiLink.dataset.hasImgEmojione = em.has_img_emojione;
-              emojiLink.dataset.hasImgGoogle = em.has_img_google;
-              emojiLink.dataset.hasImgTwitter = em.has_img_twitter;
-              emojiLink.dataset.hasImgFacebook = em.has_img_facebook;
-              emojiLink.dataset.hasImgMessenger = em.has_img_messenger;
-              emojiLink.dataset.wdtEmojiName = em.name;
-              emojiLink.dataset.wdtEmojiShortnames = ':' + em.short_names.join(': :') + ':';
-              emojiLink.dataset.wdtEmojiShortname = em.short_name;
-              emojiLink.dataset.wdtEmojiOrder = em.sort_order;
-
-              emojiLink.innerHTML = self.emoji.replace_colons(':' + em.short_name + ':');
-
-              emojiListDiv.appendChild(emojiLink);
-            }
-          }
-
-          emojiSection.appendChild(emojiTitle);
-          emojiSection.appendChild(emojiListDiv);
-          sectionsContainer.appendChild(emojiSection);
-        }
-      }
-    }
-
-    addClass(this.popup, 'ready');
-
-    wdtEmojiBundle.bindEvents();
-  };
-
-  /**
-   * Random css class getter for picker hover colors
-   * @returns string
-   */
-  wdtEmojiBundle.getRandomPickerColor = function () {
-    return wdtEmojiBundle.defaults.pickerColors[Math.floor(Math.random() * wdtEmojiBundle.defaults.pickerColors.length)]
-  };
-
-  /**
-   * Close the bundle popup
-   */
-  wdtEmojiBundle.close = function () {
-    removeClass(wdtEmojiBundle.popup, 'open');
-    wdtEmojiBundle.closePickers();
-  };
-
-
-  /**
-   * Closes all the pickers
-   */
-  wdtEmojiBundle.closePickers = function () {
-    var openPickers = document.querySelectorAll('.wdt-emoji-picker-open');
-    if (openPickers.length) {
-      for (var i = 0; i < openPickers.length; i++) {
-        wdtEmojiBundle.closePicker(openPickers[i]);
-      }
-    }
-  };
-
-  /**
-   *
-   * @param element
-   */
-  wdtEmojiBundle.closePicker = function (element) {
-    removeClass(element, 'wdt-emoji-picker-open');
-    element.innerHTML = this.emoji.replace_colons(':smile:');
-    var parent = findParent(element, 'wdt-emoji-picker-parent');
-    if (wdtEmojiBundle.searchInput) {
-      wdtEmojiBundle.searchInput.value = "";
-      wdtEmojiBundle.search("");
-    }
-  };
-
-  /**
-   * void function binds some events for the bundle
-   */
-  wdtEmojiBundle.bindEvents = function () {
-    var self = this;
-    var stickers = document.querySelectorAll('.wdt-emoji-section h3');
-    if (stickers.length) {
-      for (var i = 0; i < stickers.length; i++) {
-        sticky(stickers[i]);
-      }
-    }
-
-    live('click', '.wdt-emoji-list a.wdt-emoji', function (event) {
-      var selection = getSelection(wdtEmojiBundle.input);
-
-      replaceText(wdtEmojiBundle.input, selection, ':' + this.dataset.wdtEmojiShortname + ':');
-      fire('select', {el: wdtEmojiBundle.input, event: event, emoji: ':' + this.dataset.wdtEmojiShortname + ':'});
-
-      var ce = document.createEvent('Event');
-      ce.initEvent('input', true, true);
-      wdtEmojiBundle.input.dispatchEvent(ce);
-      wdtEmojiBundle.close();
-      fire('afterSelect', {el: wdtEmojiBundle.input, event: event, emoji: ':' + this.dataset.wdtEmojiShortname + ':'});
-
-      return false;
-    });
-
-    live('click', '.wdt-emoji-popup-mobile-closer', function (event) {
-      wdtEmojiBundle.close();
-      return false;
-    });
-
-    live('mouseover', '.wdt-emoji-list a.wdt-emoji', function (event) {
-
-      if (wdtEmojiBundle.previewTimer)
-        clearTimeout(wdtEmojiBundle.previewTimer);
-
-      if (wdtEmojiBundle.previewExitTimer)
-        clearTimeout(wdtEmojiBundle.previewExitTimer);
-
-      var emo = this;
-
-      wdtEmojiBundle.previewTimer = setTimeout(function () {
-
-        addClass(wdtEmojiBundle.popup, 'preview-mode');
-
-        wdtEmojiBundle.previewImg.innerHTML = self.emoji.replace_colons(':' + emo.dataset.wdtEmojiShortname + ':');
-        wdtEmojiBundle.previewName.innerHTML = emo.dataset.wdtEmojiShortname;
-        wdtEmojiBundle.previewAliases.innerHTML = emo.dataset.wdtEmojiShortnames;
-
-      }, 100);
-
-      return false;
-    });
-
-    live('mouseout', '.wdt-emoji-list a.wdt-emoji', function () {
-      if (wdtEmojiBundle.previewExitTimer)
-        clearTimeout(wdtEmojiBundle.previewExitTimer);
-
-      wdtEmojiBundle.previewExitTimer = setTimeout(function () {
-        removeClass(wdtEmojiBundle.popup, 'preview-mode');
-      }, 1000);
-
-      return false;
-    });
-
-    live('click', '.wdt-emoji-tab', function (e) {
-      var group = this.dataset.groupName,
-        groupHeader = wdtEmojiBundle.popup.querySelector('.wdt-emoji-section h3[data-emoji-group="' + group + '"]');
-
-      if (groupHeader) {
-        wdtEmojiBundle.setActiveTab(group);
-        wdtEmojiBundle.scroller.scrollTop = groupHeader.offsetTop - groupHeader.getBoundingClientRect().height - 2;
-      }
-
-      return false;
-    });
-
-    live('input', '#wdt-emoji-search', function (e) {
-      var input = this;
-      if (wdtEmojiBundle.searchTimer) {
-        clearTimeout(wdtEmojiBundle.searchTimer);
-      }
-
-      wdtEmojiBundle.searchTimer = setTimeout(function () {
-        wdtEmojiBundle.search(input.value);
-      }, 225);
-    });
-
-    addListenerMulti(wdtEmojiBundle.scroller, 'mousewheel DOMMouseScroll', function(e) {
-      var delta = e.wheelDelta || (e.originalEvent && e.originalEvent.wheelDelta) || -e.detail,
-          bottomOverflow = this.scrollTop + this.getBoundingClientRect().height - this.scrollHeight >= 0,
-          topOverflow = this.scrollTop <= 0;
-      if ((delta < 0 && bottomOverflow) || (delta > 0 && topOverflow)) {
-        e.preventDefault();
-      }
-    });
-
-
-
-  };
-
-  /**
-   *
-   * @param q
-   * @returns {boolean}
-   */
-  wdtEmojiBundle.fillSearch = function (q) {
-    if (wdtEmojiBundle.searchInput) {
-      wdtEmojiBundle.searchInput.value = q;
-      return wdtEmojiBundle.search(q);
-    } else {
-      return false;
-    }
-  };
-
-  /**
-   *
-   * @param q
-   * @returns {boolean}
-   */
-  wdtEmojiBundle.search = function (q) {
-
-    var sections = wdtEmojiBundle.popup.querySelector('.wdt-emoji-sections'),
-      searchResultH3 = wdtEmojiBundle.popup.querySelector('#wdt-emoji-search-result-title'),
-      emojiList = sections.querySelectorAll('.wdt-emoji'),
-      zeroText = wdtEmojiBundle.popup.querySelector('#wdt-emoji-no-result'),
-      found = 0;
-
-    if (q == '') {
-      removeClass(searchResultH3, 'wdt-show');
-      removeClass(zeroText, 'wdt-show');
-      removeClassAll('.wdt-emoji.not-matched', 'not-matched');
-      removeClassAll('.wdt-emoji-section', 'wdt-inline');
-      removeClassAll('.wdt-emoji-list', 'wdt-inline');
-      removeClassAll('.wdt-emoji-section h3', 'wdt-search-on');
-      return false;
-    }
-
-    for (var i = 0; i < emojiList.length; i++) {
-      var emo = emojiList[i];
-      var sst = emo.dataset.wdtEmojiName + ' ' + emo.dataset.wdtEmojiShortnames;
-
-      removeClass(emo, 'not-matched');
-      if (sst.match(new RegExp(q, "gi"))) {
-        found++;
-      } else {
-        addClass(emo, 'not-matched');
-      }
-
-    }
-
-    addClass(searchResultH3, 'wdt-show');
-    addClassAll('.wdt-emoji-section', 'wdt-inline');
-    addClassAll('.wdt-emoji-list', 'wdt-inline');
-    addClassAll('.wdt-emoji-section h3', 'wdt-search-on');
-
-    if (found) {
-      removeClass(zeroText, 'wdt-show');
-    } else {
-      addClass(zeroText, 'wdt-show');
-    }
-  };
-
-  /**
-   *
-   * @type {{select: Array, afterSelect: Array, afterPickerOpen: Array}}
-   */
-  wdtEmojiBundle.dispatchHandlers = {
-    'select'         : [],
-    'afterSelect'    : [],
-    'afterPickerOpen': [] // not implemented
-  };
-
-  /**
-   *
-   * @param eventName
-   * @param handler
-   * @returns mixed
-   */
-  wdtEmojiBundle.on = function (eventName, handler) {
-    switch (eventName) {
-      case "select":
-        return wdtEmojiBundle.dispatchHandlers.select.push(handler);
-        break;
-      case "afterSelect":
-        return wdtEmojiBundle.dispatchHandlers.afterSelect.push(handler);
-        break;
-      case "afterPickerOpen":
-        return wdtEmojiBundle.dispatchHandlers.afterPickerOpen.push(handler);
-        break;
-      default:
-        console.error('wdt-emoji-bundle - Not supported event type!', eventName);
-        break;
-    }
-  };
-
-  /**
-   * On the fly emoji type changer apple, google, twitter, emojione
-   * @param changeType
-   */
-  wdtEmojiBundle.changeType = function (changeType) {
-    var nextSheet = wdtEmojiBundle.defaults.emojiSheets[changeType],
-      currentEmojiList = document.querySelectorAll('.emoji-inner'),
-      i;
-
-    for (i = 0; i < currentEmojiList.length; i++) {
-      var e = currentEmojiList[i];
-      css(e, {
-        'background-image': 'url(' + nextSheet + ')'
-      });
-
-    }
-
-    wdtEmojiBundle.defaults.emojiType = changeType;
-    document.querySelector('body').dataset.wdtEmojiBundle = changeType;
-    this.emoji.img_set = changeType;
-  };
-
-  /**
-   *
-   * @param color
-   */
-  wdtEmojiBundle.changeSkinColor = function (color) {
-    // @todo - [needim] - support skin colors for apple emoji set
-  };
-
-  /**
-   *
-   * @param text
-   * @returns {string}
-   */
-  wdtEmojiBundle.render = function (text) {
-    return this.emoji.replace_colons(this.emoji.replace_emoticons(this.emoji.replace_unified(text)));
-  };
-
-  /**
-   * A trick for contenteditable range clear on blur
-   * @param el
-   */
-  wdtEmojiBundle.addRangeStore = function (el) {
-    el.addEventListener('focus', function () {
-      var s = window.getSelection();
-      if (!wdtEmojiBundle.ranges[this.dataset.rangeIndex]) {
-        wdtEmojiBundle.ranges[this.dataset.rangeIndex] = new Range();
-      } else if (s.rangeCount > 0) {
-        s.removeAllRanges();
-        s.addRange(wdtEmojiBundle.ranges[this.dataset.rangeIndex]);
-      }
-    });
-
-    addListenerMulti(el, 'mouseup keyup', function () {
-      wdtEmojiBundle.ranges[this.dataset.rangeIndex] = window.getSelection().getRangeAt(0);
-    });
-
-    addListenerMulti(el, 'mousedown click', function (e) {
-      if (document.activeElement != this) {
-        if (e.stopPropagation) {
-          e.stopPropagation();
-        } else {
-          e.cancelBubble = true;
-        }
-
-        if (e.preventDefault) {
-          e.preventDefault();
-        } else {
-          e.returnValue = false;
-        }
-
-        this.focus();
-      }
-    });
-  };
-
-  /**
-   *
-   * @param el
-   * @param events
-   * @param cb
-   */
-  var addListenerMulti = function (el, events, cb) {
-    events = events.split(' ');
-    for (var i = 0; i < events.length; i++) {
-      el.addEventListener(events[i], cb, false);
-    }
-  };
-
-  /**
-   * Stick section header controls
-   * @param el
-   */
-  var sticky = function (el) {
-
-    var scrollerRect = wdtEmojiBundle.scroller.getBoundingClientRect(),
-      elTop = el.getBoundingClientRect().top - scrollerRect.top,
-      tabHeaderHeight = wdtEmojiBundle.popup.querySelector('#wdt-emoji-menu-header').getBoundingClientRect().height;
-
-    wdtEmojiBundle.scroller.addEventListener("scroll", check);
-
-    function check() {
-      var scrollTop = wdtEmojiBundle.scroller.scrollTop;
-
-      if (hasClass(el, 'sticky') && scrollTop < elTop) {
-
-        removeClass(el, 'sticky');
-        css(el, {top: null});
-        css(el.parentNode, {'padding-top': null});
-
-      } else if (scrollTop > elTop && !hasClass(el, 'sticky')) {
-
-        var stickers = document.querySelectorAll('.wdt-emoji-section h3');
-        if (stickers.length) {
-          for (var i = 0; i < stickers.length; i++) {
-            removeClass(stickers[i], 'sticky');
-            css(stickers[i], {top: null});
-            css(stickers[i].parentNode, {'padding-top': null});
-          }
-        }
-
-        addClass(el, 'sticky');
-        css(el, {'top': tabHeaderHeight + 'px'});
-        css(el.parentNode, {'padding-top': el.getBoundingClientRect().height + 'px'});
-
-        wdtEmojiBundle.setActiveTab(el.dataset.emojiGroup);
-      }
-    }
-  };
-
-  /**
-   *
-   * @param group
-   */
-  wdtEmojiBundle.setActiveTab = function (group) {
-    var tabs = document.querySelectorAll('.wdt-emoji-tab');
-    if (tabs.length) {
-      for (var t = 0; t < tabs.length; t++) {
-        removeClass(tabs[t], 'active');
-      }
-    }
-
-    var activeTab = wdtEmojiBundle.popup.querySelector('.wdt-emoji-tab[data-group-name="' + group + '"]');
-    addClass(activeTab, 'active');
-  };
-
-  /**
-   *
-   * @param el
-   * @param cls
-   * @returns {*}
-   */
-  var findParent = function (el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
-    return el;
-  };
-
-  /**
-   *
-   * @param el
-   * @param cls
-   * @returns {*}
-   */
-  var findChild = function (el, cls) {
-    var children = el.children;
-    for (var i = 0; i < children.length; i++) {
-      var child = children[i];
-      if (child.classList.contains(cls)) {
-        return child;
-      }
-    }
-  };
-
-  /**
-   *
-   * @param el
-   * @returns {*}
-   */
-  var getSelection = function (el) {
-    var result = {};
-
-    if (el.getAttribute('contenteditable')) {
-      return {
-        el: el,
-        ce: true
-      }
-    }
-
-    if (window.getSelection) {
-      var val = el.value || el.innerHTML,
-        len = val.length,
-        start = el.selectionStart,
-        end = el.selectionEnd,
-        sel = val.substring(start, end);
-
-      result = {
-        "el"   : el,
-        "start": start,
-        "end"  : end,
-        "len"  : len,
-        "sel"  : sel
-      };
-    }
-    else if (document.selection) { // ie
-      var range = document.selection.createRange(),
-        value = el.value || el.innerHTML,
-        stored_range = range.duplicate();
-
-      stored_range.moveToElementText(el);
-      stored_range.setEndPoint('EndToEnd', range);
-      el.selectionStart = stored_range.text.length - range.text.length;
-      el.selectionEnd = el.selectionStart + range.text.length;
-
-      result = {
-        "el"   : el,
-        "start": el.selectionStart,
-        "end"  : el.selectionEnd,
-        "len"  : value.length,
-        "sel"  : range.text
-      };
-    }
-
-    return result;
-  };
-
-    /**
-   * Replace selection text for :input
-   *
-   * @param el
-   * @param selection
-   * @param emo
-   */
-  var replaceText = function (el, selection, emo) {
-    var val = el.value || el.innerHTML || '';
-    emo = emo + ' '; //append a space
-
-    if (selection.ce) { // if contenteditable
-      el.focus();
-      document.execCommand('insertText', false, emo);
-    } else {
-      var textBefore = val.substring(0, selection.start);
-      textBefore = textBefore.replace(/:\S*$/, '')
-      el.value = textBefore + emo + val.substring(selection.end, selection.len);
-
-      // @todo - [needim] - check browser compatibilities
-      el.selectionStart = el.selectionEnd = (textBefore.length + emo.length);
-      el.focus();
-    }
-  }; 
-
-  /**
-   * Fire custom events
-   *
-   * @param eventName
-   * @param params
-   */
-  var fire = function (eventName, params) {
-    var handler, i, len, ref;
-    ref = wdtEmojiBundle.dispatchHandlers[eventName];
-    for (i = 0, len = ref.length; i < len; i++) {
-      handler = ref[i];
-      handler(params);
-    }
-  };
-
-  /**
-   *
-   * @param eventType
-   * @param elementQuerySelector
-   * @param cb
-   */
-  var live = function (eventType, elementQuerySelector, cb) {
-    document.addEventListener(eventType, function (event) {
-
-      var qs = document.querySelectorAll(elementQuerySelector);
-
-      if (qs) {
-        var el = event.target, index = -1;
-        while (el && ((index = Array.prototype.indexOf.call(qs, el)) === -1)) {
-          el = el.parentElement;
-        }
-
-        if (index > -1) {
-          cb.call(el, event);
-        }
-      }
-    });
-  };
-
-  /**
-   * Applies css properties to an element, similar to the jQuery
-   * css method.
-   *
-   * While this helper does assist with vendor prefixed property names, it
-   * does not perform any manipulation of values prior to setting styles.
-   */
-  var css = (function () {
-    var cssPrefixes = ['Webkit', 'O', 'Moz', 'ms'],
-      cssProps = {};
-
-    function camelCase(string) {
-      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function (match, letter) {
-        return letter.toUpperCase();
-      });
-    }
-
-    function getVendorProp(name) {
-      var style = document.body.style;
-      if (name in style) return name;
-
-      var i = cssPrefixes.length,
-        capName = name.charAt(0).toUpperCase() + name.slice(1),
-        vendorName;
-      while (i--) {
-        vendorName = cssPrefixes[i] + capName;
-        if (vendorName in style) return vendorName;
-      }
-
-      return name;
-    }
-
-    function getStyleProp(name) {
-      name = camelCase(name);
-      return cssProps[name] || (cssProps[name] = getVendorProp(name));
-    }
-
-    function applyCss(element, prop, value) {
-      prop = getStyleProp(prop);
-      element.style[prop] = value;
-    }
-
-    return function (element, properties) {
-      var args = arguments,
-        prop,
-        value;
-
-      if (args.length == 2) {
-        for (prop in properties) {
-          value = properties[prop];
-          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
-        }
-      } else {
-        applyCss(element, args[1], args[2]);
-      }
-    }
-  })();
-
-  /**
-   *
-   * @param element
-   * @param name
-   * @returns {boolean}
-   */
-  function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  }
-
-  /**
-   *
-   * @param element
-   * @param name
-   */
-  function addClass(element, name) {
-    var oldList = classList(element),
-      newList = oldList + name;
-
-    if (hasClass(oldList, name)) return;
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  }
-
-  /**
-   *
-   * @param query
-   * @param name
-   */
-  function addClassAll(query, name) {
-
-    var elements = document.querySelectorAll(query);
-
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-
-      var oldList = classList(element),
-        newList = oldList + name;
-
-      if (hasClass(oldList, name)) return;
-
-      // Trim the opening space.
-      element.className = newList.substring(1);
-    }
-  }
-
-  /**
-   *
-   * @param element
-   * @param name
-   */
-  function removeClass(element, name) {
-    var oldList = classList(element),
-      newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  }
-
-  /**
-   *
-   * @param query
-   * @param name
-   */
-  function removeClassAll(query, name) {
-
-    var elements = document.querySelectorAll(query);
-
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-
-      var oldList = classList(element),
-        newList;
-
-      if (!hasClass(element, name)) return;
-
-      // Replace the class name.
-      newList = oldList.replace(' ' + name + ' ', ' ');
-
-      // Trim the opening and closing spaces.
-      element.className = newList.substring(1, newList.length - 1);
-    }
-  }
-
-  function inArray(needle, haystack) {
-    var length = haystack.length;
-    for(var i = 0; i < length; i++) {
-      if(haystack[i] == needle) return true;
-    }
-    return false;
-  }
-
-  /**
-   *
-   * @param element
-   * @returns {string}
-   */
-  function classList(element) {
-    return (' ' + (element && element.className || '') + ' ').replace(/\s+/gi, ' ');
-  }
-
-  return wdtEmojiBundle;
-});
-
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-;(function() {
-
-	var root = this;
-	var previous_emoji = root.EmojiConvertor;
-
-
-	/**
-	 * @global
-	 * @namespace
-	 */
-
-	var emoji = function(){
-
-		var self = this;
-
-		/**
-		 * The set of images to use for graphical emoji.
-		 *
-		 * @memberof emoji
-		 * @type {string}
-		 */
-		self.img_set = 'apple';
-
-		/**
-		 * Configuration details for different image sets. This includes a path to a directory containing the
-		 * individual images (`path`) and a URL to sprite sheets (`sheet`). All of these images can be found
-		 * in the [emoji-data repository]{@link https://github.com/iamcal/emoji-data}. Using a CDN for these
-		 * is not a bad idea.
-		 *
-		 * @memberof emoji
-		 * @type {object}
-		 */
-		self.img_sets = {
-			'apple' : {'path' : '/emoji-data/img-apple-64/', 'sheet' : '/emoji-data/sheet_apple_64.png', 'sheet_size' : 64, 'mask' : 1},
-			'google' : {'path' : '/emoji-data/img-google-64/', 'sheet' : '/emoji-data/sheet_google_64.png', 'sheet_size' : 64, 'mask' : 2},
-			'twitter' : {'path' : '/emoji-data/img-twitter-64/', 'sheet' : '/emoji-data/sheet_twitter_64.png', 'sheet_size' : 64, 'mask' : 4},
-			'emojione' : {'path' : '/emoji-data/img-emojione-64/', 'sheet' : '/emoji-data/sheet_emojione_64.png', 'sheet_size' : 64, 'mask' : 8},
-			'facebook' : {'path' : '/emoji-data/img-facebook-64/', 'sheet' : '/emoji-data/sheet_facebook_64.png', 'sheet_size' : 64, 'mask' : 16},
-			'messenger' : {'path' : '/emoji-data/img-messenger-64/', 'sheet' : '/emoji-data/sheet_messenger_64.png', 'sheet_size' : 64, 'mask' : 32},
-		};
-
-		/**
-		 * Use a CSS class instead of specifying a sprite or background image for
-		 * the span representing the emoticon. This requires a CSS sheet with
-		 * emoticon data-uris.
-		 *
-		 * @memberof emoji
-		 * @type bool
-		 * @todo document how to build the CSS stylesheet self requires.
-		 */
-		self.use_css_imgs = false;
-
-		/**
-		 * Instead of replacing emoticons with the appropriate representations,
-		 * replace them with their colon string representation.
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.colons_mode = false;
-		self.text_mode = false;
-
-		/**
-		 * If true, sets the "title" property on the span or image that gets
-		 * inserted for the emoticon.
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.include_title = false;
-
-		/**
-		 * If true, sets the text of the span or image that gets inserted for the
-		 * emoticon.
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.include_text = false;
-
-		/**
-		 * If the platform supports native emoticons, use those instead
-		 * of the fallbacks.
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.allow_native = true;
-
-		/**
-		 * Wrap native with a <span class="emoji-native"></span> to allow styling
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.wrap_native = false;
-
-		/**
-		 * Set to true to use CSS sprites instead of individual images on 
-		 * platforms that support it.
-		 *
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.use_sheet = false;
-
-		/**
-		 *
-		 * Set to true to avoid black & white native Windows emoji being used.
-		 *
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.avoid_ms_emoji = true;
-
-		/**
-		 *
-		 * Set to true to allow :CAPITALIZATION:
-		 *
-		 * @memberof emoji
-		 * @type bool
-		 */
-		self.allow_caps = false;
-
-
-		/**
-		 *
-		 * Suffix to allow for individual image cache busting
-		 *
-		 * @memberof emoji
-		 * @type string
-		 */
-		self.img_suffix = '';
-
-
-		// Keeps track of what has been initialized.
-		/** @private */
-		self.inits = {};
-		self.map = {};
-
-		// discover the environment settings
-		self.init_env();
-
-		return self;
-	}
-
-	emoji.prototype.noConflict = function(){
-		root.EmojiConvertor = previous_emoji;
-		return emoji;
-	}
-
-
-	/**
-	 * @memberof emoji
-	 * @param {string} str A string potentially containing ascii emoticons
-	 * (ie. `:)`)
-	 *
-	 * @returns {string} A new string with all emoticons in `str`
-	 * replaced by a representatation that's supported by the current
-	 * environtment.
-	 */
-	emoji.prototype.replace_emoticons = function(str){
-		var self = this;
-		var colonized = self.replace_emoticons_with_colons(str);
-		return self.replace_colons(colonized);
-	};
-
-	/**
-	 * @memberof emoji
-	 * @param {string} str A string potentially containing ascii emoticons
-	 * (ie. `:)`)
-	 *
-	 * @returns {string} A new string with all emoticons in `str`
-	 * replaced by their colon string representations (ie. `:smile:`)
-	 */
-	emoji.prototype.replace_emoticons_with_colons = function(str){
-		var self = this;
-		self.init_emoticons();
-		var _prev_offset = 0;
-		var emoticons_with_parens = [];
-		var str_replaced = str.replace(self.rx_emoticons, function(m, $1, emoticon, offset){
-			var prev_offset = _prev_offset;
-			_prev_offset = offset + m.length;
-
-			var has_open_paren = emoticon.indexOf('(') !== -1;
-			var has_close_paren = emoticon.indexOf(')') !== -1;
-
-			/*
-			 * Track paren-having emoticons for fixing later
-			 */
-			if ((has_open_paren || has_close_paren) && emoticons_with_parens.indexOf(emoticon) == -1) {
-				emoticons_with_parens.push(emoticon);
-			}
-
-			/*
-			 * Look for preceding open paren for emoticons that contain a close paren
-			 * This prevents matching "8)" inside "(around 7 - 8)"
-			 */
-			if (has_close_paren && !has_open_paren) {
-				var piece = str.substring(prev_offset, offset);
-				if (piece.indexOf('(') !== -1 && piece.indexOf(')') === -1) return m;
-			}
-
-			/*
-			 * See if we're in a numbered list
-			 * This prevents matching "8)" inside "7) foo\n8) bar"
-			 */
-			if (m === '\n8)') {
-				var before_match = str.substring(0, offset);
-				if (/\n?(6\)|7\))/.test(before_match)) return m;
-			}
-
-			var val = self.data[self.map.emoticons[emoticon]][3][0];
-			return val ? $1+':'+val+':' : m;
-		});
-
-		/*
-		 * Come back and fix emoticons we ignored because they were inside parens.
-		 * It's useful to do self at the end so we don't get tripped up by other,
-		 * normal emoticons
-		 */
-		if (emoticons_with_parens.length) {
-			var escaped_emoticons = emoticons_with_parens.map(self.escape_rx);
-			var parenthetical_rx = new RegExp('(\\(.+)('+escaped_emoticons.join('|')+')(.+\\))', 'g');
-
-			str_replaced = str_replaced.replace(parenthetical_rx, function(m, $1, emoticon, $2) {
-				var val = self.data[self.map.emoticons[emoticon]][3][0];
-				return val ? $1+':'+val+':'+$2 : m;
-			});
-		}
-
-		return str_replaced;
-	};
-
-	/**
-	 * @memberof emoji
-	 * @param {string} str A string potentially containing colon string
-	 * representations of emoticons (ie. `:smile:`)
-	 *
-	 * @returns {string} A new string with all colon string emoticons replaced
-	 * with the appropriate representation.
-	 */
-	emoji.prototype.replace_colons = function(str){
-		var self = this;
-		self.init_colons();
-
-		return str.replace(self.rx_colons, function(m){
-			var idx = m.substr(1, m.length-2);
-			if (self.allow_caps) idx = idx.toLowerCase();
-
-			// special case - an emoji with a skintone modified
-			if (idx.indexOf('::skin-tone-') > -1){
-
-				var skin_tone = idx.substr(-1, 1);
-				var skin_idx = 'skin-tone-'+skin_tone;
-				var skin_val = self.map.colons[skin_idx];
-
-				idx = idx.substr(0, idx.length - 13);
-
-				var val = self.map.colons[idx];
-				if (val){
-					return self.replacement(val, idx, ':', {
-						'idx'		: skin_val,
-						'actual'	: skin_idx,
-						'wrapper'	: ':'
-					});
-				}else{
-					return ':' + idx + ':' + self.replacement(skin_val, skin_idx, ':');
-				}
-			}else{
-				var val = self.map.colons[idx];
-				return val ? self.replacement(val, idx, ':') : m;
-			}
-		});
-	};
-
-	/**
-	 * @memberof emoji
-	 * @param {string} str A string potentially containing unified unicode
-	 * emoticons. (ie. 😄)
-	 *
-	 * @returns {string} A new string with all unicode emoticons replaced with
-	 * the appropriate representation for the current environment.
-	 */
-	emoji.prototype.replace_unified = function(str){
-		var self = this;
-		self.init_unified();
-		return str.replace(self.rx_unified, function(m, p1, p2){
-
-			var val = self.map.unified[p1];
-			if (val){
-				var idx = null;
-				if (p2 == '\uD83C\uDFFB') idx = '1f3fb';
-				if (p2 == '\uD83C\uDFFC') idx = '1f3fc';
-				if (p2 == '\uD83C\uDFFD') idx = '1f3fd';
-				if (p2 == '\uD83C\uDFFE') idx = '1f3fe';
-				if (p2 == '\uD83C\uDFFF') idx = '1f3ff';
-				if (idx){
-					return self.replacement(val, null, null, {
-						idx	: idx,
-						actual	: p2,
-						wrapper	: ''
-					});
-					}
-				return self.replacement(val);
-			}
-
-			val = self.map.unified_vars[p1];
-			if (val){
-				return self.replacement(val[0], null, null, {
-					'idx'		: val[1],
-					'actual'	: '',
-					'wrapper'	: '',
-				});
-			}
-
-			return m;
-		});
-	};
-
-	emoji.prototype.addAliases = function(map){
-		var self = this;
-
-		self.init_colons();
-		for (var i in map){
-			self.map.colons[i] = map[i];
-		}
-	};
-
-	emoji.prototype.removeAliases = function(list){
-		var self = this;
-
-		for (var i=0; i<list.length; i++){
-			var alias = list[i];
-
-			// first, delete the alias mapping
-			delete self.map.colons[alias];
-
-			// now reset it to the default, if one exists
-			finder_block: {
-				for (var j in self.data){
-					for (var k=0; k<self.data[j][3].length; k++){
-						if (alias == self.data[j][3][k]){
-							self.map.colons[alias] = j;
-							break finder_block;
-						}
-					}
-				}
-			}
-		}
-	};
-
-
-	// Does the actual replacement of a character with the appropriate
-	/** @private */
-	emoji.prototype.replacement = function(idx, actual, wrapper, variation, is_extra){
-		var self = this;
-
-		var full_idx = idx;
-
-		// for emoji with variation modifiers, set `extra` to the standalone output for the
-		// modifier (used if we can't combine the glyph) and set variation_idx to key of the
-		// variation modifier (used below)
-		var extra = '';
-		var var_idx = null;
-		if (typeof variation === 'object'){
-			extra = self.replacement(variation.idx, variation.actual, variation.wrapper, undefined, true);
-			var_idx = variation.idx;
-		}
-
-		// deal with simple modes (colons and text) first
-		wrapper = wrapper || '';
-		if (self.colons_mode) return ':'+self.data[idx][3][0]+':'+extra;
-		var text_name = (actual) ? wrapper+actual+wrapper : self.data[idx][8] || wrapper+self.data[idx][3][0]+wrapper;
-		if (self.text_mode) return text_name + extra;
-
-		// figure out which images and code points to use, based on the skin variations. this information is also used for
-		// unified native output mode
-		var img = self.find_image(idx, var_idx);
-
-		// native modes next.
-		// for variations selectors, we just need to output them raw, which `extra` will contain. since softbank and google don't
-		// support skin variations, we'll keep `extra` around, every if we have a valid variation selector
-		self.init_env();
-		if (self.replace_mode == 'softbank' && self.allow_native && self.data[idx][1]) return self.format_native(self.data[idx][1] + extra, !is_extra);
-		if (self.replace_mode == 'google'   && self.allow_native && self.data[idx][2]) return self.format_native(self.data[idx][2] + extra, !is_extra);
-
-		// for unified (and images, below), we can use the variation info and throw away the `extra` contents
-		if (img.is_var){
-			extra = '';
-		}
-		if (self.replace_mode == 'unified' && self.allow_native) return self.format_native(img.unified + extra, !is_extra);
-
-
-		// finally deal with image modes.
-		// the call to .find_image() earlier checked if the image set and particular emoji supports variations,
-		// otherwise we can return it as a separate image (already calculated in `extra`).
-		// first we set up the params we'll use if we can't use a variation.
-		var title = self.include_title ? ' title="'+(actual || self.data[idx][3][0])+'"' : '';
-		var text  = self.include_text  ? wrapper+(actual || self.data[idx][3][0])+wrapper : '';
-
-		// custom image for this glyph?
-		if (self.data[idx][7]){
-			img.path = self.data[idx][7];
-			img.px = null;
-			img.py = null;
-			img.is_var = false;
-		}
-
-		// if we're displaying a variation, include it in the text
-		if (img.is_var && self.include_text && variation && variation.actual && variation.wrapper) {
-			text += variation.wrapper+variation.actual+variation.wrapper;
-		}
-
-		// output
-		if (self.supports_css) {
-			if (self.use_sheet && img.px != null && img.py != null){
-				var sheet_size = self.sheet_size * (img.sheet_size+2); // size of image in pixels
-				var sheet_x = 100 * (((img.px * (img.sheet_size+2)) + 1) / (sheet_size - img.sheet_size));
-				var sheet_y = 100 * (((img.py * (img.sheet_size+2)) + 1) / (sheet_size - img.sheet_size));
-				var sheet_sz = 100 * (sheet_size / img.sheet_size);
-
-				var style = 'background: url('+img.sheet+');background-position:'+(sheet_x)+'% '+(sheet_y)+'%;background-size:'+sheet_sz+'% '+sheet_sz+'%';
-				return '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="'+style+'"'+title+' data-codepoints="'+img.full_idx+'">'+text+'</span></span>'+extra;
-			}else if (self.use_css_imgs){
-				return '<span class="emoji emoji-'+idx+'"'+title+' data-codepoints="'+img.full_idx+'">'+text+'</span>'+extra;
-			}else{
-				return '<span class="emoji emoji-sizer" style="background-image:url('+img.path+')"'+title+' data-codepoints="'+img.full_idx+'">'+text+'</span>'+extra;
-			}
-		}
-		return '<img src="'+img.path+'" class="emoji" data-codepoints="'+img.full_idx+'" '+title+'/>'+extra;
-	};
-
-	// Wraps the output of a native endpoint, if configured
-	/** @private */
-	emoji.prototype.format_native = function(native, allow_wrap){
-		var self = this;
-
-		if (self.wrap_native && allow_wrap){
-			return '<span class="emoji-native">'+ native + '</span>';
-		}
-		return native;
-	};
-
-	// Finds the best image to display, taking into account image set precedence and obsoletes
-	/** @private */
-	emoji.prototype.find_image = function(idx, var_idx){
-		var self = this;
-
-		// set up some initial state
-		var out = {
-			'path'		: '',
-			'sheet'		: '',
-			'sheet_size'	: 0,
-			'px'		: self.data[idx][4],
-			'py'		: self.data[idx][5],
-			'full_idx'	: idx,
-			'is_var'	: false,
-			'unified'	: self.data[idx][0][0]
-		};
-		var use_mask = self.data[idx][6];
-
-		// can we use a variation?
-		if (var_idx && self.variations_data[idx] && self.variations_data[idx][var_idx]){
-			var var_data = self.variations_data[idx][var_idx];
-
-			out.px = var_data[1];
-			out.py = var_data[2];
-			out.full_idx = var_data[0];
-			out.is_var = true;
-			out.unified = var_data[4];
-			use_mask = var_data[3];
-		}
-
-		// this matches `build/build_image.php` `in emoji-data`, so that sheet and images modes always
-		// agree about the image to use.
-		var try_order = [self.img_set, 'apple', 'emojione', 'google', 'twitter', 'facebook', 'messenger'];
-
-		// for each image set, see if we have the image we need. otherwise check for an obsolete in
-		// that image set
-		for (var j=0; j<try_order.length; j++){
-			if (use_mask & self.img_sets[try_order[j]].mask){
-				out.path = self.img_sets[try_order[j]].path+out.full_idx+'.png' + self.img_suffix;
-				// if we're not changing glyph, use our base set for sheets - it has every glyph
-				out.sheet = self.img_sets[self.img_set].sheet;
-				out.sheet_size = self.img_sets[self.img_set].sheet_size;
-				return out;
-			}
-			if (self.obsoletes_data[out.full_idx]){
-				var ob_data = self.obsoletes_data[out.full_idx];
-
-				if (ob_data[3] & self.img_sets[try_order[j]].mask){
-					out.path = self.img_sets[try_order[j]].path+ob_data[0]+'.png' + self.img_suffix;
-					out.sheet = self.img_sets[try_order[j]].sheet;
-					out.sheet_size = self.img_sets[try_order[j]].sheet_size;
-					out.px = ob_data[1];
-					out.py = ob_data[2];
-					return out;
-				}
-			}
-		}
-
-		return out;
-	};
-
-	// Initializes the text emoticon data
-	/** @private */
-	emoji.prototype.init_emoticons = function(){
-		var self = this;
-		if (self.inits.emoticons) return;
-		self.init_colons(); // we require this for the emoticons map
-		self.inits.emoticons = 1;
-		
-		var a = [];
-		self.map.emoticons = {};
-		for (var i in self.emoticons_data){
-			// because we never see some characters in our text except as entities, we must do some replacing
-			var emoticon = i.replace(/\&/g, '&amp;').replace(/\</g, '&lt;').replace(/\>/g, '&gt;');
-			
-			if (!self.map.colons[self.emoticons_data[i]]) continue;
-
-			self.map.emoticons[emoticon] = self.map.colons[self.emoticons_data[i]];
-			a.push(self.escape_rx(emoticon));
-		}
-		self.rx_emoticons = new RegExp(('(^|\\s)('+a.join('|')+')(?=$|[\\s|\\?\\.,!])'), 'g');
-	};
-
-	// Initializes the colon string data
-	/** @private */
-	emoji.prototype.init_colons = function(){
-		var self = this;
-		if (self.inits.colons) return;
-		self.inits.colons = 1;
-		self.rx_colons = new RegExp('\:[a-zA-Z0-9-_+]+\:(\:skin-tone-[2-6]\:)?', 'g');
-		self.map.colons = {};
-		for (var i in self.data){
-			for (var j=0; j<self.data[i][3].length; j++){
-				self.map.colons[self.data[i][3][j]] = i;
-			}
-		}
-	};
-
-	// initializes the unified unicode emoticon data
-	/** @private */
-	emoji.prototype.init_unified = function(){
-		var self = this;
-		if (self.inits.unified) return;
-		self.inits.unified = 1;
-
-		var a = [];
-		self.map.unified = {};
-		self.map.unified_vars = {};
-
-		for (var i in self.data){
-			for (var j=0; j<self.data[i][0].length; j++){
-				a.push(self.data[i][0][j].replace('*', '\\*'));
-				self.map.unified[self.data[i][0][j]] = i;
-			}
-		}
-		for (var i in self.variations_data){
-			// skip simple append-style skin tones
-			if (self.variations_data[i]['1f3fb'][0] == i+'-1f3fb') continue;
-
-			for (var k in self.variations_data[i]){
-				for (var j=0; j<self.variations_data[i][k][4].length; j++){
-					a.push(self.variations_data[i][k][4][j].replace('*', '\\*'));
-					self.map.unified_vars[self.variations_data[i][k][4][j]] = [i, k];
-				}
-			}
-		}
-
-		a = a.sort(function(a,b){
-			 return b.length - a.length;
-		});
-
-		self.rx_unified = new RegExp('('+a.join('|')+')(\uD83C[\uDFFB-\uDFFF])?', "g");
-	};
-
-	// initializes the environment, figuring out what representation
-	// of emoticons is best.
-	/** @private */
-	emoji.prototype.init_env = function(){
-		var self = this;
-		if (self.inits.env) return;
-		self.inits.env = 1;
-		self.replace_mode = 'img';
-		self.supports_css = false;
-		if (typeof(navigator) !== 'undefined') {
-			var ua = navigator.userAgent;
-			if (typeof window !== 'undefined' && window.getComputedStyle){
-				try {
-					var st = window.getComputedStyle(document.body);
-					if (st['background-size'] || st['backgroundSize']){
-						self.supports_css = true;
-					}
-				} catch(e){
-					// Swallow an exception caused by hidden iFrames on Firefox
-					// https://github.com/iamcal/js-emoji/issues/73
-					if (ua.match(/Firefox/i)){
-						self.supports_css = true;
-					}
-				}
-			}
-			if (ua.match(/(iPhone|iPod|iPad|iPhone\s+Simulator)/i)){
-				if (ua.match(/OS\s+[12345]/i)){
-					self.replace_mode = 'softbank';
-					return;
-				}
-				if (ua.match(/OS\s+[6789]/i)){
-					self.replace_mode = 'unified';
-					return;
-				}
-			}
-			if (ua.match(/Mac OS X 10[._ ](?:[789]|1\d)/i)){
-				self.replace_mode = 'unified';
-				return;
-			}
-			if (!self.avoid_ms_emoji){
-				if (ua.match(/Windows NT 6.[1-9]/i) || ua.match(/Windows NT 10.[0-9]/i)){
-					if (!ua.match(/Chrome/i) && !ua.match(/MSIE 8/i)){
-						self.replace_mode = 'unified';
-						return;
-					}
-				}
-			}
-		}
-
-		// Need a better way to detect android devices that actually
-		// support emoji.
-		if (false){
-			self.replace_mode = 'google';
-			return;
-		}
-		if (self.supports_css){
-			self.replace_mode = 'css';
-		}
-		// nothing fancy detected - use images
-	};
-	/** @private */
-	emoji.prototype.escape_rx = function(text){
-		return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-	};
-	emoji.prototype.sheet_size = 52;
-	/** @private */
-	emoji.prototype.data = {
-		"0023-fe0f-20e3":[["\u0023\uFE0F\u20E3","\u0023\u20E3"],"\uE210","\uDBBA\uDC2C",["hash"],0,0,15,0],
-		"002a-fe0f-20e3":[["\u002A\uFE0F\u20E3","\u002A\u20E3"],"","",["keycap_star"],0,1,15,0],
-		"0030-fe0f-20e3":[["\u0030\uFE0F\u20E3","\u0030\u20E3"],"\uE225","\uDBBA\uDC37",["zero"],0,2,15,0],
-		"0031-fe0f-20e3":[["\u0031\uFE0F\u20E3","\u0031\u20E3"],"\uE21C","\uDBBA\uDC2E",["one"],0,3,15,0],
-		"0032-fe0f-20e3":[["\u0032\uFE0F\u20E3","\u0032\u20E3"],"\uE21D","\uDBBA\uDC2F",["two"],0,4,15,0],
-		"0033-fe0f-20e3":[["\u0033\uFE0F\u20E3","\u0033\u20E3"],"\uE21E","\uDBBA\uDC30",["three"],0,5,15,0],
-		"0034-fe0f-20e3":[["\u0034\uFE0F\u20E3","\u0034\u20E3"],"\uE21F","\uDBBA\uDC31",["four"],0,6,15,0],
-		"0035-fe0f-20e3":[["\u0035\uFE0F\u20E3","\u0035\u20E3"],"\uE220","\uDBBA\uDC32",["five"],0,7,15,0],
-		"0036-fe0f-20e3":[["\u0036\uFE0F\u20E3","\u0036\u20E3"],"\uE221","\uDBBA\uDC33",["six"],0,8,15,0],
-		"0037-fe0f-20e3":[["\u0037\uFE0F\u20E3","\u0037\u20E3"],"\uE222","\uDBBA\uDC34",["seven"],0,9,15,0],
-		"0038-fe0f-20e3":[["\u0038\uFE0F\u20E3","\u0038\u20E3"],"\uE223","\uDBBA\uDC35",["eight"],0,10,15,0],
-		"0039-fe0f-20e3":[["\u0039\uFE0F\u20E3","\u0039\u20E3"],"\uE224","\uDBBA\uDC36",["nine"],0,11,15,0],
-		"00a9-fe0f":[["\u00A9\uFE0F","\u00A9"],"\uE24E","\uDBBA\uDF29",["copyright"],0,12,11,0],
-		"00ae-fe0f":[["\u00AE\uFE0F","\u00AE"],"\uE24F","\uDBBA\uDF2D",["registered"],0,13,11,0],
-		"1f004":[["\uD83C\uDC04"],"\uE12D","\uDBBA\uDC0B",["mahjong"],0,14,63,0],
-		"1f0cf":[["\uD83C\uDCCF"],"","\uDBBA\uDC12",["black_joker"],0,15,63,0],
-		"1f170-fe0f":[["\uD83C\uDD70\uFE0F","\uD83C\uDD70"],"\uE532","\uDBB9\uDD0B",["a"],0,16,63,0],
-		"1f171-fe0f":[["\uD83C\uDD71\uFE0F","\uD83C\uDD71"],"\uE533","\uDBB9\uDD0C",["b"],0,17,63,0],
-		"1f17e-fe0f":[["\uD83C\uDD7E\uFE0F","\uD83C\uDD7E"],"\uE535","\uDBB9\uDD0E",["o2"],0,18,63,0],
-		"1f17f-fe0f":[["\uD83C\uDD7F\uFE0F","\uD83C\uDD7F"],"\uE14F","\uDBB9\uDFF6",["parking"],0,19,63,0],
-		"1f18e":[["\uD83C\uDD8E"],"\uE534","\uDBB9\uDD0D",["ab"],0,20,63,0],
-		"1f191":[["\uD83C\uDD91"],"","\uDBBA\uDF84",["cl"],0,21,63,0],
-		"1f192":[["\uD83C\uDD92"],"\uE214","\uDBBA\uDF38",["cool"],0,22,63,0],
-		"1f193":[["\uD83C\uDD93"],"","\uDBBA\uDF21",["free"],0,23,63,0],
-		"1f194":[["\uD83C\uDD94"],"\uE229","\uDBBA\uDF81",["id"],0,24,63,0],
-		"1f195":[["\uD83C\uDD95"],"\uE212","\uDBBA\uDF36",["new"],0,25,63,0],
-		"1f196":[["\uD83C\uDD96"],"","\uDBBA\uDF28",["ng"],0,26,63,0],
-		"1f197":[["\uD83C\uDD97"],"\uE24D","\uDBBA\uDF27",["ok"],0,27,63,0],
-		"1f198":[["\uD83C\uDD98"],"","\uDBBA\uDF4F",["sos"],0,28,63,0],
-		"1f199":[["\uD83C\uDD99"],"\uE213","\uDBBA\uDF37",["up"],0,29,63,0],
-		"1f19a":[["\uD83C\uDD9A"],"\uE12E","\uDBBA\uDF32",["vs"],0,30,63,0],
-		"1f1e6-1f1e8":[["\uD83C\uDDE6\uD83C\uDDE8"],"","",["flag-ac"],0,31,63,0],
-		"1f1e6-1f1e9":[["\uD83C\uDDE6\uD83C\uDDE9"],"","",["flag-ad"],0,32,63,0],
-		"1f1e6-1f1ea":[["\uD83C\uDDE6\uD83C\uDDEA"],"","",["flag-ae"],0,33,63,0],
-		"1f1e6-1f1eb":[["\uD83C\uDDE6\uD83C\uDDEB"],"","",["flag-af"],0,34,63,0],
-		"1f1e6-1f1ec":[["\uD83C\uDDE6\uD83C\uDDEC"],"","",["flag-ag"],0,35,63,0],
-		"1f1e6-1f1ee":[["\uD83C\uDDE6\uD83C\uDDEE"],"","",["flag-ai"],0,36,63,0],
-		"1f1e6-1f1f1":[["\uD83C\uDDE6\uD83C\uDDF1"],"","",["flag-al"],0,37,63,0],
-		"1f1e6-1f1f2":[["\uD83C\uDDE6\uD83C\uDDF2"],"","",["flag-am"],0,38,63,0],
-		"1f1e6-1f1f4":[["\uD83C\uDDE6\uD83C\uDDF4"],"","",["flag-ao"],0,39,63,0],
-		"1f1e6-1f1f6":[["\uD83C\uDDE6\uD83C\uDDF6"],"","",["flag-aq"],0,40,63,0],
-		"1f1e6-1f1f7":[["\uD83C\uDDE6\uD83C\uDDF7"],"","",["flag-ar"],0,41,63,0],
-		"1f1e6-1f1f8":[["\uD83C\uDDE6\uD83C\uDDF8"],"","",["flag-as"],0,42,63,0],
-		"1f1e6-1f1f9":[["\uD83C\uDDE6\uD83C\uDDF9"],"","",["flag-at"],0,43,63,0],
-		"1f1e6-1f1fa":[["\uD83C\uDDE6\uD83C\uDDFA"],"","",["flag-au"],0,44,63,0],
-		"1f1e6-1f1fc":[["\uD83C\uDDE6\uD83C\uDDFC"],"","",["flag-aw"],0,45,63,0],
-		"1f1e6-1f1fd":[["\uD83C\uDDE6\uD83C\uDDFD"],"","",["flag-ax"],0,46,63,0],
-		"1f1e6-1f1ff":[["\uD83C\uDDE6\uD83C\uDDFF"],"","",["flag-az"],0,47,63,0],
-		"1f1e7-1f1e6":[["\uD83C\uDDE7\uD83C\uDDE6"],"","",["flag-ba"],0,48,31,0],
-		"1f1e7-1f1e7":[["\uD83C\uDDE7\uD83C\uDDE7"],"","",["flag-bb"],0,49,63,0],
-		"1f1e7-1f1e9":[["\uD83C\uDDE7\uD83C\uDDE9"],"","",["flag-bd"],0,50,63,0],
-		"1f1e7-1f1ea":[["\uD83C\uDDE7\uD83C\uDDEA"],"","",["flag-be"],0,51,63,0],
-		"1f1e7-1f1eb":[["\uD83C\uDDE7\uD83C\uDDEB"],"","",["flag-bf"],1,0,63,0],
-		"1f1e7-1f1ec":[["\uD83C\uDDE7\uD83C\uDDEC"],"","",["flag-bg"],1,1,63,0],
-		"1f1e7-1f1ed":[["\uD83C\uDDE7\uD83C\uDDED"],"","",["flag-bh"],1,2,63,0],
-		"1f1e7-1f1ee":[["\uD83C\uDDE7\uD83C\uDDEE"],"","",["flag-bi"],1,3,63,0],
-		"1f1e7-1f1ef":[["\uD83C\uDDE7\uD83C\uDDEF"],"","",["flag-bj"],1,4,63,0],
-		"1f1e7-1f1f1":[["\uD83C\uDDE7\uD83C\uDDF1"],"","",["flag-bl"],1,5,61,0],
-		"1f1e7-1f1f2":[["\uD83C\uDDE7\uD83C\uDDF2"],"","",["flag-bm"],1,6,63,0],
-		"1f1e7-1f1f3":[["\uD83C\uDDE7\uD83C\uDDF3"],"","",["flag-bn"],1,7,31,0],
-		"1f1e7-1f1f4":[["\uD83C\uDDE7\uD83C\uDDF4"],"","",["flag-bo"],1,8,63,0],
-		"1f1e7-1f1f6":[["\uD83C\uDDE7\uD83C\uDDF6"],"","",["flag-bq"],1,9,61,0],
-		"1f1e7-1f1f7":[["\uD83C\uDDE7\uD83C\uDDF7"],"","",["flag-br"],1,10,63,0],
-		"1f1e7-1f1f8":[["\uD83C\uDDE7\uD83C\uDDF8"],"","",["flag-bs"],1,11,63,0],
-		"1f1e7-1f1f9":[["\uD83C\uDDE7\uD83C\uDDF9"],"","",["flag-bt"],1,12,63,0],
-		"1f1e7-1f1fb":[["\uD83C\uDDE7\uD83C\uDDFB"],"","",["flag-bv"],1,13,63,0],
-		"1f1e7-1f1fc":[["\uD83C\uDDE7\uD83C\uDDFC"],"","",["flag-bw"],1,14,63,0],
-		"1f1e7-1f1fe":[["\uD83C\uDDE7\uD83C\uDDFE"],"","",["flag-by"],1,15,63,0],
-		"1f1e7-1f1ff":[["\uD83C\uDDE7\uD83C\uDDFF"],"","",["flag-bz"],1,16,63,0],
-		"1f1e8-1f1e6":[["\uD83C\uDDE8\uD83C\uDDE6"],"","",["flag-ca"],1,17,63,0],
-		"1f1e8-1f1e8":[["\uD83C\uDDE8\uD83C\uDDE8"],"","",["flag-cc"],1,18,63,0],
-		"1f1e8-1f1e9":[["\uD83C\uDDE8\uD83C\uDDE9"],"","",["flag-cd"],1,19,63,0],
-		"1f1e8-1f1eb":[["\uD83C\uDDE8\uD83C\uDDEB"],"","",["flag-cf"],1,20,63,0],
-		"1f1e8-1f1ec":[["\uD83C\uDDE8\uD83C\uDDEC"],"","",["flag-cg"],1,21,63,0],
-		"1f1e8-1f1ed":[["\uD83C\uDDE8\uD83C\uDDED"],"","",["flag-ch"],1,22,63,0],
-		"1f1e8-1f1ee":[["\uD83C\uDDE8\uD83C\uDDEE"],"","",["flag-ci"],1,23,63,0],
-		"1f1e8-1f1f0":[["\uD83C\uDDE8\uD83C\uDDF0"],"","",["flag-ck"],1,24,63,0],
-		"1f1e8-1f1f1":[["\uD83C\uDDE8\uD83C\uDDF1"],"","",["flag-cl"],1,25,63,0],
-		"1f1e8-1f1f2":[["\uD83C\uDDE8\uD83C\uDDF2"],"","",["flag-cm"],1,26,63,0],
-		"1f1e8-1f1f3":[["\uD83C\uDDE8\uD83C\uDDF3"],"\uE513","\uDBB9\uDCED",["cn","flag-cn"],1,27,63,0],
-		"1f1e8-1f1f4":[["\uD83C\uDDE8\uD83C\uDDF4"],"","",["flag-co"],1,28,63,0],
-		"1f1e8-1f1f5":[["\uD83C\uDDE8\uD83C\uDDF5"],"","",["flag-cp"],1,29,31,0],
-		"1f1e8-1f1f7":[["\uD83C\uDDE8\uD83C\uDDF7"],"","",["flag-cr"],1,30,63,0],
-		"1f1e8-1f1fa":[["\uD83C\uDDE8\uD83C\uDDFA"],"","",["flag-cu"],1,31,63,0],
-		"1f1e8-1f1fb":[["\uD83C\uDDE8\uD83C\uDDFB"],"","",["flag-cv"],1,32,63,0],
-		"1f1e8-1f1fc":[["\uD83C\uDDE8\uD83C\uDDFC"],"","",["flag-cw"],1,33,63,0],
-		"1f1e8-1f1fd":[["\uD83C\uDDE8\uD83C\uDDFD"],"","",["flag-cx"],1,34,63,0],
-		"1f1e8-1f1fe":[["\uD83C\uDDE8\uD83C\uDDFE"],"","",["flag-cy"],1,35,63,0],
-		"1f1e8-1f1ff":[["\uD83C\uDDE8\uD83C\uDDFF"],"","",["flag-cz"],1,36,63,0],
-		"1f1e9-1f1ea":[["\uD83C\uDDE9\uD83C\uDDEA"],"\uE50E","\uDBB9\uDCE8",["de","flag-de"],1,37,63,0],
-		"1f1e9-1f1ec":[["\uD83C\uDDE9\uD83C\uDDEC"],"","",["flag-dg"],1,38,61,0],
-		"1f1e9-1f1ef":[["\uD83C\uDDE9\uD83C\uDDEF"],"","",["flag-dj"],1,39,63,0],
-		"1f1e9-1f1f0":[["\uD83C\uDDE9\uD83C\uDDF0"],"","",["flag-dk"],1,40,63,0],
-		"1f1e9-1f1f2":[["\uD83C\uDDE9\uD83C\uDDF2"],"","",["flag-dm"],1,41,63,0],
-		"1f1e9-1f1f4":[["\uD83C\uDDE9\uD83C\uDDF4"],"","",["flag-do"],1,42,63,0],
-		"1f1e9-1f1ff":[["\uD83C\uDDE9\uD83C\uDDFF"],"","",["flag-dz"],1,43,63,0],
-		"1f1ea-1f1e6":[["\uD83C\uDDEA\uD83C\uDDE6"],"","",["flag-ea"],1,44,61,0],
-		"1f1ea-1f1e8":[["\uD83C\uDDEA\uD83C\uDDE8"],"","",["flag-ec"],1,45,63,0],
-		"1f1ea-1f1ea":[["\uD83C\uDDEA\uD83C\uDDEA"],"","",["flag-ee"],1,46,63,0],
-		"1f1ea-1f1ec":[["\uD83C\uDDEA\uD83C\uDDEC"],"","",["flag-eg"],1,47,63,0],
-		"1f1ea-1f1ed":[["\uD83C\uDDEA\uD83C\uDDED"],"","",["flag-eh"],1,48,61,0],
-		"1f1ea-1f1f7":[["\uD83C\uDDEA\uD83C\uDDF7"],"","",["flag-er"],1,49,63,0],
-		"1f1ea-1f1f8":[["\uD83C\uDDEA\uD83C\uDDF8"],"\uE511","\uDBB9\uDCEB",["es","flag-es"],1,50,63,0],
-		"1f1ea-1f1f9":[["\uD83C\uDDEA\uD83C\uDDF9"],"","",["flag-et"],1,51,63,0],
-		"1f1ea-1f1fa":[["\uD83C\uDDEA\uD83C\uDDFA"],"","",["flag-eu"],2,0,63,0],
-		"1f1eb-1f1ee":[["\uD83C\uDDEB\uD83C\uDDEE"],"","",["flag-fi"],2,1,63,0],
-		"1f1eb-1f1ef":[["\uD83C\uDDEB\uD83C\uDDEF"],"","",["flag-fj"],2,2,63,0],
-		"1f1eb-1f1f0":[["\uD83C\uDDEB\uD83C\uDDF0"],"","",["flag-fk"],2,3,61,0],
-		"1f1eb-1f1f2":[["\uD83C\uDDEB\uD83C\uDDF2"],"","",["flag-fm"],2,4,63,0],
-		"1f1eb-1f1f4":[["\uD83C\uDDEB\uD83C\uDDF4"],"","",["flag-fo"],2,5,63,0],
-		"1f1eb-1f1f7":[["\uD83C\uDDEB\uD83C\uDDF7"],"\uE50D","\uDBB9\uDCE7",["fr","flag-fr"],2,6,63,0],
-		"1f1ec-1f1e6":[["\uD83C\uDDEC\uD83C\uDDE6"],"","",["flag-ga"],2,7,63,0],
-		"1f1ec-1f1e7":[["\uD83C\uDDEC\uD83C\uDDE7"],"\uE510","\uDBB9\uDCEA",["gb","uk","flag-gb"],2,8,63,0],
-		"1f1ec-1f1e9":[["\uD83C\uDDEC\uD83C\uDDE9"],"","",["flag-gd"],2,9,63,0],
-		"1f1ec-1f1ea":[["\uD83C\uDDEC\uD83C\uDDEA"],"","",["flag-ge"],2,10,63,0],
-		"1f1ec-1f1eb":[["\uD83C\uDDEC\uD83C\uDDEB"],"","",["flag-gf"],2,11,61,0],
-		"1f1ec-1f1ec":[["\uD83C\uDDEC\uD83C\uDDEC"],"","",["flag-gg"],2,12,63,0],
-		"1f1ec-1f1ed":[["\uD83C\uDDEC\uD83C\uDDED"],"","",["flag-gh"],2,13,63,0],
-		"1f1ec-1f1ee":[["\uD83C\uDDEC\uD83C\uDDEE"],"","",["flag-gi"],2,14,63,0],
-		"1f1ec-1f1f1":[["\uD83C\uDDEC\uD83C\uDDF1"],"","",["flag-gl"],2,15,63,0],
-		"1f1ec-1f1f2":[["\uD83C\uDDEC\uD83C\uDDF2"],"","",["flag-gm"],2,16,63,0],
-		"1f1ec-1f1f3":[["\uD83C\uDDEC\uD83C\uDDF3"],"","",["flag-gn"],2,17,63,0],
-		"1f1ec-1f1f5":[["\uD83C\uDDEC\uD83C\uDDF5"],"","",["flag-gp"],2,18,61,0],
-		"1f1ec-1f1f6":[["\uD83C\uDDEC\uD83C\uDDF6"],"","",["flag-gq"],2,19,63,0],
-		"1f1ec-1f1f7":[["\uD83C\uDDEC\uD83C\uDDF7"],"","",["flag-gr"],2,20,63,0],
-		"1f1ec-1f1f8":[["\uD83C\uDDEC\uD83C\uDDF8"],"","",["flag-gs"],2,21,61,0],
-		"1f1ec-1f1f9":[["\uD83C\uDDEC\uD83C\uDDF9"],"","",["flag-gt"],2,22,63,0],
-		"1f1ec-1f1fa":[["\uD83C\uDDEC\uD83C\uDDFA"],"","",["flag-gu"],2,23,63,0],
-		"1f1ec-1f1fc":[["\uD83C\uDDEC\uD83C\uDDFC"],"","",["flag-gw"],2,24,63,0],
-		"1f1ec-1f1fe":[["\uD83C\uDDEC\uD83C\uDDFE"],"","",["flag-gy"],2,25,63,0],
-		"1f1ed-1f1f0":[["\uD83C\uDDED\uD83C\uDDF0"],"","",["flag-hk"],2,26,63,0],
-		"1f1ed-1f1f2":[["\uD83C\uDDED\uD83C\uDDF2"],"","",["flag-hm"],2,27,63,0],
-		"1f1ed-1f1f3":[["\uD83C\uDDED\uD83C\uDDF3"],"","",["flag-hn"],2,28,63,0],
-		"1f1ed-1f1f7":[["\uD83C\uDDED\uD83C\uDDF7"],"","",["flag-hr"],2,29,63,0],
-		"1f1ed-1f1f9":[["\uD83C\uDDED\uD83C\uDDF9"],"","",["flag-ht"],2,30,63,0],
-		"1f1ed-1f1fa":[["\uD83C\uDDED\uD83C\uDDFA"],"","",["flag-hu"],2,31,63,0],
-		"1f1ee-1f1e8":[["\uD83C\uDDEE\uD83C\uDDE8"],"","",["flag-ic"],2,32,63,0],
-		"1f1ee-1f1e9":[["\uD83C\uDDEE\uD83C\uDDE9"],"","",["flag-id"],2,33,63,0],
-		"1f1ee-1f1ea":[["\uD83C\uDDEE\uD83C\uDDEA"],"","",["flag-ie"],2,34,63,0],
-		"1f1ee-1f1f1":[["\uD83C\uDDEE\uD83C\uDDF1"],"","",["flag-il"],2,35,63,0],
-		"1f1ee-1f1f2":[["\uD83C\uDDEE\uD83C\uDDF2"],"","",["flag-im"],2,36,63,0],
-		"1f1ee-1f1f3":[["\uD83C\uDDEE\uD83C\uDDF3"],"","",["flag-in"],2,37,63,0],
-		"1f1ee-1f1f4":[["\uD83C\uDDEE\uD83C\uDDF4"],"","",["flag-io"],2,38,63,0],
-		"1f1ee-1f1f6":[["\uD83C\uDDEE\uD83C\uDDF6"],"","",["flag-iq"],2,39,63,0],
-		"1f1ee-1f1f7":[["\uD83C\uDDEE\uD83C\uDDF7"],"","",["flag-ir"],2,40,63,0],
-		"1f1ee-1f1f8":[["\uD83C\uDDEE\uD83C\uDDF8"],"","",["flag-is"],2,41,63,0],
-		"1f1ee-1f1f9":[["\uD83C\uDDEE\uD83C\uDDF9"],"\uE50F","\uDBB9\uDCE9",["it","flag-it"],2,42,63,0],
-		"1f1ef-1f1ea":[["\uD83C\uDDEF\uD83C\uDDEA"],"","",["flag-je"],2,43,63,0],
-		"1f1ef-1f1f2":[["\uD83C\uDDEF\uD83C\uDDF2"],"","",["flag-jm"],2,44,63,0],
-		"1f1ef-1f1f4":[["\uD83C\uDDEF\uD83C\uDDF4"],"","",["flag-jo"],2,45,63,0],
-		"1f1ef-1f1f5":[["\uD83C\uDDEF\uD83C\uDDF5"],"\uE50B","\uDBB9\uDCE5",["jp","flag-jp"],2,46,63,0],
-		"1f1f0-1f1ea":[["\uD83C\uDDF0\uD83C\uDDEA"],"","",["flag-ke"],2,47,63,0],
-		"1f1f0-1f1ec":[["\uD83C\uDDF0\uD83C\uDDEC"],"","",["flag-kg"],2,48,63,0],
-		"1f1f0-1f1ed":[["\uD83C\uDDF0\uD83C\uDDED"],"","",["flag-kh"],2,49,63,0],
-		"1f1f0-1f1ee":[["\uD83C\uDDF0\uD83C\uDDEE"],"","",["flag-ki"],2,50,63,0],
-		"1f1f0-1f1f2":[["\uD83C\uDDF0\uD83C\uDDF2"],"","",["flag-km"],2,51,63,0],
-		"1f1f0-1f1f3":[["\uD83C\uDDF0\uD83C\uDDF3"],"","",["flag-kn"],3,0,63,0],
-		"1f1f0-1f1f5":[["\uD83C\uDDF0\uD83C\uDDF5"],"","",["flag-kp"],3,1,63,0],
-		"1f1f0-1f1f7":[["\uD83C\uDDF0\uD83C\uDDF7"],"\uE514","\uDBB9\uDCEE",["kr","flag-kr"],3,2,63,0],
-		"1f1f0-1f1fc":[["\uD83C\uDDF0\uD83C\uDDFC"],"","",["flag-kw"],3,3,63,0],
-		"1f1f0-1f1fe":[["\uD83C\uDDF0\uD83C\uDDFE"],"","",["flag-ky"],3,4,63,0],
-		"1f1f0-1f1ff":[["\uD83C\uDDF0\uD83C\uDDFF"],"","",["flag-kz"],3,5,63,0],
-		"1f1f1-1f1e6":[["\uD83C\uDDF1\uD83C\uDDE6"],"","",["flag-la"],3,6,63,0],
-		"1f1f1-1f1e7":[["\uD83C\uDDF1\uD83C\uDDE7"],"","",["flag-lb"],3,7,63,0],
-		"1f1f1-1f1e8":[["\uD83C\uDDF1\uD83C\uDDE8"],"","",["flag-lc"],3,8,63,0],
-		"1f1f1-1f1ee":[["\uD83C\uDDF1\uD83C\uDDEE"],"","",["flag-li"],3,9,63,0],
-		"1f1f1-1f1f0":[["\uD83C\uDDF1\uD83C\uDDF0"],"","",["flag-lk"],3,10,63,0],
-		"1f1f1-1f1f7":[["\uD83C\uDDF1\uD83C\uDDF7"],"","",["flag-lr"],3,11,63,0],
-		"1f1f1-1f1f8":[["\uD83C\uDDF1\uD83C\uDDF8"],"","",["flag-ls"],3,12,63,0],
-		"1f1f1-1f1f9":[["\uD83C\uDDF1\uD83C\uDDF9"],"","",["flag-lt"],3,13,63,0],
-		"1f1f1-1f1fa":[["\uD83C\uDDF1\uD83C\uDDFA"],"","",["flag-lu"],3,14,63,0],
-		"1f1f1-1f1fb":[["\uD83C\uDDF1\uD83C\uDDFB"],"","",["flag-lv"],3,15,63,0],
-		"1f1f1-1f1fe":[["\uD83C\uDDF1\uD83C\uDDFE"],"","",["flag-ly"],3,16,63,0],
-		"1f1f2-1f1e6":[["\uD83C\uDDF2\uD83C\uDDE6"],"","",["flag-ma"],3,17,63,0],
-		"1f1f2-1f1e8":[["\uD83C\uDDF2\uD83C\uDDE8"],"","",["flag-mc"],3,18,63,0],
-		"1f1f2-1f1e9":[["\uD83C\uDDF2\uD83C\uDDE9"],"","",["flag-md"],3,19,63,0],
-		"1f1f2-1f1ea":[["\uD83C\uDDF2\uD83C\uDDEA"],"","",["flag-me"],3,20,63,0],
-		"1f1f2-1f1eb":[["\uD83C\uDDF2\uD83C\uDDEB"],"","",["flag-mf"],3,21,61,0],
-		"1f1f2-1f1ec":[["\uD83C\uDDF2\uD83C\uDDEC"],"","",["flag-mg"],3,22,63,0],
-		"1f1f2-1f1ed":[["\uD83C\uDDF2\uD83C\uDDED"],"","",["flag-mh"],3,23,63,0],
-		"1f1f2-1f1f0":[["\uD83C\uDDF2\uD83C\uDDF0"],"","",["flag-mk"],3,24,63,0],
-		"1f1f2-1f1f1":[["\uD83C\uDDF2\uD83C\uDDF1"],"","",["flag-ml"],3,25,63,0],
-		"1f1f2-1f1f2":[["\uD83C\uDDF2\uD83C\uDDF2"],"","",["flag-mm"],3,26,63,0],
-		"1f1f2-1f1f3":[["\uD83C\uDDF2\uD83C\uDDF3"],"","",["flag-mn"],3,27,63,0],
-		"1f1f2-1f1f4":[["\uD83C\uDDF2\uD83C\uDDF4"],"","",["flag-mo"],3,28,63,0],
-		"1f1f2-1f1f5":[["\uD83C\uDDF2\uD83C\uDDF5"],"","",["flag-mp"],3,29,63,0],
-		"1f1f2-1f1f6":[["\uD83C\uDDF2\uD83C\uDDF6"],"","",["flag-mq"],3,30,61,0],
-		"1f1f2-1f1f7":[["\uD83C\uDDF2\uD83C\uDDF7"],"","",["flag-mr"],3,31,63,0],
-		"1f1f2-1f1f8":[["\uD83C\uDDF2\uD83C\uDDF8"],"","",["flag-ms"],3,32,63,0],
-		"1f1f2-1f1f9":[["\uD83C\uDDF2\uD83C\uDDF9"],"","",["flag-mt"],3,33,63,0],
-		"1f1f2-1f1fa":[["\uD83C\uDDF2\uD83C\uDDFA"],"","",["flag-mu"],3,34,63,0],
-		"1f1f2-1f1fb":[["\uD83C\uDDF2\uD83C\uDDFB"],"","",["flag-mv"],3,35,63,0],
-		"1f1f2-1f1fc":[["\uD83C\uDDF2\uD83C\uDDFC"],"","",["flag-mw"],3,36,63,0],
-		"1f1f2-1f1fd":[["\uD83C\uDDF2\uD83C\uDDFD"],"","",["flag-mx"],3,37,63,0],
-		"1f1f2-1f1fe":[["\uD83C\uDDF2\uD83C\uDDFE"],"","",["flag-my"],3,38,63,0],
-		"1f1f2-1f1ff":[["\uD83C\uDDF2\uD83C\uDDFF"],"","",["flag-mz"],3,39,63,0],
-		"1f1f3-1f1e6":[["\uD83C\uDDF3\uD83C\uDDE6"],"","",["flag-na"],3,40,63,0],
-		"1f1f3-1f1e8":[["\uD83C\uDDF3\uD83C\uDDE8"],"","",["flag-nc"],3,41,61,0],
-		"1f1f3-1f1ea":[["\uD83C\uDDF3\uD83C\uDDEA"],"","",["flag-ne"],3,42,63,0],
-		"1f1f3-1f1eb":[["\uD83C\uDDF3\uD83C\uDDEB"],"","",["flag-nf"],3,43,63,0],
-		"1f1f3-1f1ec":[["\uD83C\uDDF3\uD83C\uDDEC"],"","",["flag-ng"],3,44,63,0],
-		"1f1f3-1f1ee":[["\uD83C\uDDF3\uD83C\uDDEE"],"","",["flag-ni"],3,45,63,0],
-		"1f1f3-1f1f1":[["\uD83C\uDDF3\uD83C\uDDF1"],"","",["flag-nl"],3,46,63,0],
-		"1f1f3-1f1f4":[["\uD83C\uDDF3\uD83C\uDDF4"],"","",["flag-no"],3,47,63,0],
-		"1f1f3-1f1f5":[["\uD83C\uDDF3\uD83C\uDDF5"],"","",["flag-np"],3,48,63,0],
-		"1f1f3-1f1f7":[["\uD83C\uDDF3\uD83C\uDDF7"],"","",["flag-nr"],3,49,63,0],
-		"1f1f3-1f1fa":[["\uD83C\uDDF3\uD83C\uDDFA"],"","",["flag-nu"],3,50,63,0],
-		"1f1f3-1f1ff":[["\uD83C\uDDF3\uD83C\uDDFF"],"","",["flag-nz"],3,51,63,0],
-		"1f1f4-1f1f2":[["\uD83C\uDDF4\uD83C\uDDF2"],"","",["flag-om"],4,0,63,0],
-		"1f1f5-1f1e6":[["\uD83C\uDDF5\uD83C\uDDE6"],"","",["flag-pa"],4,1,63,0],
-		"1f1f5-1f1ea":[["\uD83C\uDDF5\uD83C\uDDEA"],"","",["flag-pe"],4,2,63,0],
-		"1f1f5-1f1eb":[["\uD83C\uDDF5\uD83C\uDDEB"],"","",["flag-pf"],4,3,63,0],
-		"1f1f5-1f1ec":[["\uD83C\uDDF5\uD83C\uDDEC"],"","",["flag-pg"],4,4,63,0],
-		"1f1f5-1f1ed":[["\uD83C\uDDF5\uD83C\uDDED"],"","",["flag-ph"],4,5,63,0],
-		"1f1f5-1f1f0":[["\uD83C\uDDF5\uD83C\uDDF0"],"","",["flag-pk"],4,6,63,0],
-		"1f1f5-1f1f1":[["\uD83C\uDDF5\uD83C\uDDF1"],"","",["flag-pl"],4,7,63,0],
-		"1f1f5-1f1f2":[["\uD83C\uDDF5\uD83C\uDDF2"],"","",["flag-pm"],4,8,61,0],
-		"1f1f5-1f1f3":[["\uD83C\uDDF5\uD83C\uDDF3"],"","",["flag-pn"],4,9,63,0],
-		"1f1f5-1f1f7":[["\uD83C\uDDF5\uD83C\uDDF7"],"","",["flag-pr"],4,10,63,0],
-		"1f1f5-1f1f8":[["\uD83C\uDDF5\uD83C\uDDF8"],"","",["flag-ps"],4,11,63,0],
-		"1f1f5-1f1f9":[["\uD83C\uDDF5\uD83C\uDDF9"],"","",["flag-pt"],4,12,63,0],
-		"1f1f5-1f1fc":[["\uD83C\uDDF5\uD83C\uDDFC"],"","",["flag-pw"],4,13,63,0],
-		"1f1f5-1f1fe":[["\uD83C\uDDF5\uD83C\uDDFE"],"","",["flag-py"],4,14,63,0],
-		"1f1f6-1f1e6":[["\uD83C\uDDF6\uD83C\uDDE6"],"","",["flag-qa"],4,15,63,0],
-		"1f1f7-1f1ea":[["\uD83C\uDDF7\uD83C\uDDEA"],"","",["flag-re"],4,16,61,0],
-		"1f1f7-1f1f4":[["\uD83C\uDDF7\uD83C\uDDF4"],"","",["flag-ro"],4,17,63,0],
-		"1f1f7-1f1f8":[["\uD83C\uDDF7\uD83C\uDDF8"],"","",["flag-rs"],4,18,63,0],
-		"1f1f7-1f1fa":[["\uD83C\uDDF7\uD83C\uDDFA"],"\uE512","\uDBB9\uDCEC",["ru","flag-ru"],4,19,63,0],
-		"1f1f7-1f1fc":[["\uD83C\uDDF7\uD83C\uDDFC"],"","",["flag-rw"],4,20,63,0],
-		"1f1f8-1f1e6":[["\uD83C\uDDF8\uD83C\uDDE6"],"","",["flag-sa"],4,21,63,0],
-		"1f1f8-1f1e7":[["\uD83C\uDDF8\uD83C\uDDE7"],"","",["flag-sb"],4,22,63,0],
-		"1f1f8-1f1e8":[["\uD83C\uDDF8\uD83C\uDDE8"],"","",["flag-sc"],4,23,63,0],
-		"1f1f8-1f1e9":[["\uD83C\uDDF8\uD83C\uDDE9"],"","",["flag-sd"],4,24,63,0],
-		"1f1f8-1f1ea":[["\uD83C\uDDF8\uD83C\uDDEA"],"","",["flag-se"],4,25,63,0],
-		"1f1f8-1f1ec":[["\uD83C\uDDF8\uD83C\uDDEC"],"","",["flag-sg"],4,26,63,0],
-		"1f1f8-1f1ed":[["\uD83C\uDDF8\uD83C\uDDED"],"","",["flag-sh"],4,27,63,0],
-		"1f1f8-1f1ee":[["\uD83C\uDDF8\uD83C\uDDEE"],"","",["flag-si"],4,28,63,0],
-		"1f1f8-1f1ef":[["\uD83C\uDDF8\uD83C\uDDEF"],"","",["flag-sj"],4,29,63,0],
-		"1f1f8-1f1f0":[["\uD83C\uDDF8\uD83C\uDDF0"],"","",["flag-sk"],4,30,63,0],
-		"1f1f8-1f1f1":[["\uD83C\uDDF8\uD83C\uDDF1"],"","",["flag-sl"],4,31,63,0],
-		"1f1f8-1f1f2":[["\uD83C\uDDF8\uD83C\uDDF2"],"","",["flag-sm"],4,32,63,0],
-		"1f1f8-1f1f3":[["\uD83C\uDDF8\uD83C\uDDF3"],"","",["flag-sn"],4,33,63,0],
-		"1f1f8-1f1f4":[["\uD83C\uDDF8\uD83C\uDDF4"],"","",["flag-so"],4,34,63,0],
-		"1f1f8-1f1f7":[["\uD83C\uDDF8\uD83C\uDDF7"],"","",["flag-sr"],4,35,63,0],
-		"1f1f8-1f1f8":[["\uD83C\uDDF8\uD83C\uDDF8"],"","",["flag-ss"],4,36,63,0],
-		"1f1f8-1f1f9":[["\uD83C\uDDF8\uD83C\uDDF9"],"","",["flag-st"],4,37,63,0],
-		"1f1f8-1f1fb":[["\uD83C\uDDF8\uD83C\uDDFB"],"","",["flag-sv"],4,38,63,0],
-		"1f1f8-1f1fd":[["\uD83C\uDDF8\uD83C\uDDFD"],"","",["flag-sx"],4,39,63,0],
-		"1f1f8-1f1fe":[["\uD83C\uDDF8\uD83C\uDDFE"],"","",["flag-sy"],4,40,63,0],
-		"1f1f8-1f1ff":[["\uD83C\uDDF8\uD83C\uDDFF"],"","",["flag-sz"],4,41,63,0],
-		"1f1f9-1f1e6":[["\uD83C\uDDF9\uD83C\uDDE6"],"","",["flag-ta"],4,42,63,0],
-		"1f1f9-1f1e8":[["\uD83C\uDDF9\uD83C\uDDE8"],"","",["flag-tc"],4,43,63,0],
-		"1f1f9-1f1e9":[["\uD83C\uDDF9\uD83C\uDDE9"],"","",["flag-td"],4,44,63,0],
-		"1f1f9-1f1eb":[["\uD83C\uDDF9\uD83C\uDDEB"],"","",["flag-tf"],4,45,61,0],
-		"1f1f9-1f1ec":[["\uD83C\uDDF9\uD83C\uDDEC"],"","",["flag-tg"],4,46,63,0],
-		"1f1f9-1f1ed":[["\uD83C\uDDF9\uD83C\uDDED"],"","",["flag-th"],4,47,63,0],
-		"1f1f9-1f1ef":[["\uD83C\uDDF9\uD83C\uDDEF"],"","",["flag-tj"],4,48,63,0],
-		"1f1f9-1f1f0":[["\uD83C\uDDF9\uD83C\uDDF0"],"","",["flag-tk"],4,49,63,0],
-		"1f1f9-1f1f1":[["\uD83C\uDDF9\uD83C\uDDF1"],"","",["flag-tl"],4,50,63,0],
-		"1f1f9-1f1f2":[["\uD83C\uDDF9\uD83C\uDDF2"],"","",["flag-tm"],4,51,63,0],
-		"1f1f9-1f1f3":[["\uD83C\uDDF9\uD83C\uDDF3"],"","",["flag-tn"],5,0,63,0],
-		"1f1f9-1f1f4":[["\uD83C\uDDF9\uD83C\uDDF4"],"","",["flag-to"],5,1,63,0],
-		"1f1f9-1f1f7":[["\uD83C\uDDF9\uD83C\uDDF7"],"","",["flag-tr"],5,2,63,0],
-		"1f1f9-1f1f9":[["\uD83C\uDDF9\uD83C\uDDF9"],"","",["flag-tt"],5,3,63,0],
-		"1f1f9-1f1fb":[["\uD83C\uDDF9\uD83C\uDDFB"],"","",["flag-tv"],5,4,63,0],
-		"1f1f9-1f1fc":[["\uD83C\uDDF9\uD83C\uDDFC"],"","",["flag-tw"],5,5,63,0],
-		"1f1f9-1f1ff":[["\uD83C\uDDF9\uD83C\uDDFF"],"","",["flag-tz"],5,6,63,0],
-		"1f1fa-1f1e6":[["\uD83C\uDDFA\uD83C\uDDE6"],"","",["flag-ua"],5,7,63,0],
-		"1f1fa-1f1ec":[["\uD83C\uDDFA\uD83C\uDDEC"],"","",["flag-ug"],5,8,63,0],
-		"1f1fa-1f1f2":[["\uD83C\uDDFA\uD83C\uDDF2"],"","",["flag-um"],5,9,63,0],
-		"1f1fa-1f1f3":[["\uD83C\uDDFA\uD83C\uDDF3"],"","",["flag-un"],5,10,30,0],
-		"1f1fa-1f1f8":[["\uD83C\uDDFA\uD83C\uDDF8"],"\uE50C","\uDBB9\uDCE6",["us","flag-us"],5,11,63,0],
-		"1f1fa-1f1fe":[["\uD83C\uDDFA\uD83C\uDDFE"],"","",["flag-uy"],5,12,63,0],
-		"1f1fa-1f1ff":[["\uD83C\uDDFA\uD83C\uDDFF"],"","",["flag-uz"],5,13,63,0],
-		"1f1fb-1f1e6":[["\uD83C\uDDFB\uD83C\uDDE6"],"","",["flag-va"],5,14,63,0],
-		"1f1fb-1f1e8":[["\uD83C\uDDFB\uD83C\uDDE8"],"","",["flag-vc"],5,15,63,0],
-		"1f1fb-1f1ea":[["\uD83C\uDDFB\uD83C\uDDEA"],"","",["flag-ve"],5,16,63,0],
-		"1f1fb-1f1ec":[["\uD83C\uDDFB\uD83C\uDDEC"],"","",["flag-vg"],5,17,63,0],
-		"1f1fb-1f1ee":[["\uD83C\uDDFB\uD83C\uDDEE"],"","",["flag-vi"],5,18,63,0],
-		"1f1fb-1f1f3":[["\uD83C\uDDFB\uD83C\uDDF3"],"","",["flag-vn"],5,19,63,0],
-		"1f1fb-1f1fa":[["\uD83C\uDDFB\uD83C\uDDFA"],"","",["flag-vu"],5,20,63,0],
-		"1f1fc-1f1eb":[["\uD83C\uDDFC\uD83C\uDDEB"],"","",["flag-wf"],5,21,61,0],
-		"1f1fc-1f1f8":[["\uD83C\uDDFC\uD83C\uDDF8"],"","",["flag-ws"],5,22,63,0],
-		"1f1fd-1f1f0":[["\uD83C\uDDFD\uD83C\uDDF0"],"","",["flag-xk"],5,23,61,0],
-		"1f1fe-1f1ea":[["\uD83C\uDDFE\uD83C\uDDEA"],"","",["flag-ye"],5,24,63,0],
-		"1f1fe-1f1f9":[["\uD83C\uDDFE\uD83C\uDDF9"],"","",["flag-yt"],5,25,61,0],
-		"1f1ff-1f1e6":[["\uD83C\uDDFF\uD83C\uDDE6"],"","",["flag-za"],5,26,63,0],
-		"1f1ff-1f1f2":[["\uD83C\uDDFF\uD83C\uDDF2"],"","",["flag-zm"],5,27,63,0],
-		"1f1ff-1f1fc":[["\uD83C\uDDFF\uD83C\uDDFC"],"","",["flag-zw"],5,28,63,0],
-		"1f201":[["\uD83C\uDE01"],"\uE203","\uDBBA\uDF24",["koko"],5,29,63,0],
-		"1f202-fe0f":[["\uD83C\uDE02\uFE0F","\uD83C\uDE02"],"\uE228","\uDBBA\uDF3F",["sa"],5,30,63,0],
-		"1f21a":[["\uD83C\uDE1A"],"\uE216","\uDBBA\uDF3A",["u7121"],5,31,63,0],
-		"1f22f":[["\uD83C\uDE2F"],"\uE22C","\uDBBA\uDF40",["u6307"],5,32,63,0],
-		"1f232":[["\uD83C\uDE32"],"","\uDBBA\uDF2E",["u7981"],5,33,63,0],
-		"1f233":[["\uD83C\uDE33"],"\uE22B","\uDBBA\uDF2F",["u7a7a"],5,34,63,0],
-		"1f234":[["\uD83C\uDE34"],"","\uDBBA\uDF30",["u5408"],5,35,63,0],
-		"1f235":[["\uD83C\uDE35"],"\uE22A","\uDBBA\uDF31",["u6e80"],5,36,63,0],
-		"1f236":[["\uD83C\uDE36"],"\uE215","\uDBBA\uDF39",["u6709"],5,37,63,0],
-		"1f237-fe0f":[["\uD83C\uDE37\uFE0F","\uD83C\uDE37"],"\uE217","\uDBBA\uDF3B",["u6708"],5,38,63,0],
-		"1f238":[["\uD83C\uDE38"],"\uE218","\uDBBA\uDF3C",["u7533"],5,39,63,0],
-		"1f239":[["\uD83C\uDE39"],"\uE227","\uDBBA\uDF3E",["u5272"],5,40,63,0],
-		"1f23a":[["\uD83C\uDE3A"],"\uE22D","\uDBBA\uDF41",["u55b6"],5,41,63,0],
-		"1f250":[["\uD83C\uDE50"],"\uE226","\uDBBA\uDF3D",["ideograph_advantage"],5,42,63,0],
-		"1f251":[["\uD83C\uDE51"],"","\uDBBA\uDF50",["accept"],5,43,63,0],
-		"1f300":[["\uD83C\uDF00"],"\uE443","\uDBB8\uDC05",["cyclone"],5,44,63,0],
-		"1f301":[["\uD83C\uDF01"],"","\uDBB8\uDC06",["foggy"],5,45,63,0],
-		"1f302":[["\uD83C\uDF02"],"\uE43C","\uDBB8\uDC07",["closed_umbrella"],5,46,63,0],
-		"1f303":[["\uD83C\uDF03"],"\uE44B","\uDBB8\uDC08",["night_with_stars"],5,47,63,0],
-		"1f304":[["\uD83C\uDF04"],"\uE04D","\uDBB8\uDC09",["sunrise_over_mountains"],5,48,63,0],
-		"1f305":[["\uD83C\uDF05"],"\uE449","\uDBB8\uDC0A",["sunrise"],5,49,63,0],
-		"1f306":[["\uD83C\uDF06"],"\uE146","\uDBB8\uDC0B",["city_sunset"],5,50,63,0],
-		"1f307":[["\uD83C\uDF07"],"\uE44A","\uDBB8\uDC0C",["city_sunrise"],5,51,63,0],
-		"1f308":[["\uD83C\uDF08"],"\uE44C","\uDBB8\uDC0D",["rainbow"],6,0,63,0],
-		"1f309":[["\uD83C\uDF09"],"","\uDBB8\uDC10",["bridge_at_night"],6,1,63,0],
-		"1f30a":[["\uD83C\uDF0A"],"\uE43E","\uDBB8\uDC38",["ocean"],6,2,63,0],
-		"1f30b":[["\uD83C\uDF0B"],"","\uDBB8\uDC3A",["volcano"],6,3,63,0],
-		"1f30c":[["\uD83C\uDF0C"],"","\uDBB8\uDC3B",["milky_way"],6,4,63,0],
-		"1f30d":[["\uD83C\uDF0D"],"","",["earth_africa"],6,5,63,0],
-		"1f30e":[["\uD83C\uDF0E"],"","",["earth_americas"],6,6,63,0],
-		"1f30f":[["\uD83C\uDF0F"],"","\uDBB8\uDC39",["earth_asia"],6,7,63,0],
-		"1f310":[["\uD83C\uDF10"],"","",["globe_with_meridians"],6,8,63,0],
-		"1f311":[["\uD83C\uDF11"],"","\uDBB8\uDC11",["new_moon"],6,9,63,0],
-		"1f312":[["\uD83C\uDF12"],"","",["waxing_crescent_moon"],6,10,63,0],
-		"1f313":[["\uD83C\uDF13"],"","\uDBB8\uDC13",["first_quarter_moon"],6,11,63,0],
-		"1f314":[["\uD83C\uDF14"],"","\uDBB8\uDC12",["moon","waxing_gibbous_moon"],6,12,63,0],
-		"1f315":[["\uD83C\uDF15"],"","\uDBB8\uDC15",["full_moon"],6,13,63,0],
-		"1f316":[["\uD83C\uDF16"],"","",["waning_gibbous_moon"],6,14,63,0],
-		"1f317":[["\uD83C\uDF17"],"","",["last_quarter_moon"],6,15,63,0],
-		"1f318":[["\uD83C\uDF18"],"","",["waning_crescent_moon"],6,16,63,0],
-		"1f319":[["\uD83C\uDF19"],"\uE04C","\uDBB8\uDC14",["crescent_moon"],6,17,63,0],
-		"1f31a":[["\uD83C\uDF1A"],"","",["new_moon_with_face"],6,18,63,0],
-		"1f31b":[["\uD83C\uDF1B"],"","\uDBB8\uDC16",["first_quarter_moon_with_face"],6,19,63,0],
-		"1f31c":[["\uD83C\uDF1C"],"","",["last_quarter_moon_with_face"],6,20,63,0],
-		"1f31d":[["\uD83C\uDF1D"],"","",["full_moon_with_face"],6,21,63,0],
-		"1f31e":[["\uD83C\uDF1E"],"","",["sun_with_face"],6,22,63,0],
-		"1f31f":[["\uD83C\uDF1F"],"\uE335","\uDBBA\uDF69",["star2"],6,23,63,0],
-		"1f320":[["\uD83C\uDF20"],"","\uDBBA\uDF6A",["stars"],6,24,63,0],
-		"1f321-fe0f":[["\uD83C\uDF21\uFE0F","\uD83C\uDF21"],"","",["thermometer"],6,25,31,0],
-		"1f324-fe0f":[["\uD83C\uDF24\uFE0F","\uD83C\uDF24"],"","",["mostly_sunny","sun_small_cloud"],6,26,31,0],
-		"1f325-fe0f":[["\uD83C\uDF25\uFE0F","\uD83C\uDF25"],"","",["barely_sunny","sun_behind_cloud"],6,27,31,0],
-		"1f326-fe0f":[["\uD83C\uDF26\uFE0F","\uD83C\uDF26"],"","",["partly_sunny_rain","sun_behind_rain_cloud"],6,28,31,0],
-		"1f327-fe0f":[["\uD83C\uDF27\uFE0F","\uD83C\uDF27"],"","",["rain_cloud"],6,29,31,0],
-		"1f328-fe0f":[["\uD83C\uDF28\uFE0F","\uD83C\uDF28"],"","",["snow_cloud"],6,30,31,0],
-		"1f329-fe0f":[["\uD83C\uDF29\uFE0F","\uD83C\uDF29"],"","",["lightning","lightning_cloud"],6,31,31,0],
-		"1f32a-fe0f":[["\uD83C\uDF2A\uFE0F","\uD83C\uDF2A"],"","",["tornado","tornado_cloud"],6,32,31,0],
-		"1f32b-fe0f":[["\uD83C\uDF2B\uFE0F","\uD83C\uDF2B"],"","",["fog"],6,33,31,0],
-		"1f32c-fe0f":[["\uD83C\uDF2C\uFE0F","\uD83C\uDF2C"],"","",["wind_blowing_face"],6,34,31,0],
-		"1f32d":[["\uD83C\uDF2D"],"","",["hotdog"],6,35,31,0],
-		"1f32e":[["\uD83C\uDF2E"],"","",["taco"],6,36,31,0],
-		"1f32f":[["\uD83C\uDF2F"],"","",["burrito"],6,37,31,0],
-		"1f330":[["\uD83C\uDF30"],"","\uDBB8\uDC4C",["chestnut"],6,38,63,0],
-		"1f331":[["\uD83C\uDF31"],"","\uDBB8\uDC3E",["seedling"],6,39,63,0],
-		"1f332":[["\uD83C\uDF32"],"","",["evergreen_tree"],6,40,63,0],
-		"1f333":[["\uD83C\uDF33"],"","",["deciduous_tree"],6,41,63,0],
-		"1f334":[["\uD83C\uDF34"],"\uE307","\uDBB8\uDC47",["palm_tree"],6,42,63,0],
-		"1f335":[["\uD83C\uDF35"],"\uE308","\uDBB8\uDC48",["cactus"],6,43,63,0],
-		"1f336-fe0f":[["\uD83C\uDF36\uFE0F","\uD83C\uDF36"],"","",["hot_pepper"],6,44,31,0],
-		"1f337":[["\uD83C\uDF37"],"\uE304","\uDBB8\uDC3D",["tulip"],6,45,63,0],
-		"1f338":[["\uD83C\uDF38"],"\uE030","\uDBB8\uDC40",["cherry_blossom"],6,46,63,0],
-		"1f339":[["\uD83C\uDF39"],"\uE032","\uDBB8\uDC41",["rose"],6,47,63,0],
-		"1f33a":[["\uD83C\uDF3A"],"\uE303","\uDBB8\uDC45",["hibiscus"],6,48,63,0],
-		"1f33b":[["\uD83C\uDF3B"],"\uE305","\uDBB8\uDC46",["sunflower"],6,49,63,0],
-		"1f33c":[["\uD83C\uDF3C"],"","\uDBB8\uDC4D",["blossom"],6,50,63,0],
-		"1f33d":[["\uD83C\uDF3D"],"","\uDBB8\uDC4A",["corn"],6,51,63,0],
-		"1f33e":[["\uD83C\uDF3E"],"\uE444","\uDBB8\uDC49",["ear_of_rice"],7,0,63,0],
-		"1f33f":[["\uD83C\uDF3F"],"","\uDBB8\uDC4E",["herb"],7,1,63,0],
-		"1f340":[["\uD83C\uDF40"],"\uE110","\uDBB8\uDC3C",["four_leaf_clover"],7,2,63,0],
-		"1f341":[["\uD83C\uDF41"],"\uE118","\uDBB8\uDC3F",["maple_leaf"],7,3,63,0],
-		"1f342":[["\uD83C\uDF42"],"\uE119","\uDBB8\uDC42",["fallen_leaf"],7,4,63,0],
-		"1f343":[["\uD83C\uDF43"],"\uE447","\uDBB8\uDC43",["leaves"],7,5,63,0],
-		"1f344":[["\uD83C\uDF44"],"","\uDBB8\uDC4B",["mushroom"],7,6,63,0],
-		"1f345":[["\uD83C\uDF45"],"\uE349","\uDBB8\uDC55",["tomato"],7,7,63,0],
-		"1f346":[["\uD83C\uDF46"],"\uE34A","\uDBB8\uDC56",["eggplant"],7,8,63,0],
-		"1f347":[["\uD83C\uDF47"],"","\uDBB8\uDC59",["grapes"],7,9,63,0],
-		"1f348":[["\uD83C\uDF48"],"","\uDBB8\uDC57",["melon"],7,10,63,0],
-		"1f349":[["\uD83C\uDF49"],"\uE348","\uDBB8\uDC54",["watermelon"],7,11,63,0],
-		"1f34a":[["\uD83C\uDF4A"],"\uE346","\uDBB8\uDC52",["tangerine"],7,12,63,0],
-		"1f34b":[["\uD83C\uDF4B"],"","",["lemon"],7,13,63,0],
-		"1f34c":[["\uD83C\uDF4C"],"","\uDBB8\uDC50",["banana"],7,14,63,0],
-		"1f34d":[["\uD83C\uDF4D"],"","\uDBB8\uDC58",["pineapple"],7,15,63,0],
-		"1f34e":[["\uD83C\uDF4E"],"\uE345","\uDBB8\uDC51",["apple"],7,16,63,0],
-		"1f34f":[["\uD83C\uDF4F"],"","\uDBB8\uDC5B",["green_apple"],7,17,63,0],
-		"1f350":[["\uD83C\uDF50"],"","",["pear"],7,18,63,0],
-		"1f351":[["\uD83C\uDF51"],"","\uDBB8\uDC5A",["peach"],7,19,63,0],
-		"1f352":[["\uD83C\uDF52"],"","\uDBB8\uDC4F",["cherries"],7,20,63,0],
-		"1f353":[["\uD83C\uDF53"],"\uE347","\uDBB8\uDC53",["strawberry"],7,21,63,0],
-		"1f354":[["\uD83C\uDF54"],"\uE120","\uDBBA\uDD60",["hamburger"],7,22,63,0],
-		"1f355":[["\uD83C\uDF55"],"","\uDBBA\uDD75",["pizza"],7,23,63,0],
-		"1f356":[["\uD83C\uDF56"],"","\uDBBA\uDD72",["meat_on_bone"],7,24,63,0],
-		"1f357":[["\uD83C\uDF57"],"","\uDBBA\uDD76",["poultry_leg"],7,25,63,0],
-		"1f358":[["\uD83C\uDF58"],"\uE33D","\uDBBA\uDD69",["rice_cracker"],7,26,63,0],
-		"1f359":[["\uD83C\uDF59"],"\uE342","\uDBBA\uDD61",["rice_ball"],7,27,63,0],
-		"1f35a":[["\uD83C\uDF5A"],"\uE33E","\uDBBA\uDD6A",["rice"],7,28,63,0],
-		"1f35b":[["\uD83C\uDF5B"],"\uE341","\uDBBA\uDD6C",["curry"],7,29,63,0],
-		"1f35c":[["\uD83C\uDF5C"],"\uE340","\uDBBA\uDD63",["ramen"],7,30,63,0],
-		"1f35d":[["\uD83C\uDF5D"],"\uE33F","\uDBBA\uDD6B",["spaghetti"],7,31,63,0],
-		"1f35e":[["\uD83C\uDF5E"],"\uE339","\uDBBA\uDD64",["bread"],7,32,63,0],
-		"1f35f":[["\uD83C\uDF5F"],"\uE33B","\uDBBA\uDD67",["fries"],7,33,63,0],
-		"1f360":[["\uD83C\uDF60"],"","\uDBBA\uDD74",["sweet_potato"],7,34,63,0],
-		"1f361":[["\uD83C\uDF61"],"\uE33C","\uDBBA\uDD68",["dango"],7,35,63,0],
-		"1f362":[["\uD83C\uDF62"],"\uE343","\uDBBA\uDD6D",["oden"],7,36,63,0],
-		"1f363":[["\uD83C\uDF63"],"\uE344","\uDBBA\uDD6E",["sushi"],7,37,63,0],
-		"1f364":[["\uD83C\uDF64"],"","\uDBBA\uDD7F",["fried_shrimp"],7,38,63,0],
-		"1f365":[["\uD83C\uDF65"],"","\uDBBA\uDD73",["fish_cake"],7,39,63,0],
-		"1f366":[["\uD83C\uDF66"],"\uE33A","\uDBBA\uDD66",["icecream"],7,40,63,0],
-		"1f367":[["\uD83C\uDF67"],"\uE43F","\uDBBA\uDD71",["shaved_ice"],7,41,63,0],
-		"1f368":[["\uD83C\uDF68"],"","\uDBBA\uDD77",["ice_cream"],7,42,63,0],
-		"1f369":[["\uD83C\uDF69"],"","\uDBBA\uDD78",["doughnut"],7,43,63,0],
-		"1f36a":[["\uD83C\uDF6A"],"","\uDBBA\uDD79",["cookie"],7,44,63,0],
-		"1f36b":[["\uD83C\uDF6B"],"","\uDBBA\uDD7A",["chocolate_bar"],7,45,63,0],
-		"1f36c":[["\uD83C\uDF6C"],"","\uDBBA\uDD7B",["candy"],7,46,63,0],
-		"1f36d":[["\uD83C\uDF6D"],"","\uDBBA\uDD7C",["lollipop"],7,47,63,0],
-		"1f36e":[["\uD83C\uDF6E"],"","\uDBBA\uDD7D",["custard"],7,48,63,0],
-		"1f36f":[["\uD83C\uDF6F"],"","\uDBBA\uDD7E",["honey_pot"],7,49,63,0],
-		"1f370":[["\uD83C\uDF70"],"\uE046","\uDBBA\uDD62",["cake"],7,50,63,0],
-		"1f371":[["\uD83C\uDF71"],"\uE34C","\uDBBA\uDD6F",["bento"],7,51,63,0],
-		"1f372":[["\uD83C\uDF72"],"\uE34D","\uDBBA\uDD70",["stew"],8,0,63,0],
-		"1f373":[["\uD83C\uDF73"],"\uE147","\uDBBA\uDD65",["fried_egg","cooking"],8,1,63,0],
-		"1f374":[["\uD83C\uDF74"],"\uE043","\uDBBA\uDD80",["fork_and_knife"],8,2,63,0],
-		"1f375":[["\uD83C\uDF75"],"\uE338","\uDBBA\uDD84",["tea"],8,3,63,0],
-		"1f376":[["\uD83C\uDF76"],"\uE30B","\uDBBA\uDD85",["sake"],8,4,63,0],
-		"1f377":[["\uD83C\uDF77"],"","\uDBBA\uDD86",["wine_glass"],8,5,63,0],
-		"1f378":[["\uD83C\uDF78"],"\uE044","\uDBBA\uDD82",["cocktail"],8,6,63,0],
-		"1f379":[["\uD83C\uDF79"],"","\uDBBA\uDD88",["tropical_drink"],8,7,63,0],
-		"1f37a":[["\uD83C\uDF7A"],"\uE047","\uDBBA\uDD83",["beer"],8,8,63,0],
-		"1f37b":[["\uD83C\uDF7B"],"\uE30C","\uDBBA\uDD87",["beers"],8,9,63,0],
-		"1f37c":[["\uD83C\uDF7C"],"","",["baby_bottle"],8,10,63,0],
-		"1f37d-fe0f":[["\uD83C\uDF7D\uFE0F","\uD83C\uDF7D"],"","",["knife_fork_plate"],8,11,31,0],
-		"1f37e":[["\uD83C\uDF7E"],"","",["champagne"],8,12,31,0],
-		"1f37f":[["\uD83C\uDF7F"],"","",["popcorn"],8,13,31,0],
-		"1f380":[["\uD83C\uDF80"],"\uE314","\uDBB9\uDD0F",["ribbon"],8,14,63,0],
-		"1f381":[["\uD83C\uDF81"],"\uE112","\uDBB9\uDD10",["gift"],8,15,63,0],
-		"1f382":[["\uD83C\uDF82"],"\uE34B","\uDBB9\uDD11",["birthday"],8,16,63,0],
-		"1f383":[["\uD83C\uDF83"],"\uE445","\uDBB9\uDD1F",["jack_o_lantern"],8,17,63,0],
-		"1f384":[["\uD83C\uDF84"],"\uE033","\uDBB9\uDD12",["christmas_tree"],8,18,63,0],
-		"1f385":[["\uD83C\uDF85"],"\uE448","\uDBB9\uDD13",["santa"],8,19,63,0],
-		"1f386":[["\uD83C\uDF86"],"\uE117","\uDBB9\uDD15",["fireworks"],8,25,63,0],
-		"1f387":[["\uD83C\uDF87"],"\uE440","\uDBB9\uDD1D",["sparkler"],8,26,63,0],
-		"1f388":[["\uD83C\uDF88"],"\uE310","\uDBB9\uDD16",["balloon"],8,27,63,0],
-		"1f389":[["\uD83C\uDF89"],"\uE312","\uDBB9\uDD17",["tada"],8,28,63,0],
-		"1f38a":[["\uD83C\uDF8A"],"","\uDBB9\uDD20",["confetti_ball"],8,29,63,0],
-		"1f38b":[["\uD83C\uDF8B"],"","\uDBB9\uDD21",["tanabata_tree"],8,30,63,0],
-		"1f38c":[["\uD83C\uDF8C"],"\uE143","\uDBB9\uDD14",["crossed_flags"],8,31,63,0],
-		"1f38d":[["\uD83C\uDF8D"],"\uE436","\uDBB9\uDD18",["bamboo"],8,32,63,0],
-		"1f38e":[["\uD83C\uDF8E"],"\uE438","\uDBB9\uDD19",["dolls"],8,33,63,0],
-		"1f38f":[["\uD83C\uDF8F"],"\uE43B","\uDBB9\uDD1C",["flags"],8,34,63,0],
-		"1f390":[["\uD83C\uDF90"],"\uE442","\uDBB9\uDD1E",["wind_chime"],8,35,63,0],
-		"1f391":[["\uD83C\uDF91"],"\uE446","\uDBB8\uDC17",["rice_scene"],8,36,63,0],
-		"1f392":[["\uD83C\uDF92"],"\uE43A","\uDBB9\uDD1B",["school_satchel"],8,37,63,0],
-		"1f393":[["\uD83C\uDF93"],"\uE439","\uDBB9\uDD1A",["mortar_board"],8,38,63,0],
-		"1f396-fe0f":[["\uD83C\uDF96\uFE0F","\uD83C\uDF96"],"","",["medal"],8,39,31,0],
-		"1f397-fe0f":[["\uD83C\uDF97\uFE0F","\uD83C\uDF97"],"","",["reminder_ribbon"],8,40,31,0],
-		"1f399-fe0f":[["\uD83C\uDF99\uFE0F","\uD83C\uDF99"],"","",["studio_microphone"],8,41,31,0],
-		"1f39a-fe0f":[["\uD83C\uDF9A\uFE0F","\uD83C\uDF9A"],"","",["level_slider"],8,42,31,0],
-		"1f39b-fe0f":[["\uD83C\uDF9B\uFE0F","\uD83C\uDF9B"],"","",["control_knobs"],8,43,31,0],
-		"1f39e-fe0f":[["\uD83C\uDF9E\uFE0F","\uD83C\uDF9E"],"","",["film_frames"],8,44,31,0],
-		"1f39f-fe0f":[["\uD83C\uDF9F\uFE0F","\uD83C\uDF9F"],"","",["admission_tickets"],8,45,31,0],
-		"1f3a0":[["\uD83C\uDFA0"],"","\uDBB9\uDFFC",["carousel_horse"],8,46,63,0],
-		"1f3a1":[["\uD83C\uDFA1"],"\uE124","\uDBB9\uDFFD",["ferris_wheel"],8,47,63,0],
-		"1f3a2":[["\uD83C\uDFA2"],"\uE433","\uDBB9\uDFFE",["roller_coaster"],8,48,63,0],
-		"1f3a3":[["\uD83C\uDFA3"],"","\uDBB9\uDFFF",["fishing_pole_and_fish"],8,49,63,0],
-		"1f3a4":[["\uD83C\uDFA4"],"\uE03C","\uDBBA\uDC00",["microphone"],8,50,63,0],
-		"1f3a5":[["\uD83C\uDFA5"],"\uE03D","\uDBBA\uDC01",["movie_camera"],8,51,63,0],
-		"1f3a6":[["\uD83C\uDFA6"],"\uE507","\uDBBA\uDC02",["cinema"],9,0,63,0],
-		"1f3a7":[["\uD83C\uDFA7"],"\uE30A","\uDBBA\uDC03",["headphones"],9,1,63,0],
-		"1f3a8":[["\uD83C\uDFA8"],"\uE502","\uDBBA\uDC04",["art"],9,2,63,0],
-		"1f3a9":[["\uD83C\uDFA9"],"\uE503","\uDBBA\uDC05",["tophat"],9,3,63,0],
-		"1f3aa":[["\uD83C\uDFAA"],"","\uDBBA\uDC06",["circus_tent"],9,4,63,0],
-		"1f3ab":[["\uD83C\uDFAB"],"\uE125","\uDBBA\uDC07",["ticket"],9,5,63,0],
-		"1f3ac":[["\uD83C\uDFAC"],"\uE324","\uDBBA\uDC08",["clapper"],9,6,63,0],
-		"1f3ad":[["\uD83C\uDFAD"],"","\uDBBA\uDC09",["performing_arts"],9,7,63,0],
-		"1f3ae":[["\uD83C\uDFAE"],"","\uDBBA\uDC0A",["video_game"],9,8,63,0],
-		"1f3af":[["\uD83C\uDFAF"],"\uE130","\uDBBA\uDC0C",["dart"],9,9,63,0],
-		"1f3b0":[["\uD83C\uDFB0"],"\uE133","\uDBBA\uDC0D",["slot_machine"],9,10,63,0],
-		"1f3b1":[["\uD83C\uDFB1"],"\uE42C","\uDBBA\uDC0E",["8ball"],9,11,63,0],
-		"1f3b2":[["\uD83C\uDFB2"],"","\uDBBA\uDC0F",["game_die"],9,12,63,0],
-		"1f3b3":[["\uD83C\uDFB3"],"","\uDBBA\uDC10",["bowling"],9,13,63,0],
-		"1f3b4":[["\uD83C\uDFB4"],"","\uDBBA\uDC11",["flower_playing_cards"],9,14,63,0],
-		"1f3b5":[["\uD83C\uDFB5"],"\uE03E","\uDBBA\uDC13",["musical_note"],9,15,63,0],
-		"1f3b6":[["\uD83C\uDFB6"],"\uE326","\uDBBA\uDC14",["notes"],9,16,63,0],
-		"1f3b7":[["\uD83C\uDFB7"],"\uE040","\uDBBA\uDC15",["saxophone"],9,17,63,0],
-		"1f3b8":[["\uD83C\uDFB8"],"\uE041","\uDBBA\uDC16",["guitar"],9,18,63,0],
-		"1f3b9":[["\uD83C\uDFB9"],"","\uDBBA\uDC17",["musical_keyboard"],9,19,63,0],
-		"1f3ba":[["\uD83C\uDFBA"],"\uE042","\uDBBA\uDC18",["trumpet"],9,20,63,0],
-		"1f3bb":[["\uD83C\uDFBB"],"","\uDBBA\uDC19",["violin"],9,21,63,0],
-		"1f3bc":[["\uD83C\uDFBC"],"","\uDBBA\uDC1A",["musical_score"],9,22,63,0],
-		"1f3bd":[["\uD83C\uDFBD"],"","\uDBB9\uDFD0",["running_shirt_with_sash"],9,23,63,0],
-		"1f3be":[["\uD83C\uDFBE"],"\uE015","\uDBB9\uDFD3",["tennis"],9,24,63,0],
-		"1f3bf":[["\uD83C\uDFBF"],"\uE013","\uDBB9\uDFD5",["ski"],9,25,63,0],
-		"1f3c0":[["\uD83C\uDFC0"],"\uE42A","\uDBB9\uDFD6",["basketball"],9,26,63,0],
-		"1f3c1":[["\uD83C\uDFC1"],"\uE132","\uDBB9\uDFD7",["checkered_flag"],9,27,63,0],
-		"1f3c2":[["\uD83C\uDFC2"],"","\uDBB9\uDFD8",["snowboarder"],9,28,63,0],
-		"1f3c3-200d-2640-fe0f":[["\uD83C\uDFC3\u200D\u2640\uFE0F","\uD83C\uDFC3\u200D\u2640"],"","",["woman-running"],9,34,31,0],
-		"1f3c3-200d-2642-fe0f":[["\uD83C\uDFC3\u200D\u2642\uFE0F","\uD83C\uDFC3\u200D\u2642","\uD83C\uDFC3"],"","",["man-running","runner","running"],9,40,31,0],
-		"1f3c4-200d-2640-fe0f":[["\uD83C\uDFC4\u200D\u2640\uFE0F","\uD83C\uDFC4\u200D\u2640"],"","",["woman-surfing"],10,0,31,0],
-		"1f3c4-200d-2642-fe0f":[["\uD83C\uDFC4\u200D\u2642\uFE0F","\uD83C\uDFC4\u200D\u2642","\uD83C\uDFC4"],"","",["man-surfing","surfer"],10,6,31,0],
-		"1f3c5":[["\uD83C\uDFC5"],"","",["sports_medal"],10,18,31,0],
-		"1f3c6":[["\uD83C\uDFC6"],"\uE131","\uDBB9\uDFDB",["trophy"],10,19,63,0],
-		"1f3c7":[["\uD83C\uDFC7"],"","",["horse_racing"],10,20,63,0],
-		"1f3c8":[["\uD83C\uDFC8"],"\uE42B","\uDBB9\uDFDD",["football"],10,26,63,0],
-		"1f3c9":[["\uD83C\uDFC9"],"","",["rugby_football"],10,27,63,0],
-		"1f3ca-200d-2640-fe0f":[["\uD83C\uDFCA\u200D\u2640\uFE0F","\uD83C\uDFCA\u200D\u2640"],"","",["woman-swimming"],10,28,31,0],
-		"1f3ca-200d-2642-fe0f":[["\uD83C\uDFCA\u200D\u2642\uFE0F","\uD83C\uDFCA\u200D\u2642","\uD83C\uDFCA"],"","",["man-swimming","swimmer"],10,34,31,0],
-		"1f3cb-fe0f-200d-2640-fe0f":[["\uD83C\uDFCB\uFE0F\u200D\u2640\uFE0F"],"","",["woman-lifting-weights"],10,46,15,0],
-		"1f3cb-fe0f-200d-2642-fe0f":[["\uD83C\uDFCB\uFE0F\u200D\u2642\uFE0F","\uD83C\uDFCB\uFE0F","\uD83C\uDFCB"],"","",["man-lifting-weights","weight_lifter"],11,0,15,0],
-		"1f3cc-fe0f-200d-2640-fe0f":[["\uD83C\uDFCC\uFE0F\u200D\u2640\uFE0F"],"","",["woman-golfing"],11,12,15,0],
-		"1f3cc-fe0f-200d-2642-fe0f":[["\uD83C\uDFCC\uFE0F\u200D\u2642\uFE0F","\uD83C\uDFCC\uFE0F","\uD83C\uDFCC"],"","",["man-golfing","golfer"],11,18,15,0],
-		"1f3cd-fe0f":[["\uD83C\uDFCD\uFE0F","\uD83C\uDFCD"],"","",["racing_motorcycle"],11,30,31,0],
-		"1f3ce-fe0f":[["\uD83C\uDFCE\uFE0F","\uD83C\uDFCE"],"","",["racing_car"],11,31,31,0],
-		"1f3cf":[["\uD83C\uDFCF"],"","",["cricket_bat_and_ball"],11,32,31,0],
-		"1f3d0":[["\uD83C\uDFD0"],"","",["volleyball"],11,33,31,0],
-		"1f3d1":[["\uD83C\uDFD1"],"","",["field_hockey_stick_and_ball"],11,34,31,0],
-		"1f3d2":[["\uD83C\uDFD2"],"","",["ice_hockey_stick_and_puck"],11,35,31,0],
-		"1f3d3":[["\uD83C\uDFD3"],"","",["table_tennis_paddle_and_ball"],11,36,31,0],
-		"1f3d4-fe0f":[["\uD83C\uDFD4\uFE0F","\uD83C\uDFD4"],"","",["snow_capped_mountain"],11,37,31,0],
-		"1f3d5-fe0f":[["\uD83C\uDFD5\uFE0F","\uD83C\uDFD5"],"","",["camping"],11,38,31,0],
-		"1f3d6-fe0f":[["\uD83C\uDFD6\uFE0F","\uD83C\uDFD6"],"","",["beach_with_umbrella"],11,39,31,0],
-		"1f3d7-fe0f":[["\uD83C\uDFD7\uFE0F","\uD83C\uDFD7"],"","",["building_construction"],11,40,31,0],
-		"1f3d8-fe0f":[["\uD83C\uDFD8\uFE0F","\uD83C\uDFD8"],"","",["house_buildings"],11,41,31,0],
-		"1f3d9-fe0f":[["\uD83C\uDFD9\uFE0F","\uD83C\uDFD9"],"","",["cityscape"],11,42,31,0],
-		"1f3da-fe0f":[["\uD83C\uDFDA\uFE0F","\uD83C\uDFDA"],"","",["derelict_house_building"],11,43,31,0],
-		"1f3db-fe0f":[["\uD83C\uDFDB\uFE0F","\uD83C\uDFDB"],"","",["classical_building"],11,44,31,0],
-		"1f3dc-fe0f":[["\uD83C\uDFDC\uFE0F","\uD83C\uDFDC"],"","",["desert"],11,45,31,0],
-		"1f3dd-fe0f":[["\uD83C\uDFDD\uFE0F","\uD83C\uDFDD"],"","",["desert_island"],11,46,31,0],
-		"1f3de-fe0f":[["\uD83C\uDFDE\uFE0F","\uD83C\uDFDE"],"","",["national_park"],11,47,31,0],
-		"1f3df-fe0f":[["\uD83C\uDFDF\uFE0F","\uD83C\uDFDF"],"","",["stadium"],11,48,31,0],
-		"1f3e0":[["\uD83C\uDFE0"],"\uE036","\uDBB9\uDCB0",["house"],11,49,63,0],
-		"1f3e1":[["\uD83C\uDFE1"],"","\uDBB9\uDCB1",["house_with_garden"],11,50,63,0],
-		"1f3e2":[["\uD83C\uDFE2"],"\uE038","\uDBB9\uDCB2",["office"],11,51,63,0],
-		"1f3e3":[["\uD83C\uDFE3"],"\uE153","\uDBB9\uDCB3",["post_office"],12,0,63,0],
-		"1f3e4":[["\uD83C\uDFE4"],"","",["european_post_office"],12,1,63,0],
-		"1f3e5":[["\uD83C\uDFE5"],"\uE155","\uDBB9\uDCB4",["hospital"],12,2,63,0],
-		"1f3e6":[["\uD83C\uDFE6"],"\uE14D","\uDBB9\uDCB5",["bank"],12,3,63,0],
-		"1f3e7":[["\uD83C\uDFE7"],"\uE154","\uDBB9\uDCB6",["atm"],12,4,63,0],
-		"1f3e8":[["\uD83C\uDFE8"],"\uE158","\uDBB9\uDCB7",["hotel"],12,5,63,0],
-		"1f3e9":[["\uD83C\uDFE9"],"\uE501","\uDBB9\uDCB8",["love_hotel"],12,6,63,0],
-		"1f3ea":[["\uD83C\uDFEA"],"\uE156","\uDBB9\uDCB9",["convenience_store"],12,7,63,0],
-		"1f3eb":[["\uD83C\uDFEB"],"\uE157","\uDBB9\uDCBA",["school"],12,8,63,0],
-		"1f3ec":[["\uD83C\uDFEC"],"\uE504","\uDBB9\uDCBD",["department_store"],12,9,63,0],
-		"1f3ed":[["\uD83C\uDFED"],"\uE508","\uDBB9\uDCC0",["factory"],12,10,63,0],
-		"1f3ee":[["\uD83C\uDFEE"],"","\uDBB9\uDCC2",["izakaya_lantern","lantern"],12,11,63,0],
-		"1f3ef":[["\uD83C\uDFEF"],"\uE505","\uDBB9\uDCBE",["japanese_castle"],12,12,63,0],
-		"1f3f0":[["\uD83C\uDFF0"],"\uE506","\uDBB9\uDCBF",["european_castle"],12,13,63,0],
-		"1f3f3-fe0f-200d-1f308":[["\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08","\uD83C\uDFF3\u200D\uD83C\uDF08"],"","",["rainbow-flag"],12,14,63,0],
-		"1f3f3-fe0f":[["\uD83C\uDFF3\uFE0F","\uD83C\uDFF3"],"","",["waving_white_flag"],12,15,31,0],
-		"1f3f4-e0067-e0062-e0065-e006e-e0067-e007f":[["\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F"],"","",["flag-england"],12,16,31,0],
-		"1f3f4-e0067-e0062-e0073-e0063-e0074-e007f":[["\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F"],"","",["flag-scotland"],12,17,31,0],
-		"1f3f4-e0067-e0062-e0077-e006c-e0073-e007f":[["\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73\uDB40\uDC7F"],"","",["flag-wales"],12,18,31,0],
-		"1f3f4":[["\uD83C\uDFF4"],"","",["waving_black_flag"],12,19,31,0],
-		"1f3f5-fe0f":[["\uD83C\uDFF5\uFE0F","\uD83C\uDFF5"],"","",["rosette"],12,20,31,0],
-		"1f3f7-fe0f":[["\uD83C\uDFF7\uFE0F","\uD83C\uDFF7"],"","",["label"],12,21,31,0],
-		"1f3f8":[["\uD83C\uDFF8"],"","",["badminton_racquet_and_shuttlecock"],12,22,31,0],
-		"1f3f9":[["\uD83C\uDFF9"],"","",["bow_and_arrow"],12,23,31,0],
-		"1f3fa":[["\uD83C\uDFFA"],"","",["amphora"],12,24,31,0],
-		"1f3fb":[["\uD83C\uDFFB"],"","",["skin-tone-2"],12,25,31,0],
-		"1f3fc":[["\uD83C\uDFFC"],"","",["skin-tone-3"],12,26,31,0],
-		"1f3fd":[["\uD83C\uDFFD"],"","",["skin-tone-4"],12,27,31,0],
-		"1f3fe":[["\uD83C\uDFFE"],"","",["skin-tone-5"],12,28,31,0],
-		"1f3ff":[["\uD83C\uDFFF"],"","",["skin-tone-6"],12,29,31,0],
-		"1f400":[["\uD83D\uDC00"],"","",["rat"],12,30,63,0],
-		"1f401":[["\uD83D\uDC01"],"","",["mouse2"],12,31,63,0],
-		"1f402":[["\uD83D\uDC02"],"","",["ox"],12,32,63,0],
-		"1f403":[["\uD83D\uDC03"],"","",["water_buffalo"],12,33,63,0],
-		"1f404":[["\uD83D\uDC04"],"","",["cow2"],12,34,63,0],
-		"1f405":[["\uD83D\uDC05"],"","",["tiger2"],12,35,63,0],
-		"1f406":[["\uD83D\uDC06"],"","",["leopard"],12,36,63,0],
-		"1f407":[["\uD83D\uDC07"],"","",["rabbit2"],12,37,63,0],
-		"1f408":[["\uD83D\uDC08"],"","",["cat2"],12,38,63,0],
-		"1f409":[["\uD83D\uDC09"],"","",["dragon"],12,39,63,0],
-		"1f40a":[["\uD83D\uDC0A"],"","",["crocodile"],12,40,63,0],
-		"1f40b":[["\uD83D\uDC0B"],"","",["whale2"],12,41,63,0],
-		"1f40c":[["\uD83D\uDC0C"],"","\uDBB8\uDDB9",["snail"],12,42,63,0],
-		"1f40d":[["\uD83D\uDC0D"],"\uE52D","\uDBB8\uDDD3",["snake"],12,43,63,0],
-		"1f40e":[["\uD83D\uDC0E"],"\uE134","\uDBB9\uDFDC",["racehorse"],12,44,63,0],
-		"1f40f":[["\uD83D\uDC0F"],"","",["ram"],12,45,63,0],
-		"1f410":[["\uD83D\uDC10"],"","",["goat"],12,46,63,0],
-		"1f411":[["\uD83D\uDC11"],"\uE529","\uDBB8\uDDCF",["sheep"],12,47,63,0],
-		"1f412":[["\uD83D\uDC12"],"\uE528","\uDBB8\uDDCE",["monkey"],12,48,63,0],
-		"1f413":[["\uD83D\uDC13"],"","",["rooster"],12,49,63,0],
-		"1f414":[["\uD83D\uDC14"],"\uE52E","\uDBB8\uDDD4",["chicken"],12,50,63,0],
-		"1f415":[["\uD83D\uDC15"],"","",["dog2"],12,51,63,0],
-		"1f416":[["\uD83D\uDC16"],"","",["pig2"],13,0,63,0],
-		"1f417":[["\uD83D\uDC17"],"\uE52F","\uDBB8\uDDD5",["boar"],13,1,63,0],
-		"1f418":[["\uD83D\uDC18"],"\uE526","\uDBB8\uDDCC",["elephant"],13,2,63,0],
-		"1f419":[["\uD83D\uDC19"],"\uE10A","\uDBB8\uDDC5",["octopus"],13,3,63,0],
-		"1f41a":[["\uD83D\uDC1A"],"\uE441","\uDBB8\uDDC6",["shell"],13,4,63,0],
-		"1f41b":[["\uD83D\uDC1B"],"\uE525","\uDBB8\uDDCB",["bug"],13,5,63,0],
-		"1f41c":[["\uD83D\uDC1C"],"","\uDBB8\uDDDA",["ant"],13,6,63,0],
-		"1f41d":[["\uD83D\uDC1D"],"","\uDBB8\uDDE1",["bee","honeybee"],13,7,63,0],
-		"1f41e":[["\uD83D\uDC1E"],"","\uDBB8\uDDE2",["beetle"],13,8,63,0],
-		"1f41f":[["\uD83D\uDC1F"],"\uE019","\uDBB8\uDDBD",["fish"],13,9,63,0],
-		"1f420":[["\uD83D\uDC20"],"\uE522","\uDBB8\uDDC9",["tropical_fish"],13,10,63,0],
-		"1f421":[["\uD83D\uDC21"],"","\uDBB8\uDDD9",["blowfish"],13,11,63,0],
-		"1f422":[["\uD83D\uDC22"],"","\uDBB8\uDDDC",["turtle"],13,12,63,0],
-		"1f423":[["\uD83D\uDC23"],"","\uDBB8\uDDDD",["hatching_chick"],13,13,63,0],
-		"1f424":[["\uD83D\uDC24"],"\uE523","\uDBB8\uDDBA",["baby_chick"],13,14,63,0],
-		"1f425":[["\uD83D\uDC25"],"","\uDBB8\uDDBB",["hatched_chick"],13,15,63,0],
-		"1f426":[["\uD83D\uDC26"],"\uE521","\uDBB8\uDDC8",["bird"],13,16,63,0],
-		"1f427":[["\uD83D\uDC27"],"\uE055","\uDBB8\uDDBC",["penguin"],13,17,63,0],
-		"1f428":[["\uD83D\uDC28"],"\uE527","\uDBB8\uDDCD",["koala"],13,18,63,0],
-		"1f429":[["\uD83D\uDC29"],"","\uDBB8\uDDD8",["poodle"],13,19,63,0],
-		"1f42a":[["\uD83D\uDC2A"],"","",["dromedary_camel"],13,20,63,0],
-		"1f42b":[["\uD83D\uDC2B"],"\uE530","\uDBB8\uDDD6",["camel"],13,21,63,0],
-		"1f42c":[["\uD83D\uDC2C"],"\uE520","\uDBB8\uDDC7",["dolphin","flipper"],13,22,63,0],
-		"1f42d":[["\uD83D\uDC2D"],"\uE053","\uDBB8\uDDC2",["mouse"],13,23,63,0],
-		"1f42e":[["\uD83D\uDC2E"],"\uE52B","\uDBB8\uDDD1",["cow"],13,24,63,0],
-		"1f42f":[["\uD83D\uDC2F"],"\uE050","\uDBB8\uDDC0",["tiger"],13,25,63,0],
-		"1f430":[["\uD83D\uDC30"],"\uE52C","\uDBB8\uDDD2",["rabbit"],13,26,63,0],
-		"1f431":[["\uD83D\uDC31"],"\uE04F","\uDBB8\uDDB8",["cat"],13,27,63,0],
-		"1f432":[["\uD83D\uDC32"],"","\uDBB8\uDDDE",["dragon_face"],13,28,63,0],
-		"1f433":[["\uD83D\uDC33"],"\uE054","\uDBB8\uDDC3",["whale"],13,29,63,0],
-		"1f434":[["\uD83D\uDC34"],"\uE01A","\uDBB8\uDDBE",["horse"],13,30,63,0],
-		"1f435":[["\uD83D\uDC35"],"\uE109","\uDBB8\uDDC4",["monkey_face"],13,31,63,0],
-		"1f436":[["\uD83D\uDC36"],"\uE052","\uDBB8\uDDB7",["dog"],13,32,63,0],
-		"1f437":[["\uD83D\uDC37"],"\uE10B","\uDBB8\uDDBF",["pig"],13,33,63,0],
-		"1f438":[["\uD83D\uDC38"],"\uE531","\uDBB8\uDDD7",["frog"],13,34,63,0],
-		"1f439":[["\uD83D\uDC39"],"\uE524","\uDBB8\uDDCA",["hamster"],13,35,63,0],
-		"1f43a":[["\uD83D\uDC3A"],"\uE52A","\uDBB8\uDDD0",["wolf"],13,36,63,0],
-		"1f43b":[["\uD83D\uDC3B"],"\uE051","\uDBB8\uDDC1",["bear"],13,37,63,0],
-		"1f43c":[["\uD83D\uDC3C"],"","\uDBB8\uDDDF",["panda_face"],13,38,63,0],
-		"1f43d":[["\uD83D\uDC3D"],"","\uDBB8\uDDE0",["pig_nose"],13,39,63,0],
-		"1f43e":[["\uD83D\uDC3E"],"","\uDBB8\uDDDB",["feet","paw_prints"],13,40,63,0],
-		"1f43f-fe0f":[["\uD83D\uDC3F\uFE0F","\uD83D\uDC3F"],"","",["chipmunk"],13,41,31,0],
-		"1f440":[["\uD83D\uDC40"],"\uE419","\uDBB8\uDD90",["eyes"],13,42,63,0],
-		"1f441-fe0f-200d-1f5e8-fe0f":[["\uD83D\uDC41\uFE0F\u200D\uD83D\uDDE8\uFE0F"],"","",["eye-in-speech-bubble"],13,43,11,0],
-		"1f441-fe0f":[["\uD83D\uDC41\uFE0F","\uD83D\uDC41"],"","",["eye"],13,44,31,0],
-		"1f442":[["\uD83D\uDC42"],"\uE41B","\uDBB8\uDD91",["ear"],13,45,63,0],
-		"1f443":[["\uD83D\uDC43"],"\uE41A","\uDBB8\uDD92",["nose"],13,51,63,0],
-		"1f444":[["\uD83D\uDC44"],"\uE41C","\uDBB8\uDD93",["lips"],14,5,63,0],
-		"1f445":[["\uD83D\uDC45"],"","\uDBB8\uDD94",["tongue"],14,6,63,0],
-		"1f446":[["\uD83D\uDC46"],"\uE22E","\uDBBA\uDF99",["point_up_2"],14,7,63,0],
-		"1f447":[["\uD83D\uDC47"],"\uE22F","\uDBBA\uDF9A",["point_down"],14,13,63,0],
-		"1f448":[["\uD83D\uDC48"],"\uE230","\uDBBA\uDF9B",["point_left"],14,19,63,0],
-		"1f449":[["\uD83D\uDC49"],"\uE231","\uDBBA\uDF9C",["point_right"],14,25,63,0],
-		"1f44a":[["\uD83D\uDC4A"],"\uE00D","\uDBBA\uDF96",["facepunch","punch"],14,31,63,0],
-		"1f44b":[["\uD83D\uDC4B"],"\uE41E","\uDBBA\uDF9D",["wave"],14,37,63,0],
-		"1f44c":[["\uD83D\uDC4C"],"\uE420","\uDBBA\uDF9F",["ok_hand"],14,43,63,0],
-		"1f44d":[["\uD83D\uDC4D"],"\uE00E","\uDBBA\uDF97",["+1","thumbsup"],14,49,63,0],
-		"1f44e":[["\uD83D\uDC4E"],"\uE421","\uDBBA\uDFA0",["-1","thumbsdown"],15,3,63,0],
-		"1f44f":[["\uD83D\uDC4F"],"\uE41F","\uDBBA\uDF9E",["clap"],15,9,63,0],
-		"1f450":[["\uD83D\uDC50"],"\uE422","\uDBBA\uDFA1",["open_hands"],15,15,63,0],
-		"1f451":[["\uD83D\uDC51"],"\uE10E","\uDBB9\uDCD1",["crown"],15,21,63,0],
-		"1f452":[["\uD83D\uDC52"],"\uE318","\uDBB9\uDCD4",["womans_hat"],15,22,63,0],
-		"1f453":[["\uD83D\uDC53"],"","\uDBB9\uDCCE",["eyeglasses"],15,23,63,0],
-		"1f454":[["\uD83D\uDC54"],"\uE302","\uDBB9\uDCD3",["necktie"],15,24,63,0],
-		"1f455":[["\uD83D\uDC55"],"\uE006","\uDBB9\uDCCF",["shirt","tshirt"],15,25,63,0],
-		"1f456":[["\uD83D\uDC56"],"","\uDBB9\uDCD0",["jeans"],15,26,63,0],
-		"1f457":[["\uD83D\uDC57"],"\uE319","\uDBB9\uDCD5",["dress"],15,27,63,0],
-		"1f458":[["\uD83D\uDC58"],"\uE321","\uDBB9\uDCD9",["kimono"],15,28,63,0],
-		"1f459":[["\uD83D\uDC59"],"\uE322","\uDBB9\uDCDA",["bikini"],15,29,63,0],
-		"1f45a":[["\uD83D\uDC5A"],"","\uDBB9\uDCDB",["womans_clothes"],15,30,63,0],
-		"1f45b":[["\uD83D\uDC5B"],"","\uDBB9\uDCDC",["purse"],15,31,63,0],
-		"1f45c":[["\uD83D\uDC5C"],"\uE323","\uDBB9\uDCF0",["handbag"],15,32,63,0],
-		"1f45d":[["\uD83D\uDC5D"],"","\uDBB9\uDCF1",["pouch"],15,33,63,0],
-		"1f45e":[["\uD83D\uDC5E"],"","\uDBB9\uDCCC",["mans_shoe","shoe"],15,34,63,0],
-		"1f45f":[["\uD83D\uDC5F"],"\uE007","\uDBB9\uDCCD",["athletic_shoe"],15,35,63,0],
-		"1f460":[["\uD83D\uDC60"],"\uE13E","\uDBB9\uDCD6",["high_heel"],15,36,63,0],
-		"1f461":[["\uD83D\uDC61"],"\uE31A","\uDBB9\uDCD7",["sandal"],15,37,63,0],
-		"1f462":[["\uD83D\uDC62"],"\uE31B","\uDBB9\uDCD8",["boot"],15,38,63,0],
-		"1f463":[["\uD83D\uDC63"],"\uE536","\uDBB9\uDD53",["footprints"],15,39,63,0],
-		"1f464":[["\uD83D\uDC64"],"","\uDBB8\uDD9A",["bust_in_silhouette"],15,40,63,0],
-		"1f465":[["\uD83D\uDC65"],"","",["busts_in_silhouette"],15,41,63,0],
-		"1f466":[["\uD83D\uDC66"],"\uE001","\uDBB8\uDD9B",["boy"],15,42,63,0],
-		"1f467":[["\uD83D\uDC67"],"\uE002","\uDBB8\uDD9C",["girl"],15,48,63,0],
-		"1f468-200d-1f33e":[["\uD83D\uDC68\u200D\uD83C\uDF3E"],"","",["male-farmer"],16,2,31,0],
-		"1f468-200d-1f373":[["\uD83D\uDC68\u200D\uD83C\uDF73"],"","",["male-cook"],16,8,31,0],
-		"1f468-200d-1f393":[["\uD83D\uDC68\u200D\uD83C\uDF93"],"","",["male-student"],16,14,31,0],
-		"1f468-200d-1f3a4":[["\uD83D\uDC68\u200D\uD83C\uDFA4"],"","",["male-singer"],16,20,31,0],
-		"1f468-200d-1f3a8":[["\uD83D\uDC68\u200D\uD83C\uDFA8"],"","",["male-artist"],16,26,31,0],
-		"1f468-200d-1f3eb":[["\uD83D\uDC68\u200D\uD83C\uDFEB"],"","",["male-teacher"],16,32,31,0],
-		"1f468-200d-1f3ed":[["\uD83D\uDC68\u200D\uD83C\uDFED"],"","",["male-factory-worker"],16,38,31,0],
-		"1f468-200d-1f466-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC66\u200D\uD83D\uDC66"],"","",["man-boy-boy"],16,44,31,0],
-		"1f468-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC66"],"","",["man-boy"],16,45,31,0],
-		"1f468-200d-1f467-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC67\u200D\uD83D\uDC66"],"","",["man-girl-boy"],16,46,31,0],
-		"1f468-200d-1f467-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC67\u200D\uD83D\uDC67"],"","",["man-girl-girl"],16,47,31,0],
-		"1f468-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC67"],"","",["man-girl"],16,48,31,0],
-		"1f468-200d-1f468-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC66"],"","",["man-man-boy"],16,49,63,0],
-		"1f468-200d-1f468-200d-1f466-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC66\u200D\uD83D\uDC66"],"","",["man-man-boy-boy"],16,50,63,0],
-		"1f468-200d-1f468-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC67"],"","",["man-man-girl"],16,51,63,0],
-		"1f468-200d-1f468-200d-1f467-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC67\u200D\uD83D\uDC66"],"","",["man-man-girl-boy"],17,0,63,0],
-		"1f468-200d-1f468-200d-1f467-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC67\u200D\uD83D\uDC67"],"","",["man-man-girl-girl"],17,1,63,0],
-		"1f468-200d-1f469-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC66","\uD83D\uDC6A"],"","",["man-woman-boy","family"],17,2,63,0],
-		"1f468-200d-1f469-200d-1f466-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC66\u200D\uD83D\uDC66"],"","",["man-woman-boy-boy"],17,3,63,0],
-		"1f468-200d-1f469-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67"],"","",["man-woman-girl"],17,4,63,0],
-		"1f468-200d-1f469-200d-1f467-200d-1f466":[["\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66"],"","",["man-woman-girl-boy"],17,5,63,0],
-		"1f468-200d-1f469-200d-1f467-200d-1f467":[["\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC67"],"","",["man-woman-girl-girl"],17,6,63,0],
-		"1f468-200d-1f4bb":[["\uD83D\uDC68\u200D\uD83D\uDCBB"],"","",["male-technologist"],17,7,31,0],
-		"1f468-200d-1f4bc":[["\uD83D\uDC68\u200D\uD83D\uDCBC"],"","",["male-office-worker"],17,13,31,0],
-		"1f468-200d-1f527":[["\uD83D\uDC68\u200D\uD83D\uDD27"],"","",["male-mechanic"],17,19,31,0],
-		"1f468-200d-1f52c":[["\uD83D\uDC68\u200D\uD83D\uDD2C"],"","",["male-scientist"],17,25,31,0],
-		"1f468-200d-1f680":[["\uD83D\uDC68\u200D\uD83D\uDE80"],"","",["male-astronaut"],17,31,31,0],
-		"1f468-200d-1f692":[["\uD83D\uDC68\u200D\uD83D\uDE92"],"","",["male-firefighter"],17,37,31,0],
-		"1f468-200d-2695-fe0f":[["\uD83D\uDC68\u200D\u2695\uFE0F","\uD83D\uDC68\u200D\u2695"],"","",["male-doctor"],17,43,31,0],
-		"1f468-200d-2696-fe0f":[["\uD83D\uDC68\u200D\u2696\uFE0F","\uD83D\uDC68\u200D\u2696"],"","",["male-judge"],17,49,31,0],
-		"1f468-200d-2708-fe0f":[["\uD83D\uDC68\u200D\u2708\uFE0F","\uD83D\uDC68\u200D\u2708"],"","",["male-pilot"],18,3,31,0],
-		"1f468-200d-2764-fe0f-200d-1f468":[["\uD83D\uDC68\u200D\u2764\uFE0F\u200D\uD83D\uDC68","\uD83D\uDC68\u200D\u2764\u200D\uD83D\uDC68"],"","",["man-heart-man"],18,9,63,0],
-		"1f468-200d-2764-fe0f-200d-1f48b-200d-1f468":[["\uD83D\uDC68\u200D\u2764\uFE0F\u200D\uD83D\uDC8B\u200D\uD83D\uDC68","\uD83D\uDC68\u200D\u2764\u200D\uD83D\uDC8B\u200D\uD83D\uDC68"],"","",["man-kiss-man"],18,10,63,0],
-		"1f468":[["\uD83D\uDC68"],"\uE004","\uDBB8\uDD9D",["man"],18,11,63,0],
-		"1f469-200d-1f33e":[["\uD83D\uDC69\u200D\uD83C\uDF3E"],"","",["female-farmer"],18,17,31,0],
-		"1f469-200d-1f373":[["\uD83D\uDC69\u200D\uD83C\uDF73"],"","",["female-cook"],18,23,31,0],
-		"1f469-200d-1f393":[["\uD83D\uDC69\u200D\uD83C\uDF93"],"","",["female-student"],18,29,31,0],
-		"1f469-200d-1f3a4":[["\uD83D\uDC69\u200D\uD83C\uDFA4"],"","",["female-singer"],18,35,31,0],
-		"1f469-200d-1f3a8":[["\uD83D\uDC69\u200D\uD83C\uDFA8"],"","",["female-artist"],18,41,31,0],
-		"1f469-200d-1f3eb":[["\uD83D\uDC69\u200D\uD83C\uDFEB"],"","",["female-teacher"],18,47,31,0],
-		"1f469-200d-1f3ed":[["\uD83D\uDC69\u200D\uD83C\uDFED"],"","",["female-factory-worker"],19,1,31,0],
-		"1f469-200d-1f466-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC66\u200D\uD83D\uDC66"],"","",["woman-boy-boy"],19,7,31,0],
-		"1f469-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC66"],"","",["woman-boy"],19,8,31,0],
-		"1f469-200d-1f467-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66"],"","",["woman-girl-boy"],19,9,31,0],
-		"1f469-200d-1f467-200d-1f467":[["\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC67"],"","",["woman-girl-girl"],19,10,31,0],
-		"1f469-200d-1f467":[["\uD83D\uDC69\u200D\uD83D\uDC67"],"","",["woman-girl"],19,11,31,0],
-		"1f469-200d-1f469-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC69\u200D\uD83D\uDC66"],"","",["woman-woman-boy"],19,12,63,0],
-		"1f469-200d-1f469-200d-1f466-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC69\u200D\uD83D\uDC66\u200D\uD83D\uDC66"],"","",["woman-woman-boy-boy"],19,13,63,0],
-		"1f469-200d-1f469-200d-1f467":[["\uD83D\uDC69\u200D\uD83D\uDC69\u200D\uD83D\uDC67"],"","",["woman-woman-girl"],19,14,63,0],
-		"1f469-200d-1f469-200d-1f467-200d-1f466":[["\uD83D\uDC69\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66"],"","",["woman-woman-girl-boy"],19,15,63,0],
-		"1f469-200d-1f469-200d-1f467-200d-1f467":[["\uD83D\uDC69\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC67"],"","",["woman-woman-girl-girl"],19,16,63,0],
-		"1f469-200d-1f4bb":[["\uD83D\uDC69\u200D\uD83D\uDCBB"],"","",["female-technologist"],19,17,31,0],
-		"1f469-200d-1f4bc":[["\uD83D\uDC69\u200D\uD83D\uDCBC"],"","",["female-office-worker"],19,23,31,0],
-		"1f469-200d-1f527":[["\uD83D\uDC69\u200D\uD83D\uDD27"],"","",["female-mechanic"],19,29,31,0],
-		"1f469-200d-1f52c":[["\uD83D\uDC69\u200D\uD83D\uDD2C"],"","",["female-scientist"],19,35,31,0],
-		"1f469-200d-1f680":[["\uD83D\uDC69\u200D\uD83D\uDE80"],"","",["female-astronaut"],19,41,31,0],
-		"1f469-200d-1f692":[["\uD83D\uDC69\u200D\uD83D\uDE92"],"","",["female-firefighter"],19,47,31,0],
-		"1f469-200d-2695-fe0f":[["\uD83D\uDC69\u200D\u2695\uFE0F","\uD83D\uDC69\u200D\u2695"],"","",["female-doctor"],20,1,31,0],
-		"1f469-200d-2696-fe0f":[["\uD83D\uDC69\u200D\u2696\uFE0F","\uD83D\uDC69\u200D\u2696"],"","",["female-judge"],20,7,31,0],
-		"1f469-200d-2708-fe0f":[["\uD83D\uDC69\u200D\u2708\uFE0F","\uD83D\uDC69\u200D\u2708"],"","",["female-pilot"],20,13,31,0],
-		"1f469-200d-2764-fe0f-200d-1f468":[["\uD83D\uDC69\u200D\u2764\uFE0F\u200D\uD83D\uDC68","\uD83D\uDC69\u200D\u2764\u200D\uD83D\uDC68","\uD83D\uDC91"],"","",["woman-heart-man","couple_with_heart"],20,19,31,0],
-		"1f469-200d-2764-fe0f-200d-1f469":[["\uD83D\uDC69\u200D\u2764\uFE0F\u200D\uD83D\uDC69","\uD83D\uDC69\u200D\u2764\u200D\uD83D\uDC69"],"","",["woman-heart-woman"],20,20,63,0],
-		"1f469-200d-2764-fe0f-200d-1f48b-200d-1f468":[["\uD83D\uDC69\u200D\u2764\uFE0F\u200D\uD83D\uDC8B\u200D\uD83D\uDC68","\uD83D\uDC69\u200D\u2764\u200D\uD83D\uDC8B\u200D\uD83D\uDC68","\uD83D\uDC8F"],"","",["woman-kiss-man","couplekiss"],20,21,31,0],
-		"1f469-200d-2764-fe0f-200d-1f48b-200d-1f469":[["\uD83D\uDC69\u200D\u2764\uFE0F\u200D\uD83D\uDC8B\u200D\uD83D\uDC69","\uD83D\uDC69\u200D\u2764\u200D\uD83D\uDC8B\u200D\uD83D\uDC69"],"","",["woman-kiss-woman"],20,22,63,0],
-		"1f469":[["\uD83D\uDC69"],"\uE005","\uDBB8\uDD9E",["woman"],20,23,63,0],
-		"1f46b":[["\uD83D\uDC6B"],"\uE428","\uDBB8\uDDA0",["couple","man_and_woman_holding_hands"],20,30,63,0],
-		"1f46c":[["\uD83D\uDC6C"],"","",["two_men_holding_hands"],20,31,63,0],
-		"1f46d":[["\uD83D\uDC6D"],"","",["two_women_holding_hands"],20,32,63,0],
-		"1f46e-200d-2640-fe0f":[["\uD83D\uDC6E\u200D\u2640\uFE0F","\uD83D\uDC6E\u200D\u2640"],"","",["female-police-officer"],20,33,31,0],
-		"1f46e-200d-2642-fe0f":[["\uD83D\uDC6E\u200D\u2642\uFE0F","\uD83D\uDC6E\u200D\u2642","\uD83D\uDC6E"],"","",["male-police-officer","cop"],20,39,31,0],
-		"1f46f-200d-2640-fe0f":[["\uD83D\uDC6F\u200D\u2640\uFE0F","\uD83D\uDC6F\u200D\u2640","\uD83D\uDC6F"],"","",["woman-with-bunny-ears-partying","dancers"],20,51,31,0],
-		"1f46f-200d-2642-fe0f":[["\uD83D\uDC6F\u200D\u2642\uFE0F","\uD83D\uDC6F\u200D\u2642"],"","",["man-with-bunny-ears-partying"],21,0,31,0],
-		"1f470":[["\uD83D\uDC70"],"","\uDBB8\uDDA3",["bride_with_veil"],21,2,63,0],
-		"1f471-200d-2640-fe0f":[["\uD83D\uDC71\u200D\u2640\uFE0F","\uD83D\uDC71\u200D\u2640"],"","",["blond-haired-woman"],21,8,31,0],
-		"1f471-200d-2642-fe0f":[["\uD83D\uDC71\u200D\u2642\uFE0F","\uD83D\uDC71\u200D\u2642","\uD83D\uDC71"],"","",["blond-haired-man","person_with_blond_hair"],21,14,31,0],
-		"1f472":[["\uD83D\uDC72"],"\uE516","\uDBB8\uDDA5",["man_with_gua_pi_mao"],21,26,63,0],
-		"1f473-200d-2640-fe0f":[["\uD83D\uDC73\u200D\u2640\uFE0F","\uD83D\uDC73\u200D\u2640"],"","",["woman-wearing-turban"],21,32,31,0],
-		"1f473-200d-2642-fe0f":[["\uD83D\uDC73\u200D\u2642\uFE0F","\uD83D\uDC73\u200D\u2642","\uD83D\uDC73"],"","",["man-wearing-turban","man_with_turban"],21,38,31,0],
-		"1f474":[["\uD83D\uDC74"],"\uE518","\uDBB8\uDDA7",["older_man"],21,50,63,0],
-		"1f475":[["\uD83D\uDC75"],"\uE519","\uDBB8\uDDA8",["older_woman"],22,4,63,0],
-		"1f476":[["\uD83D\uDC76"],"\uE51A","\uDBB8\uDDA9",["baby"],22,10,63,0],
-		"1f477-200d-2640-fe0f":[["\uD83D\uDC77\u200D\u2640\uFE0F","\uD83D\uDC77\u200D\u2640"],"","",["female-construction-worker"],22,16,31,0],
-		"1f477-200d-2642-fe0f":[["\uD83D\uDC77\u200D\u2642\uFE0F","\uD83D\uDC77\u200D\u2642","\uD83D\uDC77"],"","",["male-construction-worker","construction_worker"],22,22,31,0],
-		"1f478":[["\uD83D\uDC78"],"\uE51C","\uDBB8\uDDAB",["princess"],22,34,63,0],
-		"1f479":[["\uD83D\uDC79"],"","\uDBB8\uDDAC",["japanese_ogre"],22,40,63,0],
-		"1f47a":[["\uD83D\uDC7A"],"","\uDBB8\uDDAD",["japanese_goblin"],22,41,63,0],
-		"1f47b":[["\uD83D\uDC7B"],"\uE11B","\uDBB8\uDDAE",["ghost"],22,42,63,0],
-		"1f47c":[["\uD83D\uDC7C"],"\uE04E","\uDBB8\uDDAF",["angel"],22,43,63,0],
-		"1f47d":[["\uD83D\uDC7D"],"\uE10C","\uDBB8\uDDB0",["alien"],22,49,63,0],
-		"1f47e":[["\uD83D\uDC7E"],"\uE12B","\uDBB8\uDDB1",["space_invader"],22,50,63,0],
-		"1f47f":[["\uD83D\uDC7F"],"\uE11A","\uDBB8\uDDB2",["imp"],22,51,63,0],
-		"1f480":[["\uD83D\uDC80"],"\uE11C","\uDBB8\uDDB3",["skull"],23,0,63,0],
-		"1f481-200d-2640-fe0f":[["\uD83D\uDC81\u200D\u2640\uFE0F","\uD83D\uDC81\u200D\u2640","\uD83D\uDC81"],"","",["woman-tipping-hand","information_desk_person"],23,1,31,0],
-		"1f481-200d-2642-fe0f":[["\uD83D\uDC81\u200D\u2642\uFE0F","\uD83D\uDC81\u200D\u2642"],"","",["man-tipping-hand"],23,7,31,0],
-		"1f482-200d-2640-fe0f":[["\uD83D\uDC82\u200D\u2640\uFE0F","\uD83D\uDC82\u200D\u2640"],"","",["female-guard"],23,19,31,0],
-		"1f482-200d-2642-fe0f":[["\uD83D\uDC82\u200D\u2642\uFE0F","\uD83D\uDC82\u200D\u2642","\uD83D\uDC82"],"","",["male-guard","guardsman"],23,25,31,0],
-		"1f483":[["\uD83D\uDC83"],"\uE51F","\uDBB8\uDDB6",["dancer"],23,37,63,0],
-		"1f484":[["\uD83D\uDC84"],"\uE31C","\uDBB8\uDD95",["lipstick"],23,43,63,0],
-		"1f485":[["\uD83D\uDC85"],"\uE31D","\uDBB8\uDD96",["nail_care"],23,44,63,0],
-		"1f486-200d-2640-fe0f":[["\uD83D\uDC86\u200D\u2640\uFE0F","\uD83D\uDC86\u200D\u2640","\uD83D\uDC86"],"","",["woman-getting-massage","massage"],23,50,31,0],
-		"1f486-200d-2642-fe0f":[["\uD83D\uDC86\u200D\u2642\uFE0F","\uD83D\uDC86\u200D\u2642"],"","",["man-getting-massage"],24,4,31,0],
-		"1f487-200d-2640-fe0f":[["\uD83D\uDC87\u200D\u2640\uFE0F","\uD83D\uDC87\u200D\u2640","\uD83D\uDC87"],"","",["woman-getting-haircut","haircut"],24,16,31,0],
-		"1f487-200d-2642-fe0f":[["\uD83D\uDC87\u200D\u2642\uFE0F","\uD83D\uDC87\u200D\u2642"],"","",["man-getting-haircut"],24,22,31,0],
-		"1f488":[["\uD83D\uDC88"],"\uE320","\uDBB8\uDD99",["barber"],24,34,63,0],
-		"1f489":[["\uD83D\uDC89"],"\uE13B","\uDBB9\uDD09",["syringe"],24,35,63,0],
-		"1f48a":[["\uD83D\uDC8A"],"\uE30F","\uDBB9\uDD0A",["pill"],24,36,63,0],
-		"1f48b":[["\uD83D\uDC8B"],"\uE003","\uDBBA\uDC23",["kiss"],24,37,63,0],
-		"1f48c":[["\uD83D\uDC8C"],"","\uDBBA\uDC24",["love_letter"],24,38,63,0],
-		"1f48d":[["\uD83D\uDC8D"],"\uE034","\uDBBA\uDC25",["ring"],24,39,63,0],
-		"1f48e":[["\uD83D\uDC8E"],"\uE035","\uDBBA\uDC26",["gem"],24,40,63,0],
-		"1f490":[["\uD83D\uDC90"],"\uE306","\uDBBA\uDC28",["bouquet"],24,42,63,0],
-		"1f492":[["\uD83D\uDC92"],"\uE43D","\uDBBA\uDC2A",["wedding"],24,44,63,0],
-		"1f493":[["\uD83D\uDC93"],"\uE327","\uDBBA\uDF0D",["heartbeat"],24,45,63,0],
-		"1f494":[["\uD83D\uDC94"],"\uE023","\uDBBA\uDF0E",["broken_heart"],24,46,63,0,"<\/3"],
-		"1f495":[["\uD83D\uDC95"],"","\uDBBA\uDF0F",["two_hearts"],24,47,63,0],
-		"1f496":[["\uD83D\uDC96"],"","\uDBBA\uDF10",["sparkling_heart"],24,48,63,0],
-		"1f497":[["\uD83D\uDC97"],"\uE328","\uDBBA\uDF11",["heartpulse"],24,49,63,0],
-		"1f498":[["\uD83D\uDC98"],"\uE329","\uDBBA\uDF12",["cupid"],24,50,63,0],
-		"1f499":[["\uD83D\uDC99"],"\uE32A","\uDBBA\uDF13",["blue_heart"],24,51,63,0,"<3"],
-		"1f49a":[["\uD83D\uDC9A"],"\uE32B","\uDBBA\uDF14",["green_heart"],25,0,63,0,"<3"],
-		"1f49b":[["\uD83D\uDC9B"],"\uE32C","\uDBBA\uDF15",["yellow_heart"],25,1,63,0,"<3"],
-		"1f49c":[["\uD83D\uDC9C"],"\uE32D","\uDBBA\uDF16",["purple_heart"],25,2,63,0,"<3"],
-		"1f49d":[["\uD83D\uDC9D"],"\uE437","\uDBBA\uDF17",["gift_heart"],25,3,63,0],
-		"1f49e":[["\uD83D\uDC9E"],"","\uDBBA\uDF18",["revolving_hearts"],25,4,63,0],
-		"1f49f":[["\uD83D\uDC9F"],"\uE204","\uDBBA\uDF19",["heart_decoration"],25,5,63,0],
-		"1f4a0":[["\uD83D\uDCA0"],"","\uDBBA\uDF55",["diamond_shape_with_a_dot_inside"],25,6,63,0],
-		"1f4a1":[["\uD83D\uDCA1"],"\uE10F","\uDBBA\uDF56",["bulb"],25,7,63,0],
-		"1f4a2":[["\uD83D\uDCA2"],"\uE334","\uDBBA\uDF57",["anger"],25,8,63,0],
-		"1f4a3":[["\uD83D\uDCA3"],"\uE311","\uDBBA\uDF58",["bomb"],25,9,63,0],
-		"1f4a4":[["\uD83D\uDCA4"],"\uE13C","\uDBBA\uDF59",["zzz"],25,10,63,0],
-		"1f4a5":[["\uD83D\uDCA5"],"","\uDBBA\uDF5A",["boom","collision"],25,11,63,0],
-		"1f4a6":[["\uD83D\uDCA6"],"\uE331","\uDBBA\uDF5B",["sweat_drops"],25,12,63,0],
-		"1f4a7":[["\uD83D\uDCA7"],"","\uDBBA\uDF5C",["droplet"],25,13,63,0],
-		"1f4a8":[["\uD83D\uDCA8"],"\uE330","\uDBBA\uDF5D",["dash"],25,14,63,0],
-		"1f4a9":[["\uD83D\uDCA9"],"\uE05A","\uDBB9\uDCF4",["hankey","poop","shit"],25,15,63,0],
-		"1f4aa":[["\uD83D\uDCAA"],"\uE14C","\uDBBA\uDF5E",["muscle"],25,16,63,0],
-		"1f4ab":[["\uD83D\uDCAB"],"","\uDBBA\uDF5F",["dizzy"],25,22,63,0],
-		"1f4ac":[["\uD83D\uDCAC"],"","\uDBB9\uDD32",["speech_balloon"],25,23,63,0],
-		"1f4ad":[["\uD83D\uDCAD"],"","",["thought_balloon"],25,24,63,0],
-		"1f4ae":[["\uD83D\uDCAE"],"","\uDBBA\uDF7A",["white_flower"],25,25,63,0],
-		"1f4af":[["\uD83D\uDCAF"],"","\uDBBA\uDF7B",["100"],25,26,63,0],
-		"1f4b0":[["\uD83D\uDCB0"],"\uE12F","\uDBB9\uDCDD",["moneybag"],25,27,63,0],
-		"1f4b1":[["\uD83D\uDCB1"],"\uE149","\uDBB9\uDCDE",["currency_exchange"],25,28,63,0],
-		"1f4b2":[["\uD83D\uDCB2"],"","\uDBB9\uDCE0",["heavy_dollar_sign"],25,29,63,0],
-		"1f4b3":[["\uD83D\uDCB3"],"","\uDBB9\uDCE1",["credit_card"],25,30,63,0],
-		"1f4b4":[["\uD83D\uDCB4"],"","\uDBB9\uDCE2",["yen"],25,31,63,0],
-		"1f4b5":[["\uD83D\uDCB5"],"","\uDBB9\uDCE3",["dollar"],25,32,63,0],
-		"1f4b6":[["\uD83D\uDCB6"],"","",["euro"],25,33,63,0],
-		"1f4b7":[["\uD83D\uDCB7"],"","",["pound"],25,34,63,0],
-		"1f4b8":[["\uD83D\uDCB8"],"","\uDBB9\uDCE4",["money_with_wings"],25,35,63,0],
-		"1f4b9":[["\uD83D\uDCB9"],"\uE14A","\uDBB9\uDCDF",["chart"],25,36,63,0],
-		"1f4ba":[["\uD83D\uDCBA"],"\uE11F","\uDBB9\uDD37",["seat"],25,37,63,0],
-		"1f4bb":[["\uD83D\uDCBB"],"\uE00C","\uDBB9\uDD38",["computer"],25,38,63,0],
-		"1f4bc":[["\uD83D\uDCBC"],"\uE11E","\uDBB9\uDD3B",["briefcase"],25,39,63,0],
-		"1f4bd":[["\uD83D\uDCBD"],"\uE316","\uDBB9\uDD3C",["minidisc"],25,40,63,0],
-		"1f4be":[["\uD83D\uDCBE"],"","\uDBB9\uDD3D",["floppy_disk"],25,41,63,0],
-		"1f4bf":[["\uD83D\uDCBF"],"\uE126","\uDBBA\uDC1D",["cd"],25,42,63,0],
-		"1f4c0":[["\uD83D\uDCC0"],"\uE127","\uDBBA\uDC1E",["dvd"],25,43,63,0],
-		"1f4c1":[["\uD83D\uDCC1"],"","\uDBB9\uDD43",["file_folder"],25,44,63,0],
-		"1f4c2":[["\uD83D\uDCC2"],"","\uDBB9\uDD44",["open_file_folder"],25,45,63,0],
-		"1f4c3":[["\uD83D\uDCC3"],"","\uDBB9\uDD40",["page_with_curl"],25,46,63,0],
-		"1f4c4":[["\uD83D\uDCC4"],"","\uDBB9\uDD41",["page_facing_up"],25,47,63,0],
-		"1f4c5":[["\uD83D\uDCC5"],"","\uDBB9\uDD42",["date"],25,48,63,0],
-		"1f4c6":[["\uD83D\uDCC6"],"","\uDBB9\uDD49",["calendar"],25,49,63,0],
-		"1f4c7":[["\uD83D\uDCC7"],"","\uDBB9\uDD4D",["card_index"],25,50,63,0],
-		"1f4c8":[["\uD83D\uDCC8"],"","\uDBB9\uDD4B",["chart_with_upwards_trend"],25,51,63,0],
-		"1f4c9":[["\uD83D\uDCC9"],"","\uDBB9\uDD4C",["chart_with_downwards_trend"],26,0,63,0],
-		"1f4ca":[["\uD83D\uDCCA"],"","\uDBB9\uDD4A",["bar_chart"],26,1,63,0],
-		"1f4cb":[["\uD83D\uDCCB"],"","\uDBB9\uDD48",["clipboard"],26,2,63,0],
-		"1f4cc":[["\uD83D\uDCCC"],"","\uDBB9\uDD4E",["pushpin"],26,3,63,0],
-		"1f4cd":[["\uD83D\uDCCD"],"","\uDBB9\uDD3F",["round_pushpin"],26,4,63,0],
-		"1f4ce":[["\uD83D\uDCCE"],"","\uDBB9\uDD3A",["paperclip"],26,5,63,0],
-		"1f4cf":[["\uD83D\uDCCF"],"","\uDBB9\uDD50",["straight_ruler"],26,6,63,0],
-		"1f4d0":[["\uD83D\uDCD0"],"","\uDBB9\uDD51",["triangular_ruler"],26,7,63,0],
-		"1f4d1":[["\uD83D\uDCD1"],"","\uDBB9\uDD52",["bookmark_tabs"],26,8,63,0],
-		"1f4d2":[["\uD83D\uDCD2"],"","\uDBB9\uDD4F",["ledger"],26,9,63,0],
-		"1f4d3":[["\uD83D\uDCD3"],"","\uDBB9\uDD45",["notebook"],26,10,63,0],
-		"1f4d4":[["\uD83D\uDCD4"],"","\uDBB9\uDD47",["notebook_with_decorative_cover"],26,11,63,0],
-		"1f4d5":[["\uD83D\uDCD5"],"","\uDBB9\uDD02",["closed_book"],26,12,63,0],
-		"1f4d6":[["\uD83D\uDCD6"],"\uE148","\uDBB9\uDD46",["book","open_book"],26,13,63,0],
-		"1f4d7":[["\uD83D\uDCD7"],"","\uDBB9\uDCFF",["green_book"],26,14,63,0],
-		"1f4d8":[["\uD83D\uDCD8"],"","\uDBB9\uDD00",["blue_book"],26,15,63,0],
-		"1f4d9":[["\uD83D\uDCD9"],"","\uDBB9\uDD01",["orange_book"],26,16,63,0],
-		"1f4da":[["\uD83D\uDCDA"],"","\uDBB9\uDD03",["books"],26,17,63,0],
-		"1f4db":[["\uD83D\uDCDB"],"","\uDBB9\uDD04",["name_badge"],26,18,63,0],
-		"1f4dc":[["\uD83D\uDCDC"],"","\uDBB9\uDCFD",["scroll"],26,19,63,0],
-		"1f4dd":[["\uD83D\uDCDD"],"\uE301","\uDBB9\uDD27",["memo","pencil"],26,20,63,0],
-		"1f4de":[["\uD83D\uDCDE"],"","\uDBB9\uDD24",["telephone_receiver"],26,21,63,0],
-		"1f4df":[["\uD83D\uDCDF"],"","\uDBB9\uDD22",["pager"],26,22,63,0],
-		"1f4e0":[["\uD83D\uDCE0"],"\uE00B","\uDBB9\uDD28",["fax"],26,23,63,0],
-		"1f4e1":[["\uD83D\uDCE1"],"\uE14B","\uDBB9\uDD31",["satellite_antenna"],26,24,63,0],
-		"1f4e2":[["\uD83D\uDCE2"],"\uE142","\uDBB9\uDD2F",["loudspeaker"],26,25,63,0],
-		"1f4e3":[["\uD83D\uDCE3"],"\uE317","\uDBB9\uDD30",["mega"],26,26,63,0],
-		"1f4e4":[["\uD83D\uDCE4"],"","\uDBB9\uDD33",["outbox_tray"],26,27,63,0],
-		"1f4e5":[["\uD83D\uDCE5"],"","\uDBB9\uDD34",["inbox_tray"],26,28,63,0],
-		"1f4e6":[["\uD83D\uDCE6"],"","\uDBB9\uDD35",["package"],26,29,63,0],
-		"1f4e7":[["\uD83D\uDCE7"],"","\uDBBA\uDF92",["e-mail"],26,30,63,0],
-		"1f4e8":[["\uD83D\uDCE8"],"","\uDBB9\uDD2A",["incoming_envelope"],26,31,63,0],
-		"1f4e9":[["\uD83D\uDCE9"],"\uE103","\uDBB9\uDD2B",["envelope_with_arrow"],26,32,63,0],
-		"1f4ea":[["\uD83D\uDCEA"],"","\uDBB9\uDD2C",["mailbox_closed"],26,33,63,0],
-		"1f4eb":[["\uD83D\uDCEB"],"\uE101","\uDBB9\uDD2D",["mailbox"],26,34,63,0],
-		"1f4ec":[["\uD83D\uDCEC"],"","",["mailbox_with_mail"],26,35,63,0],
-		"1f4ed":[["\uD83D\uDCED"],"","",["mailbox_with_no_mail"],26,36,63,0],
-		"1f4ee":[["\uD83D\uDCEE"],"\uE102","\uDBB9\uDD2E",["postbox"],26,37,63,0],
-		"1f4ef":[["\uD83D\uDCEF"],"","",["postal_horn"],26,38,63,0],
-		"1f4f0":[["\uD83D\uDCF0"],"","\uDBBA\uDC22",["newspaper"],26,39,63,0],
-		"1f4f1":[["\uD83D\uDCF1"],"\uE00A","\uDBB9\uDD25",["iphone"],26,40,63,0],
-		"1f4f2":[["\uD83D\uDCF2"],"\uE104","\uDBB9\uDD26",["calling"],26,41,63,0],
-		"1f4f3":[["\uD83D\uDCF3"],"\uE250","\uDBBA\uDC39",["vibration_mode"],26,42,63,0],
-		"1f4f4":[["\uD83D\uDCF4"],"\uE251","\uDBBA\uDC3A",["mobile_phone_off"],26,43,63,0],
-		"1f4f5":[["\uD83D\uDCF5"],"","",["no_mobile_phones"],26,44,63,0],
-		"1f4f6":[["\uD83D\uDCF6"],"\uE20B","\uDBBA\uDC38",["signal_strength"],26,45,63,0],
-		"1f4f7":[["\uD83D\uDCF7"],"\uE008","\uDBB9\uDCEF",["camera"],26,46,63,0],
-		"1f4f8":[["\uD83D\uDCF8"],"","",["camera_with_flash"],26,47,31,0],
-		"1f4f9":[["\uD83D\uDCF9"],"","\uDBB9\uDCF9",["video_camera"],26,48,63,0],
-		"1f4fa":[["\uD83D\uDCFA"],"\uE12A","\uDBBA\uDC1C",["tv"],26,49,63,0],
-		"1f4fb":[["\uD83D\uDCFB"],"\uE128","\uDBBA\uDC1F",["radio"],26,50,63,0],
-		"1f4fc":[["\uD83D\uDCFC"],"\uE129","\uDBBA\uDC20",["vhs"],26,51,63,0],
-		"1f4fd-fe0f":[["\uD83D\uDCFD\uFE0F","\uD83D\uDCFD"],"","",["film_projector"],27,0,31,0],
-		"1f4ff":[["\uD83D\uDCFF"],"","",["prayer_beads"],27,1,31,0],
-		"1f500":[["\uD83D\uDD00"],"","",["twisted_rightwards_arrows"],27,2,63,0],
-		"1f501":[["\uD83D\uDD01"],"","",["repeat"],27,3,63,0],
-		"1f502":[["\uD83D\uDD02"],"","",["repeat_one"],27,4,63,0],
-		"1f503":[["\uD83D\uDD03"],"","\uDBBA\uDF91",["arrows_clockwise"],27,5,63,0],
-		"1f504":[["\uD83D\uDD04"],"","",["arrows_counterclockwise"],27,6,63,0],
-		"1f505":[["\uD83D\uDD05"],"","",["low_brightness"],27,7,63,0],
-		"1f506":[["\uD83D\uDD06"],"","",["high_brightness"],27,8,63,0],
-		"1f507":[["\uD83D\uDD07"],"","",["mute"],27,9,63,0],
-		"1f508":[["\uD83D\uDD08"],"","",["speaker"],27,10,63,0],
-		"1f509":[["\uD83D\uDD09"],"","",["sound"],27,11,63,0],
-		"1f50a":[["\uD83D\uDD0A"],"\uE141","\uDBBA\uDC21",["loud_sound"],27,12,63,0],
-		"1f50b":[["\uD83D\uDD0B"],"","\uDBB9\uDCFC",["battery"],27,13,63,0],
-		"1f50c":[["\uD83D\uDD0C"],"","\uDBB9\uDCFE",["electric_plug"],27,14,63,0],
-		"1f50d":[["\uD83D\uDD0D"],"\uE114","\uDBBA\uDF85",["mag"],27,15,63,0],
-		"1f50e":[["\uD83D\uDD0E"],"","\uDBBA\uDF8D",["mag_right"],27,16,63,0],
-		"1f50f":[["\uD83D\uDD0F"],"","\uDBBA\uDF90",["lock_with_ink_pen"],27,17,63,0],
-		"1f510":[["\uD83D\uDD10"],"","\uDBBA\uDF8A",["closed_lock_with_key"],27,18,63,0],
-		"1f511":[["\uD83D\uDD11"],"\uE03F","\uDBBA\uDF82",["key"],27,19,63,0],
-		"1f512":[["\uD83D\uDD12"],"\uE144","\uDBBA\uDF86",["lock"],27,20,63,0],
-		"1f513":[["\uD83D\uDD13"],"\uE145","\uDBBA\uDF87",["unlock"],27,21,63,0],
-		"1f514":[["\uD83D\uDD14"],"\uE325","\uDBB9\uDCF2",["bell"],27,22,63,0],
-		"1f515":[["\uD83D\uDD15"],"","",["no_bell"],27,23,63,0],
-		"1f516":[["\uD83D\uDD16"],"","\uDBBA\uDF8F",["bookmark"],27,24,63,0],
-		"1f517":[["\uD83D\uDD17"],"","\uDBBA\uDF4B",["link"],27,25,63,0],
-		"1f518":[["\uD83D\uDD18"],"","\uDBBA\uDF8C",["radio_button"],27,26,63,0],
-		"1f519":[["\uD83D\uDD19"],"","\uDBBA\uDF8E",["back"],27,27,63,0],
-		"1f51a":[["\uD83D\uDD1A"],"","\uDBB8\uDC1A",["end"],27,28,63,0],
-		"1f51b":[["\uD83D\uDD1B"],"","\uDBB8\uDC19",["on"],27,29,63,0],
-		"1f51c":[["\uD83D\uDD1C"],"","\uDBB8\uDC18",["soon"],27,30,63,0],
-		"1f51d":[["\uD83D\uDD1D"],"\uE24C","\uDBBA\uDF42",["top"],27,31,63,0],
-		"1f51e":[["\uD83D\uDD1E"],"\uE207","\uDBBA\uDF25",["underage"],27,32,63,0],
-		"1f51f":[["\uD83D\uDD1F"],"","\uDBBA\uDC3B",["keycap_ten"],27,33,63,0],
-		"1f520":[["\uD83D\uDD20"],"","\uDBBA\uDF7C",["capital_abcd"],27,34,63,0],
-		"1f521":[["\uD83D\uDD21"],"","\uDBBA\uDF7D",["abcd"],27,35,63,0],
-		"1f522":[["\uD83D\uDD22"],"","\uDBBA\uDF7E",["1234"],27,36,63,0],
-		"1f523":[["\uD83D\uDD23"],"","\uDBBA\uDF7F",["symbols"],27,37,63,0],
-		"1f524":[["\uD83D\uDD24"],"","\uDBBA\uDF80",["abc"],27,38,63,0],
-		"1f525":[["\uD83D\uDD25"],"\uE11D","\uDBB9\uDCF6",["fire"],27,39,63,0],
-		"1f526":[["\uD83D\uDD26"],"","\uDBB9\uDCFB",["flashlight"],27,40,63,0],
-		"1f527":[["\uD83D\uDD27"],"","\uDBB9\uDCC9",["wrench"],27,41,63,0],
-		"1f528":[["\uD83D\uDD28"],"\uE116","\uDBB9\uDCCA",["hammer"],27,42,63,0],
-		"1f529":[["\uD83D\uDD29"],"","\uDBB9\uDCCB",["nut_and_bolt"],27,43,63,0],
-		"1f52a":[["\uD83D\uDD2A"],"","\uDBB9\uDCFA",["hocho","knife"],27,44,63,0],
-		"1f52b":[["\uD83D\uDD2B"],"\uE113","\uDBB9\uDCF5",["gun"],27,45,63,0],
-		"1f52c":[["\uD83D\uDD2C"],"","",["microscope"],27,46,63,0],
-		"1f52d":[["\uD83D\uDD2D"],"","",["telescope"],27,47,63,0],
-		"1f52e":[["\uD83D\uDD2E"],"","\uDBB9\uDCF7",["crystal_ball"],27,48,63,0],
-		"1f52f":[["\uD83D\uDD2F"],"\uE23E","\uDBB9\uDCF8",["six_pointed_star"],27,49,63,0],
-		"1f530":[["\uD83D\uDD30"],"\uE209","\uDBB8\uDC44",["beginner"],27,50,63,0],
-		"1f531":[["\uD83D\uDD31"],"\uE031","\uDBB9\uDCD2",["trident"],27,51,63,0],
-		"1f532":[["\uD83D\uDD32"],"\uE21A","\uDBBA\uDF64",["black_square_button"],28,0,63,0],
-		"1f533":[["\uD83D\uDD33"],"\uE21B","\uDBBA\uDF67",["white_square_button"],28,1,63,0],
-		"1f534":[["\uD83D\uDD34"],"\uE219","\uDBBA\uDF63",["red_circle"],28,2,63,0],
-		"1f535":[["\uD83D\uDD35"],"","\uDBBA\uDF64",["large_blue_circle"],28,3,63,0],
-		"1f536":[["\uD83D\uDD36"],"","\uDBBA\uDF73",["large_orange_diamond"],28,4,63,0],
-		"1f537":[["\uD83D\uDD37"],"","\uDBBA\uDF74",["large_blue_diamond"],28,5,63,0],
-		"1f538":[["\uD83D\uDD38"],"","\uDBBA\uDF75",["small_orange_diamond"],28,6,63,0],
-		"1f539":[["\uD83D\uDD39"],"","\uDBBA\uDF76",["small_blue_diamond"],28,7,63,0],
-		"1f53a":[["\uD83D\uDD3A"],"","\uDBBA\uDF78",["small_red_triangle"],28,8,63,0],
-		"1f53b":[["\uD83D\uDD3B"],"","\uDBBA\uDF79",["small_red_triangle_down"],28,9,63,0],
-		"1f53c":[["\uD83D\uDD3C"],"","\uDBBA\uDF01",["arrow_up_small"],28,10,63,0],
-		"1f53d":[["\uD83D\uDD3D"],"","\uDBBA\uDF00",["arrow_down_small"],28,11,63,0],
-		"1f549-fe0f":[["\uD83D\uDD49\uFE0F","\uD83D\uDD49"],"","",["om_symbol"],28,12,31,0],
-		"1f54a-fe0f":[["\uD83D\uDD4A\uFE0F","\uD83D\uDD4A"],"","",["dove_of_peace"],28,13,31,0],
-		"1f54b":[["\uD83D\uDD4B"],"","",["kaaba"],28,14,31,0],
-		"1f54c":[["\uD83D\uDD4C"],"","",["mosque"],28,15,31,0],
-		"1f54d":[["\uD83D\uDD4D"],"","",["synagogue"],28,16,31,0],
-		"1f54e":[["\uD83D\uDD4E"],"","",["menorah_with_nine_branches"],28,17,31,0],
-		"1f550":[["\uD83D\uDD50"],"\uE024","\uDBB8\uDC1E",["clock1"],28,18,63,0],
-		"1f551":[["\uD83D\uDD51"],"\uE025","\uDBB8\uDC1F",["clock2"],28,19,63,0],
-		"1f552":[["\uD83D\uDD52"],"\uE026","\uDBB8\uDC20",["clock3"],28,20,63,0],
-		"1f553":[["\uD83D\uDD53"],"\uE027","\uDBB8\uDC21",["clock4"],28,21,63,0],
-		"1f554":[["\uD83D\uDD54"],"\uE028","\uDBB8\uDC22",["clock5"],28,22,63,0],
-		"1f555":[["\uD83D\uDD55"],"\uE029","\uDBB8\uDC23",["clock6"],28,23,63,0],
-		"1f556":[["\uD83D\uDD56"],"\uE02A","\uDBB8\uDC24",["clock7"],28,24,63,0],
-		"1f557":[["\uD83D\uDD57"],"\uE02B","\uDBB8\uDC25",["clock8"],28,25,63,0],
-		"1f558":[["\uD83D\uDD58"],"\uE02C","\uDBB8\uDC26",["clock9"],28,26,63,0],
-		"1f559":[["\uD83D\uDD59"],"\uE02D","\uDBB8\uDC27",["clock10"],28,27,63,0],
-		"1f55a":[["\uD83D\uDD5A"],"\uE02E","\uDBB8\uDC28",["clock11"],28,28,63,0],
-		"1f55b":[["\uD83D\uDD5B"],"\uE02F","\uDBB8\uDC29",["clock12"],28,29,63,0],
-		"1f55c":[["\uD83D\uDD5C"],"","",["clock130"],28,30,63,0],
-		"1f55d":[["\uD83D\uDD5D"],"","",["clock230"],28,31,63,0],
-		"1f55e":[["\uD83D\uDD5E"],"","",["clock330"],28,32,63,0],
-		"1f55f":[["\uD83D\uDD5F"],"","",["clock430"],28,33,63,0],
-		"1f560":[["\uD83D\uDD60"],"","",["clock530"],28,34,63,0],
-		"1f561":[["\uD83D\uDD61"],"","",["clock630"],28,35,63,0],
-		"1f562":[["\uD83D\uDD62"],"","",["clock730"],28,36,63,0],
-		"1f563":[["\uD83D\uDD63"],"","",["clock830"],28,37,63,0],
-		"1f564":[["\uD83D\uDD64"],"","",["clock930"],28,38,63,0],
-		"1f565":[["\uD83D\uDD65"],"","",["clock1030"],28,39,63,0],
-		"1f566":[["\uD83D\uDD66"],"","",["clock1130"],28,40,63,0],
-		"1f567":[["\uD83D\uDD67"],"","",["clock1230"],28,41,63,0],
-		"1f56f-fe0f":[["\uD83D\uDD6F\uFE0F","\uD83D\uDD6F"],"","",["candle"],28,42,31,0],
-		"1f570-fe0f":[["\uD83D\uDD70\uFE0F","\uD83D\uDD70"],"","",["mantelpiece_clock"],28,43,31,0],
-		"1f573-fe0f":[["\uD83D\uDD73\uFE0F","\uD83D\uDD73"],"","",["hole"],28,44,31,0],
-		"1f574-fe0f":[["\uD83D\uDD74\uFE0F","\uD83D\uDD74"],"","",["man_in_business_suit_levitating"],28,45,31,0],
-		"1f575-fe0f-200d-2640-fe0f":[["\uD83D\uDD75\uFE0F\u200D\u2640\uFE0F"],"","",["female-detective"],28,51,15,0],
-		"1f575-fe0f-200d-2642-fe0f":[["\uD83D\uDD75\uFE0F\u200D\u2642\uFE0F","\uD83D\uDD75\uFE0F","\uD83D\uDD75"],"","",["male-detective","sleuth_or_spy"],29,5,15,0],
-		"1f576-fe0f":[["\uD83D\uDD76\uFE0F","\uD83D\uDD76"],"","",["dark_sunglasses"],29,17,31,0],
-		"1f577-fe0f":[["\uD83D\uDD77\uFE0F","\uD83D\uDD77"],"","",["spider"],29,18,31,0],
-		"1f578-fe0f":[["\uD83D\uDD78\uFE0F","\uD83D\uDD78"],"","",["spider_web"],29,19,31,0],
-		"1f579-fe0f":[["\uD83D\uDD79\uFE0F","\uD83D\uDD79"],"","",["joystick"],29,20,31,0],
-		"1f57a":[["\uD83D\uDD7A"],"","",["man_dancing"],29,21,31,0],
-		"1f587-fe0f":[["\uD83D\uDD87\uFE0F","\uD83D\uDD87"],"","",["linked_paperclips"],29,27,31,0],
-		"1f58a-fe0f":[["\uD83D\uDD8A\uFE0F","\uD83D\uDD8A"],"","",["lower_left_ballpoint_pen"],29,28,31,0],
-		"1f58b-fe0f":[["\uD83D\uDD8B\uFE0F","\uD83D\uDD8B"],"","",["lower_left_fountain_pen"],29,29,31,0],
-		"1f58c-fe0f":[["\uD83D\uDD8C\uFE0F","\uD83D\uDD8C"],"","",["lower_left_paintbrush"],29,30,31,0],
-		"1f58d-fe0f":[["\uD83D\uDD8D\uFE0F","\uD83D\uDD8D"],"","",["lower_left_crayon"],29,31,31,0],
-		"1f590-fe0f":[["\uD83D\uDD90\uFE0F","\uD83D\uDD90"],"","",["raised_hand_with_fingers_splayed"],29,32,31,0],
-		"1f595":[["\uD83D\uDD95"],"","",["middle_finger","reversed_hand_with_middle_finger_extended"],29,38,31,0],
-		"1f596":[["\uD83D\uDD96"],"","",["spock-hand"],29,44,31,0],
-		"1f5a4":[["\uD83D\uDDA4"],"","",["black_heart"],29,50,31,0],
-		"1f5a5-fe0f":[["\uD83D\uDDA5\uFE0F","\uD83D\uDDA5"],"","",["desktop_computer"],29,51,31,0],
-		"1f5a8-fe0f":[["\uD83D\uDDA8\uFE0F","\uD83D\uDDA8"],"","",["printer"],30,0,31,0],
-		"1f5b1-fe0f":[["\uD83D\uDDB1\uFE0F","\uD83D\uDDB1"],"","",["three_button_mouse"],30,1,31,0],
-		"1f5b2-fe0f":[["\uD83D\uDDB2\uFE0F","\uD83D\uDDB2"],"","",["trackball"],30,2,31,0],
-		"1f5bc-fe0f":[["\uD83D\uDDBC\uFE0F","\uD83D\uDDBC"],"","",["frame_with_picture"],30,3,31,0],
-		"1f5c2-fe0f":[["\uD83D\uDDC2\uFE0F","\uD83D\uDDC2"],"","",["card_index_dividers"],30,4,31,0],
-		"1f5c3-fe0f":[["\uD83D\uDDC3\uFE0F","\uD83D\uDDC3"],"","",["card_file_box"],30,5,31,0],
-		"1f5c4-fe0f":[["\uD83D\uDDC4\uFE0F","\uD83D\uDDC4"],"","",["file_cabinet"],30,6,31,0],
-		"1f5d1-fe0f":[["\uD83D\uDDD1\uFE0F","\uD83D\uDDD1"],"","",["wastebasket"],30,7,31,0],
-		"1f5d2-fe0f":[["\uD83D\uDDD2\uFE0F","\uD83D\uDDD2"],"","",["spiral_note_pad"],30,8,31,0],
-		"1f5d3-fe0f":[["\uD83D\uDDD3\uFE0F","\uD83D\uDDD3"],"","",["spiral_calendar_pad"],30,9,31,0],
-		"1f5dc-fe0f":[["\uD83D\uDDDC\uFE0F","\uD83D\uDDDC"],"","",["compression"],30,10,31,0],
-		"1f5dd-fe0f":[["\uD83D\uDDDD\uFE0F","\uD83D\uDDDD"],"","",["old_key"],30,11,31,0],
-		"1f5de-fe0f":[["\uD83D\uDDDE\uFE0F","\uD83D\uDDDE"],"","",["rolled_up_newspaper"],30,12,31,0],
-		"1f5e1-fe0f":[["\uD83D\uDDE1\uFE0F","\uD83D\uDDE1"],"","",["dagger_knife"],30,13,31,0],
-		"1f5e3-fe0f":[["\uD83D\uDDE3\uFE0F","\uD83D\uDDE3"],"","",["speaking_head_in_silhouette"],30,14,31,0],
-		"1f5e8-fe0f":[["\uD83D\uDDE8\uFE0F","\uD83D\uDDE8"],"","",["left_speech_bubble"],30,15,31,0],
-		"1f5ef-fe0f":[["\uD83D\uDDEF\uFE0F","\uD83D\uDDEF"],"","",["right_anger_bubble"],30,16,31,0],
-		"1f5f3-fe0f":[["\uD83D\uDDF3\uFE0F","\uD83D\uDDF3"],"","",["ballot_box_with_ballot"],30,17,31,0],
-		"1f5fa-fe0f":[["\uD83D\uDDFA\uFE0F","\uD83D\uDDFA"],"","",["world_map"],30,18,31,0],
-		"1f5fb":[["\uD83D\uDDFB"],"\uE03B","\uDBB9\uDCC3",["mount_fuji"],30,19,63,0],
-		"1f5fc":[["\uD83D\uDDFC"],"\uE509","\uDBB9\uDCC4",["tokyo_tower"],30,20,63,0],
-		"1f5fd":[["\uD83D\uDDFD"],"\uE51D","\uDBB9\uDCC6",["statue_of_liberty"],30,21,63,0],
-		"1f5fe":[["\uD83D\uDDFE"],"","\uDBB9\uDCC7",["japan"],30,22,63,0],
-		"1f5ff":[["\uD83D\uDDFF"],"","\uDBB9\uDCC8",["moyai"],30,23,63,0],
-		"1f600":[["\uD83D\uDE00"],"","",["grinning"],30,24,63,0,":D"],
-		"1f601":[["\uD83D\uDE01"],"\uE404","\uDBB8\uDF33",["grin"],30,25,63,0],
-		"1f602":[["\uD83D\uDE02"],"\uE412","\uDBB8\uDF34",["joy"],30,26,63,0],
-		"1f603":[["\uD83D\uDE03"],"\uE057","\uDBB8\uDF30",["smiley"],30,27,63,0,":)"],
-		"1f604":[["\uD83D\uDE04"],"\uE415","\uDBB8\uDF38",["smile"],30,28,63,0,":)"],
-		"1f605":[["\uD83D\uDE05"],"","\uDBB8\uDF31",["sweat_smile"],30,29,63,0],
-		"1f606":[["\uD83D\uDE06"],"","\uDBB8\uDF32",["laughing","satisfied"],30,30,63,0],
-		"1f607":[["\uD83D\uDE07"],"","",["innocent"],30,31,63,0],
-		"1f608":[["\uD83D\uDE08"],"","",["smiling_imp"],30,32,63,0],
-		"1f609":[["\uD83D\uDE09"],"\uE405","\uDBB8\uDF47",["wink"],30,33,63,0,";)"],
-		"1f60a":[["\uD83D\uDE0A"],"\uE056","\uDBB8\uDF35",["blush"],30,34,63,0,":)"],
-		"1f60b":[["\uD83D\uDE0B"],"","\uDBB8\uDF2B",["yum"],30,35,63,0],
-		"1f60c":[["\uD83D\uDE0C"],"\uE40A","\uDBB8\uDF3E",["relieved"],30,36,63,0],
-		"1f60d":[["\uD83D\uDE0D"],"\uE106","\uDBB8\uDF27",["heart_eyes"],30,37,63,0],
-		"1f60e":[["\uD83D\uDE0E"],"","",["sunglasses"],30,38,63,0],
-		"1f60f":[["\uD83D\uDE0F"],"\uE402","\uDBB8\uDF43",["smirk"],30,39,63,0],
-		"1f610":[["\uD83D\uDE10"],"","",["neutral_face"],30,40,63,0],
-		"1f611":[["\uD83D\uDE11"],"","",["expressionless"],30,41,63,0],
-		"1f612":[["\uD83D\uDE12"],"\uE40E","\uDBB8\uDF26",["unamused"],30,42,63,0,":("],
-		"1f613":[["\uD83D\uDE13"],"\uE108","\uDBB8\uDF44",["sweat"],30,43,63,0],
-		"1f614":[["\uD83D\uDE14"],"\uE403","\uDBB8\uDF40",["pensive"],30,44,63,0],
-		"1f615":[["\uD83D\uDE15"],"","",["confused"],30,45,63,0],
-		"1f616":[["\uD83D\uDE16"],"\uE407","\uDBB8\uDF3F",["confounded"],30,46,63,0],
-		"1f617":[["\uD83D\uDE17"],"","",["kissing"],30,47,63,0],
-		"1f618":[["\uD83D\uDE18"],"\uE418","\uDBB8\uDF2C",["kissing_heart"],30,48,63,0],
-		"1f619":[["\uD83D\uDE19"],"","",["kissing_smiling_eyes"],30,49,63,0],
-		"1f61a":[["\uD83D\uDE1A"],"\uE417","\uDBB8\uDF2D",["kissing_closed_eyes"],30,50,63,0],
-		"1f61b":[["\uD83D\uDE1B"],"","",["stuck_out_tongue"],30,51,63,0,":p"],
-		"1f61c":[["\uD83D\uDE1C"],"\uE105","\uDBB8\uDF29",["stuck_out_tongue_winking_eye"],31,0,63,0,";p"],
-		"1f61d":[["\uD83D\uDE1D"],"\uE409","\uDBB8\uDF2A",["stuck_out_tongue_closed_eyes"],31,1,63,0],
-		"1f61e":[["\uD83D\uDE1E"],"\uE058","\uDBB8\uDF23",["disappointed"],31,2,63,0,":("],
-		"1f61f":[["\uD83D\uDE1F"],"","",["worried"],31,3,63,0],
-		"1f620":[["\uD83D\uDE20"],"\uE059","\uDBB8\uDF20",["angry"],31,4,63,0],
-		"1f621":[["\uD83D\uDE21"],"\uE416","\uDBB8\uDF3D",["rage"],31,5,63,0],
-		"1f622":[["\uD83D\uDE22"],"\uE413","\uDBB8\uDF39",["cry"],31,6,63,0,":'("],
-		"1f623":[["\uD83D\uDE23"],"\uE406","\uDBB8\uDF3C",["persevere"],31,7,63,0],
-		"1f624":[["\uD83D\uDE24"],"","\uDBB8\uDF28",["triumph"],31,8,63,0],
-		"1f625":[["\uD83D\uDE25"],"\uE401","\uDBB8\uDF45",["disappointed_relieved"],31,9,63,0],
-		"1f626":[["\uD83D\uDE26"],"","",["frowning"],31,10,63,0],
-		"1f627":[["\uD83D\uDE27"],"","",["anguished"],31,11,63,0],
-		"1f628":[["\uD83D\uDE28"],"\uE40B","\uDBB8\uDF3B",["fearful"],31,12,63,0],
-		"1f629":[["\uD83D\uDE29"],"","\uDBB8\uDF21",["weary"],31,13,63,0],
-		"1f62a":[["\uD83D\uDE2A"],"\uE408","\uDBB8\uDF42",["sleepy"],31,14,63,0],
-		"1f62b":[["\uD83D\uDE2B"],"","\uDBB8\uDF46",["tired_face"],31,15,63,0],
-		"1f62c":[["\uD83D\uDE2C"],"","",["grimacing"],31,16,63,0],
-		"1f62d":[["\uD83D\uDE2D"],"\uE411","\uDBB8\uDF3A",["sob"],31,17,63,0,":'("],
-		"1f62e":[["\uD83D\uDE2E"],"","",["open_mouth"],31,18,63,0],
-		"1f62f":[["\uD83D\uDE2F"],"","",["hushed"],31,19,63,0],
-		"1f630":[["\uD83D\uDE30"],"\uE40F","\uDBB8\uDF25",["cold_sweat"],31,20,63,0],
-		"1f631":[["\uD83D\uDE31"],"\uE107","\uDBB8\uDF41",["scream"],31,21,63,0],
-		"1f632":[["\uD83D\uDE32"],"\uE410","\uDBB8\uDF22",["astonished"],31,22,63,0],
-		"1f633":[["\uD83D\uDE33"],"\uE40D","\uDBB8\uDF2F",["flushed"],31,23,63,0],
-		"1f634":[["\uD83D\uDE34"],"","",["sleeping"],31,24,63,0],
-		"1f635":[["\uD83D\uDE35"],"","\uDBB8\uDF24",["dizzy_face"],31,25,63,0],
-		"1f636":[["\uD83D\uDE36"],"","",["no_mouth"],31,26,63,0],
-		"1f637":[["\uD83D\uDE37"],"\uE40C","\uDBB8\uDF2E",["mask"],31,27,63,0],
-		"1f638":[["\uD83D\uDE38"],"","\uDBB8\uDF49",["smile_cat"],31,28,63,0],
-		"1f639":[["\uD83D\uDE39"],"","\uDBB8\uDF4A",["joy_cat"],31,29,63,0],
-		"1f63a":[["\uD83D\uDE3A"],"","\uDBB8\uDF48",["smiley_cat"],31,30,63,0],
-		"1f63b":[["\uD83D\uDE3B"],"","\uDBB8\uDF4C",["heart_eyes_cat"],31,31,63,0],
-		"1f63c":[["\uD83D\uDE3C"],"","\uDBB8\uDF4F",["smirk_cat"],31,32,63,0],
-		"1f63d":[["\uD83D\uDE3D"],"","\uDBB8\uDF4B",["kissing_cat"],31,33,63,0],
-		"1f63e":[["\uD83D\uDE3E"],"","\uDBB8\uDF4E",["pouting_cat"],31,34,63,0],
-		"1f63f":[["\uD83D\uDE3F"],"","\uDBB8\uDF4D",["crying_cat_face"],31,35,63,0],
-		"1f640":[["\uD83D\uDE40"],"","\uDBB8\uDF50",["scream_cat"],31,36,63,0],
-		"1f641":[["\uD83D\uDE41"],"","",["slightly_frowning_face"],31,37,31,0],
-		"1f642":[["\uD83D\uDE42"],"","",["slightly_smiling_face"],31,38,63,0],
-		"1f643":[["\uD83D\uDE43"],"","",["upside_down_face"],31,39,31,0],
-		"1f644":[["\uD83D\uDE44"],"","",["face_with_rolling_eyes"],31,40,31,0],
-		"1f645-200d-2640-fe0f":[["\uD83D\uDE45\u200D\u2640\uFE0F","\uD83D\uDE45\u200D\u2640","\uD83D\uDE45"],"","",["woman-gesturing-no","no_good"],31,41,31,0],
-		"1f645-200d-2642-fe0f":[["\uD83D\uDE45\u200D\u2642\uFE0F","\uD83D\uDE45\u200D\u2642"],"","",["man-gesturing-no"],31,47,31,0],
-		"1f646-200d-2640-fe0f":[["\uD83D\uDE46\u200D\u2640\uFE0F","\uD83D\uDE46\u200D\u2640","\uD83D\uDE46"],"","",["woman-gesturing-ok","ok_woman"],32,7,31,0],
-		"1f646-200d-2642-fe0f":[["\uD83D\uDE46\u200D\u2642\uFE0F","\uD83D\uDE46\u200D\u2642"],"","",["man-gesturing-ok"],32,13,31,0],
-		"1f647-200d-2640-fe0f":[["\uD83D\uDE47\u200D\u2640\uFE0F","\uD83D\uDE47\u200D\u2640"],"","",["woman-bowing"],32,25,31,0],
-		"1f647-200d-2642-fe0f":[["\uD83D\uDE47\u200D\u2642\uFE0F","\uD83D\uDE47\u200D\u2642","\uD83D\uDE47"],"","",["man-bowing","bow"],32,31,31,0],
-		"1f648":[["\uD83D\uDE48"],"","\uDBB8\uDF54",["see_no_evil"],32,43,63,0],
-		"1f649":[["\uD83D\uDE49"],"","\uDBB8\uDF56",["hear_no_evil"],32,44,63,0],
-		"1f64a":[["\uD83D\uDE4A"],"","\uDBB8\uDF55",["speak_no_evil"],32,45,63,0],
-		"1f64b-200d-2640-fe0f":[["\uD83D\uDE4B\u200D\u2640\uFE0F","\uD83D\uDE4B\u200D\u2640","\uD83D\uDE4B"],"","",["woman-raising-hand","raising_hand"],32,46,31,0],
-		"1f64b-200d-2642-fe0f":[["\uD83D\uDE4B\u200D\u2642\uFE0F","\uD83D\uDE4B\u200D\u2642"],"","",["man-raising-hand"],33,0,31,0],
-		"1f64c":[["\uD83D\uDE4C"],"\uE427","\uDBB8\uDF58",["raised_hands"],33,12,63,0],
-		"1f64d-200d-2640-fe0f":[["\uD83D\uDE4D\u200D\u2640\uFE0F","\uD83D\uDE4D\u200D\u2640","\uD83D\uDE4D"],"","",["woman-frowning","person_frowning"],33,18,31,0],
-		"1f64d-200d-2642-fe0f":[["\uD83D\uDE4D\u200D\u2642\uFE0F","\uD83D\uDE4D\u200D\u2642"],"","",["man-frowning"],33,24,31,0],
-		"1f64e-200d-2640-fe0f":[["\uD83D\uDE4E\u200D\u2640\uFE0F","\uD83D\uDE4E\u200D\u2640","\uD83D\uDE4E"],"","",["woman-pouting","person_with_pouting_face"],33,36,31,0],
-		"1f64e-200d-2642-fe0f":[["\uD83D\uDE4E\u200D\u2642\uFE0F","\uD83D\uDE4E\u200D\u2642"],"","",["man-pouting"],33,42,31,0],
-		"1f64f":[["\uD83D\uDE4F"],"\uE41D","\uDBB8\uDF5B",["pray"],34,2,63,0],
-		"1f680":[["\uD83D\uDE80"],"\uE10D","\uDBB9\uDFED",["rocket"],34,8,63,0],
-		"1f681":[["\uD83D\uDE81"],"","",["helicopter"],34,9,63,0],
-		"1f682":[["\uD83D\uDE82"],"","",["steam_locomotive"],34,10,63,0],
-		"1f683":[["\uD83D\uDE83"],"\uE01E","\uDBB9\uDFDF",["railway_car"],34,11,63,0],
-		"1f684":[["\uD83D\uDE84"],"\uE435","\uDBB9\uDFE2",["bullettrain_side"],34,12,63,0],
-		"1f685":[["\uD83D\uDE85"],"\uE01F","\uDBB9\uDFE3",["bullettrain_front"],34,13,63,0],
-		"1f686":[["\uD83D\uDE86"],"","",["train2"],34,14,63,0],
-		"1f687":[["\uD83D\uDE87"],"\uE434","\uDBB9\uDFE0",["metro"],34,15,63,0],
-		"1f688":[["\uD83D\uDE88"],"","",["light_rail"],34,16,63,0],
-		"1f689":[["\uD83D\uDE89"],"\uE039","\uDBB9\uDFEC",["station"],34,17,63,0],
-		"1f68a":[["\uD83D\uDE8A"],"","",["tram"],34,18,63,0],
-		"1f68b":[["\uD83D\uDE8B"],"","",["train"],34,19,63,0],
-		"1f68c":[["\uD83D\uDE8C"],"\uE159","\uDBB9\uDFE6",["bus"],34,20,63,0],
-		"1f68d":[["\uD83D\uDE8D"],"","",["oncoming_bus"],34,21,63,0],
-		"1f68e":[["\uD83D\uDE8E"],"","",["trolleybus"],34,22,63,0],
-		"1f68f":[["\uD83D\uDE8F"],"\uE150","\uDBB9\uDFE7",["busstop"],34,23,63,0],
-		"1f690":[["\uD83D\uDE90"],"","",["minibus"],34,24,63,0],
-		"1f691":[["\uD83D\uDE91"],"\uE431","\uDBB9\uDFF3",["ambulance"],34,25,63,0],
-		"1f692":[["\uD83D\uDE92"],"\uE430","\uDBB9\uDFF2",["fire_engine"],34,26,63,0],
-		"1f693":[["\uD83D\uDE93"],"\uE432","\uDBB9\uDFF4",["police_car"],34,27,63,0],
-		"1f694":[["\uD83D\uDE94"],"","",["oncoming_police_car"],34,28,63,0],
-		"1f695":[["\uD83D\uDE95"],"\uE15A","\uDBB9\uDFEF",["taxi"],34,29,63,0],
-		"1f696":[["\uD83D\uDE96"],"","",["oncoming_taxi"],34,30,63,0],
-		"1f697":[["\uD83D\uDE97"],"\uE01B","\uDBB9\uDFE4",["car","red_car"],34,31,63,0],
-		"1f698":[["\uD83D\uDE98"],"","",["oncoming_automobile"],34,32,63,0],
-		"1f699":[["\uD83D\uDE99"],"\uE42E","\uDBB9\uDFE5",["blue_car"],34,33,63,0],
-		"1f69a":[["\uD83D\uDE9A"],"\uE42F","\uDBB9\uDFF1",["truck"],34,34,63,0],
-		"1f69b":[["\uD83D\uDE9B"],"","",["articulated_lorry"],34,35,63,0],
-		"1f69c":[["\uD83D\uDE9C"],"","",["tractor"],34,36,63,0],
-		"1f69d":[["\uD83D\uDE9D"],"","",["monorail"],34,37,63,0],
-		"1f69e":[["\uD83D\uDE9E"],"","",["mountain_railway"],34,38,63,0],
-		"1f69f":[["\uD83D\uDE9F"],"","",["suspension_railway"],34,39,63,0],
-		"1f6a0":[["\uD83D\uDEA0"],"","",["mountain_cableway"],34,40,63,0],
-		"1f6a1":[["\uD83D\uDEA1"],"","",["aerial_tramway"],34,41,63,0],
-		"1f6a2":[["\uD83D\uDEA2"],"\uE202","\uDBB9\uDFE8",["ship"],34,42,63,0],
-		"1f6a3-200d-2640-fe0f":[["\uD83D\uDEA3\u200D\u2640\uFE0F","\uD83D\uDEA3\u200D\u2640"],"","",["woman-rowing-boat"],34,43,31,0],
-		"1f6a3-200d-2642-fe0f":[["\uD83D\uDEA3\u200D\u2642\uFE0F","\uD83D\uDEA3\u200D\u2642","\uD83D\uDEA3"],"","",["man-rowing-boat","rowboat"],34,49,31,0],
-		"1f6a4":[["\uD83D\uDEA4"],"\uE135","\uDBB9\uDFEE",["speedboat"],35,9,63,0],
-		"1f6a5":[["\uD83D\uDEA5"],"\uE14E","\uDBB9\uDFF7",["traffic_light"],35,10,63,0],
-		"1f6a6":[["\uD83D\uDEA6"],"","",["vertical_traffic_light"],35,11,63,0],
-		"1f6a7":[["\uD83D\uDEA7"],"\uE137","\uDBB9\uDFF8",["construction"],35,12,63,0],
-		"1f6a8":[["\uD83D\uDEA8"],"","\uDBB9\uDFF9",["rotating_light"],35,13,63,0],
-		"1f6a9":[["\uD83D\uDEA9"],"","\uDBBA\uDF22",["triangular_flag_on_post"],35,14,63,0],
-		"1f6aa":[["\uD83D\uDEAA"],"","\uDBB9\uDCF3",["door"],35,15,63,0],
-		"1f6ab":[["\uD83D\uDEAB"],"","\uDBBA\uDF48",["no_entry_sign"],35,16,63,0],
-		"1f6ac":[["\uD83D\uDEAC"],"\uE30E","\uDBBA\uDF1E",["smoking"],35,17,63,0],
-		"1f6ad":[["\uD83D\uDEAD"],"\uE208","\uDBBA\uDF1F",["no_smoking"],35,18,63,0],
-		"1f6ae":[["\uD83D\uDEAE"],"","",["put_litter_in_its_place"],35,19,63,0],
-		"1f6af":[["\uD83D\uDEAF"],"","",["do_not_litter"],35,20,63,0],
-		"1f6b0":[["\uD83D\uDEB0"],"","",["potable_water"],35,21,63,0],
-		"1f6b1":[["\uD83D\uDEB1"],"","",["non-potable_water"],35,22,63,0],
-		"1f6b2":[["\uD83D\uDEB2"],"\uE136","\uDBB9\uDFEB",["bike"],35,23,63,0],
-		"1f6b3":[["\uD83D\uDEB3"],"","",["no_bicycles"],35,24,63,0],
-		"1f6b4-200d-2640-fe0f":[["\uD83D\uDEB4\u200D\u2640\uFE0F","\uD83D\uDEB4\u200D\u2640"],"","",["woman-biking"],35,25,31,0],
-		"1f6b4-200d-2642-fe0f":[["\uD83D\uDEB4\u200D\u2642\uFE0F","\uD83D\uDEB4\u200D\u2642","\uD83D\uDEB4"],"","",["man-biking","bicyclist"],35,31,31,0],
-		"1f6b5-200d-2640-fe0f":[["\uD83D\uDEB5\u200D\u2640\uFE0F","\uD83D\uDEB5\u200D\u2640"],"","",["woman-mountain-biking"],35,43,31,0],
-		"1f6b5-200d-2642-fe0f":[["\uD83D\uDEB5\u200D\u2642\uFE0F","\uD83D\uDEB5\u200D\u2642","\uD83D\uDEB5"],"","",["man-mountain-biking","mountain_bicyclist"],35,49,31,0],
-		"1f6b6-200d-2640-fe0f":[["\uD83D\uDEB6\u200D\u2640\uFE0F","\uD83D\uDEB6\u200D\u2640"],"","",["woman-walking"],36,9,31,0],
-		"1f6b6-200d-2642-fe0f":[["\uD83D\uDEB6\u200D\u2642\uFE0F","\uD83D\uDEB6\u200D\u2642","\uD83D\uDEB6"],"","",["man-walking","walking"],36,15,31,0],
-		"1f6b7":[["\uD83D\uDEB7"],"","",["no_pedestrians"],36,27,63,0],
-		"1f6b8":[["\uD83D\uDEB8"],"","",["children_crossing"],36,28,63,0],
-		"1f6b9":[["\uD83D\uDEB9"],"\uE138","\uDBBA\uDF33",["mens"],36,29,63,0],
-		"1f6ba":[["\uD83D\uDEBA"],"\uE139","\uDBBA\uDF34",["womens"],36,30,63,0],
-		"1f6bb":[["\uD83D\uDEBB"],"\uE151","\uDBB9\uDD06",["restroom"],36,31,63,0],
-		"1f6bc":[["\uD83D\uDEBC"],"\uE13A","\uDBBA\uDF35",["baby_symbol"],36,32,63,0],
-		"1f6bd":[["\uD83D\uDEBD"],"\uE140","\uDBB9\uDD07",["toilet"],36,33,63,0],
-		"1f6be":[["\uD83D\uDEBE"],"\uE309","\uDBB9\uDD08",["wc"],36,34,63,0],
-		"1f6bf":[["\uD83D\uDEBF"],"","",["shower"],36,35,63,0],
-		"1f6c0":[["\uD83D\uDEC0"],"\uE13F","\uDBB9\uDD05",["bath"],36,36,63,0],
-		"1f6c1":[["\uD83D\uDEC1"],"","",["bathtub"],36,42,63,0],
-		"1f6c2":[["\uD83D\uDEC2"],"","",["passport_control"],36,43,63,0],
-		"1f6c3":[["\uD83D\uDEC3"],"","",["customs"],36,44,63,0],
-		"1f6c4":[["\uD83D\uDEC4"],"","",["baggage_claim"],36,45,63,0],
-		"1f6c5":[["\uD83D\uDEC5"],"","",["left_luggage"],36,46,63,0],
-		"1f6cb-fe0f":[["\uD83D\uDECB\uFE0F","\uD83D\uDECB"],"","",["couch_and_lamp"],36,47,31,0],
-		"1f6cc":[["\uD83D\uDECC"],"","",["sleeping_accommodation"],36,48,31,0],
-		"1f6cd-fe0f":[["\uD83D\uDECD\uFE0F","\uD83D\uDECD"],"","",["shopping_bags"],37,2,31,0],
-		"1f6ce-fe0f":[["\uD83D\uDECE\uFE0F","\uD83D\uDECE"],"","",["bellhop_bell"],37,3,31,0],
-		"1f6cf-fe0f":[["\uD83D\uDECF\uFE0F","\uD83D\uDECF"],"","",["bed"],37,4,31,0],
-		"1f6d0":[["\uD83D\uDED0"],"","",["place_of_worship"],37,5,31,0],
-		"1f6d1":[["\uD83D\uDED1"],"","",["octagonal_sign"],37,6,31,0],
-		"1f6d2":[["\uD83D\uDED2"],"","",["shopping_trolley"],37,7,31,0],
-		"1f6e0-fe0f":[["\uD83D\uDEE0\uFE0F","\uD83D\uDEE0"],"","",["hammer_and_wrench"],37,8,31,0],
-		"1f6e1-fe0f":[["\uD83D\uDEE1\uFE0F","\uD83D\uDEE1"],"","",["shield"],37,9,31,0],
-		"1f6e2-fe0f":[["\uD83D\uDEE2\uFE0F","\uD83D\uDEE2"],"","",["oil_drum"],37,10,31,0],
-		"1f6e3-fe0f":[["\uD83D\uDEE3\uFE0F","\uD83D\uDEE3"],"","",["motorway"],37,11,31,0],
-		"1f6e4-fe0f":[["\uD83D\uDEE4\uFE0F","\uD83D\uDEE4"],"","",["railway_track"],37,12,31,0],
-		"1f6e5-fe0f":[["\uD83D\uDEE5\uFE0F","\uD83D\uDEE5"],"","",["motor_boat"],37,13,31,0],
-		"1f6e9-fe0f":[["\uD83D\uDEE9\uFE0F","\uD83D\uDEE9"],"","",["small_airplane"],37,14,31,0],
-		"1f6eb":[["\uD83D\uDEEB"],"","",["airplane_departure"],37,15,31,0],
-		"1f6ec":[["\uD83D\uDEEC"],"","",["airplane_arriving"],37,16,31,0],
-		"1f6f0-fe0f":[["\uD83D\uDEF0\uFE0F","\uD83D\uDEF0"],"","",["satellite"],37,17,31,0],
-		"1f6f3-fe0f":[["\uD83D\uDEF3\uFE0F","\uD83D\uDEF3"],"","",["passenger_ship"],37,18,31,0],
-		"1f6f4":[["\uD83D\uDEF4"],"","",["scooter"],37,19,31,0],
-		"1f6f5":[["\uD83D\uDEF5"],"","",["motor_scooter"],37,20,31,0],
-		"1f6f6":[["\uD83D\uDEF6"],"","",["canoe"],37,21,31,0],
-		"1f6f7":[["\uD83D\uDEF7"],"","",["sled"],37,22,31,0],
-		"1f6f8":[["\uD83D\uDEF8"],"","",["flying_saucer"],37,23,31,0],
-		"1f910":[["\uD83E\uDD10"],"","",["zipper_mouth_face"],37,24,31,0],
-		"1f911":[["\uD83E\uDD11"],"","",["money_mouth_face"],37,25,31,0],
-		"1f912":[["\uD83E\uDD12"],"","",["face_with_thermometer"],37,26,31,0],
-		"1f913":[["\uD83E\uDD13"],"","",["nerd_face"],37,27,31,0],
-		"1f914":[["\uD83E\uDD14"],"","",["thinking_face"],37,28,31,0],
-		"1f915":[["\uD83E\uDD15"],"","",["face_with_head_bandage"],37,29,31,0],
-		"1f916":[["\uD83E\uDD16"],"","",["robot_face"],37,30,31,0],
-		"1f917":[["\uD83E\uDD17"],"","",["hugging_face"],37,31,31,0],
-		"1f918":[["\uD83E\uDD18"],"","",["the_horns","sign_of_the_horns"],37,32,31,0],
-		"1f919":[["\uD83E\uDD19"],"","",["call_me_hand"],37,38,31,0],
-		"1f91a":[["\uD83E\uDD1A"],"","",["raised_back_of_hand"],37,44,31,0],
-		"1f91b":[["\uD83E\uDD1B"],"","",["left-facing_fist"],37,50,31,0],
-		"1f91c":[["\uD83E\uDD1C"],"","",["right-facing_fist"],38,4,31,0],
-		"1f91d":[["\uD83E\uDD1D"],"","",["handshake"],38,10,31,0],
-		"1f91e":[["\uD83E\uDD1E"],"","",["crossed_fingers","hand_with_index_and_middle_fingers_crossed"],38,11,31,0],
-		"1f91f":[["\uD83E\uDD1F"],"","",["i_love_you_hand_sign"],38,17,31,0],
-		"1f920":[["\uD83E\uDD20"],"","",["face_with_cowboy_hat"],38,23,31,0],
-		"1f921":[["\uD83E\uDD21"],"","",["clown_face"],38,24,31,0],
-		"1f922":[["\uD83E\uDD22"],"","",["nauseated_face"],38,25,31,0],
-		"1f923":[["\uD83E\uDD23"],"","",["rolling_on_the_floor_laughing"],38,26,31,0],
-		"1f924":[["\uD83E\uDD24"],"","",["drooling_face"],38,27,31,0],
-		"1f925":[["\uD83E\uDD25"],"","",["lying_face"],38,28,31,0],
-		"1f926-200d-2640-fe0f":[["\uD83E\uDD26\u200D\u2640\uFE0F","\uD83E\uDD26\u200D\u2640"],"","",["woman-facepalming"],38,29,31,0],
-		"1f926-200d-2642-fe0f":[["\uD83E\uDD26\u200D\u2642\uFE0F","\uD83E\uDD26\u200D\u2642"],"","",["man-facepalming"],38,35,31,0],
-		"1f926":[["\uD83E\uDD26"],"","",["face_palm"],38,41,15,0],
-		"1f927":[["\uD83E\uDD27"],"","",["sneezing_face"],38,47,31,0],
-		"1f928":[["\uD83E\uDD28"],"","",["face_with_raised_eyebrow","face_with_one_eyebrow_raised"],38,48,31,0],
-		"1f929":[["\uD83E\uDD29"],"","",["star-struck","grinning_face_with_star_eyes"],38,49,31,0],
-		"1f92a":[["\uD83E\uDD2A"],"","",["zany_face","grinning_face_with_one_large_and_one_small_eye"],38,50,31,0],
-		"1f92b":[["\uD83E\uDD2B"],"","",["shushing_face","face_with_finger_covering_closed_lips"],38,51,31,0],
-		"1f92c":[["\uD83E\uDD2C"],"","",["face_with_symbols_on_mouth","serious_face_with_symbols_covering_mouth"],39,0,31,0],
-		"1f92d":[["\uD83E\uDD2D"],"","",["face_with_hand_over_mouth","smiling_face_with_smiling_eyes_and_hand_covering_mouth"],39,1,31,0],
-		"1f92e":[["\uD83E\uDD2E"],"","",["face_vomiting","face_with_open_mouth_vomiting"],39,2,31,0],
-		"1f92f":[["\uD83E\uDD2F"],"","",["exploding_head","shocked_face_with_exploding_head"],39,3,31,0],
-		"1f930":[["\uD83E\uDD30"],"","",["pregnant_woman"],39,4,31,0],
-		"1f931":[["\uD83E\uDD31"],"","",["breast-feeding"],39,10,31,0],
-		"1f932":[["\uD83E\uDD32"],"","",["palms_up_together"],39,16,31,0],
-		"1f933":[["\uD83E\uDD33"],"","",["selfie"],39,22,31,0],
-		"1f934":[["\uD83E\uDD34"],"","",["prince"],39,28,31,0],
-		"1f935":[["\uD83E\uDD35"],"","",["man_in_tuxedo"],39,34,31,0],
-		"1f936":[["\uD83E\uDD36"],"","",["mrs_claus","mother_christmas"],39,40,31,0],
-		"1f937-200d-2640-fe0f":[["\uD83E\uDD37\u200D\u2640\uFE0F","\uD83E\uDD37\u200D\u2640"],"","",["woman-shrugging"],39,46,31,0],
-		"1f937-200d-2642-fe0f":[["\uD83E\uDD37\u200D\u2642\uFE0F","\uD83E\uDD37\u200D\u2642"],"","",["man-shrugging"],40,0,31,0],
-		"1f937":[["\uD83E\uDD37"],"","",["shrug"],40,6,15,0],
-		"1f938-200d-2640-fe0f":[["\uD83E\uDD38\u200D\u2640\uFE0F","\uD83E\uDD38\u200D\u2640"],"","",["woman-cartwheeling"],40,12,31,0],
-		"1f938-200d-2642-fe0f":[["\uD83E\uDD38\u200D\u2642\uFE0F","\uD83E\uDD38\u200D\u2642"],"","",["man-cartwheeling"],40,18,31,0],
-		"1f938":[["\uD83E\uDD38"],"","",["person_doing_cartwheel"],40,24,15,0],
-		"1f939-200d-2640-fe0f":[["\uD83E\uDD39\u200D\u2640\uFE0F","\uD83E\uDD39\u200D\u2640"],"","",["woman-juggling"],40,30,15,0],
-		"1f939-200d-2642-fe0f":[["\uD83E\uDD39\u200D\u2642\uFE0F","\uD83E\uDD39\u200D\u2642"],"","",["man-juggling"],40,36,15,0],
-		"1f939":[["\uD83E\uDD39"],"","",["juggling"],40,42,31,0],
-		"1f93a":[["\uD83E\uDD3A"],"","",["fencer"],40,48,31,0],
-		"1f93c-200d-2640-fe0f":[["\uD83E\uDD3C\u200D\u2640\uFE0F","\uD83E\uDD3C\u200D\u2640"],"","",["woman-wrestling"],40,49,31,0],
-		"1f93c-200d-2642-fe0f":[["\uD83E\uDD3C\u200D\u2642\uFE0F","\uD83E\uDD3C\u200D\u2642"],"","",["man-wrestling"],40,50,31,0],
-		"1f93c":[["\uD83E\uDD3C"],"","",["wrestlers"],40,51,15,0],
-		"1f93d-200d-2640-fe0f":[["\uD83E\uDD3D\u200D\u2640\uFE0F","\uD83E\uDD3D\u200D\u2640"],"","",["woman-playing-water-polo"],41,0,31,0],
-		"1f93d-200d-2642-fe0f":[["\uD83E\uDD3D\u200D\u2642\uFE0F","\uD83E\uDD3D\u200D\u2642"],"","",["man-playing-water-polo"],41,6,31,0],
-		"1f93d":[["\uD83E\uDD3D"],"","",["water_polo"],41,12,15,0],
-		"1f93e-200d-2640-fe0f":[["\uD83E\uDD3E\u200D\u2640\uFE0F","\uD83E\uDD3E\u200D\u2640"],"","",["woman-playing-handball"],41,18,31,0],
-		"1f93e-200d-2642-fe0f":[["\uD83E\uDD3E\u200D\u2642\uFE0F","\uD83E\uDD3E\u200D\u2642"],"","",["man-playing-handball"],41,24,31,0],
-		"1f93e":[["\uD83E\uDD3E"],"","",["handball"],41,30,15,0],
-		"1f940":[["\uD83E\uDD40"],"","",["wilted_flower"],41,36,31,0],
-		"1f941":[["\uD83E\uDD41"],"","",["drum_with_drumsticks"],41,37,31,0],
-		"1f942":[["\uD83E\uDD42"],"","",["clinking_glasses"],41,38,31,0],
-		"1f943":[["\uD83E\uDD43"],"","",["tumbler_glass"],41,39,31,0],
-		"1f944":[["\uD83E\uDD44"],"","",["spoon"],41,40,31,0],
-		"1f945":[["\uD83E\uDD45"],"","",["goal_net"],41,41,31,0],
-		"1f947":[["\uD83E\uDD47"],"","",["first_place_medal"],41,42,31,0],
-		"1f948":[["\uD83E\uDD48"],"","",["second_place_medal"],41,43,31,0],
-		"1f949":[["\uD83E\uDD49"],"","",["third_place_medal"],41,44,31,0],
-		"1f94a":[["\uD83E\uDD4A"],"","",["boxing_glove"],41,45,31,0],
-		"1f94b":[["\uD83E\uDD4B"],"","",["martial_arts_uniform"],41,46,31,0],
-		"1f94c":[["\uD83E\uDD4C"],"","",["curling_stone"],41,47,31,0],
-		"1f950":[["\uD83E\uDD50"],"","",["croissant"],41,48,31,0],
-		"1f951":[["\uD83E\uDD51"],"","",["avocado"],41,49,31,0],
-		"1f952":[["\uD83E\uDD52"],"","",["cucumber"],41,50,31,0],
-		"1f953":[["\uD83E\uDD53"],"","",["bacon"],41,51,31,0],
-		"1f954":[["\uD83E\uDD54"],"","",["potato"],42,0,31,0],
-		"1f955":[["\uD83E\uDD55"],"","",["carrot"],42,1,31,0],
-		"1f956":[["\uD83E\uDD56"],"","",["baguette_bread"],42,2,31,0],
-		"1f957":[["\uD83E\uDD57"],"","",["green_salad"],42,3,31,0],
-		"1f958":[["\uD83E\uDD58"],"","",["shallow_pan_of_food"],42,4,31,0],
-		"1f959":[["\uD83E\uDD59"],"","",["stuffed_flatbread"],42,5,31,0],
-		"1f95a":[["\uD83E\uDD5A"],"","",["egg"],42,6,31,0],
-		"1f95b":[["\uD83E\uDD5B"],"","",["glass_of_milk"],42,7,31,0],
-		"1f95c":[["\uD83E\uDD5C"],"","",["peanuts"],42,8,31,0],
-		"1f95d":[["\uD83E\uDD5D"],"","",["kiwifruit"],42,9,31,0],
-		"1f95e":[["\uD83E\uDD5E"],"","",["pancakes"],42,10,31,0],
-		"1f95f":[["\uD83E\uDD5F"],"","",["dumpling"],42,11,31,0],
-		"1f960":[["\uD83E\uDD60"],"","",["fortune_cookie"],42,12,31,0],
-		"1f961":[["\uD83E\uDD61"],"","",["takeout_box"],42,13,31,0],
-		"1f962":[["\uD83E\uDD62"],"","",["chopsticks"],42,14,31,0],
-		"1f963":[["\uD83E\uDD63"],"","",["bowl_with_spoon"],42,15,31,0],
-		"1f964":[["\uD83E\uDD64"],"","",["cup_with_straw"],42,16,31,0],
-		"1f965":[["\uD83E\uDD65"],"","",["coconut"],42,17,31,0],
-		"1f966":[["\uD83E\uDD66"],"","",["broccoli"],42,18,31,0],
-		"1f967":[["\uD83E\uDD67"],"","",["pie"],42,19,31,0],
-		"1f968":[["\uD83E\uDD68"],"","",["pretzel"],42,20,31,0],
-		"1f969":[["\uD83E\uDD69"],"","",["cut_of_meat"],42,21,31,0],
-		"1f96a":[["\uD83E\uDD6A"],"","",["sandwich"],42,22,31,0],
-		"1f96b":[["\uD83E\uDD6B"],"","",["canned_food"],42,23,31,0],
-		"1f980":[["\uD83E\uDD80"],"","",["crab"],42,24,31,0],
-		"1f981":[["\uD83E\uDD81"],"","",["lion_face"],42,25,31,0],
-		"1f982":[["\uD83E\uDD82"],"","",["scorpion"],42,26,31,0],
-		"1f983":[["\uD83E\uDD83"],"","",["turkey"],42,27,31,0],
-		"1f984":[["\uD83E\uDD84"],"","",["unicorn_face"],42,28,31,0],
-		"1f985":[["\uD83E\uDD85"],"","",["eagle"],42,29,31,0],
-		"1f986":[["\uD83E\uDD86"],"","",["duck"],42,30,31,0],
-		"1f987":[["\uD83E\uDD87"],"","",["bat"],42,31,31,0],
-		"1f988":[["\uD83E\uDD88"],"","",["shark"],42,32,31,0],
-		"1f989":[["\uD83E\uDD89"],"","",["owl"],42,33,31,0],
-		"1f98a":[["\uD83E\uDD8A"],"","",["fox_face"],42,34,31,0],
-		"1f98b":[["\uD83E\uDD8B"],"","",["butterfly"],42,35,31,0],
-		"1f98c":[["\uD83E\uDD8C"],"","",["deer"],42,36,31,0],
-		"1f98d":[["\uD83E\uDD8D"],"","",["gorilla"],42,37,31,0],
-		"1f98e":[["\uD83E\uDD8E"],"","",["lizard"],42,38,31,0],
-		"1f98f":[["\uD83E\uDD8F"],"","",["rhinoceros"],42,39,31,0],
-		"1f990":[["\uD83E\uDD90"],"","",["shrimp"],42,40,31,0],
-		"1f991":[["\uD83E\uDD91"],"","",["squid"],42,41,31,0],
-		"1f992":[["\uD83E\uDD92"],"","",["giraffe_face"],42,42,31,0],
-		"1f993":[["\uD83E\uDD93"],"","",["zebra_face"],42,43,31,0],
-		"1f994":[["\uD83E\uDD94"],"","",["hedgehog"],42,44,31,0],
-		"1f995":[["\uD83E\uDD95"],"","",["sauropod"],42,45,31,0],
-		"1f996":[["\uD83E\uDD96"],"","",["t-rex"],42,46,31,0],
-		"1f997":[["\uD83E\uDD97"],"","",["cricket"],42,47,31,0],
-		"1f9c0":[["\uD83E\uDDC0"],"","",["cheese_wedge"],42,48,31,0],
-		"1f9d0":[["\uD83E\uDDD0"],"","",["face_with_monocle"],42,49,31,0],
-		"1f9d1":[["\uD83E\uDDD1"],"","",["adult"],42,50,31,0],
-		"1f9d2":[["\uD83E\uDDD2"],"","",["child"],43,4,31,0],
-		"1f9d3":[["\uD83E\uDDD3"],"","",["older_adult"],43,10,31,0],
-		"1f9d4":[["\uD83E\uDDD4"],"","",["bearded_person"],43,16,31,0],
-		"1f9d5":[["\uD83E\uDDD5"],"","",["person_with_headscarf"],43,22,31,0],
-		"1f9d6-200d-2640-fe0f":[["\uD83E\uDDD6\u200D\u2640\uFE0F","\uD83E\uDDD6\u200D\u2640"],"","",["woman_in_steamy_room"],43,28,31,0],
-		"1f9d6-200d-2642-fe0f":[["\uD83E\uDDD6\u200D\u2642\uFE0F","\uD83E\uDDD6\u200D\u2642","\uD83E\uDDD6"],"","",["man_in_steamy_room","person_in_steamy_room"],43,34,31,0],
-		"1f9d7-200d-2640-fe0f":[["\uD83E\uDDD7\u200D\u2640\uFE0F","\uD83E\uDDD7\u200D\u2640","\uD83E\uDDD7"],"","",["woman_climbing","person_climbing"],43,46,31,0],
-		"1f9d7-200d-2642-fe0f":[["\uD83E\uDDD7\u200D\u2642\uFE0F","\uD83E\uDDD7\u200D\u2642"],"","",["man_climbing"],44,0,31,0],
-		"1f9d8-200d-2640-fe0f":[["\uD83E\uDDD8\u200D\u2640\uFE0F","\uD83E\uDDD8\u200D\u2640","\uD83E\uDDD8"],"","",["woman_in_lotus_position","person_in_lotus_position"],44,12,31,0],
-		"1f9d8-200d-2642-fe0f":[["\uD83E\uDDD8\u200D\u2642\uFE0F","\uD83E\uDDD8\u200D\u2642"],"","",["man_in_lotus_position"],44,18,31,0],
-		"1f9d9-200d-2640-fe0f":[["\uD83E\uDDD9\u200D\u2640\uFE0F","\uD83E\uDDD9\u200D\u2640","\uD83E\uDDD9"],"","",["female_mage","mage"],44,30,31,0],
-		"1f9d9-200d-2642-fe0f":[["\uD83E\uDDD9\u200D\u2642\uFE0F","\uD83E\uDDD9\u200D\u2642"],"","",["male_mage"],44,36,31,0],
-		"1f9da-200d-2640-fe0f":[["\uD83E\uDDDA\u200D\u2640\uFE0F","\uD83E\uDDDA\u200D\u2640","\uD83E\uDDDA"],"","",["female_fairy","fairy"],44,48,31,0],
-		"1f9da-200d-2642-fe0f":[["\uD83E\uDDDA\u200D\u2642\uFE0F","\uD83E\uDDDA\u200D\u2642"],"","",["male_fairy"],45,2,31,0],
-		"1f9db-200d-2640-fe0f":[["\uD83E\uDDDB\u200D\u2640\uFE0F","\uD83E\uDDDB\u200D\u2640","\uD83E\uDDDB"],"","",["female_vampire","vampire"],45,14,31,0],
-		"1f9db-200d-2642-fe0f":[["\uD83E\uDDDB\u200D\u2642\uFE0F","\uD83E\uDDDB\u200D\u2642"],"","",["male_vampire"],45,20,31,0],
-		"1f9dc-200d-2640-fe0f":[["\uD83E\uDDDC\u200D\u2640\uFE0F","\uD83E\uDDDC\u200D\u2640"],"","",["mermaid"],45,32,31,0],
-		"1f9dc-200d-2642-fe0f":[["\uD83E\uDDDC\u200D\u2642\uFE0F","\uD83E\uDDDC\u200D\u2642","\uD83E\uDDDC"],"","",["merman","merperson"],45,38,31,0],
-		"1f9dd-200d-2640-fe0f":[["\uD83E\uDDDD\u200D\u2640\uFE0F","\uD83E\uDDDD\u200D\u2640"],"","",["female_elf"],45,50,31,0],
-		"1f9dd-200d-2642-fe0f":[["\uD83E\uDDDD\u200D\u2642\uFE0F","\uD83E\uDDDD\u200D\u2642","\uD83E\uDDDD"],"","",["male_elf","elf"],46,4,31,0],
-		"1f9de-200d-2640-fe0f":[["\uD83E\uDDDE\u200D\u2640\uFE0F","\uD83E\uDDDE\u200D\u2640"],"","",["female_genie"],46,16,31,0],
-		"1f9de-200d-2642-fe0f":[["\uD83E\uDDDE\u200D\u2642\uFE0F","\uD83E\uDDDE\u200D\u2642","\uD83E\uDDDE"],"","",["male_genie","genie"],46,17,31,0],
-		"1f9df-200d-2640-fe0f":[["\uD83E\uDDDF\u200D\u2640\uFE0F","\uD83E\uDDDF\u200D\u2640"],"","",["female_zombie"],46,19,31,0],
-		"1f9df-200d-2642-fe0f":[["\uD83E\uDDDF\u200D\u2642\uFE0F","\uD83E\uDDDF\u200D\u2642","\uD83E\uDDDF"],"","",["male_zombie","zombie"],46,20,31,0],
-		"1f9e0":[["\uD83E\uDDE0"],"","",["brain"],46,22,31,0],
-		"1f9e1":[["\uD83E\uDDE1"],"","",["orange_heart"],46,23,31,0],
-		"1f9e2":[["\uD83E\uDDE2"],"","",["billed_cap"],46,24,31,0],
-		"1f9e3":[["\uD83E\uDDE3"],"","",["scarf"],46,25,31,0],
-		"1f9e4":[["\uD83E\uDDE4"],"","",["gloves"],46,26,31,0],
-		"1f9e5":[["\uD83E\uDDE5"],"","",["coat"],46,27,31,0],
-		"1f9e6":[["\uD83E\uDDE6"],"","",["socks"],46,28,31,0],
-		"203c-fe0f":[["\u203C\uFE0F","\u203C"],"","\uDBBA\uDF06",["bangbang"],46,29,63,0],
-		"2049-fe0f":[["\u2049\uFE0F","\u2049"],"","\uDBBA\uDF05",["interrobang"],46,30,63,0],
-		"2122-fe0f":[["\u2122\uFE0F","\u2122"],"\uE537","\uDBBA\uDF2A",["tm"],46,31,63,0],
-		"2139-fe0f":[["\u2139\uFE0F","\u2139"],"","\uDBBA\uDF47",["information_source"],46,32,63,0],
-		"2194-fe0f":[["\u2194\uFE0F","\u2194"],"","\uDBBA\uDEF6",["left_right_arrow"],46,33,63,0],
-		"2195-fe0f":[["\u2195\uFE0F","\u2195"],"","\uDBBA\uDEF7",["arrow_up_down"],46,34,63,0],
-		"2196-fe0f":[["\u2196\uFE0F","\u2196"],"\uE237","\uDBBA\uDEF2",["arrow_upper_left"],46,35,63,0],
-		"2197-fe0f":[["\u2197\uFE0F","\u2197"],"\uE236","\uDBBA\uDEF0",["arrow_upper_right"],46,36,63,0],
-		"2198-fe0f":[["\u2198\uFE0F","\u2198"],"\uE238","\uDBBA\uDEF1",["arrow_lower_right"],46,37,63,0],
-		"2199-fe0f":[["\u2199\uFE0F","\u2199"],"\uE239","\uDBBA\uDEF3",["arrow_lower_left"],46,38,63,0],
-		"21a9-fe0f":[["\u21A9\uFE0F","\u21A9"],"","\uDBBA\uDF83",["leftwards_arrow_with_hook"],46,39,63,0],
-		"21aa-fe0f":[["\u21AA\uFE0F","\u21AA"],"","\uDBBA\uDF88",["arrow_right_hook"],46,40,63,0],
-		"231a":[["\u231A"],"","\uDBB8\uDC1D",["watch"],46,41,63,0],
-		"231b":[["\u231B"],"","\uDBB8\uDC1C",["hourglass"],46,42,63,0],
-		"2328-fe0f":[["\u2328\uFE0F","\u2328"],"","",["keyboard"],46,43,31,0],
-		"23cf-fe0f":[["\u23CF\uFE0F","\u23CF"],"","",["eject"],46,44,31,0],
-		"23e9":[["\u23E9"],"\uE23C","\uDBBA\uDEFE",["fast_forward"],46,45,63,0],
-		"23ea":[["\u23EA"],"\uE23D","\uDBBA\uDEFF",["rewind"],46,46,63,0],
-		"23eb":[["\u23EB"],"","\uDBBA\uDF03",["arrow_double_up"],46,47,63,0],
-		"23ec":[["\u23EC"],"","\uDBBA\uDF02",["arrow_double_down"],46,48,63,0],
-		"23ed-fe0f":[["\u23ED\uFE0F","\u23ED"],"","",["black_right_pointing_double_triangle_with_vertical_bar"],46,49,31,0],
-		"23ee-fe0f":[["\u23EE\uFE0F","\u23EE"],"","",["black_left_pointing_double_triangle_with_vertical_bar"],46,50,31,0],
-		"23ef-fe0f":[["\u23EF\uFE0F","\u23EF"],"","",["black_right_pointing_triangle_with_double_vertical_bar"],46,51,31,0],
-		"23f0":[["\u23F0"],"","\uDBB8\uDC2A",["alarm_clock"],47,0,63,0],
-		"23f1-fe0f":[["\u23F1\uFE0F","\u23F1"],"","",["stopwatch"],47,1,31,0],
-		"23f2-fe0f":[["\u23F2\uFE0F","\u23F2"],"","",["timer_clock"],47,2,31,0],
-		"23f3":[["\u23F3"],"","\uDBB8\uDC1B",["hourglass_flowing_sand"],47,3,63,0],
-		"23f8-fe0f":[["\u23F8\uFE0F","\u23F8"],"","",["double_vertical_bar"],47,4,31,0],
-		"23f9-fe0f":[["\u23F9\uFE0F","\u23F9"],"","",["black_square_for_stop"],47,5,31,0],
-		"23fa-fe0f":[["\u23FA\uFE0F","\u23FA"],"","",["black_circle_for_record"],47,6,31,0],
-		"24c2-fe0f":[["\u24C2\uFE0F","\u24C2"],"","\uDBB9\uDFE1",["m"],47,7,63,0],
-		"25aa-fe0f":[["\u25AA\uFE0F","\u25AA"],"","\uDBBA\uDF6E",["black_small_square"],47,8,63,0],
-		"25ab-fe0f":[["\u25AB\uFE0F","\u25AB"],"","\uDBBA\uDF6D",["white_small_square"],47,9,63,0],
-		"25b6-fe0f":[["\u25B6\uFE0F","\u25B6"],"\uE23A","\uDBBA\uDEFC",["arrow_forward"],47,10,63,0],
-		"25c0-fe0f":[["\u25C0\uFE0F","\u25C0"],"\uE23B","\uDBBA\uDEFD",["arrow_backward"],47,11,63,0],
-		"25fb-fe0f":[["\u25FB\uFE0F","\u25FB"],"","\uDBBA\uDF71",["white_medium_square"],47,12,63,0],
-		"25fc-fe0f":[["\u25FC\uFE0F","\u25FC"],"","\uDBBA\uDF72",["black_medium_square"],47,13,63,0],
-		"25fd":[["\u25FD"],"","\uDBBA\uDF6F",["white_medium_small_square"],47,14,63,0],
-		"25fe":[["\u25FE"],"","\uDBBA\uDF70",["black_medium_small_square"],47,15,63,0],
-		"2600-fe0f":[["\u2600\uFE0F","\u2600"],"\uE04A","\uDBB8\uDC00",["sunny"],47,16,63,0],
-		"2601-fe0f":[["\u2601\uFE0F","\u2601"],"\uE049","\uDBB8\uDC01",["cloud"],47,17,63,0],
-		"2602-fe0f":[["\u2602\uFE0F","\u2602"],"","",["umbrella"],47,18,31,0],
-		"2603-fe0f":[["\u2603\uFE0F","\u2603"],"","",["snowman"],47,19,31,0],
-		"2604-fe0f":[["\u2604\uFE0F","\u2604"],"","",["comet"],47,20,31,0],
-		"260e-fe0f":[["\u260E\uFE0F","\u260E"],"\uE009","\uDBB9\uDD23",["phone","telephone"],47,21,63,0],
-		"2611-fe0f":[["\u2611\uFE0F","\u2611"],"","\uDBBA\uDF8B",["ballot_box_with_check"],47,22,63,0],
-		"2614":[["\u2614"],"\uE04B","\uDBB8\uDC02",["umbrella_with_rain_drops"],47,23,63,0],
-		"2615":[["\u2615"],"\uE045","\uDBBA\uDD81",["coffee"],47,24,63,0],
-		"2618-fe0f":[["\u2618\uFE0F","\u2618"],"","",["shamrock"],47,25,31,0],
-		"261d-fe0f":[["\u261D\uFE0F","\u261D"],"\uE00F","\uDBBA\uDF98",["point_up"],47,26,63,0],
-		"2620-fe0f":[["\u2620\uFE0F","\u2620"],"","",["skull_and_crossbones"],47,32,31,0],
-		"2622-fe0f":[["\u2622\uFE0F","\u2622"],"","",["radioactive_sign"],47,33,31,0],
-		"2623-fe0f":[["\u2623\uFE0F","\u2623"],"","",["biohazard_sign"],47,34,31,0],
-		"2626-fe0f":[["\u2626\uFE0F","\u2626"],"","",["orthodox_cross"],47,35,31,0],
-		"262a-fe0f":[["\u262A\uFE0F","\u262A"],"","",["star_and_crescent"],47,36,31,0],
-		"262e-fe0f":[["\u262E\uFE0F","\u262E"],"","",["peace_symbol"],47,37,31,0],
-		"262f-fe0f":[["\u262F\uFE0F","\u262F"],"","",["yin_yang"],47,38,31,0],
-		"2638-fe0f":[["\u2638\uFE0F","\u2638"],"","",["wheel_of_dharma"],47,39,31,0],
-		"2639-fe0f":[["\u2639\uFE0F","\u2639"],"","",["white_frowning_face"],47,40,31,0],
-		"263a-fe0f":[["\u263A\uFE0F","\u263A"],"\uE414","\uDBB8\uDF36",["relaxed"],47,41,63,0],
-		"2640-fe0f":[["\u2640\uFE0F","\u2640"],"","",["female_sign"],47,42,30,0],
-		"2642-fe0f":[["\u2642\uFE0F","\u2642"],"","",["male_sign"],47,43,30,0],
-		"2648":[["\u2648"],"\uE23F","\uDBB8\uDC2B",["aries"],47,44,63,0],
-		"2649":[["\u2649"],"\uE240","\uDBB8\uDC2C",["taurus"],47,45,63,0],
-		"264a":[["\u264A"],"\uE241","\uDBB8\uDC2D",["gemini"],47,46,63,0],
-		"264b":[["\u264B"],"\uE242","\uDBB8\uDC2E",["cancer"],47,47,63,0],
-		"264c":[["\u264C"],"\uE243","\uDBB8\uDC2F",["leo"],47,48,63,0],
-		"264d":[["\u264D"],"\uE244","\uDBB8\uDC30",["virgo"],47,49,63,0],
-		"264e":[["\u264E"],"\uE245","\uDBB8\uDC31",["libra"],47,50,63,0],
-		"264f":[["\u264F"],"\uE246","\uDBB8\uDC32",["scorpius"],47,51,63,0],
-		"2650":[["\u2650"],"\uE247","\uDBB8\uDC33",["sagittarius"],48,0,63,0],
-		"2651":[["\u2651"],"\uE248","\uDBB8\uDC34",["capricorn"],48,1,63,0],
-		"2652":[["\u2652"],"\uE249","\uDBB8\uDC35",["aquarius"],48,2,63,0],
-		"2653":[["\u2653"],"\uE24A","\uDBB8\uDC36",["pisces"],48,3,63,0],
-		"2660-fe0f":[["\u2660\uFE0F","\u2660"],"\uE20E","\uDBBA\uDF1B",["spades"],48,4,63,0],
-		"2663-fe0f":[["\u2663\uFE0F","\u2663"],"\uE20F","\uDBBA\uDF1D",["clubs"],48,5,63,0],
-		"2665-fe0f":[["\u2665\uFE0F","\u2665"],"\uE20C","\uDBBA\uDF1A",["hearts"],48,6,63,0],
-		"2666-fe0f":[["\u2666\uFE0F","\u2666"],"\uE20D","\uDBBA\uDF1C",["diamonds"],48,7,63,0],
-		"2668-fe0f":[["\u2668\uFE0F","\u2668"],"\uE123","\uDBB9\uDFFA",["hotsprings"],48,8,63,0],
-		"267b-fe0f":[["\u267B\uFE0F","\u267B"],"","\uDBBA\uDF2C",["recycle"],48,9,63,0],
-		"267f":[["\u267F"],"\uE20A","\uDBBA\uDF20",["wheelchair"],48,10,63,0],
-		"2692-fe0f":[["\u2692\uFE0F","\u2692"],"","",["hammer_and_pick"],48,11,31,0],
-		"2693":[["\u2693"],"","\uDBB9\uDCC1",["anchor"],48,12,63,0],
-		"2694-fe0f":[["\u2694\uFE0F","\u2694"],"","",["crossed_swords"],48,13,31,0],
-		"2695-fe0f":[["\u2695\uFE0F","\u2695"],"","",["medical_symbol","staff_of_aesculapius"],48,14,30,0],
-		"2696-fe0f":[["\u2696\uFE0F","\u2696"],"","",["scales"],48,15,31,0],
-		"2697-fe0f":[["\u2697\uFE0F","\u2697"],"","",["alembic"],48,16,31,0],
-		"2699-fe0f":[["\u2699\uFE0F","\u2699"],"","",["gear"],48,17,31,0],
-		"269b-fe0f":[["\u269B\uFE0F","\u269B"],"","",["atom_symbol"],48,18,31,0],
-		"269c-fe0f":[["\u269C\uFE0F","\u269C"],"","",["fleur_de_lis"],48,19,31,0],
-		"26a0-fe0f":[["\u26A0\uFE0F","\u26A0"],"\uE252","\uDBBA\uDF23",["warning"],48,20,63,0],
-		"26a1":[["\u26A1"],"\uE13D","\uDBB8\uDC04",["zap"],48,21,63,0],
-		"26aa":[["\u26AA"],"","\uDBBA\uDF65",["white_circle"],48,22,63,0],
-		"26ab":[["\u26AB"],"","\uDBBA\uDF66",["black_circle"],48,23,63,0],
-		"26b0-fe0f":[["\u26B0\uFE0F","\u26B0"],"","",["coffin"],48,24,31,0],
-		"26b1-fe0f":[["\u26B1\uFE0F","\u26B1"],"","",["funeral_urn"],48,25,31,0],
-		"26bd":[["\u26BD"],"\uE018","\uDBB9\uDFD4",["soccer"],48,26,63,0],
-		"26be":[["\u26BE"],"\uE016","\uDBB9\uDFD1",["baseball"],48,27,63,0],
-		"26c4":[["\u26C4"],"\uE048","\uDBB8\uDC03",["snowman_without_snow"],48,28,63,0],
-		"26c5":[["\u26C5"],"","\uDBB8\uDC0F",["partly_sunny"],48,29,63,0],
-		"26c8-fe0f":[["\u26C8\uFE0F","\u26C8"],"","",["thunder_cloud_and_rain"],48,30,31,0],
-		"26ce":[["\u26CE"],"\uE24B","\uDBB8\uDC37",["ophiuchus"],48,31,63,0],
-		"26cf-fe0f":[["\u26CF\uFE0F","\u26CF"],"","",["pick"],48,32,31,0],
-		"26d1-fe0f":[["\u26D1\uFE0F","\u26D1"],"","",["helmet_with_white_cross"],48,33,31,0],
-		"26d3-fe0f":[["\u26D3\uFE0F","\u26D3"],"","",["chains"],48,34,31,0],
-		"26d4":[["\u26D4"],"","\uDBBA\uDF26",["no_entry"],48,35,63,0],
-		"26e9-fe0f":[["\u26E9\uFE0F","\u26E9"],"","",["shinto_shrine"],48,36,31,0],
-		"26ea":[["\u26EA"],"\uE037","\uDBB9\uDCBB",["church"],48,37,63,0],
-		"26f0-fe0f":[["\u26F0\uFE0F","\u26F0"],"","",["mountain"],48,38,31,0],
-		"26f1-fe0f":[["\u26F1\uFE0F","\u26F1"],"","",["umbrella_on_ground"],48,39,31,0],
-		"26f2":[["\u26F2"],"\uE121","\uDBB9\uDCBC",["fountain"],48,40,63,0],
-		"26f3":[["\u26F3"],"\uE014","\uDBB9\uDFD2",["golf"],48,41,63,0],
-		"26f4-fe0f":[["\u26F4\uFE0F","\u26F4"],"","",["ferry"],48,42,31,0],
-		"26f5":[["\u26F5"],"\uE01C","\uDBB9\uDFEA",["boat","sailboat"],48,43,63,0],
-		"26f7-fe0f":[["\u26F7\uFE0F","\u26F7"],"","",["skier"],48,44,31,0],
-		"26f8-fe0f":[["\u26F8\uFE0F","\u26F8"],"","",["ice_skate"],48,45,31,0],
-		"26f9-fe0f-200d-2640-fe0f":[["\u26F9\uFE0F\u200D\u2640\uFE0F"],"","",["woman-bouncing-ball"],48,46,15,0],
-		"26f9-fe0f-200d-2642-fe0f":[["\u26F9\uFE0F\u200D\u2642\uFE0F","\u26F9\uFE0F","\u26F9"],"","",["man-bouncing-ball","person_with_ball"],49,0,15,0],
-		"26fa":[["\u26FA"],"\uE122","\uDBB9\uDFFB",["tent"],49,12,63,0],
-		"26fd":[["\u26FD"],"\uE03A","\uDBB9\uDFF5",["fuelpump"],49,13,63,0],
-		"2702-fe0f":[["\u2702\uFE0F","\u2702"],"\uE313","\uDBB9\uDD3E",["scissors"],49,14,63,0],
-		"2705":[["\u2705"],"","\uDBBA\uDF4A",["white_check_mark"],49,15,63,0],
-		"2708-fe0f":[["\u2708\uFE0F","\u2708"],"\uE01D","\uDBB9\uDFE9",["airplane"],49,16,63,0],
-		"2709-fe0f":[["\u2709\uFE0F","\u2709"],"","\uDBB9\uDD29",["email","envelope"],49,17,63,0],
-		"270a":[["\u270A"],"\uE010","\uDBBA\uDF93",["fist"],49,18,63,0],
-		"270b":[["\u270B"],"\uE012","\uDBBA\uDF95",["hand","raised_hand"],49,24,63,0],
-		"270c-fe0f":[["\u270C\uFE0F","\u270C"],"\uE011","\uDBBA\uDF94",["v"],49,30,63,0],
-		"270d-fe0f":[["\u270D\uFE0F","\u270D"],"","",["writing_hand"],49,36,31,0],
-		"270f-fe0f":[["\u270F\uFE0F","\u270F"],"","\uDBB9\uDD39",["pencil2"],49,42,63,0],
-		"2712-fe0f":[["\u2712\uFE0F","\u2712"],"","\uDBB9\uDD36",["black_nib"],49,43,63,0],
-		"2714-fe0f":[["\u2714\uFE0F","\u2714"],"","\uDBBA\uDF49",["heavy_check_mark"],49,44,63,0],
-		"2716-fe0f":[["\u2716\uFE0F","\u2716"],"","\uDBBA\uDF53",["heavy_multiplication_x"],49,45,63,0],
-		"271d-fe0f":[["\u271D\uFE0F","\u271D"],"","",["latin_cross"],49,46,31,0],
-		"2721-fe0f":[["\u2721\uFE0F","\u2721"],"","",["star_of_david"],49,47,31,0],
-		"2728":[["\u2728"],"\uE32E","\uDBBA\uDF60",["sparkles"],49,48,63,0],
-		"2733-fe0f":[["\u2733\uFE0F","\u2733"],"\uE206","\uDBBA\uDF62",["eight_spoked_asterisk"],49,49,63,0],
-		"2734-fe0f":[["\u2734\uFE0F","\u2734"],"\uE205","\uDBBA\uDF61",["eight_pointed_black_star"],49,50,63,0],
-		"2744-fe0f":[["\u2744\uFE0F","\u2744"],"","\uDBB8\uDC0E",["snowflake"],49,51,63,0],
-		"2747-fe0f":[["\u2747\uFE0F","\u2747"],"","\uDBBA\uDF77",["sparkle"],50,0,63,0],
-		"274c":[["\u274C"],"\uE333","\uDBBA\uDF45",["x"],50,1,63,0],
-		"274e":[["\u274E"],"","\uDBBA\uDF46",["negative_squared_cross_mark"],50,2,63,0],
-		"2753":[["\u2753"],"\uE020","\uDBBA\uDF09",["question"],50,3,63,0],
-		"2754":[["\u2754"],"\uE336","\uDBBA\uDF0A",["grey_question"],50,4,63,0],
-		"2755":[["\u2755"],"\uE337","\uDBBA\uDF0B",["grey_exclamation"],50,5,63,0],
-		"2757":[["\u2757"],"\uE021","\uDBBA\uDF04",["exclamation","heavy_exclamation_mark"],50,6,63,0],
-		"2763-fe0f":[["\u2763\uFE0F","\u2763"],"","",["heavy_heart_exclamation_mark_ornament"],50,7,31,0],
-		"2764-fe0f":[["\u2764\uFE0F","\u2764"],"\uE022","\uDBBA\uDF0C",["heart"],50,8,63,0,"<3"],
-		"2795":[["\u2795"],"","\uDBBA\uDF51",["heavy_plus_sign"],50,9,63,0],
-		"2796":[["\u2796"],"","\uDBBA\uDF52",["heavy_minus_sign"],50,10,63,0],
-		"2797":[["\u2797"],"","\uDBBA\uDF54",["heavy_division_sign"],50,11,63,0],
-		"27a1-fe0f":[["\u27A1\uFE0F","\u27A1"],"\uE234","\uDBBA\uDEFA",["arrow_right"],50,12,63,0],
-		"27b0":[["\u27B0"],"","\uDBBA\uDF08",["curly_loop"],50,13,63,0],
-		"27bf":[["\u27BF"],"\uE211","\uDBBA\uDC2B",["loop"],50,14,63,0],
-		"2934-fe0f":[["\u2934\uFE0F","\u2934"],"","\uDBBA\uDEF4",["arrow_heading_up"],50,15,63,0],
-		"2935-fe0f":[["\u2935\uFE0F","\u2935"],"","\uDBBA\uDEF5",["arrow_heading_down"],50,16,63,0],
-		"2b05-fe0f":[["\u2B05\uFE0F","\u2B05"],"\uE235","\uDBBA\uDEFB",["arrow_left"],50,17,63,0],
-		"2b06-fe0f":[["\u2B06\uFE0F","\u2B06"],"\uE232","\uDBBA\uDEF8",["arrow_up"],50,18,63,0],
-		"2b07-fe0f":[["\u2B07\uFE0F","\u2B07"],"\uE233","\uDBBA\uDEF9",["arrow_down"],50,19,63,0],
-		"2b1b":[["\u2B1B"],"","\uDBBA\uDF6C",["black_large_square"],50,20,63,0],
-		"2b1c":[["\u2B1C"],"","\uDBBA\uDF6B",["white_large_square"],50,21,63,0],
-		"2b50":[["\u2B50"],"\uE32F","\uDBBA\uDF68",["star"],50,22,63,0],
-		"2b55":[["\u2B55"],"\uE332","\uDBBA\uDF44",["o"],50,23,63,0],
-		"3030-fe0f":[["\u3030\uFE0F","\u3030"],"","\uDBBA\uDF07",["wavy_dash"],50,24,63,0],
-		"303d-fe0f":[["\u303D\uFE0F","\u303D"],"\uE12C","\uDBBA\uDC1B",["part_alternation_mark"],50,25,63,0],
-		"3297-fe0f":[["\u3297\uFE0F","\u3297"],"\uE30D","\uDBBA\uDF43",["congratulations"],50,26,63,0],
-		"3299-fe0f":[["\u3299\uFE0F","\u3299"],"\uE315","\uDBBA\uDF2B",["secret"],50,27,63,0]
-	};
-	/** @private */
-	emoji.prototype.emoticons_data = {
-		":o)":"monkey_face",
-		"<\/3":"broken_heart",
-		"=)":"smiley",
-		"=-)":"smiley",
-		"C:":"smile",
-		"c:":"smile",
-		":D":"smile",
-		":-D":"smile",
-		":>":"laughing",
-		":->":"laughing",
-		";)":"wink",
-		";-)":"wink",
-		"8)":"sunglasses",
-		":|":"neutral_face",
-		":-|":"neutral_face",
-		":\\":"confused",
-		":-\\":"confused",
-		":\/":"confused",
-		":-\/":"confused",
-		":*":"kissing_heart",
-		":-*":"kissing_heart",
-		":p":"stuck_out_tongue",
-		":-p":"stuck_out_tongue",
-		":P":"stuck_out_tongue",
-		":-P":"stuck_out_tongue",
-		":b":"stuck_out_tongue",
-		":-b":"stuck_out_tongue",
-		";p":"stuck_out_tongue_winking_eye",
-		";-p":"stuck_out_tongue_winking_eye",
-		";b":"stuck_out_tongue_winking_eye",
-		";-b":"stuck_out_tongue_winking_eye",
-		";P":"stuck_out_tongue_winking_eye",
-		";-P":"stuck_out_tongue_winking_eye",
-		"):":"disappointed",
-		":(":"disappointed",
-		":-(":"disappointed",
-		">:(":"angry",
-		">:-(":"angry",
-		":'(":"cry",
-		"D:":"anguished",
-		":o":"open_mouth",
-		":-o":"open_mouth",
-		":O":"open_mouth",
-		":-O":"open_mouth",
-		":)":"slightly_smiling_face",
-		"(:":"slightly_smiling_face",
-		":-)":"slightly_smiling_face",
-		"<3":"heart"
-	};
-	/** @private */
-	emoji.prototype.variations_data = {
-		"1f385":{"1f3fb":["1f385-1f3fb",8,20,63,["\uD83C\uDF85\uD83C\uDFFB"]],"1f3fc":["1f385-1f3fc",8,21,63,["\uD83C\uDF85\uD83C\uDFFC"]],"1f3fd":["1f385-1f3fd",8,22,63,["\uD83C\uDF85\uD83C\uDFFD"]],"1f3fe":["1f385-1f3fe",8,23,63,["\uD83C\uDF85\uD83C\uDFFE"]],"1f3ff":["1f385-1f3ff",8,24,63,["\uD83C\uDF85\uD83C\uDFFF"]]},
-		"1f3c2":{"1f3fb":["1f3c2-1f3fb",9,29,63,["\uD83C\uDFC2\uD83C\uDFFB"]],"1f3fc":["1f3c2-1f3fc",9,30,63,["\uD83C\uDFC2\uD83C\uDFFC"]],"1f3fd":["1f3c2-1f3fd",9,31,63,["\uD83C\uDFC2\uD83C\uDFFD"]],"1f3fe":["1f3c2-1f3fe",9,32,63,["\uD83C\uDFC2\uD83C\uDFFE"]],"1f3ff":["1f3c2-1f3ff",9,33,63,["\uD83C\uDFC2\uD83C\uDFFF"]]},
-		"1f3c3-200d-2640-fe0f":{"1f3fb":["1f3c3-1f3fb-200d-2640-fe0f",9,35,15,["\uD83C\uDFC3\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f3c3-1f3fc-200d-2640-fe0f",9,36,15,["\uD83C\uDFC3\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f3c3-1f3fd-200d-2640-fe0f",9,37,15,["\uD83C\uDFC3\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f3c3-1f3fe-200d-2640-fe0f",9,38,15,["\uD83C\uDFC3\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f3c3-1f3ff-200d-2640-fe0f",9,39,15,["\uD83C\uDFC3\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f3c3-200d-2642-fe0f":{"1f3fb":["1f3c3-1f3fb-200d-2642-fe0f",9,41,15,["\uD83C\uDFC3\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83C\uDFC3\uD83C\uDFFB"]],"1f3fc":["1f3c3-1f3fc-200d-2642-fe0f",9,42,15,["\uD83C\uDFC3\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83C\uDFC3\uD83C\uDFFC"]],"1f3fd":["1f3c3-1f3fd-200d-2642-fe0f",9,43,15,["\uD83C\uDFC3\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83C\uDFC3\uD83C\uDFFD"]],"1f3fe":["1f3c3-1f3fe-200d-2642-fe0f",9,44,15,["\uD83C\uDFC3\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83C\uDFC3\uD83C\uDFFE"]],"1f3ff":["1f3c3-1f3ff-200d-2642-fe0f",9,45,15,["\uD83C\uDFC3\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83C\uDFC3\uD83C\uDFFF"]]},
-		"1f3c4-200d-2640-fe0f":{"1f3fb":["1f3c4-1f3fb-200d-2640-fe0f",10,1,15,["\uD83C\uDFC4\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f3c4-1f3fc-200d-2640-fe0f",10,2,15,["\uD83C\uDFC4\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f3c4-1f3fd-200d-2640-fe0f",10,3,15,["\uD83C\uDFC4\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f3c4-1f3fe-200d-2640-fe0f",10,4,15,["\uD83C\uDFC4\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f3c4-1f3ff-200d-2640-fe0f",10,5,15,["\uD83C\uDFC4\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f3c4-200d-2642-fe0f":{"1f3fb":["1f3c4-1f3fb-200d-2642-fe0f",10,7,15,["\uD83C\uDFC4\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83C\uDFC4\uD83C\uDFFB"]],"1f3fc":["1f3c4-1f3fc-200d-2642-fe0f",10,8,15,["\uD83C\uDFC4\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83C\uDFC4\uD83C\uDFFC"]],"1f3fd":["1f3c4-1f3fd-200d-2642-fe0f",10,9,15,["\uD83C\uDFC4\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83C\uDFC4\uD83C\uDFFD"]],"1f3fe":["1f3c4-1f3fe-200d-2642-fe0f",10,10,15,["\uD83C\uDFC4\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83C\uDFC4\uD83C\uDFFE"]],"1f3ff":["1f3c4-1f3ff-200d-2642-fe0f",10,11,15,["\uD83C\uDFC4\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83C\uDFC4\uD83C\uDFFF"]]},
-		"1f3c7":{"1f3fb":["1f3c7-1f3fb",10,21,63,["\uD83C\uDFC7\uD83C\uDFFB"]],"1f3fc":["1f3c7-1f3fc",10,22,63,["\uD83C\uDFC7\uD83C\uDFFC"]],"1f3fd":["1f3c7-1f3fd",10,23,63,["\uD83C\uDFC7\uD83C\uDFFD"]],"1f3fe":["1f3c7-1f3fe",10,24,63,["\uD83C\uDFC7\uD83C\uDFFE"]],"1f3ff":["1f3c7-1f3ff",10,25,63,["\uD83C\uDFC7\uD83C\uDFFF"]]},
-		"1f3ca-200d-2640-fe0f":{"1f3fb":["1f3ca-1f3fb-200d-2640-fe0f",10,29,15,["\uD83C\uDFCA\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f3ca-1f3fc-200d-2640-fe0f",10,30,15,["\uD83C\uDFCA\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f3ca-1f3fd-200d-2640-fe0f",10,31,15,["\uD83C\uDFCA\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f3ca-1f3fe-200d-2640-fe0f",10,32,15,["\uD83C\uDFCA\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f3ca-1f3ff-200d-2640-fe0f",10,33,15,["\uD83C\uDFCA\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f3ca-200d-2642-fe0f":{"1f3fb":["1f3ca-1f3fb-200d-2642-fe0f",10,35,15,["\uD83C\uDFCA\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83C\uDFCA\uD83C\uDFFB"]],"1f3fc":["1f3ca-1f3fc-200d-2642-fe0f",10,36,15,["\uD83C\uDFCA\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83C\uDFCA\uD83C\uDFFC"]],"1f3fd":["1f3ca-1f3fd-200d-2642-fe0f",10,37,15,["\uD83C\uDFCA\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83C\uDFCA\uD83C\uDFFD"]],"1f3fe":["1f3ca-1f3fe-200d-2642-fe0f",10,38,15,["\uD83C\uDFCA\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83C\uDFCA\uD83C\uDFFE"]],"1f3ff":["1f3ca-1f3ff-200d-2642-fe0f",10,39,15,["\uD83C\uDFCA\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83C\uDFCA\uD83C\uDFFF"]]},
-		"1f3cb-fe0f-200d-2640-fe0f":{"1f3fb":["1f3cb-1f3fb-200d-2640-fe0f",10,47,15,["\uD83C\uDFCB\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f3cb-1f3fc-200d-2640-fe0f",10,48,15,["\uD83C\uDFCB\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f3cb-1f3fd-200d-2640-fe0f",10,49,15,["\uD83C\uDFCB\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f3cb-1f3fe-200d-2640-fe0f",10,50,15,["\uD83C\uDFCB\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f3cb-1f3ff-200d-2640-fe0f",10,51,15,["\uD83C\uDFCB\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f3cb-fe0f-200d-2642-fe0f":{"1f3fb":["1f3cb-1f3fb-200d-2642-fe0f",11,1,15,["\uD83C\uDFCB\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83C\uDFCB\uD83C\uDFFB"]],"1f3fc":["1f3cb-1f3fc-200d-2642-fe0f",11,2,15,["\uD83C\uDFCB\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83C\uDFCB\uD83C\uDFFC"]],"1f3fd":["1f3cb-1f3fd-200d-2642-fe0f",11,3,15,["\uD83C\uDFCB\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83C\uDFCB\uD83C\uDFFD"]],"1f3fe":["1f3cb-1f3fe-200d-2642-fe0f",11,4,15,["\uD83C\uDFCB\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83C\uDFCB\uD83C\uDFFE"]],"1f3ff":["1f3cb-1f3ff-200d-2642-fe0f",11,5,15,["\uD83C\uDFCB\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83C\uDFCB\uD83C\uDFFF"]]},
-		"1f3cc-fe0f-200d-2640-fe0f":{"1f3fb":["1f3cc-1f3fb-200d-2640-fe0f",11,13,15,["\uD83C\uDFCC\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f3cc-1f3fc-200d-2640-fe0f",11,14,15,["\uD83C\uDFCC\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f3cc-1f3fd-200d-2640-fe0f",11,15,15,["\uD83C\uDFCC\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f3cc-1f3fe-200d-2640-fe0f",11,16,15,["\uD83C\uDFCC\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f3cc-1f3ff-200d-2640-fe0f",11,17,15,["\uD83C\uDFCC\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f3cc-fe0f-200d-2642-fe0f":{"1f3fb":["1f3cc-1f3fb-200d-2642-fe0f",11,19,15,["\uD83C\uDFCC\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83C\uDFCC\uD83C\uDFFB"]],"1f3fc":["1f3cc-1f3fc-200d-2642-fe0f",11,20,15,["\uD83C\uDFCC\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83C\uDFCC\uD83C\uDFFC"]],"1f3fd":["1f3cc-1f3fd-200d-2642-fe0f",11,21,15,["\uD83C\uDFCC\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83C\uDFCC\uD83C\uDFFD"]],"1f3fe":["1f3cc-1f3fe-200d-2642-fe0f",11,22,15,["\uD83C\uDFCC\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83C\uDFCC\uD83C\uDFFE"]],"1f3ff":["1f3cc-1f3ff-200d-2642-fe0f",11,23,15,["\uD83C\uDFCC\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83C\uDFCC\uD83C\uDFFF"]]},
-		"1f442":{"1f3fb":["1f442-1f3fb",13,46,63,["\uD83D\uDC42\uD83C\uDFFB"]],"1f3fc":["1f442-1f3fc",13,47,63,["\uD83D\uDC42\uD83C\uDFFC"]],"1f3fd":["1f442-1f3fd",13,48,63,["\uD83D\uDC42\uD83C\uDFFD"]],"1f3fe":["1f442-1f3fe",13,49,63,["\uD83D\uDC42\uD83C\uDFFE"]],"1f3ff":["1f442-1f3ff",13,50,63,["\uD83D\uDC42\uD83C\uDFFF"]]},
-		"1f443":{"1f3fb":["1f443-1f3fb",14,0,63,["\uD83D\uDC43\uD83C\uDFFB"]],"1f3fc":["1f443-1f3fc",14,1,63,["\uD83D\uDC43\uD83C\uDFFC"]],"1f3fd":["1f443-1f3fd",14,2,63,["\uD83D\uDC43\uD83C\uDFFD"]],"1f3fe":["1f443-1f3fe",14,3,63,["\uD83D\uDC43\uD83C\uDFFE"]],"1f3ff":["1f443-1f3ff",14,4,63,["\uD83D\uDC43\uD83C\uDFFF"]]},
-		"1f446":{"1f3fb":["1f446-1f3fb",14,8,63,["\uD83D\uDC46\uD83C\uDFFB"]],"1f3fc":["1f446-1f3fc",14,9,63,["\uD83D\uDC46\uD83C\uDFFC"]],"1f3fd":["1f446-1f3fd",14,10,63,["\uD83D\uDC46\uD83C\uDFFD"]],"1f3fe":["1f446-1f3fe",14,11,63,["\uD83D\uDC46\uD83C\uDFFE"]],"1f3ff":["1f446-1f3ff",14,12,63,["\uD83D\uDC46\uD83C\uDFFF"]]},
-		"1f447":{"1f3fb":["1f447-1f3fb",14,14,63,["\uD83D\uDC47\uD83C\uDFFB"]],"1f3fc":["1f447-1f3fc",14,15,63,["\uD83D\uDC47\uD83C\uDFFC"]],"1f3fd":["1f447-1f3fd",14,16,63,["\uD83D\uDC47\uD83C\uDFFD"]],"1f3fe":["1f447-1f3fe",14,17,63,["\uD83D\uDC47\uD83C\uDFFE"]],"1f3ff":["1f447-1f3ff",14,18,63,["\uD83D\uDC47\uD83C\uDFFF"]]},
-		"1f448":{"1f3fb":["1f448-1f3fb",14,20,63,["\uD83D\uDC48\uD83C\uDFFB"]],"1f3fc":["1f448-1f3fc",14,21,63,["\uD83D\uDC48\uD83C\uDFFC"]],"1f3fd":["1f448-1f3fd",14,22,63,["\uD83D\uDC48\uD83C\uDFFD"]],"1f3fe":["1f448-1f3fe",14,23,63,["\uD83D\uDC48\uD83C\uDFFE"]],"1f3ff":["1f448-1f3ff",14,24,63,["\uD83D\uDC48\uD83C\uDFFF"]]},
-		"1f449":{"1f3fb":["1f449-1f3fb",14,26,63,["\uD83D\uDC49\uD83C\uDFFB"]],"1f3fc":["1f449-1f3fc",14,27,63,["\uD83D\uDC49\uD83C\uDFFC"]],"1f3fd":["1f449-1f3fd",14,28,63,["\uD83D\uDC49\uD83C\uDFFD"]],"1f3fe":["1f449-1f3fe",14,29,63,["\uD83D\uDC49\uD83C\uDFFE"]],"1f3ff":["1f449-1f3ff",14,30,63,["\uD83D\uDC49\uD83C\uDFFF"]]},
-		"1f44a":{"1f3fb":["1f44a-1f3fb",14,32,63,["\uD83D\uDC4A\uD83C\uDFFB"]],"1f3fc":["1f44a-1f3fc",14,33,63,["\uD83D\uDC4A\uD83C\uDFFC"]],"1f3fd":["1f44a-1f3fd",14,34,63,["\uD83D\uDC4A\uD83C\uDFFD"]],"1f3fe":["1f44a-1f3fe",14,35,63,["\uD83D\uDC4A\uD83C\uDFFE"]],"1f3ff":["1f44a-1f3ff",14,36,63,["\uD83D\uDC4A\uD83C\uDFFF"]]},
-		"1f44b":{"1f3fb":["1f44b-1f3fb",14,38,63,["\uD83D\uDC4B\uD83C\uDFFB"]],"1f3fc":["1f44b-1f3fc",14,39,63,["\uD83D\uDC4B\uD83C\uDFFC"]],"1f3fd":["1f44b-1f3fd",14,40,63,["\uD83D\uDC4B\uD83C\uDFFD"]],"1f3fe":["1f44b-1f3fe",14,41,63,["\uD83D\uDC4B\uD83C\uDFFE"]],"1f3ff":["1f44b-1f3ff",14,42,63,["\uD83D\uDC4B\uD83C\uDFFF"]]},
-		"1f44c":{"1f3fb":["1f44c-1f3fb",14,44,63,["\uD83D\uDC4C\uD83C\uDFFB"]],"1f3fc":["1f44c-1f3fc",14,45,63,["\uD83D\uDC4C\uD83C\uDFFC"]],"1f3fd":["1f44c-1f3fd",14,46,63,["\uD83D\uDC4C\uD83C\uDFFD"]],"1f3fe":["1f44c-1f3fe",14,47,63,["\uD83D\uDC4C\uD83C\uDFFE"]],"1f3ff":["1f44c-1f3ff",14,48,63,["\uD83D\uDC4C\uD83C\uDFFF"]]},
-		"1f44d":{"1f3fb":["1f44d-1f3fb",14,50,63,["\uD83D\uDC4D\uD83C\uDFFB"]],"1f3fc":["1f44d-1f3fc",14,51,63,["\uD83D\uDC4D\uD83C\uDFFC"]],"1f3fd":["1f44d-1f3fd",15,0,63,["\uD83D\uDC4D\uD83C\uDFFD"]],"1f3fe":["1f44d-1f3fe",15,1,63,["\uD83D\uDC4D\uD83C\uDFFE"]],"1f3ff":["1f44d-1f3ff",15,2,63,["\uD83D\uDC4D\uD83C\uDFFF"]]},
-		"1f44e":{"1f3fb":["1f44e-1f3fb",15,4,63,["\uD83D\uDC4E\uD83C\uDFFB"]],"1f3fc":["1f44e-1f3fc",15,5,63,["\uD83D\uDC4E\uD83C\uDFFC"]],"1f3fd":["1f44e-1f3fd",15,6,63,["\uD83D\uDC4E\uD83C\uDFFD"]],"1f3fe":["1f44e-1f3fe",15,7,63,["\uD83D\uDC4E\uD83C\uDFFE"]],"1f3ff":["1f44e-1f3ff",15,8,63,["\uD83D\uDC4E\uD83C\uDFFF"]]},
-		"1f44f":{"1f3fb":["1f44f-1f3fb",15,10,63,["\uD83D\uDC4F\uD83C\uDFFB"]],"1f3fc":["1f44f-1f3fc",15,11,63,["\uD83D\uDC4F\uD83C\uDFFC"]],"1f3fd":["1f44f-1f3fd",15,12,63,["\uD83D\uDC4F\uD83C\uDFFD"]],"1f3fe":["1f44f-1f3fe",15,13,63,["\uD83D\uDC4F\uD83C\uDFFE"]],"1f3ff":["1f44f-1f3ff",15,14,63,["\uD83D\uDC4F\uD83C\uDFFF"]]},
-		"1f450":{"1f3fb":["1f450-1f3fb",15,16,63,["\uD83D\uDC50\uD83C\uDFFB"]],"1f3fc":["1f450-1f3fc",15,17,63,["\uD83D\uDC50\uD83C\uDFFC"]],"1f3fd":["1f450-1f3fd",15,18,63,["\uD83D\uDC50\uD83C\uDFFD"]],"1f3fe":["1f450-1f3fe",15,19,63,["\uD83D\uDC50\uD83C\uDFFE"]],"1f3ff":["1f450-1f3ff",15,20,63,["\uD83D\uDC50\uD83C\uDFFF"]]},
-		"1f466":{"1f3fb":["1f466-1f3fb",15,43,63,["\uD83D\uDC66\uD83C\uDFFB"]],"1f3fc":["1f466-1f3fc",15,44,63,["\uD83D\uDC66\uD83C\uDFFC"]],"1f3fd":["1f466-1f3fd",15,45,63,["\uD83D\uDC66\uD83C\uDFFD"]],"1f3fe":["1f466-1f3fe",15,46,63,["\uD83D\uDC66\uD83C\uDFFE"]],"1f3ff":["1f466-1f3ff",15,47,63,["\uD83D\uDC66\uD83C\uDFFF"]]},
-		"1f467":{"1f3fb":["1f467-1f3fb",15,49,63,["\uD83D\uDC67\uD83C\uDFFB"]],"1f3fc":["1f467-1f3fc",15,50,63,["\uD83D\uDC67\uD83C\uDFFC"]],"1f3fd":["1f467-1f3fd",15,51,63,["\uD83D\uDC67\uD83C\uDFFD"]],"1f3fe":["1f467-1f3fe",16,0,63,["\uD83D\uDC67\uD83C\uDFFE"]],"1f3ff":["1f467-1f3ff",16,1,63,["\uD83D\uDC67\uD83C\uDFFF"]]},
-		"1f468-200d-1f33e":{"1f3fb":["1f468-1f3fb-200d-1f33e",16,3,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDF3E"]],"1f3fc":["1f468-1f3fc-200d-1f33e",16,4,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDF3E"]],"1f3fd":["1f468-1f3fd-200d-1f33e",16,5,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDF3E"]],"1f3fe":["1f468-1f3fe-200d-1f33e",16,6,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDF3E"]],"1f3ff":["1f468-1f3ff-200d-1f33e",16,7,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDF3E"]]},
-		"1f468-200d-1f373":{"1f3fb":["1f468-1f3fb-200d-1f373",16,9,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDF73"]],"1f3fc":["1f468-1f3fc-200d-1f373",16,10,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDF73"]],"1f3fd":["1f468-1f3fd-200d-1f373",16,11,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDF73"]],"1f3fe":["1f468-1f3fe-200d-1f373",16,12,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDF73"]],"1f3ff":["1f468-1f3ff-200d-1f373",16,13,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDF73"]]},
-		"1f468-200d-1f393":{"1f3fb":["1f468-1f3fb-200d-1f393",16,15,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDF93"]],"1f3fc":["1f468-1f3fc-200d-1f393",16,16,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDF93"]],"1f3fd":["1f468-1f3fd-200d-1f393",16,17,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDF93"]],"1f3fe":["1f468-1f3fe-200d-1f393",16,18,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDF93"]],"1f3ff":["1f468-1f3ff-200d-1f393",16,19,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDF93"]]},
-		"1f468-200d-1f3a4":{"1f3fb":["1f468-1f3fb-200d-1f3a4",16,21,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDFA4"]],"1f3fc":["1f468-1f3fc-200d-1f3a4",16,22,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDFA4"]],"1f3fd":["1f468-1f3fd-200d-1f3a4",16,23,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDFA4"]],"1f3fe":["1f468-1f3fe-200d-1f3a4",16,24,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDFA4"]],"1f3ff":["1f468-1f3ff-200d-1f3a4",16,25,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDFA4"]]},
-		"1f468-200d-1f3a8":{"1f3fb":["1f468-1f3fb-200d-1f3a8",16,27,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDFA8"]],"1f3fc":["1f468-1f3fc-200d-1f3a8",16,28,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDFA8"]],"1f3fd":["1f468-1f3fd-200d-1f3a8",16,29,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDFA8"]],"1f3fe":["1f468-1f3fe-200d-1f3a8",16,30,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDFA8"]],"1f3ff":["1f468-1f3ff-200d-1f3a8",16,31,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDFA8"]]},
-		"1f468-200d-1f3eb":{"1f3fb":["1f468-1f3fb-200d-1f3eb",16,33,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDFEB"]],"1f3fc":["1f468-1f3fc-200d-1f3eb",16,34,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDFEB"]],"1f3fd":["1f468-1f3fd-200d-1f3eb",16,35,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDFEB"]],"1f3fe":["1f468-1f3fe-200d-1f3eb",16,36,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDFEB"]],"1f3ff":["1f468-1f3ff-200d-1f3eb",16,37,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDFEB"]]},
-		"1f468-200d-1f3ed":{"1f3fb":["1f468-1f3fb-200d-1f3ed",16,39,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83C\uDFED"]],"1f3fc":["1f468-1f3fc-200d-1f3ed",16,40,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83C\uDFED"]],"1f3fd":["1f468-1f3fd-200d-1f3ed",16,41,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83C\uDFED"]],"1f3fe":["1f468-1f3fe-200d-1f3ed",16,42,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83C\uDFED"]],"1f3ff":["1f468-1f3ff-200d-1f3ed",16,43,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83C\uDFED"]]},
-		"1f468-200d-1f4bb":{"1f3fb":["1f468-1f3fb-200d-1f4bb",17,8,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDCBB"]],"1f3fc":["1f468-1f3fc-200d-1f4bb",17,9,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB"]],"1f3fd":["1f468-1f3fd-200d-1f4bb",17,10,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDCBB"]],"1f3fe":["1f468-1f3fe-200d-1f4bb",17,11,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDCBB"]],"1f3ff":["1f468-1f3ff-200d-1f4bb",17,12,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDCBB"]]},
-		"1f468-200d-1f4bc":{"1f3fb":["1f468-1f3fb-200d-1f4bc",17,14,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDCBC"]],"1f3fc":["1f468-1f3fc-200d-1f4bc",17,15,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBC"]],"1f3fd":["1f468-1f3fd-200d-1f4bc",17,16,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDCBC"]],"1f3fe":["1f468-1f3fe-200d-1f4bc",17,17,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDCBC"]],"1f3ff":["1f468-1f3ff-200d-1f4bc",17,18,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDCBC"]]},
-		"1f468-200d-1f527":{"1f3fb":["1f468-1f3fb-200d-1f527",17,20,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDD27"]],"1f3fc":["1f468-1f3fc-200d-1f527",17,21,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDD27"]],"1f3fd":["1f468-1f3fd-200d-1f527",17,22,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDD27"]],"1f3fe":["1f468-1f3fe-200d-1f527",17,23,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDD27"]],"1f3ff":["1f468-1f3ff-200d-1f527",17,24,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDD27"]]},
-		"1f468-200d-1f52c":{"1f3fb":["1f468-1f3fb-200d-1f52c",17,26,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDD2C"]],"1f3fc":["1f468-1f3fc-200d-1f52c",17,27,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDD2C"]],"1f3fd":["1f468-1f3fd-200d-1f52c",17,28,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDD2C"]],"1f3fe":["1f468-1f3fe-200d-1f52c",17,29,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDD2C"]],"1f3ff":["1f468-1f3ff-200d-1f52c",17,30,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDD2C"]]},
-		"1f468-200d-1f680":{"1f3fb":["1f468-1f3fb-200d-1f680",17,32,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDE80"]],"1f3fc":["1f468-1f3fc-200d-1f680",17,33,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDE80"]],"1f3fd":["1f468-1f3fd-200d-1f680",17,34,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDE80"]],"1f3fe":["1f468-1f3fe-200d-1f680",17,35,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDE80"]],"1f3ff":["1f468-1f3ff-200d-1f680",17,36,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDE80"]]},
-		"1f468-200d-1f692":{"1f3fb":["1f468-1f3fb-200d-1f692",17,38,31,["\uD83D\uDC68\uD83C\uDFFB\u200D\uD83D\uDE92"]],"1f3fc":["1f468-1f3fc-200d-1f692",17,39,31,["\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDE92"]],"1f3fd":["1f468-1f3fd-200d-1f692",17,40,31,["\uD83D\uDC68\uD83C\uDFFD\u200D\uD83D\uDE92"]],"1f3fe":["1f468-1f3fe-200d-1f692",17,41,31,["\uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDE92"]],"1f3ff":["1f468-1f3ff-200d-1f692",17,42,31,["\uD83D\uDC68\uD83C\uDFFF\u200D\uD83D\uDE92"]]},
-		"1f468-200d-2695-fe0f":{"1f3fb":["1f468-1f3fb-200d-2695-fe0f",17,44,15,["\uD83D\uDC68\uD83C\uDFFB\u200D\u2695\uFE0F"]],"1f3fc":["1f468-1f3fc-200d-2695-fe0f",17,45,15,["\uD83D\uDC68\uD83C\uDFFC\u200D\u2695\uFE0F"]],"1f3fd":["1f468-1f3fd-200d-2695-fe0f",17,46,15,["\uD83D\uDC68\uD83C\uDFFD\u200D\u2695\uFE0F"]],"1f3fe":["1f468-1f3fe-200d-2695-fe0f",17,47,15,["\uD83D\uDC68\uD83C\uDFFE\u200D\u2695\uFE0F"]],"1f3ff":["1f468-1f3ff-200d-2695-fe0f",17,48,15,["\uD83D\uDC68\uD83C\uDFFF\u200D\u2695\uFE0F"]]},
-		"1f468-200d-2696-fe0f":{"1f3fb":["1f468-1f3fb-200d-2696-fe0f",17,50,15,["\uD83D\uDC68\uD83C\uDFFB\u200D\u2696\uFE0F"]],"1f3fc":["1f468-1f3fc-200d-2696-fe0f",17,51,15,["\uD83D\uDC68\uD83C\uDFFC\u200D\u2696\uFE0F"]],"1f3fd":["1f468-1f3fd-200d-2696-fe0f",18,0,15,["\uD83D\uDC68\uD83C\uDFFD\u200D\u2696\uFE0F"]],"1f3fe":["1f468-1f3fe-200d-2696-fe0f",18,1,15,["\uD83D\uDC68\uD83C\uDFFE\u200D\u2696\uFE0F"]],"1f3ff":["1f468-1f3ff-200d-2696-fe0f",18,2,15,["\uD83D\uDC68\uD83C\uDFFF\u200D\u2696\uFE0F"]]},
-		"1f468-200d-2708-fe0f":{"1f3fb":["1f468-1f3fb-200d-2708-fe0f",18,4,15,["\uD83D\uDC68\uD83C\uDFFB\u200D\u2708\uFE0F"]],"1f3fc":["1f468-1f3fc-200d-2708-fe0f",18,5,15,["\uD83D\uDC68\uD83C\uDFFC\u200D\u2708\uFE0F"]],"1f3fd":["1f468-1f3fd-200d-2708-fe0f",18,6,15,["\uD83D\uDC68\uD83C\uDFFD\u200D\u2708\uFE0F"]],"1f3fe":["1f468-1f3fe-200d-2708-fe0f",18,7,15,["\uD83D\uDC68\uD83C\uDFFE\u200D\u2708\uFE0F"]],"1f3ff":["1f468-1f3ff-200d-2708-fe0f",18,8,15,["\uD83D\uDC68\uD83C\uDFFF\u200D\u2708\uFE0F"]]},
-		"1f468":{"1f3fb":["1f468-1f3fb",18,12,63,["\uD83D\uDC68\uD83C\uDFFB"]],"1f3fc":["1f468-1f3fc",18,13,63,["\uD83D\uDC68\uD83C\uDFFC"]],"1f3fd":["1f468-1f3fd",18,14,63,["\uD83D\uDC68\uD83C\uDFFD"]],"1f3fe":["1f468-1f3fe",18,15,63,["\uD83D\uDC68\uD83C\uDFFE"]],"1f3ff":["1f468-1f3ff",18,16,63,["\uD83D\uDC68\uD83C\uDFFF"]]},
-		"1f469-200d-1f33e":{"1f3fb":["1f469-1f3fb-200d-1f33e",18,18,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDF3E"]],"1f3fc":["1f469-1f3fc-200d-1f33e",18,19,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDF3E"]],"1f3fd":["1f469-1f3fd-200d-1f33e",18,20,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDF3E"]],"1f3fe":["1f469-1f3fe-200d-1f33e",18,21,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDF3E"]],"1f3ff":["1f469-1f3ff-200d-1f33e",18,22,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDF3E"]]},
-		"1f469-200d-1f373":{"1f3fb":["1f469-1f3fb-200d-1f373",18,24,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDF73"]],"1f3fc":["1f469-1f3fc-200d-1f373",18,25,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDF73"]],"1f3fd":["1f469-1f3fd-200d-1f373",18,26,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDF73"]],"1f3fe":["1f469-1f3fe-200d-1f373",18,27,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDF73"]],"1f3ff":["1f469-1f3ff-200d-1f373",18,28,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDF73"]]},
-		"1f469-200d-1f393":{"1f3fb":["1f469-1f3fb-200d-1f393",18,30,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDF93"]],"1f3fc":["1f469-1f3fc-200d-1f393",18,31,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDF93"]],"1f3fd":["1f469-1f3fd-200d-1f393",18,32,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDF93"]],"1f3fe":["1f469-1f3fe-200d-1f393",18,33,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDF93"]],"1f3ff":["1f469-1f3ff-200d-1f393",18,34,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDF93"]]},
-		"1f469-200d-1f3a4":{"1f3fb":["1f469-1f3fb-200d-1f3a4",18,36,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDFA4"]],"1f3fc":["1f469-1f3fc-200d-1f3a4",18,37,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDFA4"]],"1f3fd":["1f469-1f3fd-200d-1f3a4",18,38,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDFA4"]],"1f3fe":["1f469-1f3fe-200d-1f3a4",18,39,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDFA4"]],"1f3ff":["1f469-1f3ff-200d-1f3a4",18,40,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDFA4"]]},
-		"1f469-200d-1f3a8":{"1f3fb":["1f469-1f3fb-200d-1f3a8",18,42,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDFA8"]],"1f3fc":["1f469-1f3fc-200d-1f3a8",18,43,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDFA8"]],"1f3fd":["1f469-1f3fd-200d-1f3a8",18,44,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDFA8"]],"1f3fe":["1f469-1f3fe-200d-1f3a8",18,45,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDFA8"]],"1f3ff":["1f469-1f3ff-200d-1f3a8",18,46,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDFA8"]]},
-		"1f469-200d-1f3eb":{"1f3fb":["1f469-1f3fb-200d-1f3eb",18,48,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDFEB"]],"1f3fc":["1f469-1f3fc-200d-1f3eb",18,49,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDFEB"]],"1f3fd":["1f469-1f3fd-200d-1f3eb",18,50,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDFEB"]],"1f3fe":["1f469-1f3fe-200d-1f3eb",18,51,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDFEB"]],"1f3ff":["1f469-1f3ff-200d-1f3eb",19,0,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDFEB"]]},
-		"1f469-200d-1f3ed":{"1f3fb":["1f469-1f3fb-200d-1f3ed",19,2,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83C\uDFED"]],"1f3fc":["1f469-1f3fc-200d-1f3ed",19,3,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83C\uDFED"]],"1f3fd":["1f469-1f3fd-200d-1f3ed",19,4,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83C\uDFED"]],"1f3fe":["1f469-1f3fe-200d-1f3ed",19,5,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83C\uDFED"]],"1f3ff":["1f469-1f3ff-200d-1f3ed",19,6,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83C\uDFED"]]},
-		"1f469-200d-1f4bb":{"1f3fb":["1f469-1f3fb-200d-1f4bb",19,18,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDCBB"]],"1f3fc":["1f469-1f3fc-200d-1f4bb",19,19,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDCBB"]],"1f3fd":["1f469-1f3fd-200d-1f4bb",19,20,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDCBB"]],"1f3fe":["1f469-1f3fe-200d-1f4bb",19,21,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDCBB"]],"1f3ff":["1f469-1f3ff-200d-1f4bb",19,22,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDCBB"]]},
-		"1f469-200d-1f4bc":{"1f3fb":["1f469-1f3fb-200d-1f4bc",19,24,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDCBC"]],"1f3fc":["1f469-1f3fc-200d-1f4bc",19,25,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDCBC"]],"1f3fd":["1f469-1f3fd-200d-1f4bc",19,26,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDCBC"]],"1f3fe":["1f469-1f3fe-200d-1f4bc",19,27,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDCBC"]],"1f3ff":["1f469-1f3ff-200d-1f4bc",19,28,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDCBC"]]},
-		"1f469-200d-1f527":{"1f3fb":["1f469-1f3fb-200d-1f527",19,30,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDD27"]],"1f3fc":["1f469-1f3fc-200d-1f527",19,31,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDD27"]],"1f3fd":["1f469-1f3fd-200d-1f527",19,32,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDD27"]],"1f3fe":["1f469-1f3fe-200d-1f527",19,33,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDD27"]],"1f3ff":["1f469-1f3ff-200d-1f527",19,34,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDD27"]]},
-		"1f469-200d-1f52c":{"1f3fb":["1f469-1f3fb-200d-1f52c",19,36,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDD2C"]],"1f3fc":["1f469-1f3fc-200d-1f52c",19,37,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDD2C"]],"1f3fd":["1f469-1f3fd-200d-1f52c",19,38,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDD2C"]],"1f3fe":["1f469-1f3fe-200d-1f52c",19,39,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDD2C"]],"1f3ff":["1f469-1f3ff-200d-1f52c",19,40,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDD2C"]]},
-		"1f469-200d-1f680":{"1f3fb":["1f469-1f3fb-200d-1f680",19,42,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDE80"]],"1f3fc":["1f469-1f3fc-200d-1f680",19,43,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE80"]],"1f3fd":["1f469-1f3fd-200d-1f680",19,44,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDE80"]],"1f3fe":["1f469-1f3fe-200d-1f680",19,45,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDE80"]],"1f3ff":["1f469-1f3ff-200d-1f680",19,46,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDE80"]]},
-		"1f469-200d-1f692":{"1f3fb":["1f469-1f3fb-200d-1f692",19,48,31,["\uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDE92"]],"1f3fc":["1f469-1f3fc-200d-1f692",19,49,31,["\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDE92"]],"1f3fd":["1f469-1f3fd-200d-1f692",19,50,31,["\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDE92"]],"1f3fe":["1f469-1f3fe-200d-1f692",19,51,31,["\uD83D\uDC69\uD83C\uDFFE\u200D\uD83D\uDE92"]],"1f3ff":["1f469-1f3ff-200d-1f692",20,0,31,["\uD83D\uDC69\uD83C\uDFFF\u200D\uD83D\uDE92"]]},
-		"1f469-200d-2695-fe0f":{"1f3fb":["1f469-1f3fb-200d-2695-fe0f",20,2,15,["\uD83D\uDC69\uD83C\uDFFB\u200D\u2695\uFE0F"]],"1f3fc":["1f469-1f3fc-200d-2695-fe0f",20,3,15,["\uD83D\uDC69\uD83C\uDFFC\u200D\u2695\uFE0F"]],"1f3fd":["1f469-1f3fd-200d-2695-fe0f",20,4,15,["\uD83D\uDC69\uD83C\uDFFD\u200D\u2695\uFE0F"]],"1f3fe":["1f469-1f3fe-200d-2695-fe0f",20,5,15,["\uD83D\uDC69\uD83C\uDFFE\u200D\u2695\uFE0F"]],"1f3ff":["1f469-1f3ff-200d-2695-fe0f",20,6,15,["\uD83D\uDC69\uD83C\uDFFF\u200D\u2695\uFE0F"]]},
-		"1f469-200d-2696-fe0f":{"1f3fb":["1f469-1f3fb-200d-2696-fe0f",20,8,15,["\uD83D\uDC69\uD83C\uDFFB\u200D\u2696\uFE0F"]],"1f3fc":["1f469-1f3fc-200d-2696-fe0f",20,9,15,["\uD83D\uDC69\uD83C\uDFFC\u200D\u2696\uFE0F"]],"1f3fd":["1f469-1f3fd-200d-2696-fe0f",20,10,15,["\uD83D\uDC69\uD83C\uDFFD\u200D\u2696\uFE0F"]],"1f3fe":["1f469-1f3fe-200d-2696-fe0f",20,11,15,["\uD83D\uDC69\uD83C\uDFFE\u200D\u2696\uFE0F"]],"1f3ff":["1f469-1f3ff-200d-2696-fe0f",20,12,15,["\uD83D\uDC69\uD83C\uDFFF\u200D\u2696\uFE0F"]]},
-		"1f469-200d-2708-fe0f":{"1f3fb":["1f469-1f3fb-200d-2708-fe0f",20,14,15,["\uD83D\uDC69\uD83C\uDFFB\u200D\u2708\uFE0F"]],"1f3fc":["1f469-1f3fc-200d-2708-fe0f",20,15,15,["\uD83D\uDC69\uD83C\uDFFC\u200D\u2708\uFE0F"]],"1f3fd":["1f469-1f3fd-200d-2708-fe0f",20,16,15,["\uD83D\uDC69\uD83C\uDFFD\u200D\u2708\uFE0F"]],"1f3fe":["1f469-1f3fe-200d-2708-fe0f",20,17,15,["\uD83D\uDC69\uD83C\uDFFE\u200D\u2708\uFE0F"]],"1f3ff":["1f469-1f3ff-200d-2708-fe0f",20,18,15,["\uD83D\uDC69\uD83C\uDFFF\u200D\u2708\uFE0F"]]},
-		"1f469":{"1f3fb":["1f469-1f3fb",20,24,63,["\uD83D\uDC69\uD83C\uDFFB"]],"1f3fc":["1f469-1f3fc",20,25,63,["\uD83D\uDC69\uD83C\uDFFC"]],"1f3fd":["1f469-1f3fd",20,26,63,["\uD83D\uDC69\uD83C\uDFFD"]],"1f3fe":["1f469-1f3fe",20,27,63,["\uD83D\uDC69\uD83C\uDFFE"]],"1f3ff":["1f469-1f3ff",20,28,63,["\uD83D\uDC69\uD83C\uDFFF"]]},
-		"1f46e-200d-2640-fe0f":{"1f3fb":["1f46e-1f3fb-200d-2640-fe0f",20,34,15,["\uD83D\uDC6E\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f46e-1f3fc-200d-2640-fe0f",20,35,15,["\uD83D\uDC6E\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f46e-1f3fd-200d-2640-fe0f",20,36,15,["\uD83D\uDC6E\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f46e-1f3fe-200d-2640-fe0f",20,37,15,["\uD83D\uDC6E\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f46e-1f3ff-200d-2640-fe0f",20,38,15,["\uD83D\uDC6E\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f46e-200d-2642-fe0f":{"1f3fb":["1f46e-1f3fb-200d-2642-fe0f",20,40,15,["\uD83D\uDC6E\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDC6E\uD83C\uDFFB"]],"1f3fc":["1f46e-1f3fc-200d-2642-fe0f",20,41,15,["\uD83D\uDC6E\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDC6E\uD83C\uDFFC"]],"1f3fd":["1f46e-1f3fd-200d-2642-fe0f",20,42,15,["\uD83D\uDC6E\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDC6E\uD83C\uDFFD"]],"1f3fe":["1f46e-1f3fe-200d-2642-fe0f",20,43,15,["\uD83D\uDC6E\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDC6E\uD83C\uDFFE"]],"1f3ff":["1f46e-1f3ff-200d-2642-fe0f",20,44,15,["\uD83D\uDC6E\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDC6E\uD83C\uDFFF"]]},
-		"1f470":{"1f3fb":["1f470-1f3fb",21,3,63,["\uD83D\uDC70\uD83C\uDFFB"]],"1f3fc":["1f470-1f3fc",21,4,63,["\uD83D\uDC70\uD83C\uDFFC"]],"1f3fd":["1f470-1f3fd",21,5,63,["\uD83D\uDC70\uD83C\uDFFD"]],"1f3fe":["1f470-1f3fe",21,6,63,["\uD83D\uDC70\uD83C\uDFFE"]],"1f3ff":["1f470-1f3ff",21,7,63,["\uD83D\uDC70\uD83C\uDFFF"]]},
-		"1f471-200d-2640-fe0f":{"1f3fb":["1f471-1f3fb-200d-2640-fe0f",21,9,15,["\uD83D\uDC71\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f471-1f3fc-200d-2640-fe0f",21,10,15,["\uD83D\uDC71\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f471-1f3fd-200d-2640-fe0f",21,11,15,["\uD83D\uDC71\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f471-1f3fe-200d-2640-fe0f",21,12,15,["\uD83D\uDC71\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f471-1f3ff-200d-2640-fe0f",21,13,15,["\uD83D\uDC71\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f471-200d-2642-fe0f":{"1f3fb":["1f471-1f3fb-200d-2642-fe0f",21,15,15,["\uD83D\uDC71\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDC71\uD83C\uDFFB"]],"1f3fc":["1f471-1f3fc-200d-2642-fe0f",21,16,15,["\uD83D\uDC71\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDC71\uD83C\uDFFC"]],"1f3fd":["1f471-1f3fd-200d-2642-fe0f",21,17,15,["\uD83D\uDC71\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDC71\uD83C\uDFFD"]],"1f3fe":["1f471-1f3fe-200d-2642-fe0f",21,18,15,["\uD83D\uDC71\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDC71\uD83C\uDFFE"]],"1f3ff":["1f471-1f3ff-200d-2642-fe0f",21,19,15,["\uD83D\uDC71\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDC71\uD83C\uDFFF"]]},
-		"1f472":{"1f3fb":["1f472-1f3fb",21,27,63,["\uD83D\uDC72\uD83C\uDFFB"]],"1f3fc":["1f472-1f3fc",21,28,63,["\uD83D\uDC72\uD83C\uDFFC"]],"1f3fd":["1f472-1f3fd",21,29,63,["\uD83D\uDC72\uD83C\uDFFD"]],"1f3fe":["1f472-1f3fe",21,30,63,["\uD83D\uDC72\uD83C\uDFFE"]],"1f3ff":["1f472-1f3ff",21,31,63,["\uD83D\uDC72\uD83C\uDFFF"]]},
-		"1f473-200d-2640-fe0f":{"1f3fb":["1f473-1f3fb-200d-2640-fe0f",21,33,15,["\uD83D\uDC73\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f473-1f3fc-200d-2640-fe0f",21,34,15,["\uD83D\uDC73\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f473-1f3fd-200d-2640-fe0f",21,35,15,["\uD83D\uDC73\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f473-1f3fe-200d-2640-fe0f",21,36,15,["\uD83D\uDC73\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f473-1f3ff-200d-2640-fe0f",21,37,15,["\uD83D\uDC73\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f473-200d-2642-fe0f":{"1f3fb":["1f473-1f3fb-200d-2642-fe0f",21,39,15,["\uD83D\uDC73\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDC73\uD83C\uDFFB"]],"1f3fc":["1f473-1f3fc-200d-2642-fe0f",21,40,15,["\uD83D\uDC73\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDC73\uD83C\uDFFC"]],"1f3fd":["1f473-1f3fd-200d-2642-fe0f",21,41,15,["\uD83D\uDC73\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDC73\uD83C\uDFFD"]],"1f3fe":["1f473-1f3fe-200d-2642-fe0f",21,42,15,["\uD83D\uDC73\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDC73\uD83C\uDFFE"]],"1f3ff":["1f473-1f3ff-200d-2642-fe0f",21,43,15,["\uD83D\uDC73\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDC73\uD83C\uDFFF"]]},
-		"1f474":{"1f3fb":["1f474-1f3fb",21,51,63,["\uD83D\uDC74\uD83C\uDFFB"]],"1f3fc":["1f474-1f3fc",22,0,63,["\uD83D\uDC74\uD83C\uDFFC"]],"1f3fd":["1f474-1f3fd",22,1,63,["\uD83D\uDC74\uD83C\uDFFD"]],"1f3fe":["1f474-1f3fe",22,2,63,["\uD83D\uDC74\uD83C\uDFFE"]],"1f3ff":["1f474-1f3ff",22,3,63,["\uD83D\uDC74\uD83C\uDFFF"]]},
-		"1f475":{"1f3fb":["1f475-1f3fb",22,5,63,["\uD83D\uDC75\uD83C\uDFFB"]],"1f3fc":["1f475-1f3fc",22,6,63,["\uD83D\uDC75\uD83C\uDFFC"]],"1f3fd":["1f475-1f3fd",22,7,63,["\uD83D\uDC75\uD83C\uDFFD"]],"1f3fe":["1f475-1f3fe",22,8,63,["\uD83D\uDC75\uD83C\uDFFE"]],"1f3ff":["1f475-1f3ff",22,9,63,["\uD83D\uDC75\uD83C\uDFFF"]]},
-		"1f476":{"1f3fb":["1f476-1f3fb",22,11,63,["\uD83D\uDC76\uD83C\uDFFB"]],"1f3fc":["1f476-1f3fc",22,12,63,["\uD83D\uDC76\uD83C\uDFFC"]],"1f3fd":["1f476-1f3fd",22,13,63,["\uD83D\uDC76\uD83C\uDFFD"]],"1f3fe":["1f476-1f3fe",22,14,63,["\uD83D\uDC76\uD83C\uDFFE"]],"1f3ff":["1f476-1f3ff",22,15,63,["\uD83D\uDC76\uD83C\uDFFF"]]},
-		"1f477-200d-2640-fe0f":{"1f3fb":["1f477-1f3fb-200d-2640-fe0f",22,17,15,["\uD83D\uDC77\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f477-1f3fc-200d-2640-fe0f",22,18,15,["\uD83D\uDC77\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f477-1f3fd-200d-2640-fe0f",22,19,15,["\uD83D\uDC77\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f477-1f3fe-200d-2640-fe0f",22,20,15,["\uD83D\uDC77\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f477-1f3ff-200d-2640-fe0f",22,21,15,["\uD83D\uDC77\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f477-200d-2642-fe0f":{"1f3fb":["1f477-1f3fb-200d-2642-fe0f",22,23,15,["\uD83D\uDC77\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDC77\uD83C\uDFFB"]],"1f3fc":["1f477-1f3fc-200d-2642-fe0f",22,24,15,["\uD83D\uDC77\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDC77\uD83C\uDFFC"]],"1f3fd":["1f477-1f3fd-200d-2642-fe0f",22,25,15,["\uD83D\uDC77\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDC77\uD83C\uDFFD"]],"1f3fe":["1f477-1f3fe-200d-2642-fe0f",22,26,15,["\uD83D\uDC77\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDC77\uD83C\uDFFE"]],"1f3ff":["1f477-1f3ff-200d-2642-fe0f",22,27,15,["\uD83D\uDC77\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDC77\uD83C\uDFFF"]]},
-		"1f478":{"1f3fb":["1f478-1f3fb",22,35,63,["\uD83D\uDC78\uD83C\uDFFB"]],"1f3fc":["1f478-1f3fc",22,36,63,["\uD83D\uDC78\uD83C\uDFFC"]],"1f3fd":["1f478-1f3fd",22,37,63,["\uD83D\uDC78\uD83C\uDFFD"]],"1f3fe":["1f478-1f3fe",22,38,63,["\uD83D\uDC78\uD83C\uDFFE"]],"1f3ff":["1f478-1f3ff",22,39,63,["\uD83D\uDC78\uD83C\uDFFF"]]},
-		"1f47c":{"1f3fb":["1f47c-1f3fb",22,44,63,["\uD83D\uDC7C\uD83C\uDFFB"]],"1f3fc":["1f47c-1f3fc",22,45,63,["\uD83D\uDC7C\uD83C\uDFFC"]],"1f3fd":["1f47c-1f3fd",22,46,63,["\uD83D\uDC7C\uD83C\uDFFD"]],"1f3fe":["1f47c-1f3fe",22,47,63,["\uD83D\uDC7C\uD83C\uDFFE"]],"1f3ff":["1f47c-1f3ff",22,48,63,["\uD83D\uDC7C\uD83C\uDFFF"]]},
-		"1f481-200d-2640-fe0f":{"1f3fb":["1f481-1f3fb-200d-2640-fe0f",23,2,15,["\uD83D\uDC81\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDC81\uD83C\uDFFB"]],"1f3fc":["1f481-1f3fc-200d-2640-fe0f",23,3,15,["\uD83D\uDC81\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDC81\uD83C\uDFFC"]],"1f3fd":["1f481-1f3fd-200d-2640-fe0f",23,4,15,["\uD83D\uDC81\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDC81\uD83C\uDFFD"]],"1f3fe":["1f481-1f3fe-200d-2640-fe0f",23,5,15,["\uD83D\uDC81\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDC81\uD83C\uDFFE"]],"1f3ff":["1f481-1f3ff-200d-2640-fe0f",23,6,15,["\uD83D\uDC81\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDC81\uD83C\uDFFF"]]},
-		"1f481-200d-2642-fe0f":{"1f3fb":["1f481-1f3fb-200d-2642-fe0f",23,8,15,["\uD83D\uDC81\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f481-1f3fc-200d-2642-fe0f",23,9,15,["\uD83D\uDC81\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f481-1f3fd-200d-2642-fe0f",23,10,15,["\uD83D\uDC81\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f481-1f3fe-200d-2642-fe0f",23,11,15,["\uD83D\uDC81\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f481-1f3ff-200d-2642-fe0f",23,12,15,["\uD83D\uDC81\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f482-200d-2640-fe0f":{"1f3fb":["1f482-1f3fb-200d-2640-fe0f",23,20,15,["\uD83D\uDC82\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f482-1f3fc-200d-2640-fe0f",23,21,15,["\uD83D\uDC82\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f482-1f3fd-200d-2640-fe0f",23,22,15,["\uD83D\uDC82\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f482-1f3fe-200d-2640-fe0f",23,23,15,["\uD83D\uDC82\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f482-1f3ff-200d-2640-fe0f",23,24,15,["\uD83D\uDC82\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f482-200d-2642-fe0f":{"1f3fb":["1f482-1f3fb-200d-2642-fe0f",23,26,15,["\uD83D\uDC82\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDC82\uD83C\uDFFB"]],"1f3fc":["1f482-1f3fc-200d-2642-fe0f",23,27,15,["\uD83D\uDC82\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDC82\uD83C\uDFFC"]],"1f3fd":["1f482-1f3fd-200d-2642-fe0f",23,28,15,["\uD83D\uDC82\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDC82\uD83C\uDFFD"]],"1f3fe":["1f482-1f3fe-200d-2642-fe0f",23,29,15,["\uD83D\uDC82\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDC82\uD83C\uDFFE"]],"1f3ff":["1f482-1f3ff-200d-2642-fe0f",23,30,15,["\uD83D\uDC82\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDC82\uD83C\uDFFF"]]},
-		"1f483":{"1f3fb":["1f483-1f3fb",23,38,63,["\uD83D\uDC83\uD83C\uDFFB"]],"1f3fc":["1f483-1f3fc",23,39,63,["\uD83D\uDC83\uD83C\uDFFC"]],"1f3fd":["1f483-1f3fd",23,40,63,["\uD83D\uDC83\uD83C\uDFFD"]],"1f3fe":["1f483-1f3fe",23,41,63,["\uD83D\uDC83\uD83C\uDFFE"]],"1f3ff":["1f483-1f3ff",23,42,63,["\uD83D\uDC83\uD83C\uDFFF"]]},
-		"1f485":{"1f3fb":["1f485-1f3fb",23,45,63,["\uD83D\uDC85\uD83C\uDFFB"]],"1f3fc":["1f485-1f3fc",23,46,63,["\uD83D\uDC85\uD83C\uDFFC"]],"1f3fd":["1f485-1f3fd",23,47,63,["\uD83D\uDC85\uD83C\uDFFD"]],"1f3fe":["1f485-1f3fe",23,48,63,["\uD83D\uDC85\uD83C\uDFFE"]],"1f3ff":["1f485-1f3ff",23,49,63,["\uD83D\uDC85\uD83C\uDFFF"]]},
-		"1f486-200d-2640-fe0f":{"1f3fb":["1f486-1f3fb-200d-2640-fe0f",23,51,15,["\uD83D\uDC86\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDC86\uD83C\uDFFB"]],"1f3fc":["1f486-1f3fc-200d-2640-fe0f",24,0,15,["\uD83D\uDC86\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDC86\uD83C\uDFFC"]],"1f3fd":["1f486-1f3fd-200d-2640-fe0f",24,1,15,["\uD83D\uDC86\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDC86\uD83C\uDFFD"]],"1f3fe":["1f486-1f3fe-200d-2640-fe0f",24,2,15,["\uD83D\uDC86\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDC86\uD83C\uDFFE"]],"1f3ff":["1f486-1f3ff-200d-2640-fe0f",24,3,15,["\uD83D\uDC86\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDC86\uD83C\uDFFF"]]},
-		"1f486-200d-2642-fe0f":{"1f3fb":["1f486-1f3fb-200d-2642-fe0f",24,5,15,["\uD83D\uDC86\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f486-1f3fc-200d-2642-fe0f",24,6,15,["\uD83D\uDC86\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f486-1f3fd-200d-2642-fe0f",24,7,15,["\uD83D\uDC86\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f486-1f3fe-200d-2642-fe0f",24,8,15,["\uD83D\uDC86\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f486-1f3ff-200d-2642-fe0f",24,9,15,["\uD83D\uDC86\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f487-200d-2640-fe0f":{"1f3fb":["1f487-1f3fb-200d-2640-fe0f",24,17,15,["\uD83D\uDC87\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDC87\uD83C\uDFFB"]],"1f3fc":["1f487-1f3fc-200d-2640-fe0f",24,18,15,["\uD83D\uDC87\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDC87\uD83C\uDFFC"]],"1f3fd":["1f487-1f3fd-200d-2640-fe0f",24,19,15,["\uD83D\uDC87\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDC87\uD83C\uDFFD"]],"1f3fe":["1f487-1f3fe-200d-2640-fe0f",24,20,15,["\uD83D\uDC87\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDC87\uD83C\uDFFE"]],"1f3ff":["1f487-1f3ff-200d-2640-fe0f",24,21,15,["\uD83D\uDC87\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDC87\uD83C\uDFFF"]]},
-		"1f487-200d-2642-fe0f":{"1f3fb":["1f487-1f3fb-200d-2642-fe0f",24,23,15,["\uD83D\uDC87\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f487-1f3fc-200d-2642-fe0f",24,24,15,["\uD83D\uDC87\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f487-1f3fd-200d-2642-fe0f",24,25,15,["\uD83D\uDC87\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f487-1f3fe-200d-2642-fe0f",24,26,15,["\uD83D\uDC87\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f487-1f3ff-200d-2642-fe0f",24,27,15,["\uD83D\uDC87\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f4aa":{"1f3fb":["1f4aa-1f3fb",25,17,63,["\uD83D\uDCAA\uD83C\uDFFB"]],"1f3fc":["1f4aa-1f3fc",25,18,63,["\uD83D\uDCAA\uD83C\uDFFC"]],"1f3fd":["1f4aa-1f3fd",25,19,63,["\uD83D\uDCAA\uD83C\uDFFD"]],"1f3fe":["1f4aa-1f3fe",25,20,63,["\uD83D\uDCAA\uD83C\uDFFE"]],"1f3ff":["1f4aa-1f3ff",25,21,63,["\uD83D\uDCAA\uD83C\uDFFF"]]},
-		"1f574-fe0f":{"1f3fb":["1f574-1f3fb",28,46,31,["\uD83D\uDD74\uD83C\uDFFB"]],"1f3fc":["1f574-1f3fc",28,47,31,["\uD83D\uDD74\uD83C\uDFFC"]],"1f3fd":["1f574-1f3fd",28,48,31,["\uD83D\uDD74\uD83C\uDFFD"]],"1f3fe":["1f574-1f3fe",28,49,31,["\uD83D\uDD74\uD83C\uDFFE"]],"1f3ff":["1f574-1f3ff",28,50,31,["\uD83D\uDD74\uD83C\uDFFF"]]},
-		"1f575-fe0f-200d-2640-fe0f":{"1f3fb":["1f575-1f3fb-200d-2640-fe0f",29,0,15,["\uD83D\uDD75\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f575-1f3fc-200d-2640-fe0f",29,1,15,["\uD83D\uDD75\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f575-1f3fd-200d-2640-fe0f",29,2,15,["\uD83D\uDD75\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f575-1f3fe-200d-2640-fe0f",29,3,15,["\uD83D\uDD75\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f575-1f3ff-200d-2640-fe0f",29,4,15,["\uD83D\uDD75\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f575-fe0f-200d-2642-fe0f":{"1f3fb":["1f575-1f3fb-200d-2642-fe0f",29,6,15,["\uD83D\uDD75\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDD75\uD83C\uDFFB"]],"1f3fc":["1f575-1f3fc-200d-2642-fe0f",29,7,15,["\uD83D\uDD75\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDD75\uD83C\uDFFC"]],"1f3fd":["1f575-1f3fd-200d-2642-fe0f",29,8,15,["\uD83D\uDD75\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDD75\uD83C\uDFFD"]],"1f3fe":["1f575-1f3fe-200d-2642-fe0f",29,9,15,["\uD83D\uDD75\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDD75\uD83C\uDFFE"]],"1f3ff":["1f575-1f3ff-200d-2642-fe0f",29,10,15,["\uD83D\uDD75\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDD75\uD83C\uDFFF"]]},
-		"1f57a":{"1f3fb":["1f57a-1f3fb",29,22,31,["\uD83D\uDD7A\uD83C\uDFFB"]],"1f3fc":["1f57a-1f3fc",29,23,31,["\uD83D\uDD7A\uD83C\uDFFC"]],"1f3fd":["1f57a-1f3fd",29,24,31,["\uD83D\uDD7A\uD83C\uDFFD"]],"1f3fe":["1f57a-1f3fe",29,25,31,["\uD83D\uDD7A\uD83C\uDFFE"]],"1f3ff":["1f57a-1f3ff",29,26,31,["\uD83D\uDD7A\uD83C\uDFFF"]]},
-		"1f590-fe0f":{"1f3fb":["1f590-1f3fb",29,33,31,["\uD83D\uDD90\uD83C\uDFFB"]],"1f3fc":["1f590-1f3fc",29,34,31,["\uD83D\uDD90\uD83C\uDFFC"]],"1f3fd":["1f590-1f3fd",29,35,31,["\uD83D\uDD90\uD83C\uDFFD"]],"1f3fe":["1f590-1f3fe",29,36,31,["\uD83D\uDD90\uD83C\uDFFE"]],"1f3ff":["1f590-1f3ff",29,37,31,["\uD83D\uDD90\uD83C\uDFFF"]]},
-		"1f595":{"1f3fb":["1f595-1f3fb",29,39,31,["\uD83D\uDD95\uD83C\uDFFB"]],"1f3fc":["1f595-1f3fc",29,40,31,["\uD83D\uDD95\uD83C\uDFFC"]],"1f3fd":["1f595-1f3fd",29,41,31,["\uD83D\uDD95\uD83C\uDFFD"]],"1f3fe":["1f595-1f3fe",29,42,31,["\uD83D\uDD95\uD83C\uDFFE"]],"1f3ff":["1f595-1f3ff",29,43,31,["\uD83D\uDD95\uD83C\uDFFF"]]},
-		"1f596":{"1f3fb":["1f596-1f3fb",29,45,31,["\uD83D\uDD96\uD83C\uDFFB"]],"1f3fc":["1f596-1f3fc",29,46,31,["\uD83D\uDD96\uD83C\uDFFC"]],"1f3fd":["1f596-1f3fd",29,47,31,["\uD83D\uDD96\uD83C\uDFFD"]],"1f3fe":["1f596-1f3fe",29,48,31,["\uD83D\uDD96\uD83C\uDFFE"]],"1f3ff":["1f596-1f3ff",29,49,31,["\uD83D\uDD96\uD83C\uDFFF"]]},
-		"1f645-200d-2640-fe0f":{"1f3fb":["1f645-1f3fb-200d-2640-fe0f",31,42,15,["\uD83D\uDE45\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDE45\uD83C\uDFFB"]],"1f3fc":["1f645-1f3fc-200d-2640-fe0f",31,43,15,["\uD83D\uDE45\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDE45\uD83C\uDFFC"]],"1f3fd":["1f645-1f3fd-200d-2640-fe0f",31,44,15,["\uD83D\uDE45\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDE45\uD83C\uDFFD"]],"1f3fe":["1f645-1f3fe-200d-2640-fe0f",31,45,15,["\uD83D\uDE45\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDE45\uD83C\uDFFE"]],"1f3ff":["1f645-1f3ff-200d-2640-fe0f",31,46,15,["\uD83D\uDE45\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDE45\uD83C\uDFFF"]]},
-		"1f645-200d-2642-fe0f":{"1f3fb":["1f645-1f3fb-200d-2642-fe0f",31,48,15,["\uD83D\uDE45\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f645-1f3fc-200d-2642-fe0f",31,49,15,["\uD83D\uDE45\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f645-1f3fd-200d-2642-fe0f",31,50,15,["\uD83D\uDE45\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f645-1f3fe-200d-2642-fe0f",31,51,15,["\uD83D\uDE45\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f645-1f3ff-200d-2642-fe0f",32,0,15,["\uD83D\uDE45\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f646-200d-2640-fe0f":{"1f3fb":["1f646-1f3fb-200d-2640-fe0f",32,8,15,["\uD83D\uDE46\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDE46\uD83C\uDFFB"]],"1f3fc":["1f646-1f3fc-200d-2640-fe0f",32,9,15,["\uD83D\uDE46\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDE46\uD83C\uDFFC"]],"1f3fd":["1f646-1f3fd-200d-2640-fe0f",32,10,15,["\uD83D\uDE46\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDE46\uD83C\uDFFD"]],"1f3fe":["1f646-1f3fe-200d-2640-fe0f",32,11,15,["\uD83D\uDE46\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDE46\uD83C\uDFFE"]],"1f3ff":["1f646-1f3ff-200d-2640-fe0f",32,12,15,["\uD83D\uDE46\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDE46\uD83C\uDFFF"]]},
-		"1f646-200d-2642-fe0f":{"1f3fb":["1f646-1f3fb-200d-2642-fe0f",32,14,15,["\uD83D\uDE46\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f646-1f3fc-200d-2642-fe0f",32,15,15,["\uD83D\uDE46\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f646-1f3fd-200d-2642-fe0f",32,16,15,["\uD83D\uDE46\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f646-1f3fe-200d-2642-fe0f",32,17,15,["\uD83D\uDE46\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f646-1f3ff-200d-2642-fe0f",32,18,15,["\uD83D\uDE46\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f647-200d-2640-fe0f":{"1f3fb":["1f647-1f3fb-200d-2640-fe0f",32,26,15,["\uD83D\uDE47\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f647-1f3fc-200d-2640-fe0f",32,27,15,["\uD83D\uDE47\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f647-1f3fd-200d-2640-fe0f",32,28,15,["\uD83D\uDE47\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f647-1f3fe-200d-2640-fe0f",32,29,15,["\uD83D\uDE47\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f647-1f3ff-200d-2640-fe0f",32,30,15,["\uD83D\uDE47\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f647-200d-2642-fe0f":{"1f3fb":["1f647-1f3fb-200d-2642-fe0f",32,32,15,["\uD83D\uDE47\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDE47\uD83C\uDFFB"]],"1f3fc":["1f647-1f3fc-200d-2642-fe0f",32,33,15,["\uD83D\uDE47\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDE47\uD83C\uDFFC"]],"1f3fd":["1f647-1f3fd-200d-2642-fe0f",32,34,15,["\uD83D\uDE47\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDE47\uD83C\uDFFD"]],"1f3fe":["1f647-1f3fe-200d-2642-fe0f",32,35,15,["\uD83D\uDE47\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDE47\uD83C\uDFFE"]],"1f3ff":["1f647-1f3ff-200d-2642-fe0f",32,36,15,["\uD83D\uDE47\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDE47\uD83C\uDFFF"]]},
-		"1f64b-200d-2640-fe0f":{"1f3fb":["1f64b-1f3fb-200d-2640-fe0f",32,47,15,["\uD83D\uDE4B\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDE4B\uD83C\uDFFB"]],"1f3fc":["1f64b-1f3fc-200d-2640-fe0f",32,48,15,["\uD83D\uDE4B\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDE4B\uD83C\uDFFC"]],"1f3fd":["1f64b-1f3fd-200d-2640-fe0f",32,49,15,["\uD83D\uDE4B\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDE4B\uD83C\uDFFD"]],"1f3fe":["1f64b-1f3fe-200d-2640-fe0f",32,50,15,["\uD83D\uDE4B\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDE4B\uD83C\uDFFE"]],"1f3ff":["1f64b-1f3ff-200d-2640-fe0f",32,51,15,["\uD83D\uDE4B\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDE4B\uD83C\uDFFF"]]},
-		"1f64b-200d-2642-fe0f":{"1f3fb":["1f64b-1f3fb-200d-2642-fe0f",33,1,15,["\uD83D\uDE4B\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f64b-1f3fc-200d-2642-fe0f",33,2,15,["\uD83D\uDE4B\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f64b-1f3fd-200d-2642-fe0f",33,3,15,["\uD83D\uDE4B\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f64b-1f3fe-200d-2642-fe0f",33,4,15,["\uD83D\uDE4B\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f64b-1f3ff-200d-2642-fe0f",33,5,15,["\uD83D\uDE4B\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f64c":{"1f3fb":["1f64c-1f3fb",33,13,63,["\uD83D\uDE4C\uD83C\uDFFB"]],"1f3fc":["1f64c-1f3fc",33,14,63,["\uD83D\uDE4C\uD83C\uDFFC"]],"1f3fd":["1f64c-1f3fd",33,15,63,["\uD83D\uDE4C\uD83C\uDFFD"]],"1f3fe":["1f64c-1f3fe",33,16,63,["\uD83D\uDE4C\uD83C\uDFFE"]],"1f3ff":["1f64c-1f3ff",33,17,63,["\uD83D\uDE4C\uD83C\uDFFF"]]},
-		"1f64d-200d-2640-fe0f":{"1f3fb":["1f64d-1f3fb-200d-2640-fe0f",33,19,15,["\uD83D\uDE4D\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDE4D\uD83C\uDFFB"]],"1f3fc":["1f64d-1f3fc-200d-2640-fe0f",33,20,15,["\uD83D\uDE4D\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDE4D\uD83C\uDFFC"]],"1f3fd":["1f64d-1f3fd-200d-2640-fe0f",33,21,15,["\uD83D\uDE4D\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDE4D\uD83C\uDFFD"]],"1f3fe":["1f64d-1f3fe-200d-2640-fe0f",33,22,15,["\uD83D\uDE4D\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDE4D\uD83C\uDFFE"]],"1f3ff":["1f64d-1f3ff-200d-2640-fe0f",33,23,15,["\uD83D\uDE4D\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDE4D\uD83C\uDFFF"]]},
-		"1f64d-200d-2642-fe0f":{"1f3fb":["1f64d-1f3fb-200d-2642-fe0f",33,25,15,["\uD83D\uDE4D\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f64d-1f3fc-200d-2642-fe0f",33,26,15,["\uD83D\uDE4D\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f64d-1f3fd-200d-2642-fe0f",33,27,15,["\uD83D\uDE4D\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f64d-1f3fe-200d-2642-fe0f",33,28,15,["\uD83D\uDE4D\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f64d-1f3ff-200d-2642-fe0f",33,29,15,["\uD83D\uDE4D\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f64e-200d-2640-fe0f":{"1f3fb":["1f64e-1f3fb-200d-2640-fe0f",33,37,15,["\uD83D\uDE4E\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83D\uDE4E\uD83C\uDFFB"]],"1f3fc":["1f64e-1f3fc-200d-2640-fe0f",33,38,15,["\uD83D\uDE4E\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83D\uDE4E\uD83C\uDFFC"]],"1f3fd":["1f64e-1f3fd-200d-2640-fe0f",33,39,15,["\uD83D\uDE4E\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83D\uDE4E\uD83C\uDFFD"]],"1f3fe":["1f64e-1f3fe-200d-2640-fe0f",33,40,15,["\uD83D\uDE4E\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83D\uDE4E\uD83C\uDFFE"]],"1f3ff":["1f64e-1f3ff-200d-2640-fe0f",33,41,15,["\uD83D\uDE4E\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83D\uDE4E\uD83C\uDFFF"]]},
-		"1f64e-200d-2642-fe0f":{"1f3fb":["1f64e-1f3fb-200d-2642-fe0f",33,43,15,["\uD83D\uDE4E\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f64e-1f3fc-200d-2642-fe0f",33,44,15,["\uD83D\uDE4E\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f64e-1f3fd-200d-2642-fe0f",33,45,15,["\uD83D\uDE4E\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f64e-1f3fe-200d-2642-fe0f",33,46,15,["\uD83D\uDE4E\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f64e-1f3ff-200d-2642-fe0f",33,47,15,["\uD83D\uDE4E\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f64f":{"1f3fb":["1f64f-1f3fb",34,3,63,["\uD83D\uDE4F\uD83C\uDFFB"]],"1f3fc":["1f64f-1f3fc",34,4,63,["\uD83D\uDE4F\uD83C\uDFFC"]],"1f3fd":["1f64f-1f3fd",34,5,63,["\uD83D\uDE4F\uD83C\uDFFD"]],"1f3fe":["1f64f-1f3fe",34,6,63,["\uD83D\uDE4F\uD83C\uDFFE"]],"1f3ff":["1f64f-1f3ff",34,7,63,["\uD83D\uDE4F\uD83C\uDFFF"]]},
-		"1f6a3-200d-2640-fe0f":{"1f3fb":["1f6a3-1f3fb-200d-2640-fe0f",34,44,15,["\uD83D\uDEA3\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f6a3-1f3fc-200d-2640-fe0f",34,45,15,["\uD83D\uDEA3\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f6a3-1f3fd-200d-2640-fe0f",34,46,15,["\uD83D\uDEA3\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f6a3-1f3fe-200d-2640-fe0f",34,47,15,["\uD83D\uDEA3\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f6a3-1f3ff-200d-2640-fe0f",34,48,15,["\uD83D\uDEA3\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f6a3-200d-2642-fe0f":{"1f3fb":["1f6a3-1f3fb-200d-2642-fe0f",34,50,15,["\uD83D\uDEA3\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDEA3\uD83C\uDFFB"]],"1f3fc":["1f6a3-1f3fc-200d-2642-fe0f",34,51,15,["\uD83D\uDEA3\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDEA3\uD83C\uDFFC"]],"1f3fd":["1f6a3-1f3fd-200d-2642-fe0f",35,0,15,["\uD83D\uDEA3\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDEA3\uD83C\uDFFD"]],"1f3fe":["1f6a3-1f3fe-200d-2642-fe0f",35,1,15,["\uD83D\uDEA3\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDEA3\uD83C\uDFFE"]],"1f3ff":["1f6a3-1f3ff-200d-2642-fe0f",35,2,15,["\uD83D\uDEA3\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDEA3\uD83C\uDFFF"]]},
-		"1f6b4-200d-2640-fe0f":{"1f3fb":["1f6b4-1f3fb-200d-2640-fe0f",35,26,15,["\uD83D\uDEB4\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f6b4-1f3fc-200d-2640-fe0f",35,27,15,["\uD83D\uDEB4\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f6b4-1f3fd-200d-2640-fe0f",35,28,15,["\uD83D\uDEB4\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f6b4-1f3fe-200d-2640-fe0f",35,29,15,["\uD83D\uDEB4\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f6b4-1f3ff-200d-2640-fe0f",35,30,15,["\uD83D\uDEB4\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f6b4-200d-2642-fe0f":{"1f3fb":["1f6b4-1f3fb-200d-2642-fe0f",35,32,15,["\uD83D\uDEB4\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDEB4\uD83C\uDFFB"]],"1f3fc":["1f6b4-1f3fc-200d-2642-fe0f",35,33,15,["\uD83D\uDEB4\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDEB4\uD83C\uDFFC"]],"1f3fd":["1f6b4-1f3fd-200d-2642-fe0f",35,34,15,["\uD83D\uDEB4\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDEB4\uD83C\uDFFD"]],"1f3fe":["1f6b4-1f3fe-200d-2642-fe0f",35,35,15,["\uD83D\uDEB4\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDEB4\uD83C\uDFFE"]],"1f3ff":["1f6b4-1f3ff-200d-2642-fe0f",35,36,15,["\uD83D\uDEB4\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDEB4\uD83C\uDFFF"]]},
-		"1f6b5-200d-2640-fe0f":{"1f3fb":["1f6b5-1f3fb-200d-2640-fe0f",35,44,15,["\uD83D\uDEB5\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f6b5-1f3fc-200d-2640-fe0f",35,45,15,["\uD83D\uDEB5\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f6b5-1f3fd-200d-2640-fe0f",35,46,15,["\uD83D\uDEB5\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f6b5-1f3fe-200d-2640-fe0f",35,47,15,["\uD83D\uDEB5\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f6b5-1f3ff-200d-2640-fe0f",35,48,15,["\uD83D\uDEB5\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f6b5-200d-2642-fe0f":{"1f3fb":["1f6b5-1f3fb-200d-2642-fe0f",35,50,15,["\uD83D\uDEB5\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDEB5\uD83C\uDFFB"]],"1f3fc":["1f6b5-1f3fc-200d-2642-fe0f",35,51,15,["\uD83D\uDEB5\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDEB5\uD83C\uDFFC"]],"1f3fd":["1f6b5-1f3fd-200d-2642-fe0f",36,0,15,["\uD83D\uDEB5\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDEB5\uD83C\uDFFD"]],"1f3fe":["1f6b5-1f3fe-200d-2642-fe0f",36,1,15,["\uD83D\uDEB5\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDEB5\uD83C\uDFFE"]],"1f3ff":["1f6b5-1f3ff-200d-2642-fe0f",36,2,15,["\uD83D\uDEB5\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDEB5\uD83C\uDFFF"]]},
-		"1f6b6-200d-2640-fe0f":{"1f3fb":["1f6b6-1f3fb-200d-2640-fe0f",36,10,15,["\uD83D\uDEB6\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f6b6-1f3fc-200d-2640-fe0f",36,11,15,["\uD83D\uDEB6\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f6b6-1f3fd-200d-2640-fe0f",36,12,15,["\uD83D\uDEB6\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f6b6-1f3fe-200d-2640-fe0f",36,13,15,["\uD83D\uDEB6\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f6b6-1f3ff-200d-2640-fe0f",36,14,15,["\uD83D\uDEB6\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f6b6-200d-2642-fe0f":{"1f3fb":["1f6b6-1f3fb-200d-2642-fe0f",36,16,15,["\uD83D\uDEB6\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83D\uDEB6\uD83C\uDFFB"]],"1f3fc":["1f6b6-1f3fc-200d-2642-fe0f",36,17,15,["\uD83D\uDEB6\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83D\uDEB6\uD83C\uDFFC"]],"1f3fd":["1f6b6-1f3fd-200d-2642-fe0f",36,18,15,["\uD83D\uDEB6\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83D\uDEB6\uD83C\uDFFD"]],"1f3fe":["1f6b6-1f3fe-200d-2642-fe0f",36,19,15,["\uD83D\uDEB6\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83D\uDEB6\uD83C\uDFFE"]],"1f3ff":["1f6b6-1f3ff-200d-2642-fe0f",36,20,15,["\uD83D\uDEB6\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83D\uDEB6\uD83C\uDFFF"]]},
-		"1f6c0":{"1f3fb":["1f6c0-1f3fb",36,37,63,["\uD83D\uDEC0\uD83C\uDFFB"]],"1f3fc":["1f6c0-1f3fc",36,38,63,["\uD83D\uDEC0\uD83C\uDFFC"]],"1f3fd":["1f6c0-1f3fd",36,39,63,["\uD83D\uDEC0\uD83C\uDFFD"]],"1f3fe":["1f6c0-1f3fe",36,40,63,["\uD83D\uDEC0\uD83C\uDFFE"]],"1f3ff":["1f6c0-1f3ff",36,41,63,["\uD83D\uDEC0\uD83C\uDFFF"]]},
-		"1f6cc":{"1f3fb":["1f6cc-1f3fb",36,49,31,["\uD83D\uDECC\uD83C\uDFFB"]],"1f3fc":["1f6cc-1f3fc",36,50,31,["\uD83D\uDECC\uD83C\uDFFC"]],"1f3fd":["1f6cc-1f3fd",36,51,31,["\uD83D\uDECC\uD83C\uDFFD"]],"1f3fe":["1f6cc-1f3fe",37,0,31,["\uD83D\uDECC\uD83C\uDFFE"]],"1f3ff":["1f6cc-1f3ff",37,1,31,["\uD83D\uDECC\uD83C\uDFFF"]]},
-		"1f918":{"1f3fb":["1f918-1f3fb",37,33,31,["\uD83E\uDD18\uD83C\uDFFB"]],"1f3fc":["1f918-1f3fc",37,34,31,["\uD83E\uDD18\uD83C\uDFFC"]],"1f3fd":["1f918-1f3fd",37,35,31,["\uD83E\uDD18\uD83C\uDFFD"]],"1f3fe":["1f918-1f3fe",37,36,31,["\uD83E\uDD18\uD83C\uDFFE"]],"1f3ff":["1f918-1f3ff",37,37,31,["\uD83E\uDD18\uD83C\uDFFF"]]},
-		"1f919":{"1f3fb":["1f919-1f3fb",37,39,31,["\uD83E\uDD19\uD83C\uDFFB"]],"1f3fc":["1f919-1f3fc",37,40,31,["\uD83E\uDD19\uD83C\uDFFC"]],"1f3fd":["1f919-1f3fd",37,41,31,["\uD83E\uDD19\uD83C\uDFFD"]],"1f3fe":["1f919-1f3fe",37,42,31,["\uD83E\uDD19\uD83C\uDFFE"]],"1f3ff":["1f919-1f3ff",37,43,31,["\uD83E\uDD19\uD83C\uDFFF"]]},
-		"1f91a":{"1f3fb":["1f91a-1f3fb",37,45,31,["\uD83E\uDD1A\uD83C\uDFFB"]],"1f3fc":["1f91a-1f3fc",37,46,31,["\uD83E\uDD1A\uD83C\uDFFC"]],"1f3fd":["1f91a-1f3fd",37,47,31,["\uD83E\uDD1A\uD83C\uDFFD"]],"1f3fe":["1f91a-1f3fe",37,48,31,["\uD83E\uDD1A\uD83C\uDFFE"]],"1f3ff":["1f91a-1f3ff",37,49,31,["\uD83E\uDD1A\uD83C\uDFFF"]]},
-		"1f91b":{"1f3fb":["1f91b-1f3fb",37,51,31,["\uD83E\uDD1B\uD83C\uDFFB"]],"1f3fc":["1f91b-1f3fc",38,0,31,["\uD83E\uDD1B\uD83C\uDFFC"]],"1f3fd":["1f91b-1f3fd",38,1,31,["\uD83E\uDD1B\uD83C\uDFFD"]],"1f3fe":["1f91b-1f3fe",38,2,31,["\uD83E\uDD1B\uD83C\uDFFE"]],"1f3ff":["1f91b-1f3ff",38,3,31,["\uD83E\uDD1B\uD83C\uDFFF"]]},
-		"1f91c":{"1f3fb":["1f91c-1f3fb",38,5,31,["\uD83E\uDD1C\uD83C\uDFFB"]],"1f3fc":["1f91c-1f3fc",38,6,31,["\uD83E\uDD1C\uD83C\uDFFC"]],"1f3fd":["1f91c-1f3fd",38,7,31,["\uD83E\uDD1C\uD83C\uDFFD"]],"1f3fe":["1f91c-1f3fe",38,8,31,["\uD83E\uDD1C\uD83C\uDFFE"]],"1f3ff":["1f91c-1f3ff",38,9,31,["\uD83E\uDD1C\uD83C\uDFFF"]]},
-		"1f91e":{"1f3fb":["1f91e-1f3fb",38,12,31,["\uD83E\uDD1E\uD83C\uDFFB"]],"1f3fc":["1f91e-1f3fc",38,13,31,["\uD83E\uDD1E\uD83C\uDFFC"]],"1f3fd":["1f91e-1f3fd",38,14,31,["\uD83E\uDD1E\uD83C\uDFFD"]],"1f3fe":["1f91e-1f3fe",38,15,31,["\uD83E\uDD1E\uD83C\uDFFE"]],"1f3ff":["1f91e-1f3ff",38,16,31,["\uD83E\uDD1E\uD83C\uDFFF"]]},
-		"1f91f":{"1f3fb":["1f91f-1f3fb",38,18,31,["\uD83E\uDD1F\uD83C\uDFFB"]],"1f3fc":["1f91f-1f3fc",38,19,31,["\uD83E\uDD1F\uD83C\uDFFC"]],"1f3fd":["1f91f-1f3fd",38,20,31,["\uD83E\uDD1F\uD83C\uDFFD"]],"1f3fe":["1f91f-1f3fe",38,21,31,["\uD83E\uDD1F\uD83C\uDFFE"]],"1f3ff":["1f91f-1f3ff",38,22,31,["\uD83E\uDD1F\uD83C\uDFFF"]]},
-		"1f926-200d-2640-fe0f":{"1f3fb":["1f926-1f3fb-200d-2640-fe0f",38,30,15,["\uD83E\uDD26\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f926-1f3fc-200d-2640-fe0f",38,31,15,["\uD83E\uDD26\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f926-1f3fd-200d-2640-fe0f",38,32,15,["\uD83E\uDD26\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f926-1f3fe-200d-2640-fe0f",38,33,15,["\uD83E\uDD26\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f926-1f3ff-200d-2640-fe0f",38,34,15,["\uD83E\uDD26\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f926-200d-2642-fe0f":{"1f3fb":["1f926-1f3fb-200d-2642-fe0f",38,36,15,["\uD83E\uDD26\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f926-1f3fc-200d-2642-fe0f",38,37,15,["\uD83E\uDD26\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f926-1f3fd-200d-2642-fe0f",38,38,15,["\uD83E\uDD26\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f926-1f3fe-200d-2642-fe0f",38,39,15,["\uD83E\uDD26\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f926-1f3ff-200d-2642-fe0f",38,40,15,["\uD83E\uDD26\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f926":{"1f3fb":["1f926-1f3fb",38,42,15,["\uD83E\uDD26\uD83C\uDFFB"]],"1f3fc":["1f926-1f3fc",38,43,15,["\uD83E\uDD26\uD83C\uDFFC"]],"1f3fd":["1f926-1f3fd",38,44,15,["\uD83E\uDD26\uD83C\uDFFD"]],"1f3fe":["1f926-1f3fe",38,45,15,["\uD83E\uDD26\uD83C\uDFFE"]],"1f3ff":["1f926-1f3ff",38,46,15,["\uD83E\uDD26\uD83C\uDFFF"]]},
-		"1f930":{"1f3fb":["1f930-1f3fb",39,5,31,["\uD83E\uDD30\uD83C\uDFFB"]],"1f3fc":["1f930-1f3fc",39,6,31,["\uD83E\uDD30\uD83C\uDFFC"]],"1f3fd":["1f930-1f3fd",39,7,31,["\uD83E\uDD30\uD83C\uDFFD"]],"1f3fe":["1f930-1f3fe",39,8,31,["\uD83E\uDD30\uD83C\uDFFE"]],"1f3ff":["1f930-1f3ff",39,9,31,["\uD83E\uDD30\uD83C\uDFFF"]]},
-		"1f931":{"1f3fb":["1f931-1f3fb",39,11,31,["\uD83E\uDD31\uD83C\uDFFB"]],"1f3fc":["1f931-1f3fc",39,12,31,["\uD83E\uDD31\uD83C\uDFFC"]],"1f3fd":["1f931-1f3fd",39,13,31,["\uD83E\uDD31\uD83C\uDFFD"]],"1f3fe":["1f931-1f3fe",39,14,31,["\uD83E\uDD31\uD83C\uDFFE"]],"1f3ff":["1f931-1f3ff",39,15,31,["\uD83E\uDD31\uD83C\uDFFF"]]},
-		"1f932":{"1f3fb":["1f932-1f3fb",39,17,31,["\uD83E\uDD32\uD83C\uDFFB"]],"1f3fc":["1f932-1f3fc",39,18,31,["\uD83E\uDD32\uD83C\uDFFC"]],"1f3fd":["1f932-1f3fd",39,19,31,["\uD83E\uDD32\uD83C\uDFFD"]],"1f3fe":["1f932-1f3fe",39,20,31,["\uD83E\uDD32\uD83C\uDFFE"]],"1f3ff":["1f932-1f3ff",39,21,31,["\uD83E\uDD32\uD83C\uDFFF"]]},
-		"1f933":{"1f3fb":["1f933-1f3fb",39,23,31,["\uD83E\uDD33\uD83C\uDFFB"]],"1f3fc":["1f933-1f3fc",39,24,31,["\uD83E\uDD33\uD83C\uDFFC"]],"1f3fd":["1f933-1f3fd",39,25,31,["\uD83E\uDD33\uD83C\uDFFD"]],"1f3fe":["1f933-1f3fe",39,26,31,["\uD83E\uDD33\uD83C\uDFFE"]],"1f3ff":["1f933-1f3ff",39,27,31,["\uD83E\uDD33\uD83C\uDFFF"]]},
-		"1f934":{"1f3fb":["1f934-1f3fb",39,29,31,["\uD83E\uDD34\uD83C\uDFFB"]],"1f3fc":["1f934-1f3fc",39,30,31,["\uD83E\uDD34\uD83C\uDFFC"]],"1f3fd":["1f934-1f3fd",39,31,31,["\uD83E\uDD34\uD83C\uDFFD"]],"1f3fe":["1f934-1f3fe",39,32,31,["\uD83E\uDD34\uD83C\uDFFE"]],"1f3ff":["1f934-1f3ff",39,33,31,["\uD83E\uDD34\uD83C\uDFFF"]]},
-		"1f935":{"1f3fb":["1f935-1f3fb",39,35,31,["\uD83E\uDD35\uD83C\uDFFB"]],"1f3fc":["1f935-1f3fc",39,36,31,["\uD83E\uDD35\uD83C\uDFFC"]],"1f3fd":["1f935-1f3fd",39,37,31,["\uD83E\uDD35\uD83C\uDFFD"]],"1f3fe":["1f935-1f3fe",39,38,31,["\uD83E\uDD35\uD83C\uDFFE"]],"1f3ff":["1f935-1f3ff",39,39,31,["\uD83E\uDD35\uD83C\uDFFF"]]},
-		"1f936":{"1f3fb":["1f936-1f3fb",39,41,31,["\uD83E\uDD36\uD83C\uDFFB"]],"1f3fc":["1f936-1f3fc",39,42,31,["\uD83E\uDD36\uD83C\uDFFC"]],"1f3fd":["1f936-1f3fd",39,43,31,["\uD83E\uDD36\uD83C\uDFFD"]],"1f3fe":["1f936-1f3fe",39,44,31,["\uD83E\uDD36\uD83C\uDFFE"]],"1f3ff":["1f936-1f3ff",39,45,31,["\uD83E\uDD36\uD83C\uDFFF"]]},
-		"1f937-200d-2640-fe0f":{"1f3fb":["1f937-1f3fb-200d-2640-fe0f",39,47,15,["\uD83E\uDD37\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f937-1f3fc-200d-2640-fe0f",39,48,15,["\uD83E\uDD37\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f937-1f3fd-200d-2640-fe0f",39,49,15,["\uD83E\uDD37\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f937-1f3fe-200d-2640-fe0f",39,50,15,["\uD83E\uDD37\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f937-1f3ff-200d-2640-fe0f",39,51,15,["\uD83E\uDD37\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f937-200d-2642-fe0f":{"1f3fb":["1f937-1f3fb-200d-2642-fe0f",40,1,15,["\uD83E\uDD37\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f937-1f3fc-200d-2642-fe0f",40,2,15,["\uD83E\uDD37\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f937-1f3fd-200d-2642-fe0f",40,3,15,["\uD83E\uDD37\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f937-1f3fe-200d-2642-fe0f",40,4,15,["\uD83E\uDD37\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f937-1f3ff-200d-2642-fe0f",40,5,15,["\uD83E\uDD37\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f937":{"1f3fb":["1f937-1f3fb",40,7,15,["\uD83E\uDD37\uD83C\uDFFB"]],"1f3fc":["1f937-1f3fc",40,8,15,["\uD83E\uDD37\uD83C\uDFFC"]],"1f3fd":["1f937-1f3fd",40,9,15,["\uD83E\uDD37\uD83C\uDFFD"]],"1f3fe":["1f937-1f3fe",40,10,15,["\uD83E\uDD37\uD83C\uDFFE"]],"1f3ff":["1f937-1f3ff",40,11,15,["\uD83E\uDD37\uD83C\uDFFF"]]},
-		"1f938-200d-2640-fe0f":{"1f3fb":["1f938-1f3fb-200d-2640-fe0f",40,13,15,["\uD83E\uDD38\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f938-1f3fc-200d-2640-fe0f",40,14,15,["\uD83E\uDD38\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f938-1f3fd-200d-2640-fe0f",40,15,15,["\uD83E\uDD38\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f938-1f3fe-200d-2640-fe0f",40,16,15,["\uD83E\uDD38\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f938-1f3ff-200d-2640-fe0f",40,17,15,["\uD83E\uDD38\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f938-200d-2642-fe0f":{"1f3fb":["1f938-1f3fb-200d-2642-fe0f",40,19,15,["\uD83E\uDD38\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f938-1f3fc-200d-2642-fe0f",40,20,15,["\uD83E\uDD38\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f938-1f3fd-200d-2642-fe0f",40,21,15,["\uD83E\uDD38\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f938-1f3fe-200d-2642-fe0f",40,22,15,["\uD83E\uDD38\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f938-1f3ff-200d-2642-fe0f",40,23,15,["\uD83E\uDD38\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f938":{"1f3fb":["1f938-1f3fb",40,25,15,["\uD83E\uDD38\uD83C\uDFFB"]],"1f3fc":["1f938-1f3fc",40,26,15,["\uD83E\uDD38\uD83C\uDFFC"]],"1f3fd":["1f938-1f3fd",40,27,15,["\uD83E\uDD38\uD83C\uDFFD"]],"1f3fe":["1f938-1f3fe",40,28,15,["\uD83E\uDD38\uD83C\uDFFE"]],"1f3ff":["1f938-1f3ff",40,29,15,["\uD83E\uDD38\uD83C\uDFFF"]]},
-		"1f939-200d-2640-fe0f":{"1f3fb":["1f939-1f3fb-200d-2640-fe0f",40,31,15,["\uD83E\uDD39\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f939-1f3fc-200d-2640-fe0f",40,32,15,["\uD83E\uDD39\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f939-1f3fd-200d-2640-fe0f",40,33,15,["\uD83E\uDD39\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f939-1f3fe-200d-2640-fe0f",40,34,15,["\uD83E\uDD39\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f939-1f3ff-200d-2640-fe0f",40,35,15,["\uD83E\uDD39\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f939-200d-2642-fe0f":{"1f3fb":["1f939-1f3fb-200d-2642-fe0f",40,37,15,["\uD83E\uDD39\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f939-1f3fc-200d-2642-fe0f",40,38,15,["\uD83E\uDD39\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f939-1f3fd-200d-2642-fe0f",40,39,15,["\uD83E\uDD39\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f939-1f3fe-200d-2642-fe0f",40,40,15,["\uD83E\uDD39\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f939-1f3ff-200d-2642-fe0f",40,41,15,["\uD83E\uDD39\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f939":{"1f3fb":["1f939-1f3fb",40,43,31,["\uD83E\uDD39\uD83C\uDFFB"]],"1f3fc":["1f939-1f3fc",40,44,31,["\uD83E\uDD39\uD83C\uDFFC"]],"1f3fd":["1f939-1f3fd",40,45,31,["\uD83E\uDD39\uD83C\uDFFD"]],"1f3fe":["1f939-1f3fe",40,46,31,["\uD83E\uDD39\uD83C\uDFFE"]],"1f3ff":["1f939-1f3ff",40,47,31,["\uD83E\uDD39\uD83C\uDFFF"]]},
-		"1f93d-200d-2640-fe0f":{"1f3fb":["1f93d-1f3fb-200d-2640-fe0f",41,1,15,["\uD83E\uDD3D\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f93d-1f3fc-200d-2640-fe0f",41,2,15,["\uD83E\uDD3D\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f93d-1f3fd-200d-2640-fe0f",41,3,15,["\uD83E\uDD3D\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f93d-1f3fe-200d-2640-fe0f",41,4,15,["\uD83E\uDD3D\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f93d-1f3ff-200d-2640-fe0f",41,5,15,["\uD83E\uDD3D\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f93d-200d-2642-fe0f":{"1f3fb":["1f93d-1f3fb-200d-2642-fe0f",41,7,15,["\uD83E\uDD3D\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f93d-1f3fc-200d-2642-fe0f",41,8,15,["\uD83E\uDD3D\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f93d-1f3fd-200d-2642-fe0f",41,9,15,["\uD83E\uDD3D\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f93d-1f3fe-200d-2642-fe0f",41,10,15,["\uD83E\uDD3D\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f93d-1f3ff-200d-2642-fe0f",41,11,15,["\uD83E\uDD3D\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f93d":{"1f3fb":["1f93d-1f3fb",41,13,15,["\uD83E\uDD3D\uD83C\uDFFB"]],"1f3fc":["1f93d-1f3fc",41,14,15,["\uD83E\uDD3D\uD83C\uDFFC"]],"1f3fd":["1f93d-1f3fd",41,15,15,["\uD83E\uDD3D\uD83C\uDFFD"]],"1f3fe":["1f93d-1f3fe",41,16,15,["\uD83E\uDD3D\uD83C\uDFFE"]],"1f3ff":["1f93d-1f3ff",41,17,15,["\uD83E\uDD3D\uD83C\uDFFF"]]},
-		"1f93e-200d-2640-fe0f":{"1f3fb":["1f93e-1f3fb-200d-2640-fe0f",41,19,15,["\uD83E\uDD3E\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f93e-1f3fc-200d-2640-fe0f",41,20,15,["\uD83E\uDD3E\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f93e-1f3fd-200d-2640-fe0f",41,21,15,["\uD83E\uDD3E\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f93e-1f3fe-200d-2640-fe0f",41,22,15,["\uD83E\uDD3E\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f93e-1f3ff-200d-2640-fe0f",41,23,15,["\uD83E\uDD3E\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f93e-200d-2642-fe0f":{"1f3fb":["1f93e-1f3fb-200d-2642-fe0f",41,25,15,["\uD83E\uDD3E\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f93e-1f3fc-200d-2642-fe0f",41,26,15,["\uD83E\uDD3E\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f93e-1f3fd-200d-2642-fe0f",41,27,15,["\uD83E\uDD3E\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f93e-1f3fe-200d-2642-fe0f",41,28,15,["\uD83E\uDD3E\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f93e-1f3ff-200d-2642-fe0f",41,29,15,["\uD83E\uDD3E\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f93e":{"1f3fb":["1f93e-1f3fb",41,31,15,["\uD83E\uDD3E\uD83C\uDFFB"]],"1f3fc":["1f93e-1f3fc",41,32,15,["\uD83E\uDD3E\uD83C\uDFFC"]],"1f3fd":["1f93e-1f3fd",41,33,15,["\uD83E\uDD3E\uD83C\uDFFD"]],"1f3fe":["1f93e-1f3fe",41,34,15,["\uD83E\uDD3E\uD83C\uDFFE"]],"1f3ff":["1f93e-1f3ff",41,35,15,["\uD83E\uDD3E\uD83C\uDFFF"]]},
-		"1f9d1":{"1f3fb":["1f9d1-1f3fb",42,51,31,["\uD83E\uDDD1\uD83C\uDFFB"]],"1f3fc":["1f9d1-1f3fc",43,0,31,["\uD83E\uDDD1\uD83C\uDFFC"]],"1f3fd":["1f9d1-1f3fd",43,1,31,["\uD83E\uDDD1\uD83C\uDFFD"]],"1f3fe":["1f9d1-1f3fe",43,2,31,["\uD83E\uDDD1\uD83C\uDFFE"]],"1f3ff":["1f9d1-1f3ff",43,3,31,["\uD83E\uDDD1\uD83C\uDFFF"]]},
-		"1f9d2":{"1f3fb":["1f9d2-1f3fb",43,5,31,["\uD83E\uDDD2\uD83C\uDFFB"]],"1f3fc":["1f9d2-1f3fc",43,6,31,["\uD83E\uDDD2\uD83C\uDFFC"]],"1f3fd":["1f9d2-1f3fd",43,7,31,["\uD83E\uDDD2\uD83C\uDFFD"]],"1f3fe":["1f9d2-1f3fe",43,8,31,["\uD83E\uDDD2\uD83C\uDFFE"]],"1f3ff":["1f9d2-1f3ff",43,9,31,["\uD83E\uDDD2\uD83C\uDFFF"]]},
-		"1f9d3":{"1f3fb":["1f9d3-1f3fb",43,11,31,["\uD83E\uDDD3\uD83C\uDFFB"]],"1f3fc":["1f9d3-1f3fc",43,12,31,["\uD83E\uDDD3\uD83C\uDFFC"]],"1f3fd":["1f9d3-1f3fd",43,13,31,["\uD83E\uDDD3\uD83C\uDFFD"]],"1f3fe":["1f9d3-1f3fe",43,14,31,["\uD83E\uDDD3\uD83C\uDFFE"]],"1f3ff":["1f9d3-1f3ff",43,15,31,["\uD83E\uDDD3\uD83C\uDFFF"]]},
-		"1f9d4":{"1f3fb":["1f9d4-1f3fb",43,17,31,["\uD83E\uDDD4\uD83C\uDFFB"]],"1f3fc":["1f9d4-1f3fc",43,18,31,["\uD83E\uDDD4\uD83C\uDFFC"]],"1f3fd":["1f9d4-1f3fd",43,19,31,["\uD83E\uDDD4\uD83C\uDFFD"]],"1f3fe":["1f9d4-1f3fe",43,20,31,["\uD83E\uDDD4\uD83C\uDFFE"]],"1f3ff":["1f9d4-1f3ff",43,21,31,["\uD83E\uDDD4\uD83C\uDFFF"]]},
-		"1f9d5":{"1f3fb":["1f9d5-1f3fb",43,23,31,["\uD83E\uDDD5\uD83C\uDFFB"]],"1f3fc":["1f9d5-1f3fc",43,24,31,["\uD83E\uDDD5\uD83C\uDFFC"]],"1f3fd":["1f9d5-1f3fd",43,25,31,["\uD83E\uDDD5\uD83C\uDFFD"]],"1f3fe":["1f9d5-1f3fe",43,26,31,["\uD83E\uDDD5\uD83C\uDFFE"]],"1f3ff":["1f9d5-1f3ff",43,27,31,["\uD83E\uDDD5\uD83C\uDFFF"]]},
-		"1f9d6-200d-2640-fe0f":{"1f3fb":["1f9d6-1f3fb-200d-2640-fe0f",43,29,15,["\uD83E\uDDD6\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f9d6-1f3fc-200d-2640-fe0f",43,30,15,["\uD83E\uDDD6\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f9d6-1f3fd-200d-2640-fe0f",43,31,15,["\uD83E\uDDD6\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f9d6-1f3fe-200d-2640-fe0f",43,32,15,["\uD83E\uDDD6\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f9d6-1f3ff-200d-2640-fe0f",43,33,15,["\uD83E\uDDD6\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f9d6-200d-2642-fe0f":{"1f3fb":["1f9d6-1f3fb-200d-2642-fe0f",43,35,15,["\uD83E\uDDD6\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83E\uDDD6\uD83C\uDFFB"]],"1f3fc":["1f9d6-1f3fc-200d-2642-fe0f",43,36,15,["\uD83E\uDDD6\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83E\uDDD6\uD83C\uDFFC"]],"1f3fd":["1f9d6-1f3fd-200d-2642-fe0f",43,37,15,["\uD83E\uDDD6\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83E\uDDD6\uD83C\uDFFD"]],"1f3fe":["1f9d6-1f3fe-200d-2642-fe0f",43,38,15,["\uD83E\uDDD6\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83E\uDDD6\uD83C\uDFFE"]],"1f3ff":["1f9d6-1f3ff-200d-2642-fe0f",43,39,15,["\uD83E\uDDD6\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83E\uDDD6\uD83C\uDFFF"]]},
-		"1f9d7-200d-2640-fe0f":{"1f3fb":["1f9d7-1f3fb-200d-2640-fe0f",43,47,15,["\uD83E\uDDD7\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83E\uDDD7\uD83C\uDFFB"]],"1f3fc":["1f9d7-1f3fc-200d-2640-fe0f",43,48,15,["\uD83E\uDDD7\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83E\uDDD7\uD83C\uDFFC"]],"1f3fd":["1f9d7-1f3fd-200d-2640-fe0f",43,49,15,["\uD83E\uDDD7\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83E\uDDD7\uD83C\uDFFD"]],"1f3fe":["1f9d7-1f3fe-200d-2640-fe0f",43,50,15,["\uD83E\uDDD7\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83E\uDDD7\uD83C\uDFFE"]],"1f3ff":["1f9d7-1f3ff-200d-2640-fe0f",43,51,15,["\uD83E\uDDD7\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83E\uDDD7\uD83C\uDFFF"]]},
-		"1f9d7-200d-2642-fe0f":{"1f3fb":["1f9d7-1f3fb-200d-2642-fe0f",44,1,15,["\uD83E\uDDD7\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f9d7-1f3fc-200d-2642-fe0f",44,2,15,["\uD83E\uDDD7\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f9d7-1f3fd-200d-2642-fe0f",44,3,15,["\uD83E\uDDD7\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f9d7-1f3fe-200d-2642-fe0f",44,4,15,["\uD83E\uDDD7\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f9d7-1f3ff-200d-2642-fe0f",44,5,15,["\uD83E\uDDD7\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f9d8-200d-2640-fe0f":{"1f3fb":["1f9d8-1f3fb-200d-2640-fe0f",44,13,15,["\uD83E\uDDD8\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83E\uDDD8\uD83C\uDFFB"]],"1f3fc":["1f9d8-1f3fc-200d-2640-fe0f",44,14,15,["\uD83E\uDDD8\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83E\uDDD8\uD83C\uDFFC"]],"1f3fd":["1f9d8-1f3fd-200d-2640-fe0f",44,15,15,["\uD83E\uDDD8\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83E\uDDD8\uD83C\uDFFD"]],"1f3fe":["1f9d8-1f3fe-200d-2640-fe0f",44,16,15,["\uD83E\uDDD8\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83E\uDDD8\uD83C\uDFFE"]],"1f3ff":["1f9d8-1f3ff-200d-2640-fe0f",44,17,15,["\uD83E\uDDD8\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83E\uDDD8\uD83C\uDFFF"]]},
-		"1f9d8-200d-2642-fe0f":{"1f3fb":["1f9d8-1f3fb-200d-2642-fe0f",44,19,15,["\uD83E\uDDD8\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f9d8-1f3fc-200d-2642-fe0f",44,20,15,["\uD83E\uDDD8\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f9d8-1f3fd-200d-2642-fe0f",44,21,15,["\uD83E\uDDD8\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f9d8-1f3fe-200d-2642-fe0f",44,22,15,["\uD83E\uDDD8\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f9d8-1f3ff-200d-2642-fe0f",44,23,15,["\uD83E\uDDD8\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f9d9-200d-2640-fe0f":{"1f3fb":["1f9d9-1f3fb-200d-2640-fe0f",44,31,15,["\uD83E\uDDD9\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83E\uDDD9\uD83C\uDFFB"]],"1f3fc":["1f9d9-1f3fc-200d-2640-fe0f",44,32,15,["\uD83E\uDDD9\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83E\uDDD9\uD83C\uDFFC"]],"1f3fd":["1f9d9-1f3fd-200d-2640-fe0f",44,33,15,["\uD83E\uDDD9\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83E\uDDD9\uD83C\uDFFD"]],"1f3fe":["1f9d9-1f3fe-200d-2640-fe0f",44,34,15,["\uD83E\uDDD9\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83E\uDDD9\uD83C\uDFFE"]],"1f3ff":["1f9d9-1f3ff-200d-2640-fe0f",44,35,15,["\uD83E\uDDD9\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83E\uDDD9\uD83C\uDFFF"]]},
-		"1f9d9-200d-2642-fe0f":{"1f3fb":["1f9d9-1f3fb-200d-2642-fe0f",44,37,15,["\uD83E\uDDD9\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f9d9-1f3fc-200d-2642-fe0f",44,38,15,["\uD83E\uDDD9\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f9d9-1f3fd-200d-2642-fe0f",44,39,15,["\uD83E\uDDD9\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f9d9-1f3fe-200d-2642-fe0f",44,40,15,["\uD83E\uDDD9\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f9d9-1f3ff-200d-2642-fe0f",44,41,15,["\uD83E\uDDD9\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f9da-200d-2640-fe0f":{"1f3fb":["1f9da-1f3fb-200d-2640-fe0f",44,49,15,["\uD83E\uDDDA\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83E\uDDDA\uD83C\uDFFB"]],"1f3fc":["1f9da-1f3fc-200d-2640-fe0f",44,50,15,["\uD83E\uDDDA\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83E\uDDDA\uD83C\uDFFC"]],"1f3fd":["1f9da-1f3fd-200d-2640-fe0f",44,51,15,["\uD83E\uDDDA\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83E\uDDDA\uD83C\uDFFD"]],"1f3fe":["1f9da-1f3fe-200d-2640-fe0f",45,0,15,["\uD83E\uDDDA\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83E\uDDDA\uD83C\uDFFE"]],"1f3ff":["1f9da-1f3ff-200d-2640-fe0f",45,1,15,["\uD83E\uDDDA\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83E\uDDDA\uD83C\uDFFF"]]},
-		"1f9da-200d-2642-fe0f":{"1f3fb":["1f9da-1f3fb-200d-2642-fe0f",45,3,15,["\uD83E\uDDDA\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f9da-1f3fc-200d-2642-fe0f",45,4,15,["\uD83E\uDDDA\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f9da-1f3fd-200d-2642-fe0f",45,5,15,["\uD83E\uDDDA\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f9da-1f3fe-200d-2642-fe0f",45,6,15,["\uD83E\uDDDA\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f9da-1f3ff-200d-2642-fe0f",45,7,15,["\uD83E\uDDDA\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f9db-200d-2640-fe0f":{"1f3fb":["1f9db-1f3fb-200d-2640-fe0f",45,15,15,["\uD83E\uDDDB\uD83C\uDFFB\u200D\u2640\uFE0F","\uD83E\uDDDB\uD83C\uDFFB"]],"1f3fc":["1f9db-1f3fc-200d-2640-fe0f",45,16,15,["\uD83E\uDDDB\uD83C\uDFFC\u200D\u2640\uFE0F","\uD83E\uDDDB\uD83C\uDFFC"]],"1f3fd":["1f9db-1f3fd-200d-2640-fe0f",45,17,15,["\uD83E\uDDDB\uD83C\uDFFD\u200D\u2640\uFE0F","\uD83E\uDDDB\uD83C\uDFFD"]],"1f3fe":["1f9db-1f3fe-200d-2640-fe0f",45,18,15,["\uD83E\uDDDB\uD83C\uDFFE\u200D\u2640\uFE0F","\uD83E\uDDDB\uD83C\uDFFE"]],"1f3ff":["1f9db-1f3ff-200d-2640-fe0f",45,19,15,["\uD83E\uDDDB\uD83C\uDFFF\u200D\u2640\uFE0F","\uD83E\uDDDB\uD83C\uDFFF"]]},
-		"1f9db-200d-2642-fe0f":{"1f3fb":["1f9db-1f3fb-200d-2642-fe0f",45,21,15,["\uD83E\uDDDB\uD83C\uDFFB\u200D\u2642\uFE0F"]],"1f3fc":["1f9db-1f3fc-200d-2642-fe0f",45,22,15,["\uD83E\uDDDB\uD83C\uDFFC\u200D\u2642\uFE0F"]],"1f3fd":["1f9db-1f3fd-200d-2642-fe0f",45,23,15,["\uD83E\uDDDB\uD83C\uDFFD\u200D\u2642\uFE0F"]],"1f3fe":["1f9db-1f3fe-200d-2642-fe0f",45,24,15,["\uD83E\uDDDB\uD83C\uDFFE\u200D\u2642\uFE0F"]],"1f3ff":["1f9db-1f3ff-200d-2642-fe0f",45,25,15,["\uD83E\uDDDB\uD83C\uDFFF\u200D\u2642\uFE0F"]]},
-		"1f9dc-200d-2640-fe0f":{"1f3fb":["1f9dc-1f3fb-200d-2640-fe0f",45,33,15,["\uD83E\uDDDC\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f9dc-1f3fc-200d-2640-fe0f",45,34,15,["\uD83E\uDDDC\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f9dc-1f3fd-200d-2640-fe0f",45,35,15,["\uD83E\uDDDC\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f9dc-1f3fe-200d-2640-fe0f",45,36,15,["\uD83E\uDDDC\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f9dc-1f3ff-200d-2640-fe0f",45,37,15,["\uD83E\uDDDC\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f9dc-200d-2642-fe0f":{"1f3fb":["1f9dc-1f3fb-200d-2642-fe0f",45,39,15,["\uD83E\uDDDC\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83E\uDDDC\uD83C\uDFFB"]],"1f3fc":["1f9dc-1f3fc-200d-2642-fe0f",45,40,15,["\uD83E\uDDDC\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83E\uDDDC\uD83C\uDFFC"]],"1f3fd":["1f9dc-1f3fd-200d-2642-fe0f",45,41,15,["\uD83E\uDDDC\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83E\uDDDC\uD83C\uDFFD"]],"1f3fe":["1f9dc-1f3fe-200d-2642-fe0f",45,42,15,["\uD83E\uDDDC\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83E\uDDDC\uD83C\uDFFE"]],"1f3ff":["1f9dc-1f3ff-200d-2642-fe0f",45,43,15,["\uD83E\uDDDC\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83E\uDDDC\uD83C\uDFFF"]]},
-		"1f9dd-200d-2640-fe0f":{"1f3fb":["1f9dd-1f3fb-200d-2640-fe0f",45,51,15,["\uD83E\uDDDD\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["1f9dd-1f3fc-200d-2640-fe0f",46,0,15,["\uD83E\uDDDD\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["1f9dd-1f3fd-200d-2640-fe0f",46,1,15,["\uD83E\uDDDD\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["1f9dd-1f3fe-200d-2640-fe0f",46,2,15,["\uD83E\uDDDD\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["1f9dd-1f3ff-200d-2640-fe0f",46,3,15,["\uD83E\uDDDD\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"1f9dd-200d-2642-fe0f":{"1f3fb":["1f9dd-1f3fb-200d-2642-fe0f",46,5,15,["\uD83E\uDDDD\uD83C\uDFFB\u200D\u2642\uFE0F","\uD83E\uDDDD\uD83C\uDFFB"]],"1f3fc":["1f9dd-1f3fc-200d-2642-fe0f",46,6,15,["\uD83E\uDDDD\uD83C\uDFFC\u200D\u2642\uFE0F","\uD83E\uDDDD\uD83C\uDFFC"]],"1f3fd":["1f9dd-1f3fd-200d-2642-fe0f",46,7,15,["\uD83E\uDDDD\uD83C\uDFFD\u200D\u2642\uFE0F","\uD83E\uDDDD\uD83C\uDFFD"]],"1f3fe":["1f9dd-1f3fe-200d-2642-fe0f",46,8,15,["\uD83E\uDDDD\uD83C\uDFFE\u200D\u2642\uFE0F","\uD83E\uDDDD\uD83C\uDFFE"]],"1f3ff":["1f9dd-1f3ff-200d-2642-fe0f",46,9,15,["\uD83E\uDDDD\uD83C\uDFFF\u200D\u2642\uFE0F","\uD83E\uDDDD\uD83C\uDFFF"]]},
-		"261d-fe0f":{"1f3fb":["261d-1f3fb",47,27,63,["\u261D\uD83C\uDFFB"]],"1f3fc":["261d-1f3fc",47,28,63,["\u261D\uD83C\uDFFC"]],"1f3fd":["261d-1f3fd",47,29,63,["\u261D\uD83C\uDFFD"]],"1f3fe":["261d-1f3fe",47,30,63,["\u261D\uD83C\uDFFE"]],"1f3ff":["261d-1f3ff",47,31,63,["\u261D\uD83C\uDFFF"]]},
-		"26f9-fe0f-200d-2640-fe0f":{"1f3fb":["26f9-1f3fb-200d-2640-fe0f",48,47,15,["\u26F9\uD83C\uDFFB\u200D\u2640\uFE0F"]],"1f3fc":["26f9-1f3fc-200d-2640-fe0f",48,48,15,["\u26F9\uD83C\uDFFC\u200D\u2640\uFE0F"]],"1f3fd":["26f9-1f3fd-200d-2640-fe0f",48,49,15,["\u26F9\uD83C\uDFFD\u200D\u2640\uFE0F"]],"1f3fe":["26f9-1f3fe-200d-2640-fe0f",48,50,15,["\u26F9\uD83C\uDFFE\u200D\u2640\uFE0F"]],"1f3ff":["26f9-1f3ff-200d-2640-fe0f",48,51,15,["\u26F9\uD83C\uDFFF\u200D\u2640\uFE0F"]]},
-		"26f9-fe0f-200d-2642-fe0f":{"1f3fb":["26f9-1f3fb-200d-2642-fe0f",49,1,15,["\u26F9\uD83C\uDFFB\u200D\u2642\uFE0F","\u26F9\uD83C\uDFFB"]],"1f3fc":["26f9-1f3fc-200d-2642-fe0f",49,2,15,["\u26F9\uD83C\uDFFC\u200D\u2642\uFE0F","\u26F9\uD83C\uDFFC"]],"1f3fd":["26f9-1f3fd-200d-2642-fe0f",49,3,15,["\u26F9\uD83C\uDFFD\u200D\u2642\uFE0F","\u26F9\uD83C\uDFFD"]],"1f3fe":["26f9-1f3fe-200d-2642-fe0f",49,4,15,["\u26F9\uD83C\uDFFE\u200D\u2642\uFE0F","\u26F9\uD83C\uDFFE"]],"1f3ff":["26f9-1f3ff-200d-2642-fe0f",49,5,15,["\u26F9\uD83C\uDFFF\u200D\u2642\uFE0F","\u26F9\uD83C\uDFFF"]]},
-		"270a":{"1f3fb":["270a-1f3fb",49,19,63,["\u270A\uD83C\uDFFB"]],"1f3fc":["270a-1f3fc",49,20,63,["\u270A\uD83C\uDFFC"]],"1f3fd":["270a-1f3fd",49,21,63,["\u270A\uD83C\uDFFD"]],"1f3fe":["270a-1f3fe",49,22,63,["\u270A\uD83C\uDFFE"]],"1f3ff":["270a-1f3ff",49,23,63,["\u270A\uD83C\uDFFF"]]},
-		"270b":{"1f3fb":["270b-1f3fb",49,25,63,["\u270B\uD83C\uDFFB"]],"1f3fc":["270b-1f3fc",49,26,63,["\u270B\uD83C\uDFFC"]],"1f3fd":["270b-1f3fd",49,27,63,["\u270B\uD83C\uDFFD"]],"1f3fe":["270b-1f3fe",49,28,63,["\u270B\uD83C\uDFFE"]],"1f3ff":["270b-1f3ff",49,29,63,["\u270B\uD83C\uDFFF"]]},
-		"270c-fe0f":{"1f3fb":["270c-1f3fb",49,31,63,["\u270C\uD83C\uDFFB"]],"1f3fc":["270c-1f3fc",49,32,63,["\u270C\uD83C\uDFFC"]],"1f3fd":["270c-1f3fd",49,33,63,["\u270C\uD83C\uDFFD"]],"1f3fe":["270c-1f3fe",49,34,63,["\u270C\uD83C\uDFFE"]],"1f3ff":["270c-1f3ff",49,35,63,["\u270C\uD83C\uDFFF"]]},
-		"270d-fe0f":{"1f3fb":["270d-1f3fb",49,37,31,["\u270D\uD83C\uDFFB"]],"1f3fc":["270d-1f3fc",49,38,31,["\u270D\uD83C\uDFFC"]],"1f3fd":["270d-1f3fd",49,39,31,["\u270D\uD83C\uDFFD"]],"1f3fe":["270d-1f3fe",49,40,31,["\u270D\uD83C\uDFFE"]],"1f3ff":["270d-1f3ff",49,41,31,["\u270D\uD83C\uDFFF"]]}
-	};
-	/** @private */
-	emoji.prototype.obsoletes_data = {
-		"1f3c3-200d-2642-fe0f":["1f3c3",9,46,47],
-		"1f3c3-1f3fb-200d-2642-fe0f":["1f3c3-1f3fb",9,47,47],
-		"1f3c3-1f3fc-200d-2642-fe0f":["1f3c3-1f3fc",9,48,47],
-		"1f3c3-1f3fd-200d-2642-fe0f":["1f3c3-1f3fd",9,49,47],
-		"1f3c3-1f3fe-200d-2642-fe0f":["1f3c3-1f3fe",9,50,47],
-		"1f3c3-1f3ff-200d-2642-fe0f":["1f3c3-1f3ff",9,51,47],
-		"1f3c4-200d-2642-fe0f":["1f3c4",10,12,47],
-		"1f3c4-1f3fb-200d-2642-fe0f":["1f3c4-1f3fb",10,13,47],
-		"1f3c4-1f3fc-200d-2642-fe0f":["1f3c4-1f3fc",10,14,47],
-		"1f3c4-1f3fd-200d-2642-fe0f":["1f3c4-1f3fd",10,15,47],
-		"1f3c4-1f3fe-200d-2642-fe0f":["1f3c4-1f3fe",10,16,47],
-		"1f3c4-1f3ff-200d-2642-fe0f":["1f3c4-1f3ff",10,17,47],
-		"1f3ca-200d-2642-fe0f":["1f3ca",10,40,47],
-		"1f3ca-1f3fb-200d-2642-fe0f":["1f3ca-1f3fb",10,41,47],
-		"1f3ca-1f3fc-200d-2642-fe0f":["1f3ca-1f3fc",10,42,47],
-		"1f3ca-1f3fd-200d-2642-fe0f":["1f3ca-1f3fd",10,43,47],
-		"1f3ca-1f3fe-200d-2642-fe0f":["1f3ca-1f3fe",10,44,47],
-		"1f3ca-1f3ff-200d-2642-fe0f":["1f3ca-1f3ff",10,45,47],
-		"1f3cb-fe0f-200d-2642-fe0f":["1f3cb-fe0f",11,6,15],
-		"1f3cb-1f3fb-200d-2642-fe0f":["1f3cb-1f3fb",11,7,15],
-		"1f3cb-1f3fc-200d-2642-fe0f":["1f3cb-1f3fc",11,8,15],
-		"1f3cb-1f3fd-200d-2642-fe0f":["1f3cb-1f3fd",11,9,15],
-		"1f3cb-1f3fe-200d-2642-fe0f":["1f3cb-1f3fe",11,10,15],
-		"1f3cb-1f3ff-200d-2642-fe0f":["1f3cb-1f3ff",11,11,15],
-		"1f3cc-fe0f-200d-2642-fe0f":["1f3cc-fe0f",11,24,15],
-		"1f3cc-1f3fb-200d-2642-fe0f":["1f3cc-1f3fb",11,25,15],
-		"1f3cc-1f3fc-200d-2642-fe0f":["1f3cc-1f3fc",11,26,15],
-		"1f3cc-1f3fd-200d-2642-fe0f":["1f3cc-1f3fd",11,27,15],
-		"1f3cc-1f3fe-200d-2642-fe0f":["1f3cc-1f3fe",11,28,15],
-		"1f3cc-1f3ff-200d-2642-fe0f":["1f3cc-1f3ff",11,29,15],
-		"1f468-200d-1f469-200d-1f466":["1f46a",20,29,47],
-		"1f46e-200d-2642-fe0f":["1f46e",20,45,47],
-		"1f46e-1f3fb-200d-2642-fe0f":["1f46e-1f3fb",20,46,47],
-		"1f46e-1f3fc-200d-2642-fe0f":["1f46e-1f3fc",20,47,47],
-		"1f46e-1f3fd-200d-2642-fe0f":["1f46e-1f3fd",20,48,47],
-		"1f46e-1f3fe-200d-2642-fe0f":["1f46e-1f3fe",20,49,47],
-		"1f46e-1f3ff-200d-2642-fe0f":["1f46e-1f3ff",20,50,47],
-		"1f46f-200d-2640-fe0f":["1f46f",21,1,47],
-		"1f471-200d-2642-fe0f":["1f471",21,20,47],
-		"1f471-1f3fb-200d-2642-fe0f":["1f471-1f3fb",21,21,47],
-		"1f471-1f3fc-200d-2642-fe0f":["1f471-1f3fc",21,22,47],
-		"1f471-1f3fd-200d-2642-fe0f":["1f471-1f3fd",21,23,47],
-		"1f471-1f3fe-200d-2642-fe0f":["1f471-1f3fe",21,24,47],
-		"1f471-1f3ff-200d-2642-fe0f":["1f471-1f3ff",21,25,47],
-		"1f473-200d-2642-fe0f":["1f473",21,44,47],
-		"1f473-1f3fb-200d-2642-fe0f":["1f473-1f3fb",21,45,47],
-		"1f473-1f3fc-200d-2642-fe0f":["1f473-1f3fc",21,46,47],
-		"1f473-1f3fd-200d-2642-fe0f":["1f473-1f3fd",21,47,47],
-		"1f473-1f3fe-200d-2642-fe0f":["1f473-1f3fe",21,48,47],
-		"1f473-1f3ff-200d-2642-fe0f":["1f473-1f3ff",21,49,47],
-		"1f477-200d-2642-fe0f":["1f477",22,28,47],
-		"1f477-1f3fb-200d-2642-fe0f":["1f477-1f3fb",22,29,47],
-		"1f477-1f3fc-200d-2642-fe0f":["1f477-1f3fc",22,30,47],
-		"1f477-1f3fd-200d-2642-fe0f":["1f477-1f3fd",22,31,47],
-		"1f477-1f3fe-200d-2642-fe0f":["1f477-1f3fe",22,32,47],
-		"1f477-1f3ff-200d-2642-fe0f":["1f477-1f3ff",22,33,47],
-		"1f481-200d-2640-fe0f":["1f481",23,13,47],
-		"1f481-1f3fb-200d-2640-fe0f":["1f481-1f3fb",23,14,47],
-		"1f481-1f3fc-200d-2640-fe0f":["1f481-1f3fc",23,15,47],
-		"1f481-1f3fd-200d-2640-fe0f":["1f481-1f3fd",23,16,47],
-		"1f481-1f3fe-200d-2640-fe0f":["1f481-1f3fe",23,17,47],
-		"1f481-1f3ff-200d-2640-fe0f":["1f481-1f3ff",23,18,47],
-		"1f482-200d-2642-fe0f":["1f482",23,31,47],
-		"1f482-1f3fb-200d-2642-fe0f":["1f482-1f3fb",23,32,47],
-		"1f482-1f3fc-200d-2642-fe0f":["1f482-1f3fc",23,33,47],
-		"1f482-1f3fd-200d-2642-fe0f":["1f482-1f3fd",23,34,47],
-		"1f482-1f3fe-200d-2642-fe0f":["1f482-1f3fe",23,35,47],
-		"1f482-1f3ff-200d-2642-fe0f":["1f482-1f3ff",23,36,47],
-		"1f486-200d-2640-fe0f":["1f486",24,10,47],
-		"1f486-1f3fb-200d-2640-fe0f":["1f486-1f3fb",24,11,47],
-		"1f486-1f3fc-200d-2640-fe0f":["1f486-1f3fc",24,12,47],
-		"1f486-1f3fd-200d-2640-fe0f":["1f486-1f3fd",24,13,47],
-		"1f486-1f3fe-200d-2640-fe0f":["1f486-1f3fe",24,14,47],
-		"1f486-1f3ff-200d-2640-fe0f":["1f486-1f3ff",24,15,47],
-		"1f487-200d-2640-fe0f":["1f487",24,28,47],
-		"1f487-1f3fb-200d-2640-fe0f":["1f487-1f3fb",24,29,47],
-		"1f487-1f3fc-200d-2640-fe0f":["1f487-1f3fc",24,30,47],
-		"1f487-1f3fd-200d-2640-fe0f":["1f487-1f3fd",24,31,47],
-		"1f487-1f3fe-200d-2640-fe0f":["1f487-1f3fe",24,32,47],
-		"1f487-1f3ff-200d-2640-fe0f":["1f487-1f3ff",24,33,47],
-		"1f469-200d-2764-fe0f-200d-1f48b-200d-1f468":["1f48f",24,41,47],
-		"1f469-200d-2764-fe0f-200d-1f468":["1f491",24,43,47],
-		"1f575-fe0f-200d-2642-fe0f":["1f575-fe0f",29,11,15],
-		"1f575-1f3fb-200d-2642-fe0f":["1f575-1f3fb",29,12,15],
-		"1f575-1f3fc-200d-2642-fe0f":["1f575-1f3fc",29,13,15],
-		"1f575-1f3fd-200d-2642-fe0f":["1f575-1f3fd",29,14,15],
-		"1f575-1f3fe-200d-2642-fe0f":["1f575-1f3fe",29,15,15],
-		"1f575-1f3ff-200d-2642-fe0f":["1f575-1f3ff",29,16,15],
-		"1f645-200d-2640-fe0f":["1f645",32,1,47],
-		"1f645-1f3fb-200d-2640-fe0f":["1f645-1f3fb",32,2,47],
-		"1f645-1f3fc-200d-2640-fe0f":["1f645-1f3fc",32,3,47],
-		"1f645-1f3fd-200d-2640-fe0f":["1f645-1f3fd",32,4,47],
-		"1f645-1f3fe-200d-2640-fe0f":["1f645-1f3fe",32,5,47],
-		"1f645-1f3ff-200d-2640-fe0f":["1f645-1f3ff",32,6,47],
-		"1f646-200d-2640-fe0f":["1f646",32,19,47],
-		"1f646-1f3fb-200d-2640-fe0f":["1f646-1f3fb",32,20,47],
-		"1f646-1f3fc-200d-2640-fe0f":["1f646-1f3fc",32,21,47],
-		"1f646-1f3fd-200d-2640-fe0f":["1f646-1f3fd",32,22,47],
-		"1f646-1f3fe-200d-2640-fe0f":["1f646-1f3fe",32,23,47],
-		"1f646-1f3ff-200d-2640-fe0f":["1f646-1f3ff",32,24,47],
-		"1f647-200d-2642-fe0f":["1f647",32,37,47],
-		"1f647-1f3fb-200d-2642-fe0f":["1f647-1f3fb",32,38,47],
-		"1f647-1f3fc-200d-2642-fe0f":["1f647-1f3fc",32,39,47],
-		"1f647-1f3fd-200d-2642-fe0f":["1f647-1f3fd",32,40,47],
-		"1f647-1f3fe-200d-2642-fe0f":["1f647-1f3fe",32,41,47],
-		"1f647-1f3ff-200d-2642-fe0f":["1f647-1f3ff",32,42,47],
-		"1f64b-200d-2640-fe0f":["1f64b",33,6,47],
-		"1f64b-1f3fb-200d-2640-fe0f":["1f64b-1f3fb",33,7,47],
-		"1f64b-1f3fc-200d-2640-fe0f":["1f64b-1f3fc",33,8,47],
-		"1f64b-1f3fd-200d-2640-fe0f":["1f64b-1f3fd",33,9,47],
-		"1f64b-1f3fe-200d-2640-fe0f":["1f64b-1f3fe",33,10,47],
-		"1f64b-1f3ff-200d-2640-fe0f":["1f64b-1f3ff",33,11,47],
-		"1f64d-200d-2640-fe0f":["1f64d",33,30,47],
-		"1f64d-1f3fb-200d-2640-fe0f":["1f64d-1f3fb",33,31,47],
-		"1f64d-1f3fc-200d-2640-fe0f":["1f64d-1f3fc",33,32,47],
-		"1f64d-1f3fd-200d-2640-fe0f":["1f64d-1f3fd",33,33,47],
-		"1f64d-1f3fe-200d-2640-fe0f":["1f64d-1f3fe",33,34,47],
-		"1f64d-1f3ff-200d-2640-fe0f":["1f64d-1f3ff",33,35,47],
-		"1f64e-200d-2640-fe0f":["1f64e",33,48,47],
-		"1f64e-1f3fb-200d-2640-fe0f":["1f64e-1f3fb",33,49,47],
-		"1f64e-1f3fc-200d-2640-fe0f":["1f64e-1f3fc",33,50,47],
-		"1f64e-1f3fd-200d-2640-fe0f":["1f64e-1f3fd",33,51,47],
-		"1f64e-1f3fe-200d-2640-fe0f":["1f64e-1f3fe",34,0,47],
-		"1f64e-1f3ff-200d-2640-fe0f":["1f64e-1f3ff",34,1,47],
-		"1f6a3-200d-2642-fe0f":["1f6a3",35,3,47],
-		"1f6a3-1f3fb-200d-2642-fe0f":["1f6a3-1f3fb",35,4,15],
-		"1f6a3-1f3fc-200d-2642-fe0f":["1f6a3-1f3fc",35,5,15],
-		"1f6a3-1f3fd-200d-2642-fe0f":["1f6a3-1f3fd",35,6,15],
-		"1f6a3-1f3fe-200d-2642-fe0f":["1f6a3-1f3fe",35,7,15],
-		"1f6a3-1f3ff-200d-2642-fe0f":["1f6a3-1f3ff",35,8,15],
-		"1f6b4-200d-2642-fe0f":["1f6b4",35,37,47],
-		"1f6b4-1f3fb-200d-2642-fe0f":["1f6b4-1f3fb",35,38,47],
-		"1f6b4-1f3fc-200d-2642-fe0f":["1f6b4-1f3fc",35,39,47],
-		"1f6b4-1f3fd-200d-2642-fe0f":["1f6b4-1f3fd",35,40,47],
-		"1f6b4-1f3fe-200d-2642-fe0f":["1f6b4-1f3fe",35,41,47],
-		"1f6b4-1f3ff-200d-2642-fe0f":["1f6b4-1f3ff",35,42,47],
-		"1f6b5-200d-2642-fe0f":["1f6b5",36,3,47],
-		"1f6b5-1f3fb-200d-2642-fe0f":["1f6b5-1f3fb",36,4,47],
-		"1f6b5-1f3fc-200d-2642-fe0f":["1f6b5-1f3fc",36,5,47],
-		"1f6b5-1f3fd-200d-2642-fe0f":["1f6b5-1f3fd",36,6,47],
-		"1f6b5-1f3fe-200d-2642-fe0f":["1f6b5-1f3fe",36,7,47],
-		"1f6b5-1f3ff-200d-2642-fe0f":["1f6b5-1f3ff",36,8,47],
-		"1f6b6-200d-2642-fe0f":["1f6b6",36,21,47],
-		"1f6b6-1f3fb-200d-2642-fe0f":["1f6b6-1f3fb",36,22,47],
-		"1f6b6-1f3fc-200d-2642-fe0f":["1f6b6-1f3fc",36,23,47],
-		"1f6b6-1f3fd-200d-2642-fe0f":["1f6b6-1f3fd",36,24,47],
-		"1f6b6-1f3fe-200d-2642-fe0f":["1f6b6-1f3fe",36,25,47],
-		"1f6b6-1f3ff-200d-2642-fe0f":["1f6b6-1f3ff",36,26,47],
-		"1f9d6-200d-2642-fe0f":["1f9d6",43,40,31],
-		"1f9d6-1f3fb-200d-2642-fe0f":["1f9d6-1f3fb",43,41,31],
-		"1f9d6-1f3fc-200d-2642-fe0f":["1f9d6-1f3fc",43,42,31],
-		"1f9d6-1f3fd-200d-2642-fe0f":["1f9d6-1f3fd",43,43,31],
-		"1f9d6-1f3fe-200d-2642-fe0f":["1f9d6-1f3fe",43,44,31],
-		"1f9d6-1f3ff-200d-2642-fe0f":["1f9d6-1f3ff",43,45,31],
-		"1f9d7-200d-2640-fe0f":["1f9d7",44,6,31],
-		"1f9d7-1f3fb-200d-2640-fe0f":["1f9d7-1f3fb",44,7,31],
-		"1f9d7-1f3fc-200d-2640-fe0f":["1f9d7-1f3fc",44,8,31],
-		"1f9d7-1f3fd-200d-2640-fe0f":["1f9d7-1f3fd",44,9,31],
-		"1f9d7-1f3fe-200d-2640-fe0f":["1f9d7-1f3fe",44,10,31],
-		"1f9d7-1f3ff-200d-2640-fe0f":["1f9d7-1f3ff",44,11,31],
-		"1f9d8-200d-2640-fe0f":["1f9d8",44,24,31],
-		"1f9d8-1f3fb-200d-2640-fe0f":["1f9d8-1f3fb",44,25,31],
-		"1f9d8-1f3fc-200d-2640-fe0f":["1f9d8-1f3fc",44,26,31],
-		"1f9d8-1f3fd-200d-2640-fe0f":["1f9d8-1f3fd",44,27,31],
-		"1f9d8-1f3fe-200d-2640-fe0f":["1f9d8-1f3fe",44,28,31],
-		"1f9d8-1f3ff-200d-2640-fe0f":["1f9d8-1f3ff",44,29,31],
-		"1f9d9-200d-2640-fe0f":["1f9d9",44,42,31],
-		"1f9d9-1f3fb-200d-2640-fe0f":["1f9d9-1f3fb",44,43,31],
-		"1f9d9-1f3fc-200d-2640-fe0f":["1f9d9-1f3fc",44,44,31],
-		"1f9d9-1f3fd-200d-2640-fe0f":["1f9d9-1f3fd",44,45,31],
-		"1f9d9-1f3fe-200d-2640-fe0f":["1f9d9-1f3fe",44,46,31],
-		"1f9d9-1f3ff-200d-2640-fe0f":["1f9d9-1f3ff",44,47,31],
-		"1f9da-200d-2640-fe0f":["1f9da",45,8,31],
-		"1f9da-1f3fb-200d-2640-fe0f":["1f9da-1f3fb",45,9,15],
-		"1f9da-1f3fc-200d-2640-fe0f":["1f9da-1f3fc",45,10,15],
-		"1f9da-1f3fd-200d-2640-fe0f":["1f9da-1f3fd",45,11,15],
-		"1f9da-1f3fe-200d-2640-fe0f":["1f9da-1f3fe",45,12,15],
-		"1f9da-1f3ff-200d-2640-fe0f":["1f9da-1f3ff",45,13,15],
-		"1f9db-200d-2640-fe0f":["1f9db",45,26,31],
-		"1f9db-1f3fb-200d-2640-fe0f":["1f9db-1f3fb",45,27,15],
-		"1f9db-1f3fc-200d-2640-fe0f":["1f9db-1f3fc",45,28,15],
-		"1f9db-1f3fd-200d-2640-fe0f":["1f9db-1f3fd",45,29,15],
-		"1f9db-1f3fe-200d-2640-fe0f":["1f9db-1f3fe",45,30,15],
-		"1f9db-1f3ff-200d-2640-fe0f":["1f9db-1f3ff",45,31,15],
-		"1f9dc-200d-2642-fe0f":["1f9dc",45,44,31],
-		"1f9dc-1f3fb-200d-2642-fe0f":["1f9dc-1f3fb",45,45,31],
-		"1f9dc-1f3fc-200d-2642-fe0f":["1f9dc-1f3fc",45,46,31],
-		"1f9dc-1f3fd-200d-2642-fe0f":["1f9dc-1f3fd",45,47,31],
-		"1f9dc-1f3fe-200d-2642-fe0f":["1f9dc-1f3fe",45,48,31],
-		"1f9dc-1f3ff-200d-2642-fe0f":["1f9dc-1f3ff",45,49,31],
-		"1f9dd-200d-2642-fe0f":["1f9dd",46,10,31],
-		"1f9dd-1f3fb-200d-2642-fe0f":["1f9dd-1f3fb",46,11,31],
-		"1f9dd-1f3fc-200d-2642-fe0f":["1f9dd-1f3fc",46,12,31],
-		"1f9dd-1f3fd-200d-2642-fe0f":["1f9dd-1f3fd",46,13,31],
-		"1f9dd-1f3fe-200d-2642-fe0f":["1f9dd-1f3fe",46,14,31],
-		"1f9dd-1f3ff-200d-2642-fe0f":["1f9dd-1f3ff",46,15,31],
-		"1f9de-200d-2642-fe0f":["1f9de",46,18,31],
-		"1f9df-200d-2642-fe0f":["1f9df",46,21,31],
-		"26f9-fe0f-200d-2642-fe0f":["26f9-fe0f",49,6,15],
-		"26f9-1f3fb-200d-2642-fe0f":["26f9-1f3fb",49,7,15],
-		"26f9-1f3fc-200d-2642-fe0f":["26f9-1f3fc",49,8,15],
-		"26f9-1f3fd-200d-2642-fe0f":["26f9-1f3fd",49,9,15],
-		"26f9-1f3fe-200d-2642-fe0f":["26f9-1f3fe",49,10,15],
-		"26f9-1f3ff-200d-2642-fe0f":["26f9-1f3ff",49,11,15]
-	};
-
-
-	// export
-	if (true){
-		if (typeof module !== 'undefined' && module.exports){
-			exports = module.exports = emoji;
-		}
-		exports.EmojiConvertor = emoji;
-	}else if (typeof define === 'function' && define.amd){
-		define(function() { return emoji; })
-	}else{
-		root.EmojiConvertor = emoji;
-	}
-
-}).call(function(){
-	return this || (typeof window !== 'undefined' ? window : global);
-}());
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
 /*!
   * Bootstrap v4.1.3 (https://getbootstrap.com/)
   * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -58229,13 +53470,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 68 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(65);
 
 /***/ }),
-/* 69 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58243,7 +53484,7 @@ module.exports = __webpack_require__(69);
 
 var utils = __webpack_require__(4);
 var bind = __webpack_require__(24);
-var Axios = __webpack_require__(71);
+var Axios = __webpack_require__(67);
 var defaults = __webpack_require__(14);
 
 /**
@@ -58278,14 +53519,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(28);
-axios.CancelToken = __webpack_require__(85);
+axios.CancelToken = __webpack_require__(81);
 axios.isCancel = __webpack_require__(27);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(86);
+axios.spread = __webpack_require__(82);
 
 module.exports = axios;
 
@@ -58294,7 +53535,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 70 */
+/* 66 */
 /***/ (function(module, exports) {
 
 /*!
@@ -58321,7 +53562,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 71 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58329,8 +53570,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(14);
 var utils = __webpack_require__(4);
-var InterceptorManager = __webpack_require__(80);
-var dispatchRequest = __webpack_require__(81);
+var InterceptorManager = __webpack_require__(76);
+var dispatchRequest = __webpack_require__(77);
 
 /**
  * Create a new instance of Axios
@@ -58407,7 +53648,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 72 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58426,7 +53667,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 73 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58459,7 +53700,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 74 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58487,7 +53728,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 75 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58560,7 +53801,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 76 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58620,7 +53861,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 77 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58695,7 +53936,7 @@ module.exports = (
 
 
 /***/ }),
-/* 78 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58738,7 +53979,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 79 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58798,7 +54039,7 @@ module.exports = (
 
 
 /***/ }),
-/* 80 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58857,18 +54098,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 81 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(4);
-var transformData = __webpack_require__(82);
+var transformData = __webpack_require__(78);
 var isCancel = __webpack_require__(27);
 var defaults = __webpack_require__(14);
-var isAbsoluteURL = __webpack_require__(83);
-var combineURLs = __webpack_require__(84);
+var isAbsoluteURL = __webpack_require__(79);
+var combineURLs = __webpack_require__(80);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -58950,7 +54191,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 82 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58977,7 +54218,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 83 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58998,7 +54239,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 84 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59019,7 +54260,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 85 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59083,7 +54324,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 86 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59117,7 +54358,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 87 */
+/* 83 */
 /***/ (function(module, exports) {
 
 var asyncGenerator = function () {
@@ -60055,7 +55296,7 @@ var Echo = function () {
 module.exports = Echo;
 
 /***/ }),
-/* 88 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -60063,10 +55304,10 @@ module.exports = Echo;
  * Module dependencies.
  */
 
-var url = __webpack_require__(89);
+var url = __webpack_require__(85);
 var parser = __webpack_require__(15);
 var Manager = __webpack_require__(32);
-var debug = __webpack_require__(5)('socket.io-client');
+var debug = __webpack_require__(6)('socket.io-client');
 
 /**
  * Module exports.
@@ -60155,7 +55396,7 @@ exports.Socket = __webpack_require__(38);
 
 
 /***/ }),
-/* 89 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -60164,7 +55405,7 @@ exports.Socket = __webpack_require__(38);
  */
 
 var parseuri = __webpack_require__(29);
-var debug = __webpack_require__(5)('socket.io-client:url');
+var debug = __webpack_require__(6)('socket.io-client:url');
 
 /**
  * Module exports.
@@ -60237,7 +55478,7 @@ function url (uri, loc) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 90 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -60253,7 +55494,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(91);
+exports.humanize = __webpack_require__(87);
 
 /**
  * Active `debug` instances.
@@ -60468,7 +55709,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 91 */
+/* 87 */
 /***/ (function(module, exports) {
 
 /**
@@ -60626,7 +55867,7 @@ function plural(ms, n, name) {
 
 
 /***/ }),
-/* 92 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*global Blob,File*/
@@ -60774,11 +56015,11 @@ exports.removeBlobs = function(data, callback) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 93 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-module.exports = __webpack_require__(94);
+module.exports = __webpack_require__(90);
 
 /**
  * Exports parser
@@ -60790,7 +56031,7 @@ module.exports.parser = __webpack_require__(8);
 
 
 /***/ }),
-/* 94 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -60799,7 +56040,7 @@ module.exports.parser = __webpack_require__(8);
 
 var transports = __webpack_require__(33);
 var Emitter = __webpack_require__(7);
-var debug = __webpack_require__(5)('engine.io-client:socket');
+var debug = __webpack_require__(6)('engine.io-client:socket');
 var index = __webpack_require__(37);
 var parser = __webpack_require__(8);
 var parseuri = __webpack_require__(29);
@@ -61540,7 +56781,7 @@ Socket.prototype.filterUpgrades = function (upgrades) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 95 */
+/* 91 */
 /***/ (function(module, exports) {
 
 
@@ -61563,7 +56804,7 @@ try {
 
 
 /***/ }),
-/* 96 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -61574,7 +56815,7 @@ var XMLHttpRequest = __webpack_require__(16);
 var Polling = __webpack_require__(34);
 var Emitter = __webpack_require__(7);
 var inherit = __webpack_require__(11);
-var debug = __webpack_require__(5)('engine.io-client:polling-xhr');
+var debug = __webpack_require__(6)('engine.io-client:polling-xhr');
 
 /**
  * Module exports.
@@ -61982,7 +57223,7 @@ function unloadHandler () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 97 */
+/* 93 */
 /***/ (function(module, exports) {
 
 
@@ -62007,7 +57248,7 @@ module.exports = Object.keys || function keys (obj){
 
 
 /***/ }),
-/* 98 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62021,9 +57262,9 @@ module.exports = Object.keys || function keys (obj){
 
 
 
-var base64 = __webpack_require__(99)
-var ieee754 = __webpack_require__(100)
-var isArray = __webpack_require__(101)
+var base64 = __webpack_require__(95)
+var ieee754 = __webpack_require__(96)
+var isArray = __webpack_require__(97)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -63804,7 +59045,7 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 99 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63962,7 +59203,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 100 */
+/* 96 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -64052,7 +59293,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 101 */
+/* 97 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -64063,7 +59304,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 102 */
+/* 98 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -64074,7 +59315,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 103 */
+/* 99 */
 /***/ (function(module, exports) {
 
 /**
@@ -64109,7 +59350,7 @@ module.exports = function(arraybuffer, start, end) {
 
 
 /***/ }),
-/* 104 */
+/* 100 */
 /***/ (function(module, exports) {
 
 module.exports = after
@@ -64143,7 +59384,7 @@ function noop() {}
 
 
 /***/ }),
-/* 105 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/utf8js v2.1.2 by @mathias */
@@ -64404,7 +59645,7 @@ function noop() {}
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)(module), __webpack_require__(3)))
 
 /***/ }),
-/* 106 */
+/* 102 */
 /***/ (function(module, exports) {
 
 /*
@@ -64477,7 +59718,7 @@ function noop() {}
 
 
 /***/ }),
-/* 107 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -64580,7 +59821,7 @@ module.exports = (function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 108 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -64818,7 +60059,7 @@ JSONPPolling.prototype.doWrite = function (data, fn) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 109 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -64830,12 +60071,12 @@ var parser = __webpack_require__(8);
 var parseqs = __webpack_require__(10);
 var inherit = __webpack_require__(11);
 var yeast = __webpack_require__(36);
-var debug = __webpack_require__(5)('engine.io-client:websocket');
+var debug = __webpack_require__(6)('engine.io-client:websocket');
 var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 var NodeWebSocket;
 if (typeof window === 'undefined') {
   try {
-    NodeWebSocket = __webpack_require__(110);
+    NodeWebSocket = __webpack_require__(106);
   } catch (e) { }
 }
 
@@ -65111,13 +60352,13 @@ WS.prototype.check = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 110 */
+/* 106 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 111 */
+/* 107 */
 /***/ (function(module, exports) {
 
 module.exports = toArray
@@ -65136,7 +60377,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 112 */
+/* 108 */
 /***/ (function(module, exports) {
 
 
@@ -65227,7 +60468,7 @@ Backoff.prototype.setJitter = function(jitter){
 
 
 /***/ }),
-/* 113 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {(function (global, factory) {
@@ -69938,15 +65179,15 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 114 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(115)
+var __vue_script__ = __webpack_require__(111)
 /* template */
-var __vue_template__ = __webpack_require__(116)
+var __vue_template__ = __webpack_require__(112)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -69985,7 +65226,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 115 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70014,7 +65255,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 116 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -70057,19 +65298,19 @@ if (false) {
 }
 
 /***/ }),
-/* 117 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(118)
+  __webpack_require__(114)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(120)
+var __vue_script__ = __webpack_require__(116)
 /* template */
-var __vue_template__ = __webpack_require__(121)
+var __vue_template__ = __webpack_require__(117)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70108,13 +65349,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 118 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(119);
+var content = __webpack_require__(115);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -70134,7 +65375,7 @@ if(false) {
 }
 
 /***/ }),
-/* 119 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -70148,7 +65389,7 @@ exports.push([module.i, "\n.languages-menu ul[data-v-3277a507] {\n  list-style: 
 
 
 /***/ }),
-/* 120 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70181,7 +65422,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 121 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -70219,15 +65460,15 @@ if (false) {
 }
 
 /***/ }),
-/* 122 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(123)
+var __vue_script__ = __webpack_require__(119)
 /* template */
-var __vue_template__ = __webpack_require__(124)
+var __vue_template__ = __webpack_require__(120)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70266,7 +65507,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 123 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70308,7 +65549,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 124 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -70351,15 +65592,15 @@ if (false) {
 }
 
 /***/ }),
-/* 125 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(126)
+var __vue_script__ = __webpack_require__(122)
 /* template */
-var __vue_template__ = __webpack_require__(127)
+var __vue_template__ = __webpack_require__(123)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70398,12 +65639,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 126 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_ckeditor2__ = __webpack_require__(18);
 //
 //
@@ -70493,7 +65734,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 127 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -70660,15 +65901,15 @@ if (false) {
 }
 
 /***/ }),
-/* 128 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(129)
+var __vue_script__ = __webpack_require__(125)
 /* template */
-var __vue_template__ = __webpack_require__(130)
+var __vue_template__ = __webpack_require__(126)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70707,12 +65948,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 129 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_ckeditor2__ = __webpack_require__(18);
 //
 //
@@ -70877,7 +66118,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 130 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -71129,19 +66370,19 @@ if (false) {
 }
 
 /***/ }),
-/* 131 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(132)
+  __webpack_require__(128)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(134)
+var __vue_script__ = __webpack_require__(130)
 /* template */
-var __vue_template__ = __webpack_require__(135)
+var __vue_template__ = __webpack_require__(131)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -71180,13 +66421,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 132 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(133);
+var content = __webpack_require__(129);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -71206,7 +66447,7 @@ if(false) {
 }
 
 /***/ }),
-/* 133 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -71220,14 +66461,14 @@ exports.push([module.i, "\n.posts > div[data-v-d82b9e3e] {\n  margin: 20px 0;\n 
 
 
 /***/ }),
-/* 134 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -71284,7 +66525,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 135 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -71342,21 +66583,25 @@ if (false) {
 }
 
 /***/ }),
-/* 136 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(270)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(137)
+var __vue_script__ = __webpack_require__(133)
 /* template */
-var __vue_template__ = __webpack_require__(138)
+var __vue_template__ = __webpack_require__(272)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-49ac9079"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -71389,11 +66634,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 137 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -71414,95 +66660,85 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['chat_id', 'me'],
     data: function data() {
         return {
-            activeUsers: []
+            activeUsers: [],
+            title: '',
+            isEdit: false
         };
     },
 
     methods: {
         listActive: function listActive(data) {
             this.activeUsers = data;
+        },
+        typing: function typing() {
+            __WEBPACK_IMPORTED_MODULE_0__event_js__["a" /* default */].$emit('type_event');
+        },
+        currentChat: function currentChat(data) {
+            this.title = data.title;
+        },
+        changeTitle: function changeTitle() {
+            this.isEdit = true;
+        },
+        saveTitle: function saveTitle(e) {
+            this.isEdit = false;
+            var obj = {
+                title: this.title,
+                chat_id: this.chat_id
+            };
+
+            axios.post('/update/chat/title', obj).then(function (response) {
+                __WEBPACK_IMPORTED_MODULE_0__event_js__["a" /* default */].$emit('new-title', obj);
+            });
+        },
+        leave: function leave() {
+            axios.post('/leave/chatroom', { chat_id: this.chat_id }).then(function (response) {
+                console.log('leave finish');
+                location.replace('/chat');
+            });
+        },
+        invite: function invite() {
+            console.log('Invite', this.chat_id);
         }
     }
 });
 
 /***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "col-md-8" }, [
-      _vm.chat_id
-        ? _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("Chats")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [
-                _c("chat-messages-component", {
-                  attrs: { chat_id: _vm.chat_id, me: _vm.me },
-                  on: { "list-active": _vm.listActive }
-                }),
-                _vm._v(" "),
-                _c("chat-form-component", {
-                  attrs: { me: _vm.me, chat_id: _vm.chat_id }
-                })
-              ],
-              1
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      !_vm.chat_id
-        ? _c("div", [_vm._v("\n            Select Chat\n        ")])
-        : _vm._e()
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "col-md-4" },
-      [
-        _c("user-component", {
-          attrs: { activeUsers: _vm.activeUsers, chat_id: _vm.chat_id }
-        })
-      ],
-      1
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-49ac9079", module.exports)
-  }
-}
-
-/***/ }),
-/* 139 */
+/* 134 */,
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(140)
+  __webpack_require__(136)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(142)
+var __vue_script__ = __webpack_require__(138)
 /* template */
-var __vue_template__ = __webpack_require__(148)
+var __vue_template__ = __webpack_require__(144)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -71541,13 +66777,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 140 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(141);
+var content = __webpack_require__(137);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -71567,7 +66803,7 @@ if(false) {
 }
 
 /***/ }),
-/* 141 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -71575,19 +66811,20 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.users[data-v-4a94cae6] {\n  background-color: #fff;\n  border-radius: 3px;\n}\n.users .active[data-v-4a94cae6] {\n    margin-left: 1em;\n}\n", ""]);
+exports.push([module.i, "\n.users[data-v-4a94cae6] {\n  background-color: #fff;\n  border-radius: 3px;\n}\n.users > div[data-v-4a94cae6] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.users .active[data-v-4a94cae6] {\n    margin-left: 1em;\n}\n.users .title[data-v-4a94cae6] {\n    -webkit-box-flex: 3;\n        -ms-flex: 3;\n            flex: 3;\n}\n.card-header[data-v-4a94cae6] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.add[data-v-4a94cae6] {\n  border: 50%;\n}\n.box-avatar[data-v-4a94cae6] {\n  width: 100%;\n  height: 35px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.box-avatar .avatar[data-v-4a94cae6] {\n    width: 35px;\n    height: 35px;\n    background-size: contain;\n    border-radius: 50%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 142 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ItemChatComponent_vue__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ItemChatComponent_vue__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ItemChatComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ItemChatComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -71617,6 +66854,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -71632,26 +66881,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios.get('/my/chats').then(function (response) {
             _this.list = response.data;
+            if (_this.chat_id != 0) {
+                _this.$emit('current-chat', response.data.find(function (chat) {
+                    return chat.id == _this.chat_id;
+                }));
+            }
+        });
+
+        __WEBPACK_IMPORTED_MODULE_1__event_js__["a" /* default */].$on('new-title', function (data) {
+            _this.list = _this.list.map(function (chat) {
+                if (data.chat_id == chat.id) {
+                    chat.title = data.title;
+                }
+                return chat;
+            });
         });
     },
 
+    methods: {
+        newChat: function newChat() {
+            console.log('add new chat');
+        }
+    },
     components: { ItemChatComponent: __WEBPACK_IMPORTED_MODULE_0__ItemChatComponent_vue___default.a }
 });
 
 /***/ }),
-/* 143 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(144)
+  __webpack_require__(140)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(146)
+var __vue_script__ = __webpack_require__(142)
 /* template */
-var __vue_template__ = __webpack_require__(147)
+var __vue_template__ = __webpack_require__(143)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -71690,13 +66958,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 144 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(145);
+var content = __webpack_require__(141);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -71716,7 +66984,7 @@ if(false) {
 }
 
 /***/ }),
-/* 145 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -71730,7 +66998,7 @@ exports.push([module.i, "\n.active[data-v-6dc1a0b4] {\n  color: red;\n}\n", ""])
 
 
 /***/ }),
-/* 146 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71767,7 +67035,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 147 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -71800,7 +67068,7 @@ if (false) {
 }
 
 /***/ }),
-/* 148 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -71809,7 +67077,23 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-header" }, [_vm._v("List")]),
+      _c("div", { staticClass: "card-header" }, [
+        _c("div", [_vm._v("Chat List")]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-secondary add",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.newChat($event)
+              }
+            }
+          },
+          [_vm._v("+")]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -71817,13 +67101,33 @@ var render = function() {
         _vm._l(_vm.list, function(chat) {
           return _c("div", { key: chat.id, staticClass: "users" }, [
             _c("div", { class: { active: chat.id == _vm.chat_id } }, [
-              _c("a", { attrs: { href: "/chat/" + chat.id } }, [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(chat.title) +
-                    "\n                    "
-                )
-              ])
+              _c(
+                "div",
+                { staticClass: "box-avatar" },
+                _vm._l(chat.users, function(user) {
+                  return _c("div", [
+                    _c("div", {
+                      staticClass: "avatar",
+                      style: {
+                        backgroundImage:
+                          "url(/storage/user/" + user.avatar + ")"
+                      }
+                    })
+                  ])
+                })
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "title", attrs: { href: "/chat/" + chat.id } },
+                [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(chat.title) +
+                      "\n                    "
+                  )
+                ]
+              )
             ])
           ])
         })
@@ -71859,19 +67163,19 @@ if (false) {
 }
 
 /***/ }),
-/* 149 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(150)
+  __webpack_require__(146)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(152)
+var __vue_script__ = __webpack_require__(148)
 /* template */
-var __vue_template__ = __webpack_require__(154)
+var __vue_template__ = __webpack_require__(150)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -71910,13 +67214,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 150 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(151);
+var content = __webpack_require__(147);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -71936,7 +67240,7 @@ if(false) {
 }
 
 /***/ }),
-/* 151 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -71950,14 +67254,16 @@ exports.push([module.i, "\n.form {\n    padding: 8px;\n}\n.form-input {\n    wid
 
 
 /***/ }),
-/* 152 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_emoji_mart_vue__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_emoji_mart_vue__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_emoji_mart_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_emoji_mart_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(5);
+//
+//
 //
 //
 //
@@ -71980,31 +67286,53 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['chat_id', 'me'],
+    props: ['chat_id', 'me', 'activeUsers'],
     data: function data() {
         return {
             body: '',
-            test: 'Some test'
+            dis: ''
         };
     },
 
     methods: {
         typing: function typing(e) {
+            this.$emit('typing');
+
             if (e.keyCode === 13 && !e.shiftKey) {
                 e.preventDefault();
                 this.sendMessage();
             }
         },
+        input: function input(e) {
+            // console.log('input', e)
+            if (e.inputType == "insertText") {
+                this.body += e.data;
+            }
+            if (e.inputType == "deleteContentBackward") {
+                this.body = this.body.substr(0, this.body.length - 1);
+            }
+            // console.log('data', e.data, e.data == undefined)
+            if (e.data == undefined) {
+                this.body = e.srcElement.value;
+            }
+        },
         sendMessage: function sendMessage() {
             var _this = this;
 
+            console.log('send messages', this.body);
             if (!this.body || this.body.trim() === '') {
                 return;
             }
+            var read = 0;
             // let messageObj = this.buildMessage();
+            // if(this.activeUsers.length > 1) {
+            //     read = 1;
+            //     console.log('Your companion is online')
+            // }
             axios.post('/message', {
                 body: this.body.trim(),
-                chat_id: this.chat_id
+                chat_id: this.chat_id,
+                read: read
             }).then(function (response) {
                 var messages = response.data;
                 messages.user = { name: _this.me.name };
@@ -72013,10 +67341,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log('failed', err);
             });
             this.body = '';
+            this.dis = '';
         },
         addEmoji: function addEmoji(e) {
-            console.log(e);
+            // console.log(e);
             this.body += ':idx:' + e.id + ':';
+            this.dis += e.native;
             document.getElementById("body").focus();
         }
     },
@@ -72026,7 +67356,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 153 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -78124,7 +73454,7 @@ exports.default = { search: search, emojis: emojis, emoticons: emoticons };
 });
 
 /***/ }),
-/* 154 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -78140,21 +73470,24 @@ var render = function() {
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.body,
-            expression: "body"
+            value: _vm.dis,
+            expression: "dis"
           }
         ],
         staticClass: "form-input",
-        attrs: { id: "body", cols: "28", rows: "5" },
-        domProps: { value: _vm.body },
+        attrs: { id: "body", cols: "28", rows: "5", debounce: "500" },
+        domProps: { value: _vm.dis },
         on: {
           keydown: _vm.typing,
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.body = $event.target.value
-          }
+          input: [
+            function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.dis = $event.target.value
+            },
+            _vm.input
+          ]
         }
       }),
       _vm._v(" "),
@@ -78178,19 +73511,19 @@ if (false) {
 }
 
 /***/ }),
-/* 155 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(156)
+  __webpack_require__(152)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(158)
+var __vue_script__ = __webpack_require__(154)
 /* template */
-var __vue_template__ = __webpack_require__(159)
+var __vue_template__ = __webpack_require__(155)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -78229,13 +73562,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 156 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(157);
+var content = __webpack_require__(153);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -78255,7 +73588,7 @@ if(false) {
 }
 
 /***/ }),
-/* 157 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -78263,19 +73596,18 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.user {\n    font-weight: 800;\n}\n.body {\n    margin-bottom: 0;\n    white-space: pre-wrap;\n}\n.message {\n    border-bottom: 1px solid #000000\n}\n.self {\n    background-color: #f0f0f0;\n    padding: 10px;\n}\n.emojione {\n    width: 24px;\n    height: 24px;\n}\n", ""]);
+exports.push([module.i, "\n.user {\n    font-weight: 800;\n}\n.body {\n    margin-bottom: 0;\n    white-space: pre-wrap;\n}\n.message {\n    border-bottom: 1px solid #000000\n}\n.self {\n    background-color: #f0f0f0;\n    padding: 10px;\n}\n.emojione {\n    width: 24px;\n    height: 24px;\n}\n.unread {\n    background-color: pink;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 158 */
+/* 154 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vb_emoji__ = __webpack_require__(19);
-//
 //
 //
 //
@@ -78309,11 +73641,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     computed: {
-        text: function text() {
-            // let outHtml = this.$options.filters.render(this.message.body);
-            var outHtml = 'zadowbalo';
-            return outHtml;
-        },
         display: function display() {
             var render = this.$options.filters.render(this.message.body);
             return render;
@@ -78322,33 +73649,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 159 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "message self" }, [
-    _c("strong", { staticClass: "user" }, [
-      _vm._v(_vm._s(_vm.message.user.name))
-    ]),
-    _vm._v(" "),
-    _c("div", {
-      staticClass: "body",
-      domProps: { innerHTML: _vm._s(_vm.message.body) }
-    }),
-    _vm._v(" "),
-    _c("span", [
-      _vm._v(
-        _vm._s(_vm._f("moment")(_vm.message.created_at, "from", "now", true))
-      )
-    ]),
-    _vm._v(" "),
-    _c("hr"),
-    _vm._v(" "),
-    _c("div", { domProps: { innerHTML: _vm._s(_vm.display) } })
-  ])
+  return _c(
+    "div",
+    { class: { unread: _vm.message.read == 0, message: true, self: true } },
+    [
+      _c("strong", { staticClass: "user" }, [
+        _vm._v(_vm._s(_vm.message.user.name))
+      ]),
+      _vm._v(" "),
+      _c("div", { domProps: { innerHTML: _vm._s(_vm.display) } }),
+      _vm._v(" "),
+      _c("span", [_vm._v(_vm._s(_vm.message.created_at))]),
+      _vm._v(" "),
+      _c("hr")
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -78361,19 +73683,19 @@ if (false) {
 }
 
 /***/ }),
-/* 160 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(161)
+  __webpack_require__(157)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(163)
+var __vue_script__ = __webpack_require__(159)
 /* template */
-var __vue_template__ = __webpack_require__(164)
+var __vue_template__ = __webpack_require__(160)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -78412,13 +73734,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 161 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(162);
+var content = __webpack_require__(158);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -78438,7 +73760,7 @@ if(false) {
 }
 
 /***/ }),
-/* 162 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -78452,14 +73774,16 @@ exports.push([module.i, "\n.message-area {\n    height: 300px;\n    max-height: 
 
 
 /***/ }),
-/* 163 */
+/* 159 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_infinite_loading__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(5);
+//
+//
 //
 //
 //
@@ -78489,7 +73813,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             messages: [],
             activeUsers: [],
             current_page: 0,
-            canLoad: false
+            canLoad: false,
+            isActive: []
         };
     },
 
@@ -78546,6 +73871,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         listActive: function listActive() {
             this.$emit('list-active', this.activeUsers);
+        },
+        typing: function typing() {
+            this.channel.whisper('typing', {
+                name: this.me.name,
+                id: this.me.id
+            });
         }
     },
     mounted: function mounted() {
@@ -78553,8 +73884,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.infiniteHandler();
 
+        if (this.chat_id > 0) {
+            axios.post('/read/message', { chat_id: this.chat_id }).then(function (response) {
+                _this4.messages = response.data.data.reverse();;
+            });
+        }
+
         __WEBPACK_IMPORTED_MODULE_1__event_js__["a" /* default */].$on('added_message', function (message) {
             _this4.messages.push(message);
+        });
+
+        __WEBPACK_IMPORTED_MODULE_1__event_js__["a" /* default */].$on('type_event', function (message) {
+            _this4.typing();
         });
 
         this.channel.here(function (users) {
@@ -78567,6 +73908,41 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var info = data.data;
             info.user = data.user;
             _this4.messages.push(info);
+            axios.post('/read/message/one', { message_id: data.data.id }).then(function (response) {
+                // console.log('response', response.data)
+            });
+
+            _this4.isActive = _this4.isActive.filter(function (user) {
+                return user.id != data.user.id;
+            });
+
+            _this4.channel.whisper('read', {
+                id: data.user.id
+            });
+        }).listenForWhisper('typing', function (e) {
+            var find = _this4.isActive.find(function (user) {
+                return user.id == e.id;
+            });
+
+            if (!find) {
+                _this4.isActive.push(e);
+            }
+
+            if (_this4.typingTime) clearTimeout(_this4.typingTime);
+
+            _this4.typingTime = setTimeout(function () {
+                _this4.isActive = _this4.isActive.filter(function (user) {
+                    return user.id != e.id;
+                });
+            }, 2000);
+        }).listenForWhisper('read', function (e) {
+            var newM = _this4.messages.map(function (msg) {
+                if (msg.user_id, e.id) {
+                    msg.read = 1;
+                    return msg;
+                }
+            });
+            _this4.messages = newM;
         });
     },
 
@@ -78586,7 +73962,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 164 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -78619,13 +73995,26 @@ var render = function() {
           staticClass: "message-area",
           attrs: { id: "scroll" }
         },
-        _vm._l(_vm.messages, function(message) {
+        _vm._l(_vm.messages, function(message, index) {
           return _c("message-component", {
-            key: message.id,
+            key: index,
             attrs: { message: message }
           })
         })
       ),
+      _vm._v(" "),
+      _vm.isActive.length > 0
+        ? _c(
+            "span",
+            [
+              _vm._l(_vm.isActive, function(active) {
+                return _c("span", [_vm._v(_vm._s(active.name) + " ")])
+              }),
+              _vm._v(" is typing...")
+            ],
+            2
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c("hr")
     ],
@@ -78643,19 +74032,19 @@ if (false) {
 }
 
 /***/ }),
-/* 165 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(166)
+  __webpack_require__(162)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(168)
+var __vue_script__ = __webpack_require__(164)
 /* template */
-var __vue_template__ = __webpack_require__(169)
+var __vue_template__ = __webpack_require__(165)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -78694,13 +74083,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 166 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(167);
+var content = __webpack_require__(163);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -78720,7 +74109,7 @@ if(false) {
 }
 
 /***/ }),
-/* 167 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -78734,7 +74123,7 @@ exports.push([module.i, "\n.title[data-v-5511a379] {\n  text-align: center;\n}\n
 
 
 /***/ }),
-/* 168 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78822,7 +74211,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 169 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -78912,19 +74301,19 @@ if (false) {
 }
 
 /***/ }),
-/* 170 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(171)
+  __webpack_require__(167)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(173)
+var __vue_script__ = __webpack_require__(169)
 /* template */
-var __vue_template__ = __webpack_require__(174)
+var __vue_template__ = __webpack_require__(170)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -78963,13 +74352,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 171 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(172);
+var content = __webpack_require__(168);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -78989,7 +74378,7 @@ if(false) {
 }
 
 /***/ }),
-/* 172 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -79003,7 +74392,7 @@ exports.push([module.i, "\n.posts > div[data-v-af2c1b9a] {\n  margin: 20px 0;\n 
 
 
 /***/ }),
-/* 173 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79071,7 +74460,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 174 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -79133,7 +74522,7 @@ if (false) {
 }
 
 /***/ }),
-/* 175 */
+/* 171 */
 /***/ (function(module, exports) {
 
 module.exports =
@@ -80431,19 +75820,19 @@ module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u20
 //# sourceMappingURL=laravel-vue-pagination.common.js.map
 
 /***/ }),
-/* 176 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(177)
+  __webpack_require__(173)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(179)
+var __vue_script__ = __webpack_require__(175)
 /* template */
-var __vue_template__ = __webpack_require__(194)
+var __vue_template__ = __webpack_require__(190)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -80482,13 +75871,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 177 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(178);
+var content = __webpack_require__(174);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -80508,7 +75897,7 @@ if(false) {
 }
 
 /***/ }),
-/* 178 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -80522,14 +75911,14 @@ exports.push([module.i, "\n.comments-app[data-v-e6815544] {\n  display: -webkit-
 
 
 /***/ }),
-/* 179 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CommentComponent__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CommentComponent__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CommentComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CommentComponent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -80626,19 +76015,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 180 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(181)
+  __webpack_require__(177)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(183)
+var __vue_script__ = __webpack_require__(179)
 /* template */
-var __vue_template__ = __webpack_require__(193)
+var __vue_template__ = __webpack_require__(189)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -80677,13 +76066,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 181 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(182);
+var content = __webpack_require__(178);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -80703,7 +76092,7 @@ if(false) {
 }
 
 /***/ }),
-/* 182 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -80717,16 +76106,16 @@ exports.push([module.i, "\n.comments-app[data-v-36537f79] {\n  margin: 5px 0;\n}
 
 
 /***/ }),
-/* 183 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EditComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__EditComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReplyComponent_vue__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReplyComponent_vue__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReplyComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ReplyComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -80883,13 +76272,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 184 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(185);
+var content = __webpack_require__(181);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -80909,7 +76298,7 @@ if(false) {
 }
 
 /***/ }),
-/* 185 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -80923,12 +76312,12 @@ exports.push([module.i, "\ntextarea[data-v-5cd6e0f0] {\n  resize: none;\n}\n", "
 
 
 /***/ }),
-/* 186 */
+/* 182 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -80987,7 +76376,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 187 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81049,19 +76438,19 @@ if (false) {
 }
 
 /***/ }),
-/* 188 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(189)
+  __webpack_require__(185)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(191)
+var __vue_script__ = __webpack_require__(187)
 /* template */
-var __vue_template__ = __webpack_require__(192)
+var __vue_template__ = __webpack_require__(188)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81100,13 +76489,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 189 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(190);
+var content = __webpack_require__(186);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -81126,7 +76515,7 @@ if(false) {
 }
 
 /***/ }),
-/* 190 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -81140,7 +76529,7 @@ exports.push([module.i, "\n.comments-app[data-v-4d07198e] {\n  margin: 5px 0;\n}
 
 
 /***/ }),
-/* 191 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81249,7 +76638,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 192 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81363,7 +76752,7 @@ if (false) {
 }
 
 /***/ }),
-/* 193 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81574,7 +76963,7 @@ if (false) {
 }
 
 /***/ }),
-/* 194 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81660,15 +77049,15 @@ if (false) {
 }
 
 /***/ }),
-/* 195 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(196)
+var __vue_script__ = __webpack_require__(192)
 /* template */
-var __vue_template__ = __webpack_require__(197)
+var __vue_template__ = __webpack_require__(193)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81707,7 +77096,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 196 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81769,7 +77158,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 197 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81817,19 +77206,19 @@ if (false) {
 }
 
 /***/ }),
-/* 198 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(199)
+  __webpack_require__(195)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(201)
+var __vue_script__ = __webpack_require__(197)
 /* template */
-var __vue_template__ = __webpack_require__(202)
+var __vue_template__ = __webpack_require__(198)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81868,13 +77257,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 199 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(200);
+var content = __webpack_require__(196);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -81894,7 +77283,7 @@ if(false) {
 }
 
 /***/ }),
-/* 200 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -81908,7 +77297,7 @@ exports.push([module.i, "\n.media[data-v-5be284f6] {\n  margin: 1em 0;\n  border
 
 
 /***/ }),
-/* 201 */
+/* 197 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81934,7 +77323,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 202 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81978,15 +77367,15 @@ if (false) {
 }
 
 /***/ }),
-/* 203 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(204)
+var __vue_script__ = __webpack_require__(200)
 /* template */
-var __vue_template__ = __webpack_require__(220)
+var __vue_template__ = __webpack_require__(216)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82025,20 +77414,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 204 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UserInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__UserInfo_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ChangePassword_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ChangeEmail_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChangeAvatar_vue__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChangeAvatar_vue__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChangeAvatar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__ChangeAvatar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__DeleteComponent__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__DeleteComponent__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__DeleteComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__DeleteComponent__);
 //
 //
@@ -82091,15 +77480,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 205 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(206)
+var __vue_script__ = __webpack_require__(202)
 /* template */
-var __vue_template__ = __webpack_require__(207)
+var __vue_template__ = __webpack_require__(203)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82138,7 +77527,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 206 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82225,7 +77614,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 207 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -82433,15 +77822,15 @@ if (false) {
 }
 
 /***/ }),
-/* 208 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(209)
+var __vue_script__ = __webpack_require__(205)
 /* template */
-var __vue_template__ = __webpack_require__(210)
+var __vue_template__ = __webpack_require__(206)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82480,7 +77869,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 209 */
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82531,7 +77920,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 210 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -82669,15 +78058,15 @@ if (false) {
 }
 
 /***/ }),
-/* 211 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(212)
+var __vue_script__ = __webpack_require__(208)
 /* template */
-var __vue_template__ = __webpack_require__(213)
+var __vue_template__ = __webpack_require__(209)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82716,7 +78105,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 212 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82759,7 +78148,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 213 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -82819,15 +78208,15 @@ if (false) {
 }
 
 /***/ }),
-/* 214 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(215)
+var __vue_script__ = __webpack_require__(211)
 /* template */
-var __vue_template__ = __webpack_require__(216)
+var __vue_template__ = __webpack_require__(212)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82866,7 +78255,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 215 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82898,7 +78287,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 216 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -82932,15 +78321,15 @@ if (false) {
 }
 
 /***/ }),
-/* 217 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(218)
+var __vue_script__ = __webpack_require__(214)
 /* template */
-var __vue_template__ = __webpack_require__(219)
+var __vue_template__ = __webpack_require__(215)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -82979,7 +78368,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 218 */
+/* 214 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83018,7 +78407,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 219 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83053,7 +78442,7 @@ if (false) {
 }
 
 /***/ }),
-/* 220 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83161,15 +78550,15 @@ if (false) {
 }
 
 /***/ }),
-/* 221 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(222)
+var __vue_script__ = __webpack_require__(218)
 /* template */
-var __vue_template__ = __webpack_require__(223)
+var __vue_template__ = __webpack_require__(219)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -83208,12 +78597,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 222 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_js__ = __webpack_require__(5);
 //
 //
 //
@@ -83273,7 +78662,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 223 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83322,19 +78711,19 @@ if (false) {
 }
 
 /***/ }),
-/* 224 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(225)
+  __webpack_require__(221)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(227)
+var __vue_script__ = __webpack_require__(223)
 /* template */
-var __vue_template__ = __webpack_require__(228)
+var __vue_template__ = __webpack_require__(224)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -83373,13 +78762,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 225 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(226);
+var content = __webpack_require__(222);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -83399,7 +78788,7 @@ if(false) {
 }
 
 /***/ }),
-/* 226 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -83413,7 +78802,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 227 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83460,7 +78849,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 228 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83512,19 +78901,19 @@ if (false) {
 }
 
 /***/ }),
-/* 229 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(230)
+  __webpack_require__(226)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(232)
+var __vue_script__ = __webpack_require__(228)
 /* template */
-var __vue_template__ = __webpack_require__(233)
+var __vue_template__ = __webpack_require__(229)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -83563,13 +78952,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 230 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(231);
+var content = __webpack_require__(227);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -83589,7 +78978,7 @@ if(false) {
 }
 
 /***/ }),
-/* 231 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -83603,7 +78992,7 @@ exports.push([module.i, "\n.main span[data-v-88f593a0] {\n  font-size: 0.8em;\n}
 
 
 /***/ }),
-/* 232 */
+/* 228 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83631,7 +79020,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 233 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83702,19 +79091,19 @@ if (false) {
 }
 
 /***/ }),
-/* 234 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(235)
+  __webpack_require__(231)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(237)
+var __vue_script__ = __webpack_require__(233)
 /* template */
-var __vue_template__ = __webpack_require__(238)
+var __vue_template__ = __webpack_require__(234)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -83753,13 +79142,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 235 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(236);
+var content = __webpack_require__(232);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -83779,7 +79168,7 @@ if(false) {
 }
 
 /***/ }),
-/* 236 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -83793,7 +79182,7 @@ exports.push([module.i, "\n.following[data-v-1b71ddd5] {\n  display: -webkit-box
 
 
 /***/ }),
-/* 237 */
+/* 233 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83815,7 +79204,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 238 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -83850,19 +79239,19 @@ if (false) {
 }
 
 /***/ }),
-/* 239 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(240)
+  __webpack_require__(236)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(242)
+var __vue_script__ = __webpack_require__(238)
 /* template */
-var __vue_template__ = __webpack_require__(243)
+var __vue_template__ = __webpack_require__(239)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -83901,13 +79290,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 240 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(241);
+var content = __webpack_require__(237);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -83927,7 +79316,7 @@ if(false) {
 }
 
 /***/ }),
-/* 241 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -83941,7 +79330,7 @@ exports.push([module.i, "\n.head[data-v-b555d114] {\n  text-align: center;\n}\n.
 
 
 /***/ }),
-/* 242 */
+/* 238 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84001,7 +79390,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 243 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -84051,19 +79440,19 @@ if (false) {
 }
 
 /***/ }),
-/* 244 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(245)
+  __webpack_require__(241)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(247)
+var __vue_script__ = __webpack_require__(243)
 /* template */
-var __vue_template__ = __webpack_require__(248)
+var __vue_template__ = __webpack_require__(244)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -84102,13 +79491,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 245 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(246);
+var content = __webpack_require__(242);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -84128,7 +79517,7 @@ if(false) {
 }
 
 /***/ }),
-/* 246 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -84142,7 +79531,7 @@ exports.push([module.i, "\n.head[data-v-d15801f6] {\n  text-align: center;\n}\n.
 
 
 /***/ }),
-/* 247 */
+/* 243 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84202,7 +79591,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 248 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -84253,15 +79642,15 @@ if (false) {
 }
 
 /***/ }),
-/* 249 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(250)
+var __vue_script__ = __webpack_require__(246)
 /* template */
-var __vue_template__ = __webpack_require__(251)
+var __vue_template__ = __webpack_require__(247)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -84300,7 +79689,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 250 */
+/* 246 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84363,7 +79752,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 251 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -84406,19 +79795,19 @@ if (false) {
 }
 
 /***/ }),
-/* 252 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(253)
+  __webpack_require__(249)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(255)
+var __vue_script__ = __webpack_require__(251)
 /* template */
-var __vue_template__ = __webpack_require__(256)
+var __vue_template__ = __webpack_require__(252)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -84457,13 +79846,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 253 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(254);
+var content = __webpack_require__(250);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -84483,7 +79872,7 @@ if(false) {
 }
 
 /***/ }),
-/* 254 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -84497,7 +79886,7 @@ exports.push([module.i, "\n.form-component textarea[data-v-c7548aec] {\n  resize
 
 
 /***/ }),
-/* 255 */
+/* 251 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84560,7 +79949,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 256 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -84672,19 +80061,19 @@ if (false) {
 }
 
 /***/ }),
-/* 257 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(258)
+  __webpack_require__(254)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(260)
+var __vue_script__ = __webpack_require__(256)
 /* template */
-var __vue_template__ = __webpack_require__(261)
+var __vue_template__ = __webpack_require__(257)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -84723,13 +80112,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 258 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(259);
+var content = __webpack_require__(255);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -84749,7 +80138,7 @@ if(false) {
 }
 
 /***/ }),
-/* 259 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -84763,7 +80152,7 @@ exports.push([module.i, "\n.edit-container textarea[data-v-40d1ee60] {\n  resize
 
 
 /***/ }),
-/* 260 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84832,7 +80221,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 261 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -84944,19 +80333,19 @@ if (false) {
 }
 
 /***/ }),
-/* 262 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(263)
+  __webpack_require__(259)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(265)
+var __vue_script__ = __webpack_require__(261)
 /* template */
-var __vue_template__ = __webpack_require__(266)
+var __vue_template__ = __webpack_require__(262)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -84995,13 +80384,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 263 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(264);
+var content = __webpack_require__(260);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -85021,7 +80410,7 @@ if(false) {
 }
 
 /***/ }),
-/* 264 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -85035,7 +80424,7 @@ exports.push([module.i, "\n.portfolio .toolbar[data-v-5501cafc] {\n  display: -w
 
 
 /***/ }),
-/* 265 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85090,7 +80479,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 266 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -85176,19 +80565,19 @@ if (false) {
 }
 
 /***/ }),
-/* 267 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(268)
+  __webpack_require__(264)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(270)
+var __vue_script__ = __webpack_require__(266)
 /* template */
-var __vue_template__ = __webpack_require__(271)
+var __vue_template__ = __webpack_require__(267)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -85227,13 +80616,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 268 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(269);
+var content = __webpack_require__(265);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -85253,7 +80642,7 @@ if(false) {
 }
 
 /***/ }),
-/* 269 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -85267,7 +80656,7 @@ exports.push([module.i, "\n.portfolio .box[data-v-6be7c443] {\n  display: -webki
 
 
 /***/ }),
-/* 270 */
+/* 266 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85322,7 +80711,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 271 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -85418,10 +80807,234 @@ if (false) {
 }
 
 /***/ }),
-/* 272 */
+/* 268 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 269 */,
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(271);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("26be5186", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-49ac9079\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ChatComponent.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-49ac9079\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ChatComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.card-header[data-v-49ac9079] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.dropdown-toggle[data-v-49ac9079]::before {\n  content: none;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c(
+      "div",
+      { staticClass: "col-md-4" },
+      [
+        _c("user-component", {
+          attrs: { activeUsers: _vm.activeUsers, chat_id: _vm.chat_id },
+          on: { "current-chat": _vm.currentChat }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-md-8" }, [
+      _vm.chat_id
+        ? _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("div", [
+                _vm.isEdit
+                  ? _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.title,
+                            expression: "title"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.title },
+                        on: {
+                          keydown: function($event) {
+                            if (
+                              !("button" in $event) &&
+                              _vm._k(
+                                $event.keyCode,
+                                "enter",
+                                13,
+                                $event.key,
+                                "Enter"
+                              )
+                            ) {
+                              return null
+                            }
+                            return _vm.saveTitle($event)
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.title = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  : _c("div", [_vm._v(_vm._s(_vm.title))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown dropleft" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "dropdown-menu",
+                    attrs: { "aria-labelledby": "dropdownMenuButton" }
+                  },
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "dropdown-item",
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.changeTitle($event)
+                          }
+                        }
+                      },
+                      [_vm._v("Change Chat Title")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "dropdown-item",
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.leave($event)
+                          }
+                        }
+                      },
+                      [_vm._v("Leave the Chat")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "dropdown-item",
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.invite($event)
+                          }
+                        }
+                      },
+                      [_vm._v("Invite")]
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-body" },
+              [
+                _c("chat-messages-component", {
+                  attrs: { chat_id: _vm.chat_id, me: _vm.me },
+                  on: { "list-active": _vm.listActive }
+                }),
+                _vm._v(" "),
+                _c("chat-form-component", {
+                  attrs: {
+                    me: _vm.me,
+                    chat_id: _vm.chat_id,
+                    activeUsers: _vm.activeUsers
+                  },
+                  on: { typing: _vm.typing }
+                })
+              ],
+              1
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.chat_id
+        ? _c("div", [_vm._v("\n            Select Chat\n        ")])
+        : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-outline-secondary dropdown-toggle",
+        attrs: {
+          type: "button",
+          id: "dropdownMenuButton",
+          "data-toggle": "dropdown",
+          "aria-haspopup": "true",
+          "aria-expanded": "false"
+        }
+      },
+      [_c("i", { staticClass: "fas fa-ellipsis-v" })]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-49ac9079", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
