@@ -5,7 +5,7 @@ require("vue-awesome-notifications/dist/styles/style.css")
 // import App from './views/App.vue'
 import VueI18n from 'vue-i18n'
 import translate from './lang/translate.js'
-import { filter } from 'vb-emoji'
+import BetterInputTag from 'better-vue-input-tag'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -15,8 +15,6 @@ import { filter } from 'vb-emoji'
 
 require('./bootstrap');
 window.Vue = require('vue');
-
-Vue.use(filter)
 
 Vue.use(VueAWN);
 Vue.use(VueI18n);
@@ -35,6 +33,9 @@ const i18n = new VueI18n({
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import VueTagsInput from '@johmun/vue-tags-input';
+
+Vue.component('vue-tags-input', VueTagsInput)
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('languages', require('./components/navbar/Languages.vue'));

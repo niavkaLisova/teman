@@ -1,23 +1,28 @@
 <template>
     <div class="row">
         <div class="col-md-4">
-            <user-component :activeUsers="activeUsers" :chat_id="chat_id" @current-chat="currentChat"></user-component>
+            <user-component :activeUsers="activeUsers" :chat_id="chat_id" @current-chat="currentChat" :me="me"></user-component>
         </div>
         <div class="col-md-8">
             <div class="card" v-if="chat_id">
                 <div class="card-header">
-                    <div>
+                    <div v-if="state == 0">
                         <div v-if="isEdit"><input type="text" v-model="title" class="form-control" @keydown.enter="saveTitle"></div>
                         <div v-else="isEdit">{{title}}</div>
+                    </div>
+                    <div v-else>
+                        <div v-for="user in users">
+                            <h2 v-if="user.id != me.id">{{user.name}}</h2>
+                        </div>
                     </div>
                     <div class="dropdown dropleft">
                         <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" @click.prevent="changeTitle">Change Chat Title</a>
+                            <a class="dropdown-item" @click.prevent="changeTitle" v-if="state == 0">Change Chat Title</a>
                             <a class="dropdown-item" @click.prevent="leave">Leave the Chat</a>
-                            <a class="dropdown-item" @click.prevent="invite">Invite</a>
+                            <a class="dropdown-item" @click.prevent="invite" v-if="state == 0">Invite</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +47,9 @@
             return {
                 activeUsers: [],
                 title: '',
-                isEdit: false
+                isEdit: false,
+                state: 1,
+                users: []
             }
         },
         methods: {
@@ -56,7 +63,8 @@
                 this.title = data.title;
             },
             changeTitle() {
-                this.isEdit = true;
+                if(this.state == 0)
+                    this.isEdit = true;
             },
             saveTitle(e) {
                 this.isEdit = false;
@@ -73,13 +81,20 @@
             leave() {
                 axios.post('/leave/chatroom', {chat_id: this.chat_id})
                 .then(response => {
-                    console.log('leave finish');
                     location.replace('/chat');
                 })
             },
             invite() {
                 console.log('Invite', this.chat_id);
             }
+        },
+        mounted() {
+            if(this.chat_id != 0)
+                axios.post('/chat/state/' , {chat_id: this.chat_id} )
+                    .then(response => {
+                        this.state = response.data.chat.state;
+                        this.users = response.data.users;
+                    })
         }
     }
 </script>

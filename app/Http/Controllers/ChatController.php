@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Chat;
 use App\User;
+use App\follower;
 
 class ChatController extends Controller
 {
@@ -46,15 +47,42 @@ class ChatController extends Controller
         }
     }
 
-    public function chatMessages()
-    {
-    	$id = Auth::id();
-    	$companion = 2;
+    public function findUser(Request $request) {
+        $search = '%' . $request->search . '%';
 
-    	return DB::table('chats')
-    		->where('users->1', $id)
-		    ->orWhere('users->2', $companion)
-		    ->get();
+        $users =  collect(Auth::user()->following()->where('name', 'like', $search)->take(10)->select('name', 'email', 'avatar', 'follower_id as id')->get());
+
+        $users2 = collect(User::where('name', 'like', $search)
+            ->where('id', '<>', Auth::id())
+            ->take(10)
+            ->select('name', 'email', 'avatar', 'id')
+            ->get());
+
+        $result = $users->merge($users2)->unique('id')->take(10);
+
+        return $result;
+    }
+
+    public function chatState(Request $request) {
+        $result = Chat::find($request->chat_id);
+        $users = $result->users()->get();
+        return ['chat' => $result, 'users' => $users];
+    }
+
+    // public function chatMessages()
+    // {
+    // 	$id = Auth::id();
+    // 	$companion = 2;
+
+    // 	return DB::table('chats')
+    // 		->where('users->1', $id)
+		  //   ->orWhere('users->2', $companion)
+		  //   ->get();
+    // }
+
+    public function openChat(Request $request)
+    {
+       return Auth::user()->specChat($request->user_id)->get();
     }
 
     public function companionInfo(Request $request)

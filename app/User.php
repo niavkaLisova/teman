@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 use App\Post;
 use App\Message;
 use App\Portfolio;
@@ -99,5 +100,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function chats()
     {
         return $this->belongsToMany(Chat::class);
+    }
+
+    public function specChat($user_id)
+    {
+        $chats = $this->belongsToMany(Chat::class)->where('state', 1)->select('chat_id')->get();
+
+        $chats2 = (DB::table('chat_user')->where('user_id', $user_id)->select('chat_id'))->whereIn('chat_id', $chats);
+
+        return $chats2;
     }
 }
