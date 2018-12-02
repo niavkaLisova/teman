@@ -46,8 +46,10 @@
                                     <span v-if="me.id != user.id">{{user.name}}</span>
                                 </span>
                             </span>
+                            
                             <span v-else>{{chat.title}}</span> 
                         </a>
+                        <router-link :to="{ name: 'page', params: { id: chat.id } }">Hello World</router-link>
                     </div>
                 </div>
             </div>
@@ -104,8 +106,6 @@
                 this.selectNew = !this.selectNew;
             },
             changeTags(newTags) {
-                console.log('HEY')
-                conosle.log('change tags', newTags, this.findList)
                 let length = this.tags.length;
                 let tagsArray = newTags.slice(0, length);
                 if (newTags[length] && this.findList.length > 0 && newTags[length].text.length > 0){ 
@@ -138,6 +138,14 @@
                     axios.post('/find/chat/user', {'user_id': user.id})
                     .then(response => {
                         console.log('chat with', response.data);
+                        if(response.data.length > 0) {
+                            window.location.replace('/chat/' + response.data[0].chat_id);
+                        }
+                    })
+                } else {
+                    axios.post('/find/chat/poli/user', {'user_id': user.id})
+                    .then(response => {
+                        console.log('poli chat with', response.data);
                     })
                 }
             }

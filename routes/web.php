@@ -85,6 +85,8 @@ Route::get('/my/chats', 'ChatController@chatList')->name('chat');
 
 Route::post('/find/chat/user', 'ChatController@openChat');
 
+Route::post('/find/chat/poli/user', 'ChatController@openPoliChat');
+
 Route::post('/update/chat/title', 'ChatController@updateTitle')->name('chat');
 
 Route::post('/leave/chatroom', 'ChatController@leaveChat')->name('chat');

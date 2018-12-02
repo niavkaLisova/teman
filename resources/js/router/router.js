@@ -7,6 +7,7 @@ import Home from '../views/Home'
 Vue.use(Router)
 
 export default new Router({
+	// mode: 'history',
   	routes: [
 	    {
 	        path: '/',
@@ -14,8 +15,8 @@ export default new Router({
 	        component: Home
 	    },
 	    {
-	        path: '/hello',
-	        name: 'hello',
+	        path: '/:id',
+	        name: 'page',
 	        component: Hello,
 	    },
   	]

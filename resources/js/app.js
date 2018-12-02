@@ -1,8 +1,9 @@
 import Vue from "vue"
 import VueAWN from "vue-awesome-notifications"
 require("vue-awesome-notifications/dist/styles/style.css")
-// import router from './router/router.js'
-// import App from './views/App.vue'
+import VueRouter from 'vue-router';
+import router from './router/router.js'
+import App from './views/App.vue'
 import VueI18n from 'vue-i18n'
 import translate from './lang/translate.js'
 import BetterInputTag from 'better-vue-input-tag'
@@ -37,6 +38,8 @@ import VueTagsInput from '@johmun/vue-tags-input';
 
 Vue.component('vue-tags-input', VueTagsInput)
 
+Vue.component('app-router', App)
+
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('languages', require('./components/navbar/Languages.vue'));
 Vue.component('editor-component', require('./components/post/EditorComponent.vue'));
@@ -69,7 +72,7 @@ Vue.component('portfolio-show', require('./components/portfolio/PortfolioShow'))
 
 const app = new Vue({
     el: '#app',
-    i18n
+    i18n,
     // components: { App },
-    // // router
+    router
 });

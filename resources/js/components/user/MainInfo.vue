@@ -5,7 +5,6 @@
         <div class="tools">
             <div class="input-group">
                 <a :href="`/portfolio/${user.id}`" class="btn btn-outline-secondary">Portfolio</a>
-                <a v-if="user.id == me" href="/my_favorites" class="btn btn-outline-primary">My favorites</a>
             </div>
             <div class="input-group">
                 <a :href="`/following/${user.id}/list`" class="btn btn-outline-secondary">Following</a>

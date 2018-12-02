@@ -1,17 +1,19 @@
 <template>
-    <div>
-        <h1>Vue Router Demo App</h1>
+    <div class="container-fluid">
+        <div class="row">
 
-        <p>
-            <router-link :to="{ name: 'home' }">Home</router-link> |
-            <router-link :to="{ name: 'hello' }">Hello World</router-link>
-        </p>
+            <div class="col-md-4">
+                <user-component :activeUsers="activeUsers" :chat_id="chat_id" :me="me"></user-component>
+            </div>
 
-        <div class="container">
-            <router-view></router-view>
+            <div class="col-md-8">
+                <router-view :me="me" ></router-view>
+            </div>
         </div>
     </div>
 </template>
 <script>
-    export default {}
+    export default {
+        props: ['activeUsers', 'chat_id', 'me']
+    }
 </script>

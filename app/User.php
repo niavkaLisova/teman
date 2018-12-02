@@ -110,4 +110,13 @@ class User extends Authenticatable implements MustVerifyEmail
 
         return $chats2;
     }
+
+    public function specPoliChat($user_id)
+    {
+        $chats = $this->belongsToMany(Chat::class)->where('state', 0)->select('chat_id')->get();
+
+        $chats2 = (DB::table('chat_user')->where('user_id', $user_id)->select('chat_id'))->whereIn('chat_id', $chats);
+
+        return $chats2;
+    }
 }

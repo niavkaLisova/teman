@@ -1,38 +1,40 @@
 <template>
-    <div class="row">
-        <div class="col-md-4">
-            <user-component :activeUsers="activeUsers" :chat_id="chat_id" @current-chat="currentChat" :me="me"></user-component>
+    <div>
+        <div class="row"> 
+            <app-router :activeUsers="activeUsers" :chat_id="chat_id" :me="me"/>
         </div>
-        <div class="col-md-8">
-            <div class="card" v-if="chat_id">
-                <div class="card-header">
-                    <div v-if="state == 0">
-                        <div v-if="isEdit"><input type="text" v-model="title" class="form-control" @keydown.enter="saveTitle"></div>
-                        <div v-else="isEdit">{{title}}</div>
-                    </div>
-                    <div v-else>
-                        <div v-for="user in users">
-                            <h2 v-if="user.id != me.id">{{user.name}}</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" v-if="chat_id">
+                    <div class="card-header">
+                        <div v-if="state == 0">
+                            <div v-if="isEdit"><input type="text" v-model="title" class="form-control" @keydown.enter="saveTitle"></div>
+                            <div v-else="isEdit">{{title}}</div>
+                        </div>
+                        <div v-else>
+                            <div v-for="user in users">
+                                <h2 v-if="user.id != me.id">{{user.name}}</h2>
+                            </div>
+                        </div>
+                        <div class="dropdown dropleft">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" @click.prevent="changeTitle" v-if="state == 0">Change Chat Title</a>
+                                <a class="dropdown-item" @click.prevent="leave">Leave the Chat</a>
+                                <a class="dropdown-item" @click.prevent="invite" v-if="state == 0">Invite</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="dropdown dropleft">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" @click.prevent="changeTitle" v-if="state == 0">Change Chat Title</a>
-                            <a class="dropdown-item" @click.prevent="leave">Leave the Chat</a>
-                            <a class="dropdown-item" @click.prevent="invite" v-if="state == 0">Invite</a>
-                        </div>
+                    <div class="card-body">
+                        <chat-messages-component :chat_id="chat_id" :me="me" @list-active="listActive" ></chat-messages-component>
+                        <chat-form-component :me="me" :chat_id="chat_id" :activeUsers="activeUsers" @typing="typing"></chat-form-component>
                     </div>
                 </div>
-                <div class="card-body">
-                    <chat-messages-component :chat_id="chat_id" :me="me" @list-active="listActive" ></chat-messages-component>
-                    <chat-form-component :me="me" :chat_id="chat_id" :activeUsers="activeUsers" @typing="typing"></chat-form-component>
+                <div v-if="!chat_id">
+                    Select Chat
                 </div>
-            </div>
-            <div v-if="!chat_id">
-                Select Chat
             </div>
         </div>
     </div>

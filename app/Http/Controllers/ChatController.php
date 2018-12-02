@@ -85,6 +85,11 @@ class ChatController extends Controller
        return Auth::user()->specChat($request->user_id)->get();
     }
 
+    public function openPoliChat(Request $request)
+    {
+       return Auth::user()->specPoliChat($request->user_id)->get();
+    }
+
     public function companionInfo(Request $request)
     {
     	return DB::table('users')
