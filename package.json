@@ -10,7 +10,6 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "axios": "^0.18",
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap": "^4.0.0",
     "cross-env": "^5.1",
@@ -22,12 +21,16 @@
   },
   "dependencies": {
     "@johmun/vue-tags-input": "^1.5.9",
+    "axios": "^0.18.0",
     "better-vue-input-tag": "^1.1.0",
+    "cross-env": "^5.2.0",
     "emoji-mart-vue": "^2.6.4",
     "laravel-echo": "^1.4.0",
+    "laravel-vue-pagination": "^2.2.0",
     "socket.io-client": "^2.1.1",
     "vue-awesome-notifications": "^2.2.9",
     "vue-ckeditor": "^1.0.0",
+    "vue-ckeditor2": "^2.1.1",
     "vue-i18n": "^8.2.0",
     "vue-infinite-loading": "^2.3.5",
     "vue-moment": "^4.0.0",

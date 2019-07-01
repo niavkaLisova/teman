@@ -22,6 +22,7 @@
             <info-component :user="{{$user}}"></info-component>
         </div>
         <div class="col-md-8">
+            <p>Test in User blade php</p>
         </div>
     </div>
 </div>

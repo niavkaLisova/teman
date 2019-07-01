@@ -9,8 +9,6 @@
 </template>
 
 <script>
-    import { EmojiIcon, filter } from 'vb-emoji'
-
     export default {
         props: ['message'],
         filters: {
